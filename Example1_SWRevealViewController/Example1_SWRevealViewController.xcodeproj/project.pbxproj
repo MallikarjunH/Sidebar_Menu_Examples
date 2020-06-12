@@ -15,6 +15,8 @@
 		060618CD2493AEE300F4F6EA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060618CC2493AEE300F4F6EA /* LoginViewController.swift */; };
 		060618CF2493AEF100F4F6EA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060618CE2493AEF100F4F6EA /* HomeViewController.swift */; };
 		060618D42493AF3600F4F6EA /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 060618D32493AF3600F4F6EA /* SWRevealViewController.m */; };
+		060618DB2493B40000F4F6EA /* SampleNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060618DA2493B40000F4F6EA /* SampleNavigation.swift */; };
+		060618DD2493B45700F4F6EA /* SideMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060618DC2493B45700F4F6EA /* SideMenuBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		060618D12493AF3500F4F6EA /* Example1_SWRevealViewController-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Example1_SWRevealViewController-Bridging-Header.h"; sourceTree = "<group>"; };
 		060618D22493AF3600F4F6EA /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		060618D32493AF3600F4F6EA /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		060618DA2493B40000F4F6EA /* SampleNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleNavigation.swift; sourceTree = "<group>"; };
+		060618DC2493B45700F4F6EA /* SideMenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +105,9 @@
 		060618CB2493AE4200F4F6EA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				060618CC2493AEE300F4F6EA /* LoginViewController.swift */,
-				060618CE2493AEF100F4F6EA /* HomeViewController.swift */,
+				060618D52493B38200F4F6EA /* SideMenu */,
+				060618D62493B39E00F4F6EA /* Login */,
+				060618D72493B3A900F4F6EA /* Home */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -115,6 +120,31 @@
 				060618D12493AF3500F4F6EA /* Example1_SWRevealViewController-Bridging-Header.h */,
 			);
 			path = HelperClasses;
+			sourceTree = "<group>";
+		};
+		060618D52493B38200F4F6EA /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				060618DA2493B40000F4F6EA /* SampleNavigation.swift */,
+				060618DC2493B45700F4F6EA /* SideMenuBar.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		060618D62493B39E00F4F6EA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				060618CC2493AEE300F4F6EA /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		060618D72493B3A900F4F6EA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				060618CE2493AEF100F4F6EA /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,7 +219,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				060618DD2493B45700F4F6EA /* SideMenuBar.swift in Sources */,
 				060618CF2493AEF100F4F6EA /* HomeViewController.swift in Sources */,
+				060618DB2493B40000F4F6EA /* SampleNavigation.swift in Sources */,
 				060618CD2493AEE300F4F6EA /* LoginViewController.swift in Sources */,
 				060618D42493AF3600F4F6EA /* SWRevealViewController.m in Sources */,
 				060618B52493AE0E00F4F6EA /* AppDelegate.swift in Sources */,

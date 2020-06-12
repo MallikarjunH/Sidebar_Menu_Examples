@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  SampleNavigation.swift
 //  Example1_SWRevealViewController
 //
 //  Created by Mallikarjun on 12/06/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class SampleNavigation: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
