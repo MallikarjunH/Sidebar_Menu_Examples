@@ -11,10 +11,39 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
+    var window: UIWindow?
+   
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if GlobalVariables.sharedManager.loggedIn {
+            
+            //navigate to Home ViewController
+            
+            //naviagate to Inbox VC
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let inboxVC = mainStoryboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            
+            let navigation: SampleNavigation = SampleNavigation(rootViewController: inboxVC)
+            
+            let sidemenu = mainStoryboard.instantiateViewController(withIdentifier: "SideMenuBar") as? SideMenuBar
+            
+            let vc = SWRevealViewController(rearViewController: sidemenu, frontViewController: navigation)
+            
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = vc
+            self.window?.makeKeyAndVisible()
+            
+        }else{
+            //navigate to Login ViewController
+            let loginVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginViewController")
+            
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = loginVC
+            self.window?.makeKeyAndVisible()
+        }
+        
         return true
     }
 

@@ -19,11 +19,13 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonClicked(_ sender: Any) {
         
+        GlobalVariables.sharedManager.loggedIn =  true
+        
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let inboxVC = mainStoryboard.instantiateViewController(withIdentifier: "InboxViewControllerId") as! InboxViewController
+        let homeVC = mainStoryboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         
-        let navigation: SampleNavigation = SampleNavigation(rootViewController: inboxVC)
+        let navigation: SampleNavigation = SampleNavigation(rootViewController: homeVC)
         
         let sidemenu = mainStoryboard.instantiateViewController(withIdentifier: "SideMenuBarId") as? SideMenuBar
         
