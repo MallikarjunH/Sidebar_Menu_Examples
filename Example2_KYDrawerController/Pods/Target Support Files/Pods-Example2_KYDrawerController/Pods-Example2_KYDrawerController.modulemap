@@ -1,0 +1,6 @@
+framework module Pods_Example2_KYDrawerController {
+  umbrella header "Pods-Example2_KYDrawerController-umbrella.h"
+
+  export *
+  module * { export * }
+}
