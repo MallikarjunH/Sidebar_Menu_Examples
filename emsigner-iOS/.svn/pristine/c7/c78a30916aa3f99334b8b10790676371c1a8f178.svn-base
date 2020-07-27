@@ -1,0 +1,20 @@
+PODS:
+  - MuPDF (1.10)
+  - OpenSSL-Universal (1.0.2.13)
+
+DEPENDENCIES:
+  - MuPDF
+  - OpenSSL-Universal
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MuPDF
+    - OpenSSL-Universal
+
+SPEC CHECKSUMS:
+  MuPDF: 303264f90d7751bc2f16fd7c30b787e873235da3
+  OpenSSL-Universal: 401888162f11c33ebbd46f782d9229da35c61327
+
+PODFILE CHECKSUM: ced7e68c56448de81744f85941a738212575f213
+
+COCOAPODS: 1.5.3

@@ -1,0 +1,143 @@
+//
+//  ShowActivities.m
+//  emSigner
+//
+//  Created by EMUDHRA on 26/10/18.
+//  Copyright © 2018 Emudhra. All rights reserved.
+//
+
+#import "ShowActivities.h"
+#import "ShowActivitiesCellTableViewCell.h"
+#import "UploadDocuments.h"
+#import "SignersInformation.h"
+
+
+
+@interface ShowActivities ()
+{
+    NSMutableString * MutableCategoryName;
+}
+@end
+
+@implementation ShowActivities
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
+    _showActivities.delegate = self;
+    _showActivities.dataSource = self;
+    MutableCategoryName = [[NSMutableString alloc]init];
+    //_showArrayForActivity = [[NSMutableArray alloc]init];
+    MutableCategoryName = [NSMutableString stringWithFormat:@"%@",_categoryname];
+    self.showActivities.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
+    [self.showActivities registerNib:[UINib nibWithNibName:@"ShowActivitiesCellTableViewCell" bundle:nil] forCellReuseIdentifier:@"ShowActivitiesCellTableViewCell"];
+    
+    
+    
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    
+    return _showArrayForActivity.count;
+}
+
+// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
+// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    
+    ShowActivitiesCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ShowActivitiesCellTableViewCell" forIndexPath:indexPath];
+    cell.imageForActivity.image = [UIImage imageNamed:@"folder"];
+
+    cell.showActivityLabel.text = [[_showArrayForActivity objectAtIndex:indexPath.row]valueForKey:@"CategoryName"];
+    return cell;
+
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    NSDictionary *d =[self.showArrayForActivity objectAtIndex:indexPath.row];
+    int CategoryId = [[d valueForKey:@"CategoryId"]intValue];
+    NSString* CategoryName = [[d valueForKey:@"CategoryName"]substringToIndex:2];
+
+    NSMutableArray *arCells=[[NSMutableArray alloc]init];
+
+    
+     if ([[d valueForKey:@"IsWorkflowCreated"]boolValue] == false) {
+    
+    for (int j= 0; j<_TotalArrayForActivity.count; j++) {
+        NSDictionary * dict1 = _TotalArrayForActivity[j];
+        NSLog(@"%i",j);
+
+        if (CategoryId == [[dict1 valueForKey:@"ParentId"]intValue]) {
+
+            NSLog(@"parentId %i",[[dict1 valueForKey:@"ParentId"]intValue]);
+            [arCells addObject:dict1];
+
+            [MutableCategoryName appendString:[NSMutableString stringWithFormat:@"/%@",CategoryName]];
+            
+        }
+    }
+    if (arCells.count > 0) {
+        _showArrayForActivity = [[NSMutableArray alloc]init];
+        NSArray*arr;
+        for ( arr in arCells) {
+            [_showArrayForActivity addObject:arr];
+        }
+        [self.showActivities reloadData];
+    }
+    else
+    {
+        
+       
+            UIAlertController * alert = [UIAlertController
+                                         alertControllerWithTitle:nil
+                                         message:@"Workflow is not created for this Activity."
+                                         preferredStyle:UIAlertControllerStyleAlert];
+            
+            //Add Buttons
+            
+            UIAlertAction* yesButton = [UIAlertAction
+                                        actionWithTitle:@"Ok"
+                                        style:UIAlertActionStyleDefault
+                                        handler:^(UIAlertAction * action) {
+                                            [self.navigationController popViewControllerAnimated:YES];
+                                        }];
+            
+            
+            [alert addAction:yesButton];
+            
+            [self presentViewController:alert animated:YES completion:nil];
+            
+        }
+     }
+        else{
+            NSUserDefaults *savePathForPdf = [NSUserDefaults standardUserDefaults];
+            [savePathForPdf setInteger:CategoryId forKey:@"workflowCategoryId"];
+            [savePathForPdf synchronize];
+            
+ [MutableCategoryName appendString:[NSMutableString stringWithFormat:@"/%@",CategoryName]];
+        SignersInformation *objTrackOrderVC= [[SignersInformation alloc] initWithNibName:@"SignersInformation" bundle:nil];
+        objTrackOrderVC.categoryId = [NSString stringWithFormat:@"%d",CategoryId];
+            
+            objTrackOrderVC.categoryname = MutableCategoryName;
+        [self.navigationController pushViewController:objTrackOrderVC animated:YES];
+    }
+        
+    
+    //
+    
+    
+    
+    
+    
+//    UIStoryboard *newStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    UploadDocuments *objTrackOrderVC= [newStoryBoard instantiateViewControllerWithIdentifier:@"UploadDocuments"];
+//    [self.navigationController pushViewController:objTrackOrderVC animated:YES];
+    
+}
+@end

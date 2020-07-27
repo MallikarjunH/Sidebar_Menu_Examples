@@ -1,0 +1,18 @@
+//
+//  Documents.h
+//  emSigner
+//
+//  Created by EMUDHRA on 22/11/18.
+//  Copyright © 2018 Emudhra. All rights reserved.
+//
+
+#import <CoreData/CoreData.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface DocumentsAdd : NSManagedObject
+@property (nonatomic, retain) NSString * documents;
+
+@end
+
+NS_ASSUME_NONNULL_END

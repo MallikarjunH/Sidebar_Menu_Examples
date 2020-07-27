@@ -1,0 +1,137 @@
+//
+//  AboutUsVC.m
+//  emSigner
+//
+//  Created by Administrator on 9/29/16.
+//  Copyright © 2016 Emudhra. All rights reserved.
+//
+
+#import "AboutUsVC.h"
+
+@interface AboutUsVC ()<UIWebViewDelegate>
+
+@end
+
+@implementation AboutUsVC
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    self.title = @"About emSigner";
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    
+}
+- (IBAction)supportBtn:(id)sender {
+    if ([MFMailComposeViewController canSendMail])
+        
+    {
+        [self sendEmail];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
+                                                        message:@"This device cannot send email"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    
+}
+- (IBAction)termsOfUse:(id)sender {
+    NSString *iTunesLink = @"https://qa.emsigner.com/Areas/Home/termsofservice";
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];
+}
+- (IBAction)privacyBtn:(id)sender {
+    
+    NSString *iTunesLink = @"https://qa.emsigner.com/Areas/Home/privacypolicy";
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];
+    
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+-(void)sendEmail
+{
+    if ([MFMailComposeViewController canSendMail])
+    {
+        // Email Subject
+       // NSString *emailTitle = _pdfName;
+        NSString *messageBody = @"";
+        NSArray *toRecipents =[NSArray arrayWithObjects:@"support@emsigner.com",nil];
+        
+        MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+        mc.mailComposeDelegate = self;
+       // [mc setSubject:emailTitle];
+        [mc setMessageBody:messageBody isHTML:NO];
+        [mc setToRecipients:toRecipents];
+        
+       // NSData *fileData = [NSData dataWithContentsOfFile:_filePath];
+        
+        // Add attachment
+       // [mc addAttachmentData:fileData mimeType:@"application/pdf" fileName:_pdfName];
+        
+        // [self dismissViewControllerAnimated:YES completion:^{
+        [self presentViewController:mc animated:YES completion:nil];
+    }
+    else
+    {
+        NSLog(@"This device cannot send email");
+    }
+    
+}
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Mail saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Mail sent");
+            [self mailSent];
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+-(void)mailSent
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
+                                                    message:@"Mail sent successfully"
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+
+@end

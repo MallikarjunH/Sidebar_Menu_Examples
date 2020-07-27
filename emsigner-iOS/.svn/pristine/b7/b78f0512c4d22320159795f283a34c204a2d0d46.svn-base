@@ -1,0 +1,29 @@
+//
+//  SignersInformation.h
+//  emSigner
+//
+//  Created by EMUDHRA on 29/10/18.
+//  Copyright © 2018 Emudhra. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "ShowEditImagesFromImageList.h"
+
+
+@interface SignersInformation : UIViewController<UITableViewDelegate,UITableViewDataSource,UICollectionViewDataSource,UICollectionViewDelegate,senddataProtocol>
+@property (weak, nonatomic) IBOutlet UITableView *signersInfoTable;
+@property (strong,nonatomic)NSString* categoryId;
+@property (strong,nonatomic) NSMutableArray *signersArray;
+@property(nonatomic,strong)NSString *categoryname;
+@property (strong,nonatomic) NSMutableArray *sendarray;
+@property (strong,nonatomic) NSMutableArray *SelectedArray;
+@property(strong,nonatomic)NSMutableArray *getAllSigners;
+@property(strong,nonatomic)NSMutableArray *subscriberidarray;
+@property(strong,nonatomic)NSMutableDictionary *imagesDictionary;
+@property(strong,nonatomic)NSMutableArray *finalarray;
+@property(strong,nonatomic) NSMutableArray * post;
+
+@property (weak, nonatomic) IBOutlet UIButton *sendDocuments;
++(void)viewWillAppear:(BOOL)animated;
+@end
+

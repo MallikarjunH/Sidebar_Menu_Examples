@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ParallelSigning">
+            <connections>
+                <outlet property="Signatorylbl" destination="JDw-mN-IYm" id="jTa-ff-ZWD"/>
+                <outlet property="pdfView" destination="EDX-wa-61I" id="0AX-x7-VcW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QZv-RI-k1o">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDw-mN-IYm">
+                            <rect key="frame" x="8" y="5" width="44" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="j9H-UT-9ji"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" red="0.0" green="0.37647058823529411" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.83921568627450982" green="0.83921568627450982" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="JDw-mN-IYm" secondAttribute="trailing" constant="8" id="A72-vQ-0Db"/>
+                        <constraint firstItem="JDw-mN-IYm" firstAttribute="top" secondItem="QZv-RI-k1o" secondAttribute="top" constant="5" id="JAc-ek-6TL"/>
+                        <constraint firstItem="JDw-mN-IYm" firstAttribute="leading" secondItem="QZv-RI-k1o" secondAttribute="leading" constant="8" id="c3z-rf-XM9"/>
+                        <constraint firstAttribute="height" constant="35" id="jLJ-xH-qrb"/>
+                    </constraints>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDX-wa-61I" customClass="PDFView">
+                    <rect key="frame" x="0.0" y="129" width="375" height="489"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1f-af-akW">
+                            <rect key="frame" x="0.0" y="-9" width="375" height="498"/>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="g1f-af-akW" firstAttribute="top" secondItem="EDX-wa-61I" secondAttribute="top" constant="-9" id="2YZ-Cg-etq"/>
+                        <constraint firstAttribute="trailing" secondItem="g1f-af-akW" secondAttribute="trailing" id="FMH-iJ-Sz2"/>
+                        <constraint firstAttribute="bottom" secondItem="g1f-af-akW" secondAttribute="bottom" id="Xkw-FJ-fEJ"/>
+                        <constraint firstItem="g1f-af-akW" firstAttribute="leading" secondItem="EDX-wa-61I" secondAttribute="leading" id="anl-5c-HlU"/>
+                        <constraint firstItem="g1f-af-akW" firstAttribute="centerX" secondItem="EDX-wa-61I" secondAttribute="centerX" id="tDl-gX-WC7"/>
+                    </constraints>
+                </view>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wkz-Bl-jsZ">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <items>
+                        <barButtonItem image="DelegationIcon" id="jwV-Bd-jdl">
+                            <connections>
+                                <action selector="delegateDocument:" destination="-1" id="Acw-mf-FSq"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="7pB-N7-8KC"/>
+                        <barButtonItem title="Item" image="download" id="PuF-c6-Dba">
+                            <connections>
+                                <action selector="Download:" destination="-1" id="eCA-w1-WbI"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="mmF-e3-gSR"/>
+                        <barButtonItem title="Item" image="tab-more-1x-1" id="SUb-R1-ZhO">
+                            <connections>
+                                <action selector="More:" destination="-1" id="jTV-49-Utu"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="barTintColor" red="0.11372549019607843" green="0.2627450980392157" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
+                </toolbar>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delegate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liL-qC-gCP">
+                    <rect key="frame" x="0.0" y="652" width="65" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="65" id="QNb-Ns-2aP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYk-lS-iAu">
+                    <rect key="frame" x="161.5" y="652" width="52" height="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBa-2Q-flg">
+                    <rect key="frame" x="327" y="651" width="40" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="alv-Gy-jd5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="EDX-wa-61I" firstAttribute="top" secondItem="QZv-RI-k1o" secondAttribute="bottom" constant="8" id="0qr-Xr-Id7"/>
+                <constraint firstItem="wkz-Bl-jsZ" firstAttribute="leading" secondItem="EDX-wa-61I" secondAttribute="leading" id="7nP-IK-yfZ"/>
+                <constraint firstItem="liL-qC-gCP" firstAttribute="leading" secondItem="wkz-Bl-jsZ" secondAttribute="leading" id="8Qf-vs-hUc"/>
+                <constraint firstItem="EDX-wa-61I" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="B8j-og-Xl6"/>
+                <constraint firstItem="wkz-Bl-jsZ" firstAttribute="trailing" secondItem="EDX-wa-61I" secondAttribute="trailing" id="BxB-pd-HDV"/>
+                <constraint firstItem="EDX-wa-61I" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="JJx-MB-L5p"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="pYk-lS-iAu" secondAttribute="bottom" constant="1" id="MUD-5c-FIo"/>
+                <constraint firstItem="liL-qC-gCP" firstAttribute="top" secondItem="EDX-wa-61I" secondAttribute="bottom" constant="34" id="Rai-Mt-I2r"/>
+                <constraint firstItem="wkz-Bl-jsZ" firstAttribute="top" secondItem="EDX-wa-61I" secondAttribute="bottom" constant="5" id="Sms-sF-rzF"/>
+                <constraint firstItem="QZv-RI-k1o" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Wb1-PI-DxS"/>
+                <constraint firstItem="QZv-RI-k1o" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="86" id="fq4-oN-lNm"/>
+                <constraint firstItem="QZv-RI-k1o" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="irO-Y0-vMm"/>
+                <constraint firstAttribute="trailing" secondItem="nBa-2Q-flg" secondAttribute="trailing" constant="8" id="l8h-Oy-9Yd"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="nBa-2Q-flg" secondAttribute="bottom" constant="2" id="mgn-QI-a6o"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="wkz-Bl-jsZ" secondAttribute="bottom" id="qNO-5s-r2m"/>
+                <constraint firstItem="pYk-lS-iAu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vyE-2j-DxA"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="-1487" y="-560"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="DelegationIcon" width="24" height="24"/>
+        <image name="download" width="24" height="24"/>
+        <image name="tab-more-1x-1" width="36" height="36"/>
+    </resources>
+</document>

@@ -1,0 +1,13 @@
+//
+//  Documents.m
+//  emSigner
+//
+//  Created by EMUDHRA on 22/11/18.
+//  Copyright © 2018 Emudhra. All rights reserved.
+//
+
+#import "DocumentsAdd.h"
+
+@implementation DocumentsAdd
+@dynamic documents;
+@end

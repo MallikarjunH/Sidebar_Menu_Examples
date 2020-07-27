@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeclineNextVC">
+            <connections>
+                <outlet property="documentLog" destination="XdU-c3-6TZ" id="Q1n-2C-J1y"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="hCx-FJ-g8M" id="xSa-VI-Sym"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCx-FJ-g8M">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QpJ-qi-FP6">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="6hx-H1-kdn"/>
+                        <barButtonItem style="plain" id="C7E-0K-pSN">
+                            <view key="customView" contentMode="scaleToFill" id="XkY-05-tvy">
+                                <rect key="frame" x="152" y="0.0" width="70" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Document Log" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZE-q2-OQd">
+                                        <rect key="frame" x="-6" y="22" width="88" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XdU-c3-6TZ">
+                                        <rect key="frame" x="15" y="5" width="40" height="34"/>
+                                        <state key="normal" image="tab-doclog-1x"/>
+                                        <connections>
+                                            <action selector="documentLog:" destination="-1" eventType="touchUpInside" id="sjp-Oi-At8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="XdU-c3-6TZ" firstAttribute="leading" secondItem="XkY-05-tvy" secondAttribute="leading" constant="15" id="3os-dd-i7q"/>
+                                    <constraint firstItem="XdU-c3-6TZ" firstAttribute="centerY" secondItem="XkY-05-tvy" secondAttribute="centerY" id="6uw-14-nYO"/>
+                                    <constraint firstAttribute="bottom" secondItem="HZE-q2-OQd" secondAttribute="bottom" constant="2" id="9xm-AZ-d2f"/>
+                                    <constraint firstItem="XdU-c3-6TZ" firstAttribute="centerX" secondItem="XkY-05-tvy" secondAttribute="centerX" id="LIu-QC-ZmT"/>
+                                    <constraint firstItem="XdU-c3-6TZ" firstAttribute="top" secondItem="XkY-05-tvy" secondAttribute="top" constant="5" id="Vaj-6r-1vY"/>
+                                    <constraint firstItem="HZE-q2-OQd" firstAttribute="leading" secondItem="XkY-05-tvy" secondAttribute="leading" constant="-6" id="a2H-kY-HzW"/>
+                                    <constraint firstItem="HZE-q2-OQd" firstAttribute="centerX" secondItem="XdU-c3-6TZ" secondAttribute="centerX" constant="3" id="pUr-15-Ehh"/>
+                                    <constraint firstItem="HZE-q2-OQd" firstAttribute="top" secondItem="XkY-05-tvy" secondAttribute="top" constant="22" id="pyp-af-yoJ"/>
+                                </constraints>
+                            </view>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="CbJ-aZ-MuF"/>
+                    </items>
+                    <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hCx-FJ-g8M" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0RN-Ir-2Hj"/>
+                <constraint firstAttribute="trailing" secondItem="hCx-FJ-g8M" secondAttribute="trailing" id="0q9-WL-COc"/>
+                <constraint firstAttribute="bottom" secondItem="QpJ-qi-FP6" secondAttribute="bottom" id="5NW-wV-ima"/>
+                <constraint firstItem="QpJ-qi-FP6" firstAttribute="top" secondItem="hCx-FJ-g8M" secondAttribute="bottom" id="8ai-rb-MQD"/>
+                <constraint firstItem="QpJ-qi-FP6" firstAttribute="top" secondItem="hCx-FJ-g8M" secondAttribute="bottom" id="YJF-k9-rdb"/>
+                <constraint firstAttribute="trailing" secondItem="QpJ-qi-FP6" secondAttribute="trailing" id="c6F-zg-uFW"/>
+                <constraint firstItem="QpJ-qi-FP6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="q1X-lN-XYy"/>
+                <constraint firstItem="hCx-FJ-g8M" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sZh-uq-5C0"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="111.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="tab-doclog-1x" width="18" height="18"/>
+    </resources>
+</document>

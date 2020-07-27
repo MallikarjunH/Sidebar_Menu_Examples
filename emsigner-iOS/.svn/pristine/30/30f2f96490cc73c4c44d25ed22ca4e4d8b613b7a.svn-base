@@ -1,0 +1,844 @@
+//
+//  AttachedVC.m
+//  emSigner
+//
+//  Created by Administrator on 7/16/17.
+//  Copyright © 2017 Emudhra. All rights reserved.
+//
+
+#import "AttachedVC.h"
+#import "MBProgressHUD.h"
+#import "NSObject+Activity.h"
+#import "WebserviceManager.h"
+#import "HoursConstants.h"
+#import "AppDelegate.h"
+#import "Reachability.h"
+#import "AttachedViewVC.h"
+@interface AttachedVC ()
+{
+    int currentPreviewIndex;
+    NSString *descriptionStr;
+    BOOL hasPresentedAlert;
+    int currentPage;
+    
+}
+
+@property (nonatomic, weak) NSIndexPath *selectedIndexPath;
+@end
+
+@implementation AttachedVC
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    _attachedToolBar.hidden = YES;
+    
+    _threeDotsArray = [[NSMutableArray alloc]init];
+    _addFile = [[NSMutableArray alloc] init];
+
+    _listArray = [[NSMutableArray alloc]init];
+    
+    //Empty cell keep blank
+    self.attachedTableView.contentInset = UIEdgeInsetsMake(0, 0, 65, 0);
+    
+    [self.attachedTableView setContentOffset:CGPointMake(0.0, self.attachedTableView.tableHeaderView.frame.size.height) animated:YES];
+    _attachedTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
+    [self.attachedTableView registerNib:[UINib nibWithNibName:@"AttachedMultiplePdfTableViewCell" bundle:nil] forCellReuseIdentifier:@"AttachedPdfTableViewCell"];
+  
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc]init];
+    refreshControl.backgroundColor = [UIColor colorWithRed:235.0/255.0 green:235.0/255.0 blue:241.0/255.0 alpha:1.0];
+    refreshControl.tintColor = [UIColor grayColor];
+    [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+    [self.attachedTableView addSubview:refreshControl];
+    
+    self.title = _document;
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+
+    [self viewWillAppear:YES];
+}
+
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    /*************************Web Service*******************************/
+    
+    [self startActivity:@"Refreshing"];
+    NSString *requestURL = [NSString stringWithFormat:@"%@GetAttachmentById?WorkflowID=%@",kAttchedDocument,_workFlowId];
+    
+    [WebserviceManager sendSyncRequestWithURLGet:requestURL method:SAServiceReqestHTTPMethodGET body:requestURL completionBlock:^(BOOL status, id responseValue) {
+        
+        if(status)
+        {
+            
+            dispatch_async(dispatch_get_main_queue(),
+                           ^{
+                               
+                               if ([[responseValue valueForKey:@"Response"] isKindOfClass:[NSArray class]]) {
+                                   _listArray= [NSMutableArray arrayWithArray:[responseValue valueForKey:@"Response"]];
+                               }
+                               
+                               if (_listArray != (id)[NSNull null])
+                               {
+                                   
+                                   [_attachedTableView reloadData];
+                                   
+                                   [self stopActivity];
+                               }
+                               else{
+                               
+                                   UIAlertController * alert = [UIAlertController
+                                                                alertControllerWithTitle:@"Info"
+                                                                message:@"Invalid Request"
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+                                   
+                                   //Add Buttons
+                                   
+                                   UIAlertAction* yesButton = [UIAlertAction
+                                                               actionWithTitle:@"Ok"
+                                                               style:UIAlertActionStyleDefault
+                                                               handler:^(UIAlertAction * action) {
+                                                                   //Handle your yes please button action here
+                                                                   
+                                                               }];
+                                   
+                                   //Add your buttons to alert controller
+                                   
+                                   [alert addAction:yesButton];
+                                   //[alert addAction:noButton];
+                                   
+                                   [self presentViewController:alert animated:YES completion:nil];
+                                   [self stopActivity];
+
+                               }
+                               
+                               [self stopActivity];
+                               
+                           });
+            
+        }
+        else{
+            
+        }
+        
+    }];
+    [self stopActivity];
+    /*******************************************************************************/
+    
+}
+
+-(void)refresh:(UIRefreshControl *)refreshControl
+{
+    
+    [self viewWillAppear:YES];
+    
+    [_attachedTableView reloadData];
+    [refreshControl endRefreshing];
+    
+    
+}
+
+//Network Connection Checks
+- (BOOL)connected
+{
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [reachability currentReachabilityStatus];
+    return !(networkStatus == NotReachable);
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    NSInteger numOfSections = 0;
+    if ([self.listArray count]>0)
+    {
+        self.attachedTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        numOfSections                = 1;
+        self.attachedTableView.backgroundView = nil;
+    }
+    else
+    {
+        UILabel *noDataLabel         = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.attachedTableView.bounds.size.width, self.attachedTableView.bounds.size.height)];
+        noDataLabel.text             = @"No documents available";
+        noDataLabel.textColor        = [UIColor grayColor];
+        noDataLabel.textAlignment    = NSTextAlignmentCenter;
+        self.attachedTableView.backgroundView = noDataLabel;
+        self.attachedTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        
+        //hide right bar button item if there is no data
+        self.navigationItem.rightBarButtonItem = nil;
+    }
+    
+    return numOfSections;
+    
+    
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (_listArray) {
+        return [_listArray count];
+    }
+    return 1;
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    AttachedMultiplePdfTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AttachedPdfTableViewCell" forIndexPath:indexPath];
+    
+    //Check Document Name
+    descriptionStr=[[AppDelegate AppDelegateInstance] strCheckNull:[NSString stringWithFormat:@"%@",[[_listArray objectAtIndex:indexPath.row] objectForKey:@"DocumentName"]]];
+    cell.documentNameLabel.text = descriptionStr;
+    
+    NSString *dateFromArray = [[_listArray objectAtIndex:indexPath.row] objectForKey:@"UploadDateTime"];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd-MM-yyyy HH:mm:ss"];
+    NSDate *dates = [formatter dateFromString:dateFromArray];
+    [cell.threedotsImageBtn addTarget:self action:@selector(threeDots:) forControlEvents:UIControlEventTouchUpInside];
+
+    
+    cell.dateLabelOfAttachment.text = [self transformedValue:dates];
+    
+    UIView *bgColorView = [[UIView alloc] init];
+    bgColorView.backgroundColor = [UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:250.0/255.0 alpha:1.0];
+    [cell setSelectedBackgroundView:bgColorView];
+    
+    if(indexPath.row == _currentSelectedRow)
+    {
+        
+        [tableView
+         selectRowAtIndexPath:indexPath
+         animated:TRUE
+         scrollPosition:UITableViewScrollPositionNone
+         ];
+        
+    }
+    
+    //
+    return cell;
+}
+
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    return 50.0;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    //Check Document Name
+    NSString *descriptionStr1;
+    descriptionStr1=[[AppDelegate AppDelegateInstance] strCheckNull:[NSString stringWithFormat:@"%@",[[_listArray objectAtIndex:indexPath.row] objectForKey:@"DocumentId"]]];
+    
+    _documentID =descriptionStr1;
+    self.selectedIndexPath = indexPath;
+    
+    NSNumber * isSuccessNumber = (NSNumber *)[[_listArray objectAtIndex:indexPath.row] objectForKey:@"IsDelete"];
+    if ([isSuccessNumber boolValue] == YES) {
+        _documentView.hidden = NO;
+    }
+    else{
+        _documentView.hidden = YES;
+    }
+
+    //Network Check
+    if (![self connected])
+    {
+        if(hasPresentedAlert == false){
+            
+            // not connected
+            
+            UIAlertController * alert = [UIAlertController
+                                         alertControllerWithTitle:@"No internet connection!"
+                                         message:@"Check internet connection!"
+                                         preferredStyle:UIAlertControllerStyleAlert];
+            
+            //Add Buttons
+            
+            UIAlertAction* yesButton = [UIAlertAction
+                                        actionWithTitle:@"Okay"
+                                        style:UIAlertActionStyleDefault
+                                        handler:^(UIAlertAction * action) {
+                                            //Handle your yes please button action here
+                                            
+                                        }];
+            
+            
+            //Add your buttons to alert controller
+            
+            [alert addAction:yesButton];
+            [self presentViewController:alert animated:YES completion:nil];
+            hasPresentedAlert = true;
+        }
+    } else
+    {
+        
+        /*************************Web Service*******************************/
+        
+        [self startActivity:@"Loading..."];
+        
+        NSString *requestURL = [NSString stringWithFormat:@"%@GetDraftFileData?workFlowId=%@",kOpenPDFImage,[[_listArray objectAtIndex:indexPath.row] valueForKey:@"DocumentId"]];
+        [WebserviceManager sendSyncRequestWithURLGet:requestURL method:SAServiceReqestHTTPMethodGET body:requestURL completionBlock:^(BOOL status, id responseValue) {
+            
+            if(status)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    //                    //Check Null String Address
+                    
+                                        _pdfImageArray=[[AppDelegate AppDelegateInstance] strCheckNull:[NSString stringWithFormat:@"%@",[[responseValue valueForKey:@"Response"] valueForKey:@"FileData"]]];
+                                        //
+                  
+                    if (_pdfImageArray != (id)[NSNull null])
+                    {
+                        
+                        if ([[[[_listArray objectAtIndex:indexPath.row] valueForKey:@"DocumentName"] pathExtension] isEqualToString:@"pdf"]){
+                            
+                            //
+                            _attachedToolBar.hidden = YES;
+                            AttachedViewVC *temp = [[AttachedViewVC alloc]initWithNibName:@"AttachedViewVC" bundle:nil];
+                            temp.pdfImagedetail = _pdfImageArray;
+                            temp.isDelete = [[[_listArray objectAtIndex:indexPath.row] objectForKey:@"IsDelete"] boolValue];
+                            temp.documentID=_documentID;
+                            temp.myTitle = [[_listArray objectAtIndex:indexPath.row] objectForKey:@"DocumentName"];
+                            [self.navigationController pushViewController:temp animated:YES];
+                            [self stopActivity];
+
+                        }
+                        else{
+                            _attachedToolBar.hidden = NO;
+                            _documentName = [[_listArray objectAtIndex:indexPath.row] objectForKey:@"DocumentName"];
+                            [self stopActivity];
+                        }
+                        
+                    }
+                    else{
+                        
+
+                        UIAlertController * alert = [UIAlertController
+                                                     alertControllerWithTitle:@"Info"
+                                                     message:@"Invalid Request"
+                                                     preferredStyle:UIAlertControllerStyleAlert];
+                        
+                        //Add Buttons
+                        
+                        UIAlertAction* yesButton = [UIAlertAction
+                                                    actionWithTitle:@"Ok"
+                                                    style:UIAlertActionStyleDefault
+                                                    handler:^(UIAlertAction * action) {
+                                                        //Handle your yes please button action here
+                                                        
+                                                    }];
+                        
+                        
+                        //Add your buttons to alert controller
+                        
+                        [alert addAction:yesButton];
+                        [self presentViewController:alert animated:YES completion:nil];
+                        [self stopActivity];
+                    }
+                });
+                
+            }
+            else{
+                //Alert at the time of no server connection
+                
+                UIAlertController * alert = [UIAlertController
+                                             alertControllerWithTitle:@"Alert"
+                                             message:@"Try again"
+                                             preferredStyle:UIAlertControllerStyleAlert];
+                
+                //Add Buttons
+                
+                UIAlertAction* yesButton = [UIAlertAction
+                                            actionWithTitle:@"Ok"
+                                            style:UIAlertActionStyleDefault
+                                            handler:^(UIAlertAction * action) {
+                                                //Handle your yes please button action here
+                                                
+                                            }];
+                
+                
+                //Add your buttons to alert controller
+                
+                [alert addAction:yesButton];
+                [self presentViewController:alert animated:YES completion:nil];
+                [self stopActivity];
+                
+            }
+            
+        }];
+        
+    }
+
+}
+
+
+- (IBAction)inactiveBtn:(id)sender {
+    
+    
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:@"Delete"
+                                 message:@"Do you want to Delete Document?"
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    //Add Buttons
+    
+    UIAlertAction* yesButton = [UIAlertAction
+                                actionWithTitle:@"Yes"
+                                style:UIAlertActionStyleDefault
+                                handler:^(UIAlertAction * action) {
+                                    //Handle your yes please button action here
+                                    [self startActivity:@"Processing..."];
+                                    NSString *requestURL = [NSString stringWithFormat:@"%@MarkAsInactive?documentId=%@&Status=%@",kInactive,_documentID,@"Attachment"];
+                                    
+                                    [WebserviceManager sendSyncRequestWithURLGet:requestURL method:SAServiceReqestHTTPMethodGET body:requestURL completionBlock:^(BOOL status, id responseValue) {
+                                        
+                                        if(status)
+                                        {
+                                            dispatch_async(dispatch_get_main_queue(),
+                                                           ^{
+                                                               
+                                                               
+                                                               _inactiveArray =responseValue;
+                                                               
+                                                               if (_inactiveArray != (id)[NSNull null])
+                                                               {
+                                                                   if (self.selectedIndexPath) {
+                                                                       [_listArray removeObjectAtIndex:self.selectedIndexPath.row];
+                                                                   }
+                                                                   _attachedToolBar.hidden = YES;
+                                                                   [_attachedTableView reloadData];
+                                                                   
+                                                                   [self stopActivity];
+                                                               }
+                                                               else{
+
+                                                                   
+                                                                   UIAlertController * alert = [UIAlertController
+                                                                                                alertControllerWithTitle:@"Info"
+                                                                                                message:@"Invalid Request"
+                                                                                                preferredStyle:UIAlertControllerStyleAlert];
+                                                                   
+                                                                   //Add Buttons
+                                                                   
+                                                                   UIAlertAction* yesButton = [UIAlertAction
+                                                                                               actionWithTitle:@"Ok"
+                                                                                               style:UIAlertActionStyleDefault
+                                                                                               handler:^(UIAlertAction * action) {
+                                                                                                   //Handle your yes please button action here
+                                                                                                   
+                                                                                               }];
+                                                                   
+                                                                   
+                                                                   //Add your buttons to alert controller
+                                                                   
+                                                                   [alert addAction:yesButton];
+                                                                   [self presentViewController:alert animated:YES completion:nil];
+                                                                   [self stopActivity];
+                                                               }
+                                                              
+                                                               
+                                                           });
+                                            
+                                        }
+                                        else{
+                                            
+                                            
+                                        }
+                                        
+                                    }];
+                                }];
+    
+    UIAlertAction* noButton = [UIAlertAction
+                                actionWithTitle:@"No"
+                                style:UIAlertActionStyleDefault
+                                handler:^(UIAlertAction * action) {
+                                    //Handle your yes please button action here
+                                    
+                                }];
+    
+    //Add your buttons to alert controller
+    
+    [alert addAction:yesButton];
+    [alert addAction:noButton];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    
+    
+}
+
+
+-(void)threeDots:(UIButton*)sender
+{
+
+    CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.attachedTableView];
+    NSIndexPath *indexPath = [self.attachedTableView indexPathForRowAtPoint:buttonPosition];
+    UIAlertController * view=   [[UIAlertController
+                                  alloc]init];
+    UIAlertAction* Download = [UIAlertAction
+                               actionWithTitle:@"Download Document"
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * action)
+                               {
+                                   
+                                   //CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.attachedTableView];
+                                  // NSIndexPath *indexPath = [self.attachedTableView indexPathForRowAtPoint:buttonPosition];
+                                   _documentID = [[_listArray objectAtIndex:indexPath.row] objectForKey:@"DocumentId"];
+                                    _documentName = [[_listArray objectAtIndex:indexPath.row] objectForKey:@"DocumentName"];
+                                   NSString *requestURL = [NSString stringWithFormat:@"%@GetDraftFileData?workFlowId=%@",kDownloadPdf,_documentID];
+                                   [WebserviceManager sendSyncRequestWithURLGet:requestURL method:SAServiceReqestHTTPMethodGET body:requestURL completionBlock:^(BOOL status, id responseValue) {
+                                       
+                                       if(status)
+                                       {
+                                           dispatch_async(dispatch_get_main_queue(), ^{
+                                               
+                                               [_addFile removeAllObjects];
+                                               
+                                               _pdfImageArray=[[AppDelegate AppDelegateInstance] strCheckNull:[NSString stringWithFormat:@"%@",[[responseValue valueForKey:@"Response"] valueForKey:@"FileData"]]];
+                                              
+
+                                               if (_pdfImageArray != (id)[NSNull null])
+                                               {
+                                                   int Count;
+                                                   NSData *data = [[NSData alloc]initWithBase64EncodedString:_pdfImageArray options:0];
+                                                   NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0];
+                                                   NSString *path = [documentsDirectory stringByAppendingPathComponent:_documentName];
+                                                   NSArray *directoryContent = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:NULL];
+                                                   for (Count = 0; Count < (int)[directoryContent count]; Count++)
+                                                   {
+                                                       NSLog(@"File %d: %@", (Count + 1), [directoryContent objectAtIndex:Count]);
+                                                   }
+                                                   [_addFile addObject:path];
+                                                   
+                                                   [data writeToFile:path atomically:YES];
+                                                   [self stopActivity];
+                                                   QLPreviewController *previewController=[[QLPreviewController alloc]init];
+                                                   previewController.delegate=self;
+                                                   previewController.dataSource=self;
+                                                   [self presentViewController:previewController animated:YES completion:nil];
+                                                   ;
+                                                   [previewController.navigationItem setRightBarButtonItem:nil];                            _attachedToolBar.hidden = YES;
+                                                   
+                                               }
+                                               else{
+                                                   return;
+                                               }
+                                               
+                                               
+                                           });
+                                           
+                                       }
+                                       else{
+                                           
+                                       }
+                                       
+                                   }];
+                               }];
+    
+    UIAlertAction* Delete = [UIAlertAction
+                             actionWithTitle:@"Delete"
+                             style:UIAlertActionStyleDefault
+                             handler:^(UIAlertAction * action)
+                             {
+                                 //Handle your yes please button action here
+                                 [self startActivity:@"Processing..."];
+                                 
+                                 CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.attachedTableView];
+                                 NSIndexPath *indexPath = [self.attachedTableView indexPathForRowAtPoint:buttonPosition];
+                                 NSString *requestURL = [NSString stringWithFormat:@"%@MarkAsInactive?documentId=%@&Status=%@",kInactive,[[_listArray objectAtIndex:indexPath.row] objectForKey:@"DocumentId"],@"Attachment"];
+                                 
+                                 [WebserviceManager sendSyncRequestWithURLGet:requestURL method:SAServiceReqestHTTPMethodGET body:requestURL completionBlock:^(BOOL status, id responseValue) {
+                                     
+                                     if(status)
+                                     {
+                                         dispatch_async(dispatch_get_main_queue(),
+                                                        ^{
+                                                            
+                                                            
+                                                            _inactiveArray =responseValue;
+                                                            
+                                                            if (_inactiveArray != (id)[NSNull null])
+                                                            {
+                                                               // if (self.selectedIndexPath) {
+                                                                    [_listArray removeObjectAtIndex:indexPath.row];
+                                                               // }
+                                                                _attachedToolBar.hidden = YES;
+                                                                [_attachedTableView reloadData];
+                                                                
+                                                                [self stopActivity];
+                                                            }
+                                                            else{
+                                                                
+                                                                
+                                                                UIAlertController * alert = [UIAlertController
+                                                                                             alertControllerWithTitle:@"Info"
+                                                                                             message:@"Invalid Request"
+                                                                                             preferredStyle:UIAlertControllerStyleAlert];
+                                                                
+                                                                //Add Buttons
+                                                                
+                                                                UIAlertAction* yesButton = [UIAlertAction
+                                                                                            actionWithTitle:@"Ok"
+                                                                                            style:UIAlertActionStyleDefault
+                                                                                            handler:^(UIAlertAction * action) {
+                                                                                                //Handle your yes please button action here
+                                                                                                
+                                                                                            }];
+                                                                
+                                                                
+                                                                //Add your buttons to alert controller
+                                                                
+                                                                [alert addAction:yesButton];
+                                                                [self presentViewController:alert animated:YES completion:nil];
+                                                                [self stopActivity];
+                                                            }
+                                                            
+                                                        });
+                                         
+                                     }
+                                     else{
+                                         
+                                         
+                                     }
+                                     
+                                 }];
+                             }];
+    
+    UIAlertAction* cancel = [UIAlertAction
+                             actionWithTitle:@"Cancel"
+                             style:UIAlertActionStyleDestructive
+                             handler:^(UIAlertAction * action)
+                             {
+                                 
+                             }];
+    
+    [Download setValue:[[UIImage imageNamed:@"download.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forKey:@"image"];
+    [Delete setValue:[[UIImage imageNamed:@"trash-can-outline.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forKey:@"image"];
+    
+    [Download setValue:kCAAlignmentLeft forKey:@"titleTextAlignment"];
+    [Delete setValue:kCAAlignmentLeft forKey:@"titleTextAlignment"];
+    
+    view.view.tintColor = [UIColor colorWithRed:102.0/255.0 green:102.0/255.0 blue:102.0/255.0 alpha:1.0];
+    
+    if ([[[_listArray objectAtIndex:indexPath.row] objectForKey:@"IsDelete"] boolValue] == 1) {
+        [view addAction:Delete];
+        [view addAction:Download];
+    }
+    else [view addAction:Download];
+   // [view addAction:Share];
+    
+    [view addAction:cancel];
+    
+    [self presentViewController:view animated:YES completion:nil];
+
+}
+
+
+- (IBAction)downloadBtn:(id)sender {
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:@"Download File"
+                                 message:@"Do you want to download document?"
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    //Add Buttons
+    
+    UIAlertAction* yesButton = [UIAlertAction
+                                actionWithTitle:@"Yes"
+                                style:UIAlertActionStyleDefault
+                                handler:^(UIAlertAction * action) {
+                                    //Handle your yes please button action here
+                                    [self startActivity:@"Loading..."];
+                                    
+                                    NSString *requestURL = [NSString stringWithFormat:@"%@GetDraftFileData?workFlowId=%@",kDownloadPdf,_documentID];
+                                    [WebserviceManager sendSyncRequestWithURLGet:requestURL method:SAServiceReqestHTTPMethodGET body:requestURL completionBlock:^(BOOL status, id responseValue) {
+                                        
+                                        if(status)
+                                        {
+                                            dispatch_async(dispatch_get_main_queue(), ^{
+                                                
+                                                [_addFile removeAllObjects];
+
+                                                _pdfImageArray=[[AppDelegate AppDelegateInstance] strCheckNull:[NSString stringWithFormat:@"%@",[[responseValue valueForKey:@"Response"] valueForKey:@"FileData"]]];
+                                                if (_pdfImageArray != (id)[NSNull null])
+                                                {
+                                                    int Count;
+                                                    NSData *data = [[NSData alloc]initWithBase64EncodedString:_pdfImageArray options:0];
+                                                    NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0];
+                                                    NSString *path = [documentsDirectory stringByAppendingPathComponent:_documentName];
+                                                    NSArray *directoryContent = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:NULL];
+                                                    for (Count = 0; Count < (int)[directoryContent count]; Count++)
+                                                    {
+                                                        NSLog(@"File %d: %@", (Count + 1), [directoryContent objectAtIndex:Count]);
+                                                    }
+                                                    [_addFile addObject:path];
+
+                                                    [data writeToFile:path atomically:YES];
+                                                    [self stopActivity];
+                                                    QLPreviewController *previewController=[[QLPreviewController alloc]init];
+                                                    previewController.delegate=self;
+                                                    previewController.dataSource=self;
+                                                    [self presentViewController:previewController animated:YES completion:nil];
+                                                    ;
+                                                    [previewController.navigationItem setRightBarButtonItem:nil];                            _attachedToolBar.hidden = YES;
+                                                    
+                                                }
+                                                else{
+                                                    return;
+                                                }
+                                                
+                                                
+                                            });
+                                            
+                                        }
+                                        else{
+                                            
+                                        }
+                                        
+                                    }];
+
+                                }];
+    
+    UIAlertAction* noButton = [UIAlertAction
+                               actionWithTitle:@"No"
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * action) {
+                                   //Handle your yes please button action here
+                                   
+                               }];
+    
+    //Add your buttons to alert controller
+    
+    [alert addAction:yesButton];
+    [alert addAction:noButton];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (IBAction)cancelBtn:(id)sender {
+    _attachedToolBar.hidden = YES;
+}
+
+
+
+- (id)transformedValue:(NSDate *)date
+{
+    // Initialize the formatter.
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterShortStyle];
+    [formatter setTimeStyle:NSDateFormatterNoStyle];
+    
+    // Initialize the calendar and flags.
+    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit | NSWeekdayCalendarUnit;
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    
+    // Create reference date for supplied date.
+    NSDateComponents *comps = [calendar components:unitFlags fromDate:date];
+    [comps setHour:0];
+    [comps setMinute:0];
+    [comps setSecond:0];
+    NSDate *suppliedDate = [calendar dateFromComponents:comps];
+    
+    // Iterate through the eight days (tomorrow, today, and the last six).
+    int i;
+    for (i = -1; i < 7; i++)
+    {
+        // Initialize reference date.
+        comps = [calendar components:unitFlags fromDate:[NSDate date]];
+        [comps setHour:0];
+        [comps setMinute:0];
+        [comps setSecond:0];
+        [comps setDay:[comps day] - i];
+        NSDate *referenceDate = [calendar dateFromComponents:comps];
+        // Get week day (starts at 1).
+        int weekday = [[calendar components:unitFlags fromDate:referenceDate] weekday] - 1;
+        
+        if ([suppliedDate compare:referenceDate] == NSOrderedSame && i == -1)
+        {
+            // Tomorrow
+            return @"Tomorrow";
+        }
+        else if ([suppliedDate compare:referenceDate] == NSOrderedSame && i == 0)
+        {
+            // Today's time (a la iPhone Mail)
+            formatter.dateFormat = @"HH:mm:ss";
+            NSString *convertedString = [formatter stringFromDate:date];
+            // [formatter setDateStyle:NSDateFormatterNoStyle];
+            //[formatter setTimeStyle:NSDateFormatterShortStyle];
+            return convertedString;
+        }
+        else if ([suppliedDate compare:referenceDate] == NSOrderedSame && i == 1)
+        {
+            // Today
+            return @"Yesterday";
+        }
+        else if ([suppliedDate compare:referenceDate] == NSOrderedSame)
+        {
+            // Day of the week
+            NSString *day = [[formatter weekdaySymbols] objectAtIndex:weekday];
+            return day;
+        }
+    }
+    
+    // It's not in those eight days.
+    NSString *defaultDate = [formatter stringFromDate:date];
+    return defaultDate;
+}
+
+#pragma mark - data source(Preview)
+
+- (NSInteger)numberOfPreviewItemsInPreviewController:(QLPreviewController *)controller
+{
+    return [_addFile count];
+    
+}
+
+- (id <QLPreviewItem>)previewController:(QLPreviewController *)controller previewItemAtIndex:(NSInteger)index
+{
+    NSString *fileName = [_addFile objectAtIndex:index];
+    return [NSURL fileURLWithPath:fileName];
+}
+
+#pragma mark - delegate methods
+
+
+- (BOOL)previewController:(QLPreviewController *)controller shouldOpenURL:(NSURL *)url forPreviewItem:(id <QLPreviewItem>)item
+{
+    return YES;
+}
+
+- (CGRect)previewController:(QLPreviewController *)controller frameForPreviewItem:(id <QLPreviewItem>)item inSourceView:(UIView **)view
+{
+    
+    //Rectangle of the button which has been pressed by the user
+    //Zoom in and out effect appears to happen from the button which is pressed.
+    UIView *view1 = [self.view viewWithTag:currentPreviewIndex+1];
+    return view1.frame;
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

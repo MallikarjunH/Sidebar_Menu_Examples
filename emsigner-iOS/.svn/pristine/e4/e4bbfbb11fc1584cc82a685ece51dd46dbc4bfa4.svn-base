@@ -1,0 +1,479 @@
+//
+//  ShareVC.m
+//  emSigner
+//
+//  Created by Administrator on 11/18/16.
+//  Copyright © 2016 Emudhra. All rights reserved.
+//
+
+#import "ShareVC.h"
+#import "UITextView+Placeholder.h"
+#import "WebserviceManager.h"
+#import "HoursConstants.h"
+#import "NSObject+Activity.h"
+#import "MBProgressHUD.h"
+#import "LMNavigationController.h"
+#import "CoSignPendingVC.h"
+#import "PendingVC.h"
+#import "BaseViewController.h"
+#import "CompletedNextVC.h"
+#import "AppDelegate.h"
+
+@interface ShareVC ()
+
+@end
+
+@implementation ShareVC
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+   // self.mEmail.layer.cornerRadius = 10;
+    //self.MMessage.layer.cornerRadius = 10;
+    self.mShare.layer.cornerRadius = 10;
+    self.mCancel.layer.cornerRadius = 10;
+    
+    self.title = @"Share Document";
+    UIVisualEffect *blurEffect;
+    blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+
+    UIVisualEffectView *visualEffectView;
+    visualEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+
+    visualEffectView.frame = _imageView.bounds;
+    [_imageView addSubview:visualEffectView];
+    
+ //   ****************************Card View********************************
+    
+   // TextField Down Border
+    CALayer *border = [CALayer layer];
+    CGFloat borderWidth = 2;
+    border.borderColor = ([UIColor colorWithRed:0.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:1.0].CGColor);
+    border.frame = CGRectMake(0, _sharelable.frame.size.height - borderWidth, _sharelable.frame.size.width, _sharelable.frame.size.height);
+    border.borderWidth = borderWidth;
+    [_sharelable.layer addSublayer:border];
+    _sharelable.layer.masksToBounds = YES;
+    
+    [self.customView setAlpha:1];
+    self.customView.layer.masksToBounds = NO;
+    self.customView.layer.cornerRadius = 10;
+    self.customView.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
+    self.customView.layer.shadowRadius = 25;
+    self.customView.layer.shadowOpacity = 0.5;
+
+        UIBezierPath *path = [UIBezierPath bezierPathWithRect:self.customView.bounds];
+        self.customView.layer.shadowPath = path.CGPath;
+    
+    
+  //  _mEmail.layer.borderWidth = 1;
+   // _mEmail.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor lightGrayColor]);
+  //  _mEmail.layer.borderColor = [UIColor colorWithRed:154.0/255.0 green:154.0/255.0 blue:154.0/255.0 alpha:1.0].CGColor;
+    
+    _mEmail.delegate = self;
+   // _mEmail.placeholder = @"Email (Use a semicolon(,) to add multiple email)";
+    _mEmail.textColor = [UIColor blackColor];
+    //
+    _MMessage.layer.borderWidth = 1;
+  //  _MMessage.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor lightGrayColor]);
+    _MMessage.layer.borderColor = [UIColor colorWithRed:154.0/255.0 green:154.0/255.0 blue:154.0/255.0 alpha:1.0].CGColor;
+    
+    _MMessage.delegate = self;
+    _MMessage.placeholder = @"Message";
+    _MMessage.textColor = [UIColor blackColor];
+    //
+  //  self.view.backgroundColor = [UIColor clearColor];
+   //// self.modalPresentationStyle = UIModalPresentationCurrentContext;
+  //  self.modalPresentationStyle = UIModalPresentationFormSheet;
+    
+    self.pdfLable.text = [[NSString stringWithFormat:@"%@",_documentName]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];// this will do the trick
+}
+//- (BOOL)textFieldShouldReturn:(UITextField *)textField
+//{
+//    [textField resignFirstResponder];
+//    return YES;
+//}
+
+//Email Validation
+-(BOOL)IsValidEmail:(NSString *)checkString
+{
+    BOOL isvalidate;
+    NSString *emailRegEx = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegEx];
+    //Valid email address
+    
+    if ([emailTest evaluateWithObject:checkString] == YES)
+    {
+        isvalidate = YES;
+        //Do Something
+    }
+    else
+    {
+        isvalidate = NO;
+        //NSLog(@"email not in proper format");
+    }
+    return isvalidate;
+}
+/*****************************************************************/
+
+
+- (IBAction)mShare:(id)sender
+{
+    
+    if ([self.mEmail text].length > 1)
+    {
+        NSString *email=self.mEmail.text;  //is your str
+        
+        NSArray *items = [email componentsSeparatedByString:@","];
+        
+            BOOL IsValidate =true;
+            for(NSString *currentNumberString in items) {
+                NSLog(@"Number: %@", currentNumberString);
+                if (![self IsValidEmail:currentNumberString]) {
+                    IsValidate = false;
+                    UIAlertController * alert = [UIAlertController
+                                                 alertControllerWithTitle:@""
+                                                 message:@"Please enter Valid Email Id"
+                                                 preferredStyle:UIAlertControllerStyleAlert];
+                    
+                    //Add Buttons
+                    
+                    UIAlertAction* yesButton = [UIAlertAction
+                                                actionWithTitle:@"Ok"
+                                                style:UIAlertActionStyleDefault
+                                                handler:^(UIAlertAction * action) {
+                                                    //Handle your yes please button action here
+                                                    
+                                                }];
+                    
+                    
+                    //Add your buttons to alert controller
+                    
+                    [alert addAction:yesButton];
+                    //[alert addAction:noButton];
+                    
+                    [self presentViewController:alert animated:YES completion:nil];
+                    return;
+
+                }
+                
+            
+        }
+        
+        /***************************Calling Share Api*******************************/
+        
+            if (IsValidate ) {
+                
+                //Check Null Date
+                NSString *descriptionStr3;
+                descriptionStr3=[[AppDelegate AppDelegateInstance] strCheckNull:[NSString stringWithFormat:@"%@",_documentID]];
+                //
+                
+                //Check Null Date
+                NSString *descriptionStr;
+                descriptionStr=[[AppDelegate AppDelegateInstance] strCheckNull:[NSString stringWithFormat:@"%@",_workflowID]];
+                //
+                
+            [self startActivity:@"Document Sharing"];
+            
+            NSString *post = [NSString stringWithFormat:@"WorkflowId=%@&Email=%@&MessageContent=%@&IsAttached=%@&DocumentId=%@",_workflowID,self.mEmail.text,self.MMessage.text,_flagStr,descriptionStr3];
+            [WebserviceManager sendSyncRequestWithURL:kShare method:SAServiceReqestHTTPMethodPOST body:post completionBlock:^(BOOL status, id responseValue)
+             {
+                 
+                 if(status)
+                 {
+                     dispatch_async(dispatch_get_main_queue(),
+                                    ^{
+                                        
+                                        _shareArray = [responseValue valueForKey:@"Response"];
+                                        
+                                        if (_shareArray != (id)[NSNull null])
+                                        {
+                                            
+                                            NSNumber * isSuccessNumber = (NSNumber *)[responseValue valueForKey:@"IsSuccess"];
+                                            if([isSuccessNumber boolValue] == YES)
+                                            {
+                                                
+                                                UIAlertController * alert = [UIAlertController
+                                                                             alertControllerWithTitle:@""
+                                                                             message:@"Document Shared Successfully"
+                                                                             preferredStyle:UIAlertControllerStyleAlert];
+                                                
+                                                //Add Buttons
+                                                
+                                                UIAlertAction* yesButton = [UIAlertAction
+                                                                            actionWithTitle:@"Ok"
+                                                                            style:UIAlertActionStyleDefault
+                                                                            handler:^(UIAlertAction * action) {
+                                                                                //Handle your yes please button action here
+                                                                                
+                                                                                //[self dismissViewControllerAnimated:YES completion:nil];
+                                                                                [[self navigationController] popViewControllerAnimated:YES];
+
+                                                                            }];
+                                                
+                                                
+                                                //Add your buttons to alert controller
+                                                
+                                                [alert addAction:yesButton];
+                                                //[alert addAction:noButton];
+                                                
+                                                [self presentViewController:alert animated:YES completion:nil];
+                                                [self stopActivity];
+                                                //[self dismissViewControllerAnimated:YES completion:nil];
+                                            }
+                                           else{
+                                               
+                                               
+                                               UIAlertController * alert = [UIAlertController
+                                                                            alertControllerWithTitle:@""
+                                                                            message:[[responseValue valueForKey:@"Messages"] objectAtIndex:0]
+                                                                            preferredStyle:UIAlertControllerStyleAlert];
+                                               
+                                               //Add Buttons
+                                               
+                                               UIAlertAction* yesButton = [UIAlertAction
+                                                                           actionWithTitle:@"Ok"
+                                                                           style:UIAlertActionStyleDefault
+                                                                           handler:^(UIAlertAction * action) {
+                                                                               //Handle your yes please button action here
+                                                                          
+                                                                              // [self dismissViewControllerAnimated:YES completion:Nil];
+                                                                               [[self navigationController] popViewControllerAnimated:YES];
+
+                                                                           }];
+                                               
+                                               //Add your buttons to alert controller
+                                               
+                                               [alert addAction:yesButton];
+                                               
+                                               [self presentViewController:alert animated:YES completion:nil];
+                                               
+                                               [self stopActivity];
+                                            
+                                            }
+                                            
+                                          
+
+                                        }
+                                        else{
+                                            
+                                           
+                                            
+                                        }
+                                        
+                                    
+                                    });
+                     
+                 }
+                 else{
+                     
+                     
+                 }
+                 
+             }];
+
+        }
+        
+        
+        
+    }
+                    else
+                    {
+
+                        UIAlertController * alert = [UIAlertController
+                                                     alertControllerWithTitle:@""
+                                                     message:@"Please enter Email Id"
+                                                     preferredStyle:UIAlertControllerStyleAlert];
+                        
+                        //Add Buttons
+                        
+                        UIAlertAction* yesButton = [UIAlertAction
+                                                    actionWithTitle:@"Ok"
+                                                    style:UIAlertActionStyleDefault
+                                                    handler:^(UIAlertAction * action) {
+                                                        //Handle your yes please button action here
+                                                        
+                                                    }];
+                        
+                        
+                        //Add your buttons to alert controller
+                        
+                        [alert addAction:yesButton];
+                        
+                        [self presentViewController:alert animated:YES completion:nil];
+                    }
+
+}
+
+
+- (IBAction)mCancel:(id)sender
+{
+    [[self navigationController] popViewControllerAnimated:YES];
+}
+
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardDidShowNotification object:nil];
+    
+}
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardDidHideNotification object:nil];
+    
+    [self.view endEditing:YES];
+    
+}
+
+//- (void)keyboardWillShow:(NSNotification*)aNotification {
+//    [UIView animateWithDuration:0.25 animations:^
+//     {
+//         CGRect newFrame = [self.view frame];
+//         newFrame.origin.y -= 50; // tweak here to adjust the moving position
+//         [self.view setFrame:newFrame];
+//
+//     }completion:^(BOOL finished)
+//     {
+//
+//     }];
+//}
+//
+//- (void)keyboardWillBeHidden:(NSNotification*)aNotification {
+//    [UIView animateWithDuration:0.25 animations:^
+//     {
+//         CGRect newFrame = [self.view frame];
+//         newFrame.origin.y += 50; // tweak here to adjust the moving position
+//        // newFrame.origin.x = 0;
+//         [self.view setFrame:newFrame];
+//
+//     }completion:^(BOOL finished)
+//     {
+//
+//     }];
+//
+//}
+
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    // register for keyboard notifications
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(keyboardWillShow:)
+//                                                 name:UIKeyboardWillShowNotification
+//                                               object:nil];
+//
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(keyboardWillHide:)
+//                                                 name:UIKeyboardWillHideNotification
+//                                               object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+   // [super viewWillDisappear:animated];
+    // unregister for keyboard notifications while not visible.
+//    [[NSNotificationCenter defaultCenter] removeObserver:self
+//                                                    name:UIKeyboardWillShowNotification
+//                                                  object:nil];
+//
+//    [[NSNotificationCenter defaultCenter] removeObserver:self
+//                                                    name:UIKeyboardWillHideNotification
+//                                                  object:nil];
+}
+
+-(void)keyboardWillShow:(NSNotification*)aNotification {
+    // Animate the current view out of the way
+    if (self.view.frame.origin.y >= 0)
+    {
+        [self setViewMovedUp:YES];
+    }
+    else if (self.view.frame.origin.y < 0)
+    {
+        [self setViewMovedUp:NO];
+    }
+}
+
+-(void)keyboardWillHide:(NSNotification*)aNotification {
+    if (self.view.frame.origin.y >= 0)
+    {
+        [self setViewMovedUp:YES];
+    }
+    else if (self.view.frame.origin.y < 0)
+    {
+        [self setViewMovedUp:NO];
+    }
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)sender
+{
+  
+        //move the main view, so that the keyboard does not hide it.
+        if  (self.view.frame.origin.y >= 0)
+        {
+            [self setViewMovedUp:YES];
+        }
+    
+}
+
+//method to move the view up/down whenever the keyboard is shown/dismissed
+-(void)setViewMovedUp:(BOOL)movedUp
+{
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.3]; // if you want to slide up the view
+    
+    CGRect rect = self.view.frame;
+    if (movedUp)
+    {
+        // 1. move the view's origin up so that the text field that will be hidden come above the keyboard
+        // 2. increase the size of the view so that the area behind the keyboard is covered up.
+        rect.origin.y -= 50;
+        rect.size.height += 50;
+    }
+    else
+    {
+        // revert back to the normal state.
+        rect.origin.y += 50;
+        rect.size.height -= 50;
+    }
+    self.view.frame = rect;
+    
+    [UIView commitAnimations];
+}
+
+- (IBAction)shareSwitch:(id)sender
+{
+   //BOOL flag = TRUE;
+    if([sender isOn]){
+        // Execute any code when the switch is ON
+        _flagStr = @"true";
+        NSLog(@"Switch is ON");
+    } else{
+        // Execute any code when the switch is OFF
+        _flagStr = @"false";
+        NSLog(@"Switch is OFF");
+    }
+}
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+
+@end

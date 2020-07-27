@@ -1,0 +1,2736 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06031EB322C379610005248A /* EsignWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06031EB222C379610005248A /* EsignWebView.m */; };
+		06054B8B21414DD5006E749D /* SignatureImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06054B8A21414DD5006E749D /* SignatureImagesCell.m */; };
+		06058C2F2303E4EE00ACFC7B /* CommentsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06058C2E2303E4EE00ACFC7B /* CommentsController.m */; };
+		06058C32230406BA00ACFC7B /* DropDownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06058C31230406BA00ACFC7B /* DropDownCell.m */; };
+		0605CF7621833F1C00B36C36 /* DocumentInfoCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0605CF7421833F1C00B36C36 /* DocumentInfoCollectionCell.m */; };
+		0605CF7721833F1C00B36C36 /* DocumentInfoCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0605CF7521833F1C00B36C36 /* DocumentInfoCollectionCell.xib */; };
+		06108778240633E8006DC56E /* FlexiformsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 06108776240633E8006DC56E /* FlexiformsPage.m */; };
+		06108779240633E8006DC56E /* FlexiformsPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06108777240633E8006DC56E /* FlexiformsPage.xib */; };
+		0611394F210B1FE5003BD191 /* DocsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0611394E210B1FE5003BD191 /* DocsPage.m */; };
+		06113955210B2BD1003BD191 /* DocsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06113954210B2BD1003BD191 /* DocsCell.m */; };
+		0611D85521D5F4AF00C01C9C /* NSString+DateAsAppleTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 0611D85421D5F4AF00C01C9C /* NSString+DateAsAppleTime.m */; };
+		0613A5CF249A3418000FE35D /* BulkDocVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0613A5CE249A3418000FE35D /* BulkDocVC.m */; };
+		061754682473BF500025A62D /* SignatoriesListForFlexiforms.xib in Resources */ = {isa = PBXBuildFile; fileRef = 061754672473BF500025A62D /* SignatoriesListForFlexiforms.xib */; };
+		06211E6221395F8F00412D1B /* SubClassView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06211E6021395F8E00412D1B /* SubClassView.xib */; };
+		06211E6321395F8F00412D1B /* SubClassView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06211E6121395F8F00412D1B /* SubClassView.m */; };
+		0627B6B1239E113200F1AA4E /* IntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0627B6B0239E113200F1AA4E /* IntentHandler.m */; };
+		0627B6B9239E113300F1AA4E /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0627B6B8239E113300F1AA4E /* IntentsUI.framework */; };
+		0627B6BD239E113300F1AA4E /* IntentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0627B6BC239E113300F1AA4E /* IntentViewController.m */; };
+		0627B6C0239E113300F1AA4E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0627B6BE239E113300F1AA4E /* MainInterface.storyboard */; };
+		0627B6C4239E113300F1AA4E /* emSignerDocumentSignIntentUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0627B6B7239E113300F1AA4E /* emSignerDocumentSignIntentUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0627B6C7239E113300F1AA4E /* emSignerDocumentSignIntent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0627B6AD239E113200F1AA4E /* emSignerDocumentSignIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0627B6D0239E11A200F1AA4E /* DocumentSignIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 0627B6CF239E11A200F1AA4E /* DocumentSignIntents.intentdefinition */; };
+		062C60BE221425D600FDAD7B /* MPGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 062C60BD221425D600FDAD7B /* MPGTextField.m */; };
+		06350D91232B65880004661E /* ReviewerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06350D90232B65880004661E /* ReviewerController.m */; };
+		0637A0092407C96D0014E303 /* SignatoriesListForFlexiforms.m in Sources */ = {isa = PBXBuildFile; fileRef = 0637A0072407C96D0014E303 /* SignatoriesListForFlexiforms.m */; };
+		064222D6210D8A890028CB5B /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064222D5210D8A890028CB5B /* Messages.framework */; };
+		064222D8210D8A910028CB5B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064222D7210D8A910028CB5B /* MessageUI.framework */; };
+		064762792170AD32008E03E9 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 064762782170AD31008E03E9 /* FXBlurView.m */; };
+		0647627C2170AD44008E03E9 /* ImageFileCrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 0647627B2170AD44008E03E9 /* ImageFileCrop.m */; };
+		06593B7321268FB000B07C0D /* emsigner-with-ico2.png in Resources */ = {isa = PBXBuildFile; fileRef = 06593B7221268FAF00B07C0D /* emsigner-with-ico2.png */; };
+		06636038225CC0F500514E23 /* delegationFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 06636036225CC0F500514E23 /* delegationFlow.m */; };
+		06636039225CC0F500514E23 /* delegationFlow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06636037225CC0F500514E23 /* delegationFlow.xib */; };
+		0663603D225CC2E300514E23 /* delegationtableviewcell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0663603B225CC2E300514E23 /* delegationtableviewcell.m */; };
+		0663603E225CC2E300514E23 /* delegationtableviewcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0663603C225CC2E300514E23 /* delegationtableviewcell.xib */; };
+		0670EE0D24740E7900791A15 /* UploadHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0670EE0C24740E7900791A15 /* UploadHeader.m */; };
+		0670EE0F24740F0000791A15 /* UploadHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0670EE0E24740F0000791A15 /* UploadHeader.xib */; };
+		06710C0F22CDFD63005BD9EA /* DocsNameForHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 06710BDB22CDFD5E005BD9EA /* DocsNameForHeader.m */; };
+		06710C1022CDFD63005BD9EA /* ShowEditImagesFromImageList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06710BDC22CDFD5F005BD9EA /* ShowEditImagesFromImageList.xib */; };
+		06710C1122CDFD63005BD9EA /* SignersCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06710BDE22CDFD5F005BD9EA /* SignersCollectionCell.xib */; };
+		06710C1222CDFD63005BD9EA /* ShowActivities.m in Sources */ = {isa = PBXBuildFile; fileRef = 06710BDF22CDFD5F005BD9EA /* ShowActivities.m */; };
+		06710C1322CDFD63005BD9EA /* UploadDocuments.m in Sources */ = {isa = PBXBuildFile; fileRef = 06710BE122CDFD5F005BD9EA /* UploadDocuments.m */; };
+		06710C1422CDFD63005BD9EA /* ImagelistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06710BE222CDFD5F005BD9EA /* ImagelistCell.m */; };
+		06710C1522CDFD63005BD9EA /* PreviewerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06710BE422CDFD5F005BD9EA /* PreviewerController.m */; };
+		06710C1622CDFD63005BD9EA /* workflow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06710BE522CDFD5F005BD9EA /* workflow.xib */; };
+		06710C1722CDFD63005BD9EA /* DocsNameForHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06710BE622CDFD5F005BD9EA /* DocsNameForHeader.xib */; };
+		06710C1822CDFD63005BD9EA /* WorkflowTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06710BE722CDFD5F005BD9EA /* WorkflowTableViewController.m */; };
+		06710C1922CDFD63005BD9EA /* ShowActivitiesCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06710BE922CDFD5F005BD9EA /* ShowActivitiesCellTableViewCell.m */; };
+		06710C1A22CDFD63005BD9EA /* SignersInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 06710BEA22CDFD60005BD9EA /* SignersInformation.m */; };
+		06710C1B22CDFD63005BD9EA /* SignersCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06710BEB22CDFD60005BD9EA /* SignersCollectionCell.m */; };
+		06710C1C22CDFD63005BD9EA /* MultipleImagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06710BEC22CDFD60005BD9EA /* MultipleImagesCell.xib */; };
+		06710C1D22CDFD63005BD9EA /* ShowActivitiesCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06710BED22CDFD60005BD9EA /* ShowActivitiesCellTableViewCell.xib */; };
+		06710C1E22CDFD63005BD9EA /* DocsSize.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06710BEE22CDFD60005BD9EA /* DocsSize.xib */; };
+		06710C2022CDFD63005BD9EA /* ShowPdfForImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 06710BF022CDFD60005BD9EA /* ShowPdfForImages.m */; };
+		06710C2122CDFD63005BD9EA /* ShowEditImagesFromImageList.m in Sources */ = {isa = PBXBuildFile; fileRef = 06710BF122CDFD60005BD9EA /* ShowEditImagesFromImageList.m */; };
+		06710C2222CDFD63005BD9EA /* SignersDisplay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06710BF322CDFD60005BD9EA /* SignersDisplay.xib */; };
+		06710C2322CDFD63005BD9EA /* SignersCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06710BF422CDFD60005BD9EA /* SignersCellTableViewCell.xib */; };
+		06710C2422CDFD63005BD9EA /* RenameDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06710BF722CDFD61005BD9EA /* RenameDocument.xib */; };
+		06710C2522CDFD63005BD9EA /* SignerListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06710BF922CDFD61005BD9EA /* SignerListCell.xib */; };
+		06710C2622CDFD63005BD9EA /* SignersDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 06710BFD22CDFD61005BD9EA /* SignersDisplay.m */; };
+		06710C2722CDFD63005BD9EA /* DocsSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 06710BFE22CDFD61005BD9EA /* DocsSize.m */; };
+		06710C2822CDFD63005BD9EA /* SignersInformation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06710BFF22CDFD62005BD9EA /* SignersInformation.xib */; };
+		06710C2922CDFD63005BD9EA /* ShowPdfForImages.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06710C0122CDFD62005BD9EA /* ShowPdfForImages.xib */; };
+		06710C2A22CDFD63005BD9EA /* workflow.m in Sources */ = {isa = PBXBuildFile; fileRef = 06710C0322CDFD62005BD9EA /* workflow.m */; };
+		06710C2B22CDFD63005BD9EA /* SignerListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06710C0522CDFD62005BD9EA /* SignerListCell.m */; };
+		06710C2C22CDFD63005BD9EA /* RenameDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 06710C0722CDFD62005BD9EA /* RenameDocument.m */; };
+		06710C2D22CDFD63005BD9EA /* ShowActivities.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06710C0822CDFD62005BD9EA /* ShowActivities.xib */; };
+		06710C2E22CDFD63005BD9EA /* SignersCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06710C0922CDFD62005BD9EA /* SignersCellTableViewCell.m */; };
+		06710C2F22CDFD63005BD9EA /* MultipleImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06710C0B22CDFD63005BD9EA /* MultipleImagesCell.m */; };
+		06710C3022CDFD63005BD9EA /* ImagelistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06710C0D22CDFD63005BD9EA /* ImagelistCell.xib */; };
+		06732E532150F26F007BEC69 /* ForgotPasswordUpdated.m in Sources */ = {isa = PBXBuildFile; fileRef = 06732E522150F26F007BEC69 /* ForgotPasswordUpdated.m */; };
+		067863102189D85C006C7BDF /* DocumentInfoNames.m in Sources */ = {isa = PBXBuildFile; fileRef = 0678630E2189D85C006C7BDF /* DocumentInfoNames.m */; };
+		067863112189D85C006C7BDF /* DocumentInfoNames.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0678630F2189D85C006C7BDF /* DocumentInfoNames.xib */; };
+		067863152189DE59006C7BDF /* DocumentNamesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 067863132189DE59006C7BDF /* DocumentNamesCell.m */; };
+		067863162189DE59006C7BDF /* DocumentNamesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 067863142189DE59006C7BDF /* DocumentNamesCell.xib */; };
+		06821D5823EBED1400A40B68 /* ControllerAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 06821D5523EBED1400A40B68 /* ControllerAnimator.m */; };
+		06821D5923EBED1400A40B68 /* OverlayPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06821D5623EBED1400A40B68 /* OverlayPresentationController.m */; };
+		06821D5A23EBED1400A40B68 /* OverlayTransitioningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06821D5723EBED1400A40B68 /* OverlayTransitioningDelegate.m */; };
+		06871455220C391A00B61578 /* SPUserResizableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06871453220C391A00B61578 /* SPUserResizableView.m */; };
+		069B93E422130A7B00B05771 /* DelegateDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 069B93E222130A7B00B05771 /* DelegateDocument.m */; };
+		069B93E522130A7B00B05771 /* DelegateDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 069B93E322130A7B00B05771 /* DelegateDocument.xib */; };
+		069D3DF823D5729100932607 /* SigningSiri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069D3DF723D5729100932607 /* SigningSiri.swift */; };
+		06A7B9F922A9245100BFDF0C /* swiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A7B9F822A9245100BFDF0C /* swiftController.swift */; };
+		06A8EDF3239F684A00D57EA0 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A8EDF2239F684A00D57EA0 /* Intents.framework */; };
+		06AFF684239A7F230037D3A4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06AFF683239A7F230037D3A4 /* MapKit.framework */; };
+		06B207F323211D29004BDDF3 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B207F223211D29004BDDF3 /* AccountViewController.m */; };
+		06B803B52223E5F600942F1A /* ParallelSigning.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B803B32223E5F600942F1A /* ParallelSigning.m */; };
+		06B803B62223E5F600942F1A /* ParallelSigning.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06B803B42223E5F600942F1A /* ParallelSigning.xib */; };
+		06BBF71222019B8100172797 /* floatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BBF70F22019B8100172797 /* floatTableViewCell.m */; };
+		06BBF71322019B8100172797 /* floatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06BBF71022019B8100172797 /* floatTableViewCell.xib */; };
+		06BBF71422019B8100172797 /* VCFloatingActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BBF71122019B8100172797 /* VCFloatingActionButton.m */; };
+		06C217A121133EAB002EAAE2 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C217A021133EAB002EAAE2 /* LocalAuthentication.framework */; };
+		06D3B71824728C92001BC378 /* CustomHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D3B71724728C92001BC378 /* CustomHeader.m */; };
+		06D3B71B24728CFB001BC378 /* CustomHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D3B71A24728CFB001BC378 /* CustomHeader.xib */; };
+		06D49B60231655A3001EC7B9 /* GHWalkThroughView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D49B5C231655A2001EC7B9 /* GHWalkThroughView.m */; };
+		06D49B61231655A3001EC7B9 /* GHWalkThroughPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D49B5D231655A2001EC7B9 /* GHWalkThroughPageCell.m */; };
+		06D64D5424696C2300A28387 /* WorkflowScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D64D5324696C2300A28387 /* WorkflowScannerController.swift */; };
+		06D64D5624696C8500A28387 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06D64D5524696C8500A28387 /* AVFoundation.framework */; };
+		06D64D5824696C9C00A28387 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06D64D5724696C9C00A28387 /* CoreImage.framework */; };
+		06D7A1292237916F002F96F4 /* PDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06D7A1282237916F002F96F4 /* PDFKit.framework */; };
+		06D7A12C2237B3C1002F96F4 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D7A12B2237B3C1002F96F4 /* MyAnnotation.m */; };
+		06D97D1B2313ADC200CC682A /* ImagesForPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D97D1A2313ADC200CC682A /* ImagesForPageViewController.m */; };
+		06DB56BE229D3B280086E159 /* DocinfoSignatoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DB56BB229D3B270086E159 /* DocinfoSignatoryCell.m */; };
+		06DB56BF229D3B280086E159 /* DocinfoSignatoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06DB56BD229D3B270086E159 /* DocinfoSignatoryCell.xib */; };
+		06E1CFBE2118835D007B93C2 /* SignatoriesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E1CFBD2118835D007B93C2 /* SignatoriesCell.m */; };
+		06E29AF72354327F00AE0282 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06E29AF62354327E00AE0282 /* GoogleService-Info.plist */; };
+		06F6057321DF78F900FAABC0 /* LoadingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F6057121DF78F900FAABC0 /* LoadingCell.m */; };
+		06F6057421DF78F900FAABC0 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F6057221DF78F900FAABC0 /* LoadingCell.xib */; };
+		06FFC55C2118778F0025CD11 /* SignatoriesPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FFC55B2118778F0025CD11 /* SignatoriesPage.m */; };
+		974DA26FD7EAA0E7EDC65827 /* Pods_emSigner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2221E0972C90471FA9DD6BE /* Pods_emSigner.framework */; };
+		AFDED992677F13565591717F /* Pods_emSignerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660D4534BCC142B598BD2D31 /* Pods_emSignerTests.framework */; };
+		B4964EA0C47D50838893AD7B /* Pods_emSignerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E0F0C161D1DFAF11A388C50 /* Pods_emSignerTests.framework */; };
+		C1E3EDDFA94B8A93B38AB92E /* Pods_emSignerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4386461A364855C80F3111 /* Pods_emSignerUITests.framework */; };
+		C3009DDF1D641CF4006DB84E /* DocumentLogTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3009DDD1D641CF4006DB84E /* DocumentLogTableViewCell.m */; };
+		C3009DE01D641CF4006DB84E /* DocumentLogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3009DDE1D641CF4006DB84E /* DocumentLogTableViewCell.xib */; };
+		C3009DE41D641D3A006DB84E /* CustomDocumentLogTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3009DE21D641D3A006DB84E /* CustomDocumentLogTableViewCell.m */; };
+		C3009DE51D641D3A006DB84E /* CustomDocumentLogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3009DE31D641D3A006DB84E /* CustomDocumentLogTableViewCell.xib */; };
+		C301D09A1D6C49A50027B362 /* RecallVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C301D0991D6C49A50027B362 /* RecallVC.m */; };
+		C30360EF1E2C981F00578EDF /* LMMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C30360EE1E2C981F00578EDF /* LMMenuCell.m */; };
+		C304C0A11F010138007800EF /* DocsStoreMultiplePdf.m in Sources */ = {isa = PBXBuildFile; fileRef = C304C0A01F010138007800EF /* DocsStoreMultiplePdf.m */; };
+		C306C9BD1EC96D940086B2AD /* RateUsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C306C9BC1EC96D940086B2AD /* RateUsVC.m */; };
+		C30873691D477B11000A51B6 /* MyProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C30873681D477B11000A51B6 /* MyProfileVC.m */; };
+		C3092DAF1F0B5B4E000834C7 /* AttachedMultiplePdfTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3092DAD1F0B5B4E000834C7 /* AttachedMultiplePdfTableViewCell.m */; };
+		C3092DB01F0B5B4E000834C7 /* AttachedMultiplePdfTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3092DAE1F0B5B4E000834C7 /* AttachedMultiplePdfTableViewCell.xib */; };
+		C30998101F1BA67A00058938 /* AttachedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C309980F1F1BA67A00058938 /* AttachedVC.m */; };
+		C309AFB71E545B5700B7ACFA /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C309AFB61E545B5600B7ACFA /* QuickLook.framework */; };
+		C30FB16F1E14DDA400FE087E /* DraftInactiveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C30FB16D1E14DDA400FE087E /* DraftInactiveVC.m */; };
+		C30FB1701E14DDA500FE087E /* DraftInactiveVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C30FB16E1E14DDA400FE087E /* DraftInactiveVC.xib */; };
+		C311605B1E5B000300E93385 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = C311605A1E5B000300E93385 /* UITextView+Placeholder.m */; };
+		C313681A1E547EF600252501 /* ChangePasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C31368191E547EF600252501 /* ChangePasswordVC.m */; };
+		C3396CE41E8CD1B9000F638D /* PdfListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3396CE21E8CD1B9000F638D /* PdfListTableViewCell.m */; };
+		C3396CE51E8CD1B9000F638D /* PdfListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3396CE31E8CD1B9000F638D /* PdfListTableViewCell.xib */; };
+		C339C4061D9BCD470039DEAE /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C339C4031D9BCD470039DEAE /* iRate.bundle */; };
+		C339C4071D9BCD470039DEAE /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = C339C4051D9BCD470039DEAE /* iRate.m */; };
+		C339D5E51DDB232600C03171 /* RecallStatusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C339D5E31DDB232600C03171 /* RecallStatusVC.m */; };
+		C339D5E61DDB232600C03171 /* RecallStatusVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C339D5E41DDB232600C03171 /* RecallStatusVC.xib */; };
+		C339D5EA1DDB238200C03171 /* DeclineStatusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C339D5E81DDB238200C03171 /* DeclineStatusVC.m */; };
+		C339D5EB1DDB238200C03171 /* DeclineStatusVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C339D5E91DDB238200C03171 /* DeclineStatusVC.xib */; };
+		C339D5F41DDB23E400C03171 /* CompleteStatusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C339D5F21DDB23E400C03171 /* CompleteStatusVC.m */; };
+		C339D5F51DDB23E400C03171 /* CompleteStatusVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C339D5F31DDB23E400C03171 /* CompleteStatusVC.xib */; };
+		C339D5F91DDB248100C03171 /* RecallTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C339D5F71DDB248100C03171 /* RecallTableViewCell.m */; };
+		C339D5FA1DDB248100C03171 /* RecallTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C339D5F81DDB248100C03171 /* RecallTableViewCell.xib */; };
+		C33C343B1E27BDEC0000ABC0 /* RPFloatingPlaceholderTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C33C34381E27BDEC0000ABC0 /* RPFloatingPlaceholderTextField.m */; };
+		C33C343C1E27BDEC0000ABC0 /* RPFloatingPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C33C343A1E27BDEC0000ABC0 /* RPFloatingPlaceholderTextView.m */; };
+		C33C86DF1D48851900856B55 /* CustomSignVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C33C86DE1D48851900856B55 /* CustomSignVC.m */; };
+		C33EC9BF1DF592F00062BB8D /* CaptureSignatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = C33EC9BD1DF592F00062BB8D /* CaptureSignatureView.m */; };
+		C33EC9C01DF592F00062BB8D /* CaptureSignatureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33EC9BE1DF592F00062BB8D /* CaptureSignatureView.xib */; };
+		C340098C1DE0552D007008AE /* NotStartedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C340098A1DE0552D007008AE /* NotStartedTableViewCell.m */; };
+		C340098D1DE0552D007008AE /* NotStartedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C340098B1DE0552D007008AE /* NotStartedTableViewCell.xib */; };
+		C34800261E30B7E200EE6D08 /* DocumentInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C34800251E30B7E200EE6D08 /* DocumentInfoVC.m */; };
+		C34A43D41E40718D00A38BB0 /* DeclineNextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C34A43D21E40718D00A38BB0 /* DeclineNextVC.m */; };
+		C34A43D51E40718D00A38BB0 /* DeclineNextVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34A43D31E40718D00A38BB0 /* DeclineNextVC.xib */; };
+		C34B43931DF1832D00295E72 /* PendingListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C34B43911DF1832D00295E72 /* PendingListVC.m */; };
+		C34B43941DF1832D00295E72 /* PendingListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34B43921DF1832D00295E72 /* PendingListVC.xib */; };
+		C35368DC1DEFEDEA008B7029 /* PendingVCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C35368DA1DEFEDEA008B7029 /* PendingVCTableViewCell.m */; };
+		C35368DD1DEFEDEA008B7029 /* PendingVCTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35368DB1DEFEDEA008B7029 /* PendingVCTableViewCell.xib */; };
+		C35368E41DEFF8CD008B7029 /* PendingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C35368E21DEFF8CD008B7029 /* PendingVC.m */; };
+		C35368E51DEFF8CD008B7029 /* PendingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35368E31DEFF8CD008B7029 /* PendingVC.xib */; };
+		C35A93E51DDF0A37001B8D2A /* ShareVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C35A93E41DDF0A37001B8D2A /* ShareVC.m */; };
+		C36207061F208E8C00FBAFBE /* AttachedViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C36207041F208E8C00FBAFBE /* AttachedViewVC.m */; };
+		C36207071F208E8C00FBAFBE /* AttachedViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36207051F208E8C00FBAFBE /* AttachedViewVC.xib */; };
+		C368B10C1EF6CA9A00F0458F /* emSigner Mobile App Description (2).pdf in Resources */ = {isa = PBXBuildFile; fileRef = C368B10B1EF6CA9A00F0458F /* emSigner Mobile App Description (2).pdf */; };
+		C397ECD21E3B642800844B53 /* DocInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C397ECD01E3B642800844B53 /* DocInfoTableViewCell.m */; };
+		C397ECD31E3B642800844B53 /* DocInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C397ECD11E3B642800844B53 /* DocInfoTableViewCell.xib */; };
+		C397ECD71E3B644400844B53 /* DocAssignedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C397ECD51E3B644400844B53 /* DocAssignedTableViewCell.m */; };
+		C397ECD81E3B644400844B53 /* DocAssignedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C397ECD61E3B644400844B53 /* DocAssignedTableViewCell.xib */; };
+		C3A12D201D93B8A50077BF5D /* ForgotPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A12D1F1D93B8A50077BF5D /* ForgotPasswordVC.m */; };
+		C3A58D521D4F61D40080B011 /* DeclineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A58D511D4F61D40080B011 /* DeclineVC.m */; };
+		C3AB662E1E324BC400C17560 /* NSObject+Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = C3AB662C1E324BC400C17560 /* NSObject+Activity.m */; };
+		C3E8460F1D9CDDDA007B14D2 /* AboutUsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E8460E1D9CDDDA007B14D2 /* AboutUsVC.m */; };
+		C3F0620F1D50A52A008F19B3 /* CustomPopOverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F0620E1D50A52A008F19B3 /* CustomPopOverVC.m */; };
+		C3F062121D50A8A3008F19B3 /* DocumentLogVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F062111D50A8A3008F19B3 /* DocumentLogVC.m */; };
+		C3F2A2731D34F0EE00BFA456 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F2A2721D34F0EE00BFA456 /* main.m */; };
+		C3F2A2761D34F0EE00BFA456 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F2A2751D34F0EE00BFA456 /* AppDelegate.m */; };
+		C3F2A2791D34F0EE00BFA456 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F2A2781D34F0EE00BFA456 /* ViewController.m */; };
+		C3F2A27C1D34F0EE00BFA456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F2A27A1D34F0EE00BFA456 /* Main.storyboard */; };
+		C3F2A27E1D34F0EE00BFA456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3F2A27D1D34F0EE00BFA456 /* Assets.xcassets */; };
+		C3F2A2811D34F0EE00BFA456 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F2A27F1D34F0EE00BFA456 /* LaunchScreen.storyboard */; };
+		C3F2A28C1D34F0EE00BFA456 /* emSignerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F2A28B1D34F0EE00BFA456 /* emSignerTests.m */; };
+		C3F2A2971D34F0EE00BFA456 /* emSignerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F2A2961D34F0EE00BFA456 /* emSignerUITests.m */; };
+		C3F2A2A91D34F37000BFA456 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F2A2A81D34F37000BFA456 /* UIKit.framework */; };
+		C3F2A2AB1D34F37D00BFA456 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F2A2AA1D34F37D00BFA456 /* QuartzCore.framework */; };
+		C3F2A2AD1D34F3A900BFA456 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F2A2AC1D34F3A900BFA456 /* Foundation.framework */; };
+		C3F2A2AF1D34F3B700BFA456 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F2A2AE1D34F3B700BFA456 /* CoreGraphics.framework */; };
+		C3F50AD41E07EC4A00EFA46D /* PPSSignatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F50AD31E07EC4A00EFA46D /* PPSSignatureView.m */; };
+		C3F50ADC1E07ED2500EFA46D /* MPBCustomStyleSignatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F50AD71E07ED2500EFA46D /* MPBCustomStyleSignatureViewController.m */; };
+		C3F50ADD1E07ED2500EFA46D /* MPBDefaultStyleSignatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F50AD91E07ED2500EFA46D /* MPBDefaultStyleSignatureViewController.m */; };
+		C3F50ADE1E07ED2500EFA46D /* MPBSignatureViewControllerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F50ADB1E07ED2500EFA46D /* MPBSignatureViewControllerConfiguration.m */; };
+		C3F50AE11E08076200EFA46D /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F50AE01E08076200EFA46D /* GLKit.framework */; };
+		C3F50AE41E08077900EFA46D /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F50AE21E08077900EFA46D /* OpenAL.framework */; };
+		C3F50AE51E08077900EFA46D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F50AE31E08077900EFA46D /* OpenGLES.framework */; };
+		C3F5949E1DE42A9F00080735 /* GetOTPVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F5949D1DE42A9F00080735 /* GetOTPVC.m */; };
+		C3F5FD991ED58A36004EC97E /* MultiplePdfViewerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F5FD981ED58A36004EC97E /* MultiplePdfViewerVC.m */; };
+		C3F6AE6A1E0A7AF800429CA8 /* CompletedNextVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F6AE681E0A7AF800429CA8 /* CompletedNextVC.xib */; };
+		C3F6AE6D1E0A834400429CA8 /* CompletedNextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F6AE6C1E0A834400429CA8 /* CompletedNextVC.m */; };
+		C3F6DCB81D38F0CE00223CA9 /* CoSignPendingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F6DCB61D38F0CE00223CA9 /* CoSignPendingVC.m */; };
+		C3F6DCB91D38F0CE00223CA9 /* CoSignPendingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F6DCB71D38F0CE00223CA9 /* CoSignPendingVC.xib */; };
+		C3F6EA681E4C54DF00E64BB1 /* DocsStoreNextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F6EA661E4C54DF00E64BB1 /* DocsStoreNextVC.m */; };
+		C3F6EA691E4C54DF00E64BB1 /* DocsStoreNextVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F6EA671E4C54DF00E64BB1 /* DocsStoreNextVC.xib */; };
+		C3F72C2A1ED4025000B8BF2E /* FeedbackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F72C291ED4025000B8BF2E /* FeedbackVC.m */; };
+		C3F738811E4D91E7000142EF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F738801E4D91E7000142EF /* Reachability.m */; };
+		C3F742FA1E1F5ABE009D1DF1 /* SingletonAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F742F91E1F5ABE009D1DF1 /* SingletonAPI.m */; };
+		C3F900D41E85353200A4C6CC /* HomeNewDashBoardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F900D31E85353200A4C6CC /* HomeNewDashBoardVC.m */; };
+		C3FA5BDC1EDFF522006373F0 /* InprogressMultiplePdf.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FA5BDB1EDFF522006373F0 /* InprogressMultiplePdf.m */; };
+		C3FA5BE01EE01CB6006373F0 /* CompleteMultipleDocumentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FA5BDF1EE01CB6006373F0 /* CompleteMultipleDocumentVC.m */; };
+		C3FA5BE41EE02774006373F0 /* MultiplePdfTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FA5BE21EE02774006373F0 /* MultiplePdfTableViewCell.m */; };
+		C3FA5BE51EE02774006373F0 /* MultiplePdfTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3FA5BE31EE02774006373F0 /* MultiplePdfTableViewCell.xib */; };
+		C3FABDF31E37361800EAF5D7 /* DeclineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FABDF11E37361800EAF5D7 /* DeclineTableViewCell.m */; };
+		C3FABDF41E37361800EAF5D7 /* DeclineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3FABDF21E37361800EAF5D7 /* DeclineTableViewCell.xib */; };
+		C3FABDF81E37366700EAF5D7 /* CompletedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FABDF61E37366700EAF5D7 /* CompletedTableViewCell.m */; };
+		C3FABDF91E37366700EAF5D7 /* CompletedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3FABDF71E37366700EAF5D7 /* CompletedTableViewCell.xib */; };
+		C3FBC9AF1E81665200D4F0A8 /* ListPdfViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FBC9AE1E81665200D4F0A8 /* ListPdfViewer.m */; };
+		C3FEE8DD1E28DA8B00509D99 /* LMDropdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FEE8DC1E28DA8B00509D99 /* LMDropdownView.m */; };
+		C3FEE8E01E28DA9800509D99 /* UIImage+LMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FEE8DF1E28DA9800509D99 /* UIImage+LMExtension.m */; };
+		C3FF8B911E02C18100F82488 /* RecallDeclineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FF8B8F1E02C18100F82488 /* RecallDeclineVC.m */; };
+		C3FF8B921E02C18100F82488 /* RecallDeclineVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3FF8B901E02C18100F82488 /* RecallDeclineVC.xib */; };
+		D20AB3FC1DB3FE73009B925D /* WebserviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D20AB3F81DB3FE73009B925D /* WebserviceManager.m */; };
+		D20AB3FD1DB3FE73009B925D /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = D20AB3FA1DB3FE73009B925D /* Connection.m */; };
+		D234389C1DA43042002FBD55 /* DropDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = D234389B1DA43042002FBD55 /* DropDownView.m */; };
+		D271FFA41E2B595F00CB2E80 /* LMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D271FFA31E2B595F00CB2E80 /* LMNavigationController.m */; };
+		D2923F811DF44CF500795F8A /* CoSignPendingListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2923F7F1DF44CF500795F8A /* CoSignPendingListVC.m */; };
+		D2923F821DF44CF500795F8A /* CoSignPendingListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2923F801DF44CF500795F8A /* CoSignPendingListVC.xib */; };
+		D2D0546C1D3BA22F007EAE97 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D054691D3BA22F007EAE97 /* BaseViewController.m */; };
+		D2D0546D1D3BA22F007EAE97 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D0546B1D3BA22F007EAE97 /* LeftMenuViewController.m */; };
+		D2D054741D3BAB2B007EAE97 /* DocStoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D054731D3BAB2B007EAE97 /* DocStoreVC.m */; };
+		F2A207CA53D916AE1D9477ED /* Pods_emSigner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB738E16E178809D48BE188F /* Pods_emSigner.framework */; };
+		FD236D72DBAEC335564C04AB /* Pods_emSignerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6806396BE9B8ACA551492D8 /* Pods_emSignerUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0627B6C2239E113300F1AA4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3F2A2661D34F0EE00BFA456 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0627B6B6239E113300F1AA4E;
+			remoteInfo = emSignerDocumentSignIntentUI;
+		};
+		0627B6C5239E113300F1AA4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3F2A2661D34F0EE00BFA456 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0627B6AC239E113200F1AA4E;
+			remoteInfo = emSignerDocumentSignIntent;
+		};
+		C3F2A2881D34F0EE00BFA456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3F2A2661D34F0EE00BFA456 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3F2A26D1D34F0EE00BFA456;
+			remoteInfo = emSigner;
+		};
+		C3F2A2931D34F0EE00BFA456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3F2A2661D34F0EE00BFA456 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3F2A26D1D34F0EE00BFA456;
+			remoteInfo = emSigner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0627B6C8239E113300F1AA4E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0627B6C7239E113300F1AA4E /* emSignerDocumentSignIntent.appex in Embed App Extensions */,
+				0627B6C4239E113300F1AA4E /* emSignerDocumentSignIntentUI.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		06031EB122C379610005248A /* EsignWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EsignWebView.h; sourceTree = "<group>"; };
+		06031EB222C379610005248A /* EsignWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EsignWebView.m; sourceTree = "<group>"; };
+		06054B8921414DD5006E749D /* SignatureImagesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignatureImagesCell.h; sourceTree = "<group>"; };
+		06054B8A21414DD5006E749D /* SignatureImagesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignatureImagesCell.m; sourceTree = "<group>"; };
+		06058C2D2303E4EE00ACFC7B /* CommentsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentsController.h; sourceTree = "<group>"; };
+		06058C2E2303E4EE00ACFC7B /* CommentsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentsController.m; sourceTree = "<group>"; };
+		06058C30230406BA00ACFC7B /* DropDownCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropDownCell.h; sourceTree = "<group>"; };
+		06058C31230406BA00ACFC7B /* DropDownCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropDownCell.m; sourceTree = "<group>"; };
+		0605CF7321833F1C00B36C36 /* DocumentInfoCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DocumentInfoCollectionCell.h; sourceTree = "<group>"; };
+		0605CF7421833F1C00B36C36 /* DocumentInfoCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DocumentInfoCollectionCell.m; sourceTree = "<group>"; };
+		0605CF7521833F1C00B36C36 /* DocumentInfoCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentInfoCollectionCell.xib; sourceTree = "<group>"; };
+		06108775240633E8006DC56E /* FlexiformsPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlexiformsPage.h; sourceTree = "<group>"; };
+		06108776240633E8006DC56E /* FlexiformsPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlexiformsPage.m; sourceTree = "<group>"; };
+		06108777240633E8006DC56E /* FlexiformsPage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlexiformsPage.xib; sourceTree = "<group>"; };
+		0611394D210B1FE5003BD191 /* DocsPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DocsPage.h; sourceTree = "<group>"; };
+		0611394E210B1FE5003BD191 /* DocsPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DocsPage.m; sourceTree = "<group>"; };
+		06113953210B2BD1003BD191 /* DocsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DocsCell.h; sourceTree = "<group>"; };
+		06113954210B2BD1003BD191 /* DocsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DocsCell.m; sourceTree = "<group>"; };
+		0611D85321D5F4AF00C01C9C /* NSString+DateAsAppleTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+DateAsAppleTime.h"; sourceTree = "<group>"; };
+		0611D85421D5F4AF00C01C9C /* NSString+DateAsAppleTime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+DateAsAppleTime.m"; sourceTree = "<group>"; };
+		0613A5CD249A3418000FE35D /* BulkDocVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BulkDocVC.h; sourceTree = "<group>"; };
+		0613A5CE249A3418000FE35D /* BulkDocVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BulkDocVC.m; sourceTree = "<group>"; };
+		061754672473BF500025A62D /* SignatoriesListForFlexiforms.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignatoriesListForFlexiforms.xib; sourceTree = "<group>"; };
+		06211E5F21395F8E00412D1B /* SubClassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubClassView.h; sourceTree = "<group>"; };
+		06211E6021395F8E00412D1B /* SubClassView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubClassView.xib; sourceTree = "<group>"; };
+		06211E6121395F8F00412D1B /* SubClassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubClassView.m; sourceTree = "<group>"; };
+		0625BD1A2420EF3F00CB81B3 /* NotificationBannerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NotificationBannerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0627B6AD239E113200F1AA4E /* emSignerDocumentSignIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = emSignerDocumentSignIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0627B6AF239E113200F1AA4E /* IntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntentHandler.h; sourceTree = "<group>"; };
+		0627B6B0239E113200F1AA4E /* IntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntentHandler.m; sourceTree = "<group>"; };
+		0627B6B2239E113200F1AA4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0627B6B7239E113300F1AA4E /* emSignerDocumentSignIntentUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = emSignerDocumentSignIntentUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0627B6B8239E113300F1AA4E /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		0627B6BB239E113300F1AA4E /* IntentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntentViewController.h; sourceTree = "<group>"; };
+		0627B6BC239E113300F1AA4E /* IntentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntentViewController.m; sourceTree = "<group>"; };
+		0627B6BF239E113300F1AA4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		0627B6C1239E113300F1AA4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0627B6CF239E11A200F1AA4E /* DocumentSignIntents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = DocumentSignIntents.intentdefinition; sourceTree = "<group>"; };
+		062C60BC221425D600FDAD7B /* MPGTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPGTextField.h; sourceTree = "<group>"; };
+		062C60BD221425D600FDAD7B /* MPGTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPGTextField.m; sourceTree = "<group>"; };
+		06350D8F232B65880004661E /* ReviewerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReviewerController.h; sourceTree = "<group>"; };
+		06350D90232B65880004661E /* ReviewerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReviewerController.m; sourceTree = "<group>"; };
+		0637A0062407C96D0014E303 /* SignatoriesListForFlexiforms.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignatoriesListForFlexiforms.h; sourceTree = "<group>"; };
+		0637A0072407C96D0014E303 /* SignatoriesListForFlexiforms.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignatoriesListForFlexiforms.m; sourceTree = "<group>"; };
+		064222D5210D8A890028CB5B /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		064222D7210D8A910028CB5B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		064762772170AD31008E03E9 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		064762782170AD31008E03E9 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		0647627A2170AD44008E03E9 /* ImageFileCrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageFileCrop.h; sourceTree = "<group>"; };
+		0647627B2170AD44008E03E9 /* ImageFileCrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageFileCrop.m; sourceTree = "<group>"; };
+		06593B7221268FAF00B07C0D /* emsigner-with-ico2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emsigner-with-ico2.png"; sourceTree = "<group>"; };
+		06636035225CC0F500514E23 /* delegationFlow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = delegationFlow.h; sourceTree = "<group>"; };
+		06636036225CC0F500514E23 /* delegationFlow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = delegationFlow.m; sourceTree = "<group>"; };
+		06636037225CC0F500514E23 /* delegationFlow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = delegationFlow.xib; sourceTree = "<group>"; };
+		0663603A225CC2E300514E23 /* delegationtableviewcell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = delegationtableviewcell.h; sourceTree = "<group>"; };
+		0663603B225CC2E300514E23 /* delegationtableviewcell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = delegationtableviewcell.m; sourceTree = "<group>"; };
+		0663603C225CC2E300514E23 /* delegationtableviewcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = delegationtableviewcell.xib; sourceTree = "<group>"; };
+		0670EE0B24740E7900791A15 /* UploadHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadHeader.h; sourceTree = "<group>"; };
+		0670EE0C24740E7900791A15 /* UploadHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadHeader.m; sourceTree = "<group>"; };
+		0670EE0E24740F0000791A15 /* UploadHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadHeader.xib; sourceTree = "<group>"; };
+		06710BDB22CDFD5E005BD9EA /* DocsNameForHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocsNameForHeader.m; sourceTree = "<group>"; };
+		06710BDC22CDFD5F005BD9EA /* ShowEditImagesFromImageList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowEditImagesFromImageList.xib; sourceTree = "<group>"; };
+		06710BDD22CDFD5F005BD9EA /* ShowPdfForImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowPdfForImages.h; sourceTree = "<group>"; };
+		06710BDE22CDFD5F005BD9EA /* SignersCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignersCollectionCell.xib; sourceTree = "<group>"; };
+		06710BDF22CDFD5F005BD9EA /* ShowActivities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowActivities.m; sourceTree = "<group>"; };
+		06710BE022CDFD5F005BD9EA /* DocsNameForHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocsNameForHeader.h; sourceTree = "<group>"; };
+		06710BE122CDFD5F005BD9EA /* UploadDocuments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadDocuments.m; sourceTree = "<group>"; };
+		06710BE222CDFD5F005BD9EA /* ImagelistCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagelistCell.m; sourceTree = "<group>"; };
+		06710BE322CDFD5F005BD9EA /* ImagelistCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagelistCell.h; sourceTree = "<group>"; };
+		06710BE422CDFD5F005BD9EA /* PreviewerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewerController.m; sourceTree = "<group>"; };
+		06710BE522CDFD5F005BD9EA /* workflow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = workflow.xib; sourceTree = "<group>"; };
+		06710BE622CDFD5F005BD9EA /* DocsNameForHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DocsNameForHeader.xib; sourceTree = "<group>"; };
+		06710BE722CDFD5F005BD9EA /* WorkflowTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkflowTableViewController.m; sourceTree = "<group>"; };
+		06710BE822CDFD5F005BD9EA /* SignersCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignersCollectionCell.h; sourceTree = "<group>"; };
+		06710BE922CDFD5F005BD9EA /* ShowActivitiesCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowActivitiesCellTableViewCell.m; sourceTree = "<group>"; };
+		06710BEA22CDFD60005BD9EA /* SignersInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignersInformation.m; sourceTree = "<group>"; wrapsLines = 1; };
+		06710BEB22CDFD60005BD9EA /* SignersCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignersCollectionCell.m; sourceTree = "<group>"; };
+		06710BEC22CDFD60005BD9EA /* MultipleImagesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultipleImagesCell.xib; sourceTree = "<group>"; };
+		06710BED22CDFD60005BD9EA /* ShowActivitiesCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowActivitiesCellTableViewCell.xib; sourceTree = "<group>"; };
+		06710BEE22CDFD60005BD9EA /* DocsSize.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DocsSize.xib; sourceTree = "<group>"; };
+		06710BF022CDFD60005BD9EA /* ShowPdfForImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowPdfForImages.m; sourceTree = "<group>"; };
+		06710BF122CDFD60005BD9EA /* ShowEditImagesFromImageList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowEditImagesFromImageList.m; sourceTree = "<group>"; };
+		06710BF222CDFD60005BD9EA /* UploadDocuments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadDocuments.h; sourceTree = "<group>"; };
+		06710BF322CDFD60005BD9EA /* SignersDisplay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignersDisplay.xib; sourceTree = "<group>"; };
+		06710BF422CDFD60005BD9EA /* SignersCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignersCellTableViewCell.xib; sourceTree = "<group>"; };
+		06710BF522CDFD61005BD9EA /* ShowEditImagesFromImageList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowEditImagesFromImageList.h; sourceTree = "<group>"; };
+		06710BF622CDFD61005BD9EA /* ShowActivities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowActivities.h; sourceTree = "<group>"; };
+		06710BF722CDFD61005BD9EA /* RenameDocument.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RenameDocument.xib; sourceTree = "<group>"; };
+		06710BF822CDFD61005BD9EA /* DocsSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocsSize.h; sourceTree = "<group>"; };
+		06710BF922CDFD61005BD9EA /* SignerListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignerListCell.xib; sourceTree = "<group>"; };
+		06710BFA22CDFD61005BD9EA /* SignersDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignersDisplay.h; sourceTree = "<group>"; };
+		06710BFB22CDFD61005BD9EA /* SignersInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignersInformation.h; sourceTree = "<group>"; };
+		06710BFC22CDFD61005BD9EA /* MultipleImagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipleImagesCell.h; sourceTree = "<group>"; };
+		06710BFD22CDFD61005BD9EA /* SignersDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignersDisplay.m; sourceTree = "<group>"; };
+		06710BFE22CDFD61005BD9EA /* DocsSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocsSize.m; sourceTree = "<group>"; };
+		06710BFF22CDFD62005BD9EA /* SignersInformation.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignersInformation.xib; sourceTree = "<group>"; };
+		06710C0022CDFD62005BD9EA /* workflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = workflow.h; sourceTree = "<group>"; };
+		06710C0122CDFD62005BD9EA /* ShowPdfForImages.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowPdfForImages.xib; sourceTree = "<group>"; };
+		06710C0222CDFD62005BD9EA /* SignerListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignerListCell.h; sourceTree = "<group>"; };
+		06710C0322CDFD62005BD9EA /* workflow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = workflow.m; sourceTree = "<group>"; };
+		06710C0422CDFD62005BD9EA /* SignersCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignersCellTableViewCell.h; sourceTree = "<group>"; };
+		06710C0522CDFD62005BD9EA /* SignerListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignerListCell.m; sourceTree = "<group>"; };
+		06710C0622CDFD62005BD9EA /* PreviewerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewerController.h; sourceTree = "<group>"; };
+		06710C0722CDFD62005BD9EA /* RenameDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenameDocument.m; sourceTree = "<group>"; };
+		06710C0822CDFD62005BD9EA /* ShowActivities.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowActivities.xib; sourceTree = "<group>"; };
+		06710C0922CDFD62005BD9EA /* SignersCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignersCellTableViewCell.m; sourceTree = "<group>"; };
+		06710C0A22CDFD63005BD9EA /* ShowActivitiesCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowActivitiesCellTableViewCell.h; sourceTree = "<group>"; };
+		06710C0B22CDFD63005BD9EA /* MultipleImagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleImagesCell.m; sourceTree = "<group>"; };
+		06710C0C22CDFD63005BD9EA /* WorkflowTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkflowTableViewController.h; sourceTree = "<group>"; };
+		06710C0D22CDFD63005BD9EA /* ImagelistCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagelistCell.xib; sourceTree = "<group>"; };
+		06710C0E22CDFD63005BD9EA /* RenameDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenameDocument.h; sourceTree = "<group>"; };
+		06732E512150F26F007BEC69 /* ForgotPasswordUpdated.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordUpdated.h; sourceTree = "<group>"; };
+		06732E522150F26F007BEC69 /* ForgotPasswordUpdated.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordUpdated.m; sourceTree = "<group>"; };
+		0678630D2189D85C006C7BDF /* DocumentInfoNames.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DocumentInfoNames.h; sourceTree = "<group>"; };
+		0678630E2189D85C006C7BDF /* DocumentInfoNames.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DocumentInfoNames.m; sourceTree = "<group>"; };
+		0678630F2189D85C006C7BDF /* DocumentInfoNames.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentInfoNames.xib; sourceTree = "<group>"; };
+		067863122189DE59006C7BDF /* DocumentNamesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DocumentNamesCell.h; sourceTree = "<group>"; };
+		067863132189DE59006C7BDF /* DocumentNamesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DocumentNamesCell.m; sourceTree = "<group>"; };
+		067863142189DE59006C7BDF /* DocumentNamesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentNamesCell.xib; sourceTree = "<group>"; };
+		067C6D5C219EC4B300880C41 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		06821D5223EBED1400A40B68 /* OverlayTransitioningDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayTransitioningDelegate.h; sourceTree = "<group>"; };
+		06821D5323EBED1400A40B68 /* OverlayPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayPresentationController.h; sourceTree = "<group>"; };
+		06821D5423EBED1400A40B68 /* ControllerAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerAnimator.h; sourceTree = "<group>"; };
+		06821D5523EBED1400A40B68 /* ControllerAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllerAnimator.m; sourceTree = "<group>"; };
+		06821D5623EBED1400A40B68 /* OverlayPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayPresentationController.m; sourceTree = "<group>"; };
+		06821D5723EBED1400A40B68 /* OverlayTransitioningDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayTransitioningDelegate.m; sourceTree = "<group>"; };
+		06871453220C391A00B61578 /* SPUserResizableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPUserResizableView.m; sourceTree = "<group>"; };
+		06871454220C391A00B61578 /* SPUserResizableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPUserResizableView.h; sourceTree = "<group>"; };
+		069B93E122130A7B00B05771 /* DelegateDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DelegateDocument.h; sourceTree = "<group>"; };
+		069B93E222130A7B00B05771 /* DelegateDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DelegateDocument.m; sourceTree = "<group>"; };
+		069B93E322130A7B00B05771 /* DelegateDocument.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DelegateDocument.xib; sourceTree = "<group>"; };
+		069D3DF723D5729100932607 /* SigningSiri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningSiri.swift; sourceTree = "<group>"; };
+		06A7B9F722A9245100BFDF0C /* emSigner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "emSigner-Bridging-Header.h"; sourceTree = "<group>"; };
+		06A7B9F822A9245100BFDF0C /* swiftController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftController.swift; sourceTree = "<group>"; };
+		06A8EDF2239F684A00D57EA0 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		06AFF683239A7F230037D3A4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		06B207F123211D29004BDDF3 /* AccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		06B207F223211D29004BDDF3 /* AccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		06B803B22223E5F600942F1A /* ParallelSigning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParallelSigning.h; sourceTree = "<group>"; };
+		06B803B32223E5F600942F1A /* ParallelSigning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParallelSigning.m; sourceTree = "<group>"; };
+		06B803B42223E5F600942F1A /* ParallelSigning.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParallelSigning.xib; sourceTree = "<group>"; };
+		06BBF70D22019B8100172797 /* floatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = floatTableViewCell.h; sourceTree = "<group>"; };
+		06BBF70E22019B8100172797 /* VCFloatingActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCFloatingActionButton.h; sourceTree = "<group>"; };
+		06BBF70F22019B8100172797 /* floatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = floatTableViewCell.m; sourceTree = "<group>"; };
+		06BBF71022019B8100172797 /* floatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = floatTableViewCell.xib; sourceTree = "<group>"; };
+		06BBF71122019B8100172797 /* VCFloatingActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCFloatingActionButton.m; sourceTree = "<group>"; };
+		06C217A021133EAB002EAAE2 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		06D3B71624728C92001BC378 /* CustomHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomHeader.h; sourceTree = "<group>"; };
+		06D3B71724728C92001BC378 /* CustomHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomHeader.m; sourceTree = "<group>"; };
+		06D3B71A24728CFB001BC378 /* CustomHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeader.xib; sourceTree = "<group>"; };
+		06D49B5C231655A2001EC7B9 /* GHWalkThroughView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHWalkThroughView.m; sourceTree = "<group>"; };
+		06D49B5D231655A2001EC7B9 /* GHWalkThroughPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHWalkThroughPageCell.m; sourceTree = "<group>"; };
+		06D49B5E231655A2001EC7B9 /* GHWalkThroughView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHWalkThroughView.h; sourceTree = "<group>"; };
+		06D49B5F231655A3001EC7B9 /* GHWalkThroughPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHWalkThroughPageCell.h; sourceTree = "<group>"; };
+		06D64D5324696C2300A28387 /* WorkflowScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkflowScannerController.swift; sourceTree = "<group>"; };
+		06D64D5524696C8500A28387 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		06D64D5724696C9C00A28387 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		06D7A1282237916F002F96F4 /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = System/Library/Frameworks/PDFKit.framework; sourceTree = SDKROOT; };
+		06D7A12A2237B3C1002F96F4 /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
+		06D7A12B2237B3C1002F96F4 /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
+		06D97D192313ADC200CC682A /* ImagesForPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImagesForPageViewController.h; sourceTree = "<group>"; };
+		06D97D1A2313ADC200CC682A /* ImagesForPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagesForPageViewController.m; sourceTree = "<group>"; };
+		06DB56BB229D3B270086E159 /* DocinfoSignatoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocinfoSignatoryCell.m; sourceTree = "<group>"; };
+		06DB56BC229D3B270086E159 /* DocinfoSignatoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocinfoSignatoryCell.h; sourceTree = "<group>"; };
+		06DB56BD229D3B270086E159 /* DocinfoSignatoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DocinfoSignatoryCell.xib; sourceTree = "<group>"; };
+		06E1CFBC2118835D007B93C2 /* SignatoriesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignatoriesCell.h; sourceTree = "<group>"; };
+		06E1CFBD2118835D007B93C2 /* SignatoriesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignatoriesCell.m; sourceTree = "<group>"; };
+		06E29AF62354327E00AE0282 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		06F6057021DF78F900FAABC0 /* LoadingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingCell.h; sourceTree = "<group>"; };
+		06F6057121DF78F900FAABC0 /* LoadingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadingCell.m; sourceTree = "<group>"; };
+		06F6057221DF78F900FAABC0 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		06FFC55A2118778F0025CD11 /* SignatoriesPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignatoriesPage.h; sourceTree = "<group>"; };
+		06FFC55B2118778F0025CD11 /* SignatoriesPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignatoriesPage.m; sourceTree = "<group>"; };
+		36BB6117FA0FFCFA76A61DA2 /* Pods-emSigner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emSigner.release.xcconfig"; path = "Pods/Target Support Files/Pods-emSigner/Pods-emSigner.release.xcconfig"; sourceTree = "<group>"; };
+		4CA2E2F4817F93CBA9D00964 /* Pods-emSigner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emSigner.release.xcconfig"; path = "Target Support Files/Pods-emSigner/Pods-emSigner.release.xcconfig"; sourceTree = "<group>"; };
+		4E99C20830A818664DB5B9F3 /* Pods-emSignerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emSignerUITests.debug.xcconfig"; path = "Target Support Files/Pods-emSignerUITests/Pods-emSignerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5AB900A9750FC7F0B4A07606 /* Pods-emSignerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emSignerTests.debug.xcconfig"; path = "Target Support Files/Pods-emSignerTests/Pods-emSignerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B945691AF4C0B5E3450C069 /* Pods-emSigner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emSigner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emSigner/Pods-emSigner.debug.xcconfig"; sourceTree = "<group>"; };
+		660D4534BCC142B598BD2D31 /* Pods_emSignerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_emSignerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E0F0C161D1DFAF11A388C50 /* Pods_emSignerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_emSignerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A70F3AFA2159E0250535635 /* Pods-emSignerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emSignerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emSignerTests/Pods-emSignerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7B16091F09EA9948A957BFF5 /* Pods-emSignerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emSignerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-emSignerUITests/Pods-emSignerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		98EE4B8D948EC283D7F358E8 /* Pods-emSignerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emSignerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-emSignerTests/Pods-emSignerTests.release.xcconfig"; sourceTree = "<group>"; };
+		AB738E16E178809D48BE188F /* Pods_emSigner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_emSigner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC59D068C768919C22C99D41 /* Pods-emSignerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emSignerTests.release.xcconfig"; path = "Target Support Files/Pods-emSignerTests/Pods-emSignerTests.release.xcconfig"; sourceTree = "<group>"; };
+		C3009DDC1D641CF4006DB84E /* DocumentLogTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocumentLogTableViewCell.h; path = ../DocumentLogTableViewCell.h; sourceTree = "<group>"; };
+		C3009DDD1D641CF4006DB84E /* DocumentLogTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DocumentLogTableViewCell.m; path = ../DocumentLogTableViewCell.m; sourceTree = "<group>"; };
+		C3009DDE1D641CF4006DB84E /* DocumentLogTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DocumentLogTableViewCell.xib; path = ../DocumentLogTableViewCell.xib; sourceTree = "<group>"; };
+		C3009DE11D641D3A006DB84E /* CustomDocumentLogTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomDocumentLogTableViewCell.h; sourceTree = "<group>"; };
+		C3009DE21D641D3A006DB84E /* CustomDocumentLogTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomDocumentLogTableViewCell.m; sourceTree = "<group>"; };
+		C3009DE31D641D3A006DB84E /* CustomDocumentLogTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomDocumentLogTableViewCell.xib; sourceTree = "<group>"; };
+		C301D0981D6C49A50027B362 /* RecallVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecallVC.h; sourceTree = "<group>"; };
+		C301D0991D6C49A50027B362 /* RecallVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecallVC.m; sourceTree = "<group>"; };
+		C30360ED1E2C981F00578EDF /* LMMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMMenuCell.h; sourceTree = "<group>"; };
+		C30360EE1E2C981F00578EDF /* LMMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMMenuCell.m; sourceTree = "<group>"; };
+		C304C09F1F010138007800EF /* DocsStoreMultiplePdf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocsStoreMultiplePdf.h; sourceTree = "<group>"; };
+		C304C0A01F010138007800EF /* DocsStoreMultiplePdf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocsStoreMultiplePdf.m; sourceTree = "<group>"; };
+		C306C9BB1EC96D940086B2AD /* RateUsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateUsVC.h; sourceTree = "<group>"; };
+		C306C9BC1EC96D940086B2AD /* RateUsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateUsVC.m; sourceTree = "<group>"; };
+		C30873671D477B11000A51B6 /* MyProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileVC.h; sourceTree = "<group>"; };
+		C30873681D477B11000A51B6 /* MyProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileVC.m; sourceTree = "<group>"; };
+		C3092DAC1F0B5B4E000834C7 /* AttachedMultiplePdfTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttachedMultiplePdfTableViewCell.h; sourceTree = "<group>"; };
+		C3092DAD1F0B5B4E000834C7 /* AttachedMultiplePdfTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttachedMultiplePdfTableViewCell.m; sourceTree = "<group>"; };
+		C3092DAE1F0B5B4E000834C7 /* AttachedMultiplePdfTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttachedMultiplePdfTableViewCell.xib; sourceTree = "<group>"; };
+		C309980E1F1BA67900058938 /* AttachedVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttachedVC.h; sourceTree = "<group>"; };
+		C309980F1F1BA67A00058938 /* AttachedVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttachedVC.m; sourceTree = "<group>"; };
+		C309AFB61E545B5600B7ACFA /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		C30FB16C1E14DDA400FE087E /* DraftInactiveVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraftInactiveVC.h; sourceTree = "<group>"; };
+		C30FB16D1E14DDA400FE087E /* DraftInactiveVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraftInactiveVC.m; sourceTree = "<group>"; };
+		C30FB16E1E14DDA400FE087E /* DraftInactiveVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DraftInactiveVC.xib; sourceTree = "<group>"; };
+		C31160591E5B000300E93385 /* UITextView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
+		C311605A1E5B000300E93385 /* UITextView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
+		C31368181E547EF600252501 /* ChangePasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordVC.h; sourceTree = "<group>"; };
+		C31368191E547EF600252501 /* ChangePasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordVC.m; sourceTree = "<group>"; };
+		C3396CE11E8CD1B9000F638D /* PdfListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PdfListTableViewCell.h; sourceTree = "<group>"; };
+		C3396CE21E8CD1B9000F638D /* PdfListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PdfListTableViewCell.m; sourceTree = "<group>"; };
+		C3396CE31E8CD1B9000F638D /* PdfListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PdfListTableViewCell.xib; sourceTree = "<group>"; };
+		C339C4031D9BCD470039DEAE /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
+		C339C4041D9BCD470039DEAE /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
+		C339C4051D9BCD470039DEAE /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
+		C339D5E21DDB232600C03171 /* RecallStatusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecallStatusVC.h; sourceTree = "<group>"; };
+		C339D5E31DDB232600C03171 /* RecallStatusVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecallStatusVC.m; sourceTree = "<group>"; };
+		C339D5E41DDB232600C03171 /* RecallStatusVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecallStatusVC.xib; sourceTree = "<group>"; };
+		C339D5E71DDB238200C03171 /* DeclineStatusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeclineStatusVC.h; sourceTree = "<group>"; };
+		C339D5E81DDB238200C03171 /* DeclineStatusVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeclineStatusVC.m; sourceTree = "<group>"; };
+		C339D5E91DDB238200C03171 /* DeclineStatusVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeclineStatusVC.xib; sourceTree = "<group>"; };
+		C339D5F11DDB23E400C03171 /* CompleteStatusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompleteStatusVC.h; sourceTree = "<group>"; };
+		C339D5F21DDB23E400C03171 /* CompleteStatusVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompleteStatusVC.m; sourceTree = "<group>"; };
+		C339D5F31DDB23E400C03171 /* CompleteStatusVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompleteStatusVC.xib; sourceTree = "<group>"; };
+		C339D5F61DDB248100C03171 /* RecallTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecallTableViewCell.h; sourceTree = "<group>"; };
+		C339D5F71DDB248100C03171 /* RecallTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecallTableViewCell.m; sourceTree = "<group>"; };
+		C339D5F81DDB248100C03171 /* RecallTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecallTableViewCell.xib; sourceTree = "<group>"; };
+		C33C34361E27BDEB0000ABC0 /* RPFloatingPlaceholderConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPFloatingPlaceholderConstants.h; sourceTree = "<group>"; };
+		C33C34371E27BDEC0000ABC0 /* RPFloatingPlaceholderTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPFloatingPlaceholderTextField.h; sourceTree = "<group>"; };
+		C33C34381E27BDEC0000ABC0 /* RPFloatingPlaceholderTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPFloatingPlaceholderTextField.m; sourceTree = "<group>"; };
+		C33C34391E27BDEC0000ABC0 /* RPFloatingPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPFloatingPlaceholderTextView.h; sourceTree = "<group>"; };
+		C33C343A1E27BDEC0000ABC0 /* RPFloatingPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPFloatingPlaceholderTextView.m; sourceTree = "<group>"; };
+		C33C86DD1D48851900856B55 /* CustomSignVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSignVC.h; sourceTree = "<group>"; };
+		C33C86DE1D48851900856B55 /* CustomSignVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSignVC.m; sourceTree = "<group>"; };
+		C33EC9BC1DF592F00062BB8D /* CaptureSignatureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureSignatureView.h; sourceTree = "<group>"; };
+		C33EC9BD1DF592F00062BB8D /* CaptureSignatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureSignatureView.m; sourceTree = "<group>"; };
+		C33EC9BE1DF592F00062BB8D /* CaptureSignatureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CaptureSignatureView.xib; sourceTree = "<group>"; };
+		C34009891DE0552D007008AE /* NotStartedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotStartedTableViewCell.h; sourceTree = "<group>"; };
+		C340098A1DE0552D007008AE /* NotStartedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotStartedTableViewCell.m; sourceTree = "<group>"; };
+		C340098B1DE0552D007008AE /* NotStartedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotStartedTableViewCell.xib; sourceTree = "<group>"; };
+		C34800241E30B7E200EE6D08 /* DocumentInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentInfoVC.h; sourceTree = "<group>"; };
+		C34800251E30B7E200EE6D08 /* DocumentInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentInfoVC.m; sourceTree = "<group>"; };
+		C34925F91F174DDE009C114F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		C34A43D11E40718D00A38BB0 /* DeclineNextVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeclineNextVC.h; sourceTree = "<group>"; };
+		C34A43D21E40718D00A38BB0 /* DeclineNextVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeclineNextVC.m; sourceTree = "<group>"; };
+		C34A43D31E40718D00A38BB0 /* DeclineNextVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeclineNextVC.xib; sourceTree = "<group>"; };
+		C34B43901DF1832D00295E72 /* PendingListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendingListVC.h; sourceTree = "<group>"; };
+		C34B43911DF1832D00295E72 /* PendingListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendingListVC.m; sourceTree = "<group>"; };
+		C34B43921DF1832D00295E72 /* PendingListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PendingListVC.xib; sourceTree = "<group>"; };
+		C35368D91DEFEDEA008B7029 /* PendingVCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendingVCTableViewCell.h; sourceTree = "<group>"; };
+		C35368DA1DEFEDEA008B7029 /* PendingVCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendingVCTableViewCell.m; sourceTree = "<group>"; };
+		C35368DB1DEFEDEA008B7029 /* PendingVCTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PendingVCTableViewCell.xib; sourceTree = "<group>"; };
+		C35368E11DEFF8CD008B7029 /* PendingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendingVC.h; sourceTree = "<group>"; };
+		C35368E21DEFF8CD008B7029 /* PendingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendingVC.m; sourceTree = "<group>"; };
+		C35368E31DEFF8CD008B7029 /* PendingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PendingVC.xib; sourceTree = "<group>"; };
+		C35A93E31DDF0A37001B8D2A /* ShareVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareVC.h; sourceTree = "<group>"; };
+		C35A93E41DDF0A37001B8D2A /* ShareVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareVC.m; sourceTree = "<group>"; };
+		C36207031F208E8C00FBAFBE /* AttachedViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttachedViewVC.h; sourceTree = "<group>"; };
+		C36207041F208E8C00FBAFBE /* AttachedViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttachedViewVC.m; sourceTree = "<group>"; };
+		C36207051F208E8C00FBAFBE /* AttachedViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttachedViewVC.xib; sourceTree = "<group>"; };
+		C368B10B1EF6CA9A00F0458F /* emSigner Mobile App Description (2).pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "emSigner Mobile App Description (2).pdf"; sourceTree = "<group>"; };
+		C397ECCF1E3B642800844B53 /* DocInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocInfoTableViewCell.h; sourceTree = "<group>"; };
+		C397ECD01E3B642800844B53 /* DocInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocInfoTableViewCell.m; sourceTree = "<group>"; };
+		C397ECD11E3B642800844B53 /* DocInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DocInfoTableViewCell.xib; sourceTree = "<group>"; };
+		C397ECD41E3B644400844B53 /* DocAssignedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocAssignedTableViewCell.h; sourceTree = "<group>"; };
+		C397ECD51E3B644400844B53 /* DocAssignedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocAssignedTableViewCell.m; sourceTree = "<group>"; };
+		C397ECD61E3B644400844B53 /* DocAssignedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DocAssignedTableViewCell.xib; sourceTree = "<group>"; };
+		C3A12D1E1D93B8A50077BF5D /* ForgotPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordVC.h; sourceTree = "<group>"; };
+		C3A12D1F1D93B8A50077BF5D /* ForgotPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordVC.m; sourceTree = "<group>"; };
+		C3A58D501D4F61D40080B011 /* DeclineVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeclineVC.h; sourceTree = "<group>"; };
+		C3A58D511D4F61D40080B011 /* DeclineVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeclineVC.m; sourceTree = "<group>"; };
+		C3AB662B1E324BC400C17560 /* NSObject+Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Activity.h"; sourceTree = "<group>"; };
+		C3AB662C1E324BC400C17560 /* NSObject+Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Activity.m"; sourceTree = "<group>"; };
+		C3E8460D1D9CDDDA007B14D2 /* AboutUsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsVC.h; sourceTree = "<group>"; };
+		C3E8460E1D9CDDDA007B14D2 /* AboutUsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsVC.m; sourceTree = "<group>"; };
+		C3F0620D1D50A52A008F19B3 /* CustomPopOverVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPopOverVC.h; sourceTree = "<group>"; };
+		C3F0620E1D50A52A008F19B3 /* CustomPopOverVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPopOverVC.m; sourceTree = "<group>"; };
+		C3F062101D50A8A3008F19B3 /* DocumentLogVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentLogVC.h; sourceTree = "<group>"; };
+		C3F062111D50A8A3008F19B3 /* DocumentLogVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentLogVC.m; sourceTree = "<group>"; };
+		C3F2A26E1D34F0EE00BFA456 /* emSigner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emSigner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3F2A2721D34F0EE00BFA456 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C3F2A2741D34F0EE00BFA456 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C3F2A2751D34F0EE00BFA456 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C3F2A2771D34F0EE00BFA456 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C3F2A2781D34F0EE00BFA456 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C3F2A27B1D34F0EE00BFA456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C3F2A27D1D34F0EE00BFA456 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C3F2A2801D34F0EE00BFA456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C3F2A2821D34F0EE00BFA456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3F2A2871D34F0EE00BFA456 /* emSignerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = emSignerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3F2A28B1D34F0EE00BFA456 /* emSignerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = emSignerTests.m; sourceTree = "<group>"; };
+		C3F2A28D1D34F0EE00BFA456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3F2A2921D34F0EE00BFA456 /* emSignerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = emSignerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3F2A2961D34F0EE00BFA456 /* emSignerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = emSignerUITests.m; sourceTree = "<group>"; };
+		C3F2A2981D34F0EE00BFA456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3F2A2A81D34F37000BFA456 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C3F2A2AA1D34F37D00BFA456 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C3F2A2AC1D34F3A900BFA456 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C3F2A2AE1D34F3B700BFA456 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C3F50AD21E07EC4A00EFA46D /* PPSSignatureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSSignatureView.h; sourceTree = "<group>"; };
+		C3F50AD31E07EC4A00EFA46D /* PPSSignatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSSignatureView.m; sourceTree = "<group>"; };
+		C3F50AD51E07ED2500EFA46D /* MPBSignatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPBSignatureViewController.h; sourceTree = "<group>"; };
+		C3F50AD61E07ED2500EFA46D /* MPBCustomStyleSignatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPBCustomStyleSignatureViewController.h; sourceTree = "<group>"; };
+		C3F50AD71E07ED2500EFA46D /* MPBCustomStyleSignatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPBCustomStyleSignatureViewController.m; sourceTree = "<group>"; };
+		C3F50AD81E07ED2500EFA46D /* MPBDefaultStyleSignatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPBDefaultStyleSignatureViewController.h; sourceTree = "<group>"; };
+		C3F50AD91E07ED2500EFA46D /* MPBDefaultStyleSignatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPBDefaultStyleSignatureViewController.m; sourceTree = "<group>"; };
+		C3F50ADA1E07ED2500EFA46D /* MPBSignatureViewControllerConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPBSignatureViewControllerConfiguration.h; sourceTree = "<group>"; };
+		C3F50ADB1E07ED2500EFA46D /* MPBSignatureViewControllerConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPBSignatureViewControllerConfiguration.m; sourceTree = "<group>"; };
+		C3F50AE01E08076200EFA46D /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		C3F50AE21E08077900EFA46D /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		C3F50AE31E08077900EFA46D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		C3F5949C1DE42A9F00080735 /* GetOTPVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GetOTPVC.h; path = ../GetOTPVC.h; sourceTree = "<group>"; };
+		C3F5949D1DE42A9F00080735 /* GetOTPVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GetOTPVC.m; path = ../GetOTPVC.m; sourceTree = "<group>"; };
+		C3F5FD971ED58A36004EC97E /* MultiplePdfViewerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiplePdfViewerVC.h; sourceTree = "<group>"; };
+		C3F5FD981ED58A36004EC97E /* MultiplePdfViewerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiplePdfViewerVC.m; sourceTree = "<group>"; };
+		C3F69A381EEA7BAB0081B586 /* emSigner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = emSigner.entitlements; sourceTree = "<group>"; };
+		C3F6AE681E0A7AF800429CA8 /* CompletedNextVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompletedNextVC.xib; sourceTree = "<group>"; };
+		C3F6AE6B1E0A834400429CA8 /* CompletedNextVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CompletedNextVC.h; path = ../CompletedNextVC.h; sourceTree = "<group>"; };
+		C3F6AE6C1E0A834400429CA8 /* CompletedNextVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CompletedNextVC.m; path = ../CompletedNextVC.m; sourceTree = "<group>"; };
+		C3F6DCB51D38F0CE00223CA9 /* CoSignPendingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoSignPendingVC.h; sourceTree = "<group>"; };
+		C3F6DCB61D38F0CE00223CA9 /* CoSignPendingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoSignPendingVC.m; sourceTree = "<group>"; };
+		C3F6DCB71D38F0CE00223CA9 /* CoSignPendingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoSignPendingVC.xib; sourceTree = "<group>"; };
+		C3F6EA651E4C54DF00E64BB1 /* DocsStoreNextVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocsStoreNextVC.h; sourceTree = "<group>"; };
+		C3F6EA661E4C54DF00E64BB1 /* DocsStoreNextVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocsStoreNextVC.m; sourceTree = "<group>"; };
+		C3F6EA671E4C54DF00E64BB1 /* DocsStoreNextVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DocsStoreNextVC.xib; sourceTree = "<group>"; };
+		C3F6FBA21E26629600C7AF4A /* HomeNewDashBoardVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeNewDashBoardVC.h; sourceTree = "<group>"; };
+		C3F72C281ED4025000B8BF2E /* FeedbackVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackVC.h; sourceTree = "<group>"; };
+		C3F72C291ED4025000B8BF2E /* FeedbackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackVC.m; sourceTree = "<group>"; };
+		C3F7387F1E4D91E7000142EF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		C3F738801E4D91E7000142EF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		C3F742F81E1F5ABE009D1DF1 /* SingletonAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingletonAPI.h; sourceTree = "<group>"; };
+		C3F742F91E1F5ABE009D1DF1 /* SingletonAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingletonAPI.m; sourceTree = "<group>"; };
+		C3F900D31E85353200A4C6CC /* HomeNewDashBoardVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeNewDashBoardVC.m; sourceTree = "<group>"; };
+		C3FA5BDA1EDFF522006373F0 /* InprogressMultiplePdf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InprogressMultiplePdf.h; sourceTree = "<group>"; };
+		C3FA5BDB1EDFF522006373F0 /* InprogressMultiplePdf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InprogressMultiplePdf.m; sourceTree = "<group>"; };
+		C3FA5BDE1EE01CB6006373F0 /* CompleteMultipleDocumentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompleteMultipleDocumentVC.h; sourceTree = "<group>"; };
+		C3FA5BDF1EE01CB6006373F0 /* CompleteMultipleDocumentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompleteMultipleDocumentVC.m; sourceTree = "<group>"; };
+		C3FA5BE11EE02774006373F0 /* MultiplePdfTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiplePdfTableViewCell.h; sourceTree = "<group>"; };
+		C3FA5BE21EE02774006373F0 /* MultiplePdfTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiplePdfTableViewCell.m; sourceTree = "<group>"; };
+		C3FA5BE31EE02774006373F0 /* MultiplePdfTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiplePdfTableViewCell.xib; sourceTree = "<group>"; };
+		C3FABDF01E37361800EAF5D7 /* DeclineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeclineTableViewCell.h; sourceTree = "<group>"; };
+		C3FABDF11E37361800EAF5D7 /* DeclineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeclineTableViewCell.m; sourceTree = "<group>"; };
+		C3FABDF21E37361800EAF5D7 /* DeclineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeclineTableViewCell.xib; sourceTree = "<group>"; };
+		C3FABDF51E37366700EAF5D7 /* CompletedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedTableViewCell.h; sourceTree = "<group>"; };
+		C3FABDF61E37366700EAF5D7 /* CompletedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedTableViewCell.m; sourceTree = "<group>"; };
+		C3FABDF71E37366700EAF5D7 /* CompletedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompletedTableViewCell.xib; sourceTree = "<group>"; };
+		C3FBC9AD1E81665200D4F0A8 /* ListPdfViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListPdfViewer.h; sourceTree = "<group>"; };
+		C3FBC9AE1E81665200D4F0A8 /* ListPdfViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListPdfViewer.m; sourceTree = "<group>"; };
+		C3FEE8DB1E28DA8B00509D99 /* LMDropdownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMDropdownView.h; sourceTree = "<group>"; };
+		C3FEE8DC1E28DA8B00509D99 /* LMDropdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMDropdownView.m; sourceTree = "<group>"; };
+		C3FEE8DE1E28DA9800509D99 /* UIImage+LMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LMExtension.h"; sourceTree = "<group>"; };
+		C3FEE8DF1E28DA9800509D99 /* UIImage+LMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LMExtension.m"; sourceTree = "<group>"; };
+		C3FF8B8E1E02C18100F82488 /* RecallDeclineVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecallDeclineVC.h; sourceTree = "<group>"; };
+		C3FF8B8F1E02C18100F82488 /* RecallDeclineVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecallDeclineVC.m; sourceTree = "<group>"; };
+		C3FF8B901E02C18100F82488 /* RecallDeclineVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecallDeclineVC.xib; sourceTree = "<group>"; };
+		C83D57293883C675A6B0DBC2 /* Pods-emSigner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emSigner.debug.xcconfig"; path = "Target Support Files/Pods-emSigner/Pods-emSigner.debug.xcconfig"; sourceTree = "<group>"; };
+		D20AB3F61DB3FE73009B925D /* HoursConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoursConstants.h; sourceTree = "<group>"; };
+		D20AB3F71DB3FE73009B925D /* WebserviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebserviceManager.h; sourceTree = "<group>"; };
+		D20AB3F81DB3FE73009B925D /* WebserviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebserviceManager.m; sourceTree = "<group>"; };
+		D20AB3F91DB3FE73009B925D /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
+		D20AB3FA1DB3FE73009B925D /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connection.m; sourceTree = "<group>"; };
+		D20AB3FB1DB3FE73009B925D /* ConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionDelegate.h; sourceTree = "<group>"; };
+		D2221E0972C90471FA9DD6BE /* Pods_emSigner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_emSigner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D234389A1DA43042002FBD55 /* DropDownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownView.h; sourceTree = "<group>"; };
+		D234389B1DA43042002FBD55 /* DropDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownView.m; sourceTree = "<group>"; };
+		D271FFA21E2B595F00CB2E80 /* LMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMNavigationController.h; sourceTree = "<group>"; };
+		D271FFA31E2B595F00CB2E80 /* LMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMNavigationController.m; sourceTree = "<group>"; };
+		D2923F7E1DF44CF500795F8A /* CoSignPendingListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoSignPendingListVC.h; sourceTree = "<group>"; };
+		D2923F7F1DF44CF500795F8A /* CoSignPendingListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoSignPendingListVC.m; sourceTree = "<group>"; };
+		D2923F801DF44CF500795F8A /* CoSignPendingListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoSignPendingListVC.xib; sourceTree = "<group>"; };
+		D2D054681D3BA22F007EAE97 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		D2D054691D3BA22F007EAE97 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		D2D0546A1D3BA22F007EAE97 /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuViewController.h; sourceTree = "<group>"; };
+		D2D0546B1D3BA22F007EAE97 /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuViewController.m; sourceTree = "<group>"; };
+		D2D054721D3BAB2B007EAE97 /* DocStoreVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocStoreVC.h; path = ../DocStoreVC.h; sourceTree = "<group>"; };
+		D2D054731D3BAB2B007EAE97 /* DocStoreVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DocStoreVC.m; path = ../DocStoreVC.m; sourceTree = "<group>"; };
+		D9F5BC16235CF4A79C93E00A /* Pods-emSignerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emSignerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emSignerUITests/Pods-emSignerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DDC1EED8F3ACAF3489A5A7B5 /* Pods-emSignerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emSignerUITests.release.xcconfig"; path = "Target Support Files/Pods-emSignerUITests/Pods-emSignerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E6806396BE9B8ACA551492D8 /* Pods_emSignerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_emSignerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF4386461A364855C80F3111 /* Pods_emSignerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_emSignerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0627B6AA239E113200F1AA4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0627B6B4239E113300F1AA4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0627B6B9239E113300F1AA4E /* IntentsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3F2A26B1D34F0EE00BFA456 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06D7A1292237916F002F96F4 /* PDFKit.framework in Frameworks */,
+				06C217A121133EAB002EAAE2 /* LocalAuthentication.framework in Frameworks */,
+				06A8EDF3239F684A00D57EA0 /* Intents.framework in Frameworks */,
+				064222D8210D8A910028CB5B /* MessageUI.framework in Frameworks */,
+				064222D6210D8A890028CB5B /* Messages.framework in Frameworks */,
+				C309AFB71E545B5700B7ACFA /* QuickLook.framework in Frameworks */,
+				C3F50AE41E08077900EFA46D /* OpenAL.framework in Frameworks */,
+				C3F50AE51E08077900EFA46D /* OpenGLES.framework in Frameworks */,
+				06AFF684239A7F230037D3A4 /* MapKit.framework in Frameworks */,
+				C3F50AE11E08076200EFA46D /* GLKit.framework in Frameworks */,
+				C3F2A2AF1D34F3B700BFA456 /* CoreGraphics.framework in Frameworks */,
+				06D64D5824696C9C00A28387 /* CoreImage.framework in Frameworks */,
+				06D64D5624696C8500A28387 /* AVFoundation.framework in Frameworks */,
+				C3F2A2AD1D34F3A900BFA456 /* Foundation.framework in Frameworks */,
+				C3F2A2AB1D34F37D00BFA456 /* QuartzCore.framework in Frameworks */,
+				C3F2A2A91D34F37000BFA456 /* UIKit.framework in Frameworks */,
+				F2A207CA53D916AE1D9477ED /* Pods_emSigner.framework in Frameworks */,
+				974DA26FD7EAA0E7EDC65827 /* Pods_emSigner.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3F2A2841D34F0EE00BFA456 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFDED992677F13565591717F /* Pods_emSignerTests.framework in Frameworks */,
+				B4964EA0C47D50838893AD7B /* Pods_emSignerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3F2A28F1D34F0EE00BFA456 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1E3EDDFA94B8A93B38AB92E /* Pods_emSignerUITests.framework in Frameworks */,
+				FD236D72DBAEC335564C04AB /* Pods_emSignerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06058C2C2303E4BC00ACFC7B /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				06058C2D2303E4EE00ACFC7B /* CommentsController.h */,
+				06058C2E2303E4EE00ACFC7B /* CommentsController.m */,
+				06058C30230406BA00ACFC7B /* DropDownCell.h */,
+				06058C31230406BA00ACFC7B /* DropDownCell.m */,
+			);
+			name = Comments;
+			sourceTree = "<group>";
+		};
+		0611D85621D5F63000C01C9C /* DateCategory */ = {
+			isa = PBXGroup;
+			children = (
+				0611D85421D5F4AF00C01C9C /* NSString+DateAsAppleTime.m */,
+				0611D85321D5F4AF00C01C9C /* NSString+DateAsAppleTime.h */,
+			);
+			name = DateCategory;
+			sourceTree = "<group>";
+		};
+		0616026F2109CB9D00FFCF11 /* All Documents */ = {
+			isa = PBXGroup;
+			children = (
+				0611394D210B1FE5003BD191 /* DocsPage.h */,
+				0611394E210B1FE5003BD191 /* DocsPage.m */,
+				06113953210B2BD1003BD191 /* DocsCell.h */,
+				06113954210B2BD1003BD191 /* DocsCell.m */,
+			);
+			name = "All Documents";
+			sourceTree = "<group>";
+		};
+		0627B6AE239E113200F1AA4E /* emSignerDocumentSignIntent */ = {
+			isa = PBXGroup;
+			children = (
+				0627B6AF239E113200F1AA4E /* IntentHandler.h */,
+				0627B6B0239E113200F1AA4E /* IntentHandler.m */,
+				0627B6CF239E11A200F1AA4E /* DocumentSignIntents.intentdefinition */,
+				0627B6B2239E113200F1AA4E /* Info.plist */,
+			);
+			path = emSignerDocumentSignIntent;
+			sourceTree = "<group>";
+		};
+		0627B6BA239E113300F1AA4E /* emSignerDocumentSignIntentUI */ = {
+			isa = PBXGroup;
+			children = (
+				0627B6BB239E113300F1AA4E /* IntentViewController.h */,
+				0627B6BC239E113300F1AA4E /* IntentViewController.m */,
+				0627B6BE239E113300F1AA4E /* MainInterface.storyboard */,
+				0627B6C1239E113300F1AA4E /* Info.plist */,
+			);
+			path = emSignerDocumentSignIntentUI;
+			sourceTree = "<group>";
+		};
+		062C60BB221425D600FDAD7B /* MPGTextField */ = {
+			isa = PBXGroup;
+			children = (
+				062C60BC221425D600FDAD7B /* MPGTextField.h */,
+				062C60BD221425D600FDAD7B /* MPGTextField.m */,
+			);
+			path = MPGTextField;
+			sourceTree = "<group>";
+		};
+		064762762170AD31008E03E9 /* FXBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				06108777240633E8006DC56E /* FlexiformsPage.xib */,
+				064762772170AD31008E03E9 /* FXBlurView.h */,
+				064762782170AD31008E03E9 /* FXBlurView.m */,
+			);
+			path = FXBlurView;
+			sourceTree = "<group>";
+		};
+		06710B8422CDFCC4005BD9EA /* WorkFlow */ = {
+			isa = PBXGroup;
+			children = (
+				061754672473BF500025A62D /* SignatoriesListForFlexiforms.xib */,
+				06710BE022CDFD5F005BD9EA /* DocsNameForHeader.h */,
+				06710BDB22CDFD5E005BD9EA /* DocsNameForHeader.m */,
+				06710BE622CDFD5F005BD9EA /* DocsNameForHeader.xib */,
+				06710BF822CDFD61005BD9EA /* DocsSize.h */,
+				06710BFE22CDFD61005BD9EA /* DocsSize.m */,
+				06710BEE22CDFD60005BD9EA /* DocsSize.xib */,
+				06710BE322CDFD5F005BD9EA /* ImagelistCell.h */,
+				06710BE222CDFD5F005BD9EA /* ImagelistCell.m */,
+				06710C0D22CDFD63005BD9EA /* ImagelistCell.xib */,
+				06710BFC22CDFD61005BD9EA /* MultipleImagesCell.h */,
+				06710C0B22CDFD63005BD9EA /* MultipleImagesCell.m */,
+				06710BEC22CDFD60005BD9EA /* MultipleImagesCell.xib */,
+				06710C0622CDFD62005BD9EA /* PreviewerController.h */,
+				06710BE422CDFD5F005BD9EA /* PreviewerController.m */,
+				06710C0E22CDFD63005BD9EA /* RenameDocument.h */,
+				06710C0722CDFD62005BD9EA /* RenameDocument.m */,
+				06710BF722CDFD61005BD9EA /* RenameDocument.xib */,
+				06710BF622CDFD61005BD9EA /* ShowActivities.h */,
+				06710BDF22CDFD5F005BD9EA /* ShowActivities.m */,
+				06710C0822CDFD62005BD9EA /* ShowActivities.xib */,
+				06710C0A22CDFD63005BD9EA /* ShowActivitiesCellTableViewCell.h */,
+				06710BE922CDFD5F005BD9EA /* ShowActivitiesCellTableViewCell.m */,
+				06710BED22CDFD60005BD9EA /* ShowActivitiesCellTableViewCell.xib */,
+				06710BF522CDFD61005BD9EA /* ShowEditImagesFromImageList.h */,
+				06710BF122CDFD60005BD9EA /* ShowEditImagesFromImageList.m */,
+				06710BDC22CDFD5F005BD9EA /* ShowEditImagesFromImageList.xib */,
+				06710BDD22CDFD5F005BD9EA /* ShowPdfForImages.h */,
+				06710BF022CDFD60005BD9EA /* ShowPdfForImages.m */,
+				06710C0122CDFD62005BD9EA /* ShowPdfForImages.xib */,
+				06710C0222CDFD62005BD9EA /* SignerListCell.h */,
+				06710C0522CDFD62005BD9EA /* SignerListCell.m */,
+				06710BF922CDFD61005BD9EA /* SignerListCell.xib */,
+				06710C0422CDFD62005BD9EA /* SignersCellTableViewCell.h */,
+				06710C0922CDFD62005BD9EA /* SignersCellTableViewCell.m */,
+				06710BF422CDFD60005BD9EA /* SignersCellTableViewCell.xib */,
+				06710BE822CDFD5F005BD9EA /* SignersCollectionCell.h */,
+				06710BEB22CDFD60005BD9EA /* SignersCollectionCell.m */,
+				06710BDE22CDFD5F005BD9EA /* SignersCollectionCell.xib */,
+				06710BFA22CDFD61005BD9EA /* SignersDisplay.h */,
+				06710BFD22CDFD61005BD9EA /* SignersDisplay.m */,
+				06710BF322CDFD60005BD9EA /* SignersDisplay.xib */,
+				06710BFB22CDFD61005BD9EA /* SignersInformation.h */,
+				06710BEA22CDFD60005BD9EA /* SignersInformation.m */,
+				06710BFF22CDFD62005BD9EA /* SignersInformation.xib */,
+				06710BF222CDFD60005BD9EA /* UploadDocuments.h */,
+				06710BE122CDFD5F005BD9EA /* UploadDocuments.m */,
+				06710C0022CDFD62005BD9EA /* workflow.h */,
+				06710C0322CDFD62005BD9EA /* workflow.m */,
+				06710BE522CDFD5F005BD9EA /* workflow.xib */,
+				06710C0C22CDFD63005BD9EA /* WorkflowTableViewController.h */,
+				06710BE722CDFD5F005BD9EA /* WorkflowTableViewController.m */,
+				06350D8F232B65880004661E /* ReviewerController.h */,
+				06350D90232B65880004661E /* ReviewerController.m */,
+				06108775240633E8006DC56E /* FlexiformsPage.h */,
+				06108776240633E8006DC56E /* FlexiformsPage.m */,
+				0637A0062407C96D0014E303 /* SignatoriesListForFlexiforms.h */,
+				0637A0072407C96D0014E303 /* SignatoriesListForFlexiforms.m */,
+				0613A5CD249A3418000FE35D /* BulkDocVC.h */,
+				0613A5CE249A3418000FE35D /* BulkDocVC.m */,
+			);
+			name = WorkFlow;
+			sourceTree = "<group>";
+		};
+		06821D5123EBED1400A40B68 /* CustomAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				06821D5223EBED1400A40B68 /* OverlayTransitioningDelegate.h */,
+				06821D5323EBED1400A40B68 /* OverlayPresentationController.h */,
+				06821D5423EBED1400A40B68 /* ControllerAnimator.h */,
+				06821D5523EBED1400A40B68 /* ControllerAnimator.m */,
+				06821D5623EBED1400A40B68 /* OverlayPresentationController.m */,
+				06821D5723EBED1400A40B68 /* OverlayTransitioningDelegate.m */,
+			);
+			path = CustomAnimation;
+			sourceTree = "<group>";
+		};
+		06871452220C390700B61578 /* PlaceHolder */ = {
+			isa = PBXGroup;
+			children = (
+				06871454220C391A00B61578 /* SPUserResizableView.h */,
+				06871453220C391A00B61578 /* SPUserResizableView.m */,
+			);
+			name = PlaceHolder;
+			sourceTree = "<group>";
+		};
+		069D3DF623D5726600932607 /* SiriForSigning */ = {
+			isa = PBXGroup;
+			children = (
+				069D3DF723D5729100932607 /* SigningSiri.swift */,
+			);
+			name = SiriForSigning;
+			sourceTree = "<group>";
+		};
+		06A7B9F622A9242400BFDF0C /* office365 */ = {
+			isa = PBXGroup;
+			children = (
+				06A7B9F822A9245100BFDF0C /* swiftController.swift */,
+				06A7B9F722A9245100BFDF0C /* emSigner-Bridging-Header.h */,
+			);
+			name = office365;
+			sourceTree = "<group>";
+		};
+		06BBF70C22019B8100172797 /* VCFloatingActionButton */ = {
+			isa = PBXGroup;
+			children = (
+				06BBF70D22019B8100172797 /* floatTableViewCell.h */,
+				06BBF70E22019B8100172797 /* VCFloatingActionButton.h */,
+				06BBF70F22019B8100172797 /* floatTableViewCell.m */,
+				06BBF71022019B8100172797 /* floatTableViewCell.xib */,
+				06BBF71122019B8100172797 /* VCFloatingActionButton.m */,
+			);
+			path = VCFloatingActionButton;
+			sourceTree = "<group>";
+		};
+		06CB9FE222E5C01F0091AA46 /* SubclassAnnotationsPdf */ = {
+			isa = PBXGroup;
+			children = (
+				06D7A12A2237B3C1002F96F4 /* MyAnnotation.h */,
+				06D7A12B2237B3C1002F96F4 /* MyAnnotation.m */,
+			);
+			name = SubclassAnnotationsPdf;
+			sourceTree = "<group>";
+		};
+		06D3B71524728C3E001BC378 /* CustomHeader */ = {
+			isa = PBXGroup;
+			children = (
+				06D3B71924728CBE001BC378 /* New Group */,
+				06D3B71624728C92001BC378 /* CustomHeader.h */,
+				0670EE0E24740F0000791A15 /* UploadHeader.xib */,
+				06D3B71724728C92001BC378 /* CustomHeader.m */,
+				06D3B71A24728CFB001BC378 /* CustomHeader.xib */,
+				0670EE0B24740E7900791A15 /* UploadHeader.h */,
+				0670EE0C24740E7900791A15 /* UploadHeader.m */,
+			);
+			name = CustomHeader;
+			sourceTree = "<group>";
+		};
+		06D3B71924728CBE001BC378 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		06D64D5224696BF000A28387 /* IRLDocumentForWorkflows */ = {
+			isa = PBXGroup;
+			children = (
+				06D64D5324696C2300A28387 /* WorkflowScannerController.swift */,
+			);
+			name = IRLDocumentForWorkflows;
+			sourceTree = "<group>";
+		};
+		06D97D132313ABBE00CC682A /* PageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				06D49B5F231655A3001EC7B9 /* GHWalkThroughPageCell.h */,
+				06D49B5D231655A2001EC7B9 /* GHWalkThroughPageCell.m */,
+				06D49B5E231655A2001EC7B9 /* GHWalkThroughView.h */,
+				06D49B5C231655A2001EC7B9 /* GHWalkThroughView.m */,
+				06D97D192313ADC200CC682A /* ImagesForPageViewController.h */,
+				06D97D1A2313ADC200CC682A /* ImagesForPageViewController.m */,
+			);
+			name = PageViewController;
+			sourceTree = "<group>";
+		};
+		06E1CFBA211882B4007B93C2 /* Signatories Page */ = {
+			isa = PBXGroup;
+			children = (
+				06FFC55A2118778F0025CD11 /* SignatoriesPage.h */,
+				06FFC55B2118778F0025CD11 /* SignatoriesPage.m */,
+				06E1CFBC2118835D007B93C2 /* SignatoriesCell.h */,
+				06E1CFBD2118835D007B93C2 /* SignatoriesCell.m */,
+			);
+			name = "Signatories Page";
+			sourceTree = "<group>";
+		};
+		06F6057621DF790B00FAABC0 /* LoadingCell */ = {
+			isa = PBXGroup;
+			children = (
+				C3F50ADF1E08076200EFA46D /* Frameworks */,
+				06F6057221DF78F900FAABC0 /* LoadingCell.xib */,
+				06F6057121DF78F900FAABC0 /* LoadingCell.m */,
+				06F6057021DF78F900FAABC0 /* LoadingCell.h */,
+			);
+			name = LoadingCell;
+			sourceTree = "<group>";
+		};
+		22951A0FAC18BF7220B15267 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B945691AF4C0B5E3450C069 /* Pods-emSigner.debug.xcconfig */,
+				36BB6117FA0FFCFA76A61DA2 /* Pods-emSigner.release.xcconfig */,
+				7A70F3AFA2159E0250535635 /* Pods-emSignerTests.debug.xcconfig */,
+				98EE4B8D948EC283D7F358E8 /* Pods-emSignerTests.release.xcconfig */,
+				D9F5BC16235CF4A79C93E00A /* Pods-emSignerUITests.debug.xcconfig */,
+				7B16091F09EA9948A957BFF5 /* Pods-emSignerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		45EBD4A046468555F4410DBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06D64D5724696C9C00A28387 /* CoreImage.framework */,
+				06D64D5524696C8500A28387 /* AVFoundation.framework */,
+				0625BD1A2420EF3F00CB81B3 /* NotificationBannerSwift.framework */,
+				06A8EDF2239F684A00D57EA0 /* Intents.framework */,
+				06AFF683239A7F230037D3A4 /* MapKit.framework */,
+				D2221E0972C90471FA9DD6BE /* Pods_emSigner.framework */,
+				6E0F0C161D1DFAF11A388C50 /* Pods_emSignerTests.framework */,
+				E6806396BE9B8ACA551492D8 /* Pods_emSignerUITests.framework */,
+				0627B6B8239E113300F1AA4E /* IntentsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3009DD61D641C01006DB84E /* Document Log */ = {
+			isa = PBXGroup;
+			children = (
+				C3F062101D50A8A3008F19B3 /* DocumentLogVC.h */,
+				C3F062111D50A8A3008F19B3 /* DocumentLogVC.m */,
+				C3009DE11D641D3A006DB84E /* CustomDocumentLogTableViewCell.h */,
+				C3009DE21D641D3A006DB84E /* CustomDocumentLogTableViewCell.m */,
+				C3009DE31D641D3A006DB84E /* CustomDocumentLogTableViewCell.xib */,
+				C3009DDC1D641CF4006DB84E /* DocumentLogTableViewCell.h */,
+				C3009DDD1D641CF4006DB84E /* DocumentLogTableViewCell.m */,
+				C3009DDE1D641CF4006DB84E /* DocumentLogTableViewCell.xib */,
+			);
+			name = "Document Log";
+			sourceTree = "<group>";
+		};
+		C304C09B1F00FD71007800EF /* Docs Store MultipleDocuments */ = {
+			isa = PBXGroup;
+			children = (
+				C304C09F1F010138007800EF /* DocsStoreMultiplePdf.h */,
+				C304C0A01F010138007800EF /* DocsStoreMultiplePdf.m */,
+			);
+			name = "Docs Store MultipleDocuments";
+			sourceTree = "<group>";
+		};
+		C306C9BE1EC96DA30086B2AD /* Rate Us */ = {
+			isa = PBXGroup;
+			children = (
+				C306C9BB1EC96D940086B2AD /* RateUsVC.h */,
+				C306C9BC1EC96D940086B2AD /* RateUsVC.m */,
+			);
+			name = "Rate Us";
+			sourceTree = "<group>";
+		};
+		C309AFB51E5415C000B7ACFA /* Docs Store */ = {
+			isa = PBXGroup;
+			children = (
+				D2D054721D3BAB2B007EAE97 /* DocStoreVC.h */,
+				D2D054731D3BAB2B007EAE97 /* DocStoreVC.m */,
+				C3F6EA651E4C54DF00E64BB1 /* DocsStoreNextVC.h */,
+				C3F6EA661E4C54DF00E64BB1 /* DocsStoreNextVC.m */,
+				C3F6EA671E4C54DF00E64BB1 /* DocsStoreNextVC.xib */,
+				C304C09B1F00FD71007800EF /* Docs Store MultipleDocuments */,
+			);
+			name = "Docs Store";
+			sourceTree = "<group>";
+		};
+		C309AFB81E5472F100B7ACFA /* Change Password */ = {
+			isa = PBXGroup;
+			children = (
+				C31368181E547EF600252501 /* ChangePasswordVC.h */,
+				C31368191E547EF600252501 /* ChangePasswordVC.m */,
+			);
+			name = "Change Password";
+			sourceTree = "<group>";
+		};
+		C31160581E5AFF8200E93385 /* Textview Placeholder */ = {
+			isa = PBXGroup;
+			children = (
+				C31160591E5B000300E93385 /* UITextView+Placeholder.h */,
+				C311605A1E5B000300E93385 /* UITextView+Placeholder.m */,
+			);
+			name = "Textview Placeholder";
+			sourceTree = "<group>";
+		};
+		C312E8991E63F9A7009DC7A2 /* Decline */ = {
+			isa = PBXGroup;
+			children = (
+				C3A58D501D4F61D40080B011 /* DeclineVC.h */,
+				C3A58D511D4F61D40080B011 /* DeclineVC.m */,
+			);
+			name = Decline;
+			sourceTree = "<group>";
+		};
+		C312E89A1E6427E6009DC7A2 /* Recall */ = {
+			isa = PBXGroup;
+			children = (
+				C301D0981D6C49A50027B362 /* RecallVC.h */,
+				C301D0991D6C49A50027B362 /* RecallVC.m */,
+			);
+			name = Recall;
+			sourceTree = "<group>";
+		};
+		C312E89B1E646D19009DC7A2 /* Forgot Password */ = {
+			isa = PBXGroup;
+			children = (
+				C3A12D1E1D93B8A50077BF5D /* ForgotPasswordVC.h */,
+				C3A12D1F1D93B8A50077BF5D /* ForgotPasswordVC.m */,
+			);
+			name = "Forgot Password";
+			sourceTree = "<group>";
+		};
+		C339D5DE1DDB0BDE00C03171 /* Completed */ = {
+			isa = PBXGroup;
+			children = (
+				C339D5F11DDB23E400C03171 /* CompleteStatusVC.h */,
+				C339D5F21DDB23E400C03171 /* CompleteStatusVC.m */,
+				C339D5F31DDB23E400C03171 /* CompleteStatusVC.xib */,
+				C3F6AE6B1E0A834400429CA8 /* CompletedNextVC.h */,
+				C3F6AE6C1E0A834400429CA8 /* CompletedNextVC.m */,
+				C3F6AE681E0A7AF800429CA8 /* CompletedNextVC.xib */,
+				C3FA5BDD1EE01B08006373F0 /* Complete Multiple Document */,
+				C3FABDF51E37366700EAF5D7 /* CompletedTableViewCell.h */,
+				C3FABDF61E37366700EAF5D7 /* CompletedTableViewCell.m */,
+				C3FABDF71E37366700EAF5D7 /* CompletedTableViewCell.xib */,
+			);
+			name = Completed;
+			sourceTree = "<group>";
+		};
+		C339D5DF1DDB0C0A00C03171 /* Declined */ = {
+			isa = PBXGroup;
+			children = (
+				C339D5E71DDB238200C03171 /* DeclineStatusVC.h */,
+				C339D5E81DDB238200C03171 /* DeclineStatusVC.m */,
+				C339D5E91DDB238200C03171 /* DeclineStatusVC.xib */,
+				C34A43D11E40718D00A38BB0 /* DeclineNextVC.h */,
+				C34A43D21E40718D00A38BB0 /* DeclineNextVC.m */,
+				C34A43D31E40718D00A38BB0 /* DeclineNextVC.xib */,
+				C3FABDF01E37361800EAF5D7 /* DeclineTableViewCell.h */,
+				C3FABDF11E37361800EAF5D7 /* DeclineTableViewCell.m */,
+				C3FABDF21E37361800EAF5D7 /* DeclineTableViewCell.xib */,
+			);
+			name = Declined;
+			sourceTree = "<group>";
+		};
+		C339D5E01DDB0C1900C03171 /* Recalled */ = {
+			isa = PBXGroup;
+			children = (
+				C339D5E21DDB232600C03171 /* RecallStatusVC.h */,
+				C339D5E31DDB232600C03171 /* RecallStatusVC.m */,
+				C339D5E41DDB232600C03171 /* RecallStatusVC.xib */,
+				C3FF8B8E1E02C18100F82488 /* RecallDeclineVC.h */,
+				C3FF8B8F1E02C18100F82488 /* RecallDeclineVC.m */,
+				C3FF8B901E02C18100F82488 /* RecallDeclineVC.xib */,
+				C339D5F61DDB248100C03171 /* RecallTableViewCell.h */,
+				C339D5F71DDB248100C03171 /* RecallTableViewCell.m */,
+				C339D5F81DDB248100C03171 /* RecallTableViewCell.xib */,
+			);
+			name = Recalled;
+			sourceTree = "<group>";
+		};
+		C33C34321E27B9610000ABC0 /* Float Buttton */ = {
+			isa = PBXGroup;
+			children = (
+				C33C34361E27BDEB0000ABC0 /* RPFloatingPlaceholderConstants.h */,
+				C33C34371E27BDEC0000ABC0 /* RPFloatingPlaceholderTextField.h */,
+				C33C34381E27BDEC0000ABC0 /* RPFloatingPlaceholderTextField.m */,
+				C33C34391E27BDEC0000ABC0 /* RPFloatingPlaceholderTextView.h */,
+				C33C343A1E27BDEC0000ABC0 /* RPFloatingPlaceholderTextView.m */,
+			);
+			name = "Float Buttton";
+			sourceTree = "<group>";
+		};
+		C33EC9C11DF594000062BB8D /* Signature View */ = {
+			isa = PBXGroup;
+			children = (
+				C3F50AD21E07EC4A00EFA46D /* PPSSignatureView.h */,
+				C3F50AD31E07EC4A00EFA46D /* PPSSignatureView.m */,
+				C3F50AD51E07ED2500EFA46D /* MPBSignatureViewController.h */,
+				C3F50AD61E07ED2500EFA46D /* MPBCustomStyleSignatureViewController.h */,
+				C3F50AD71E07ED2500EFA46D /* MPBCustomStyleSignatureViewController.m */,
+				C3F50AD81E07ED2500EFA46D /* MPBDefaultStyleSignatureViewController.h */,
+				C3F50AD91E07ED2500EFA46D /* MPBDefaultStyleSignatureViewController.m */,
+				C3F50ADA1E07ED2500EFA46D /* MPBSignatureViewControllerConfiguration.h */,
+				C3F50ADB1E07ED2500EFA46D /* MPBSignatureViewControllerConfiguration.m */,
+				06054B8921414DD5006E749D /* SignatureImagesCell.h */,
+				06054B8A21414DD5006E749D /* SignatureImagesCell.m */,
+			);
+			name = "Signature View";
+			sourceTree = "<group>";
+		};
+		C34009841DE04D18007008AE /* Rate Us */ = {
+			isa = PBXGroup;
+			children = (
+				C339C4041D9BCD470039DEAE /* iRate.h */,
+				C339C4051D9BCD470039DEAE /* iRate.m */,
+				C339C4031D9BCD470039DEAE /* iRate.bundle */,
+			);
+			name = "Rate Us";
+			sourceTree = "<group>";
+		};
+		C34009851DE04D5D007008AE /* DropDown View */ = {
+			isa = PBXGroup;
+			children = (
+				D234389A1DA43042002FBD55 /* DropDownView.h */,
+				D234389B1DA43042002FBD55 /* DropDownView.m */,
+			);
+			name = "DropDown View";
+			sourceTree = "<group>";
+		};
+		C397ECCE1E3B635C00844B53 /* Document Info */ = {
+			isa = PBXGroup;
+			children = (
+				06DB56BC229D3B270086E159 /* DocinfoSignatoryCell.h */,
+				06DB56BB229D3B270086E159 /* DocinfoSignatoryCell.m */,
+				06DB56BD229D3B270086E159 /* DocinfoSignatoryCell.xib */,
+				06211E5F21395F8E00412D1B /* SubClassView.h */,
+				06211E6121395F8F00412D1B /* SubClassView.m */,
+				06211E6021395F8E00412D1B /* SubClassView.xib */,
+				C34800241E30B7E200EE6D08 /* DocumentInfoVC.h */,
+				C34800251E30B7E200EE6D08 /* DocumentInfoVC.m */,
+				C397ECCF1E3B642800844B53 /* DocInfoTableViewCell.h */,
+				C397ECD01E3B642800844B53 /* DocInfoTableViewCell.m */,
+				C397ECD11E3B642800844B53 /* DocInfoTableViewCell.xib */,
+				C397ECD41E3B644400844B53 /* DocAssignedTableViewCell.h */,
+				C397ECD51E3B644400844B53 /* DocAssignedTableViewCell.m */,
+				C397ECD61E3B644400844B53 /* DocAssignedTableViewCell.xib */,
+				0605CF7321833F1C00B36C36 /* DocumentInfoCollectionCell.h */,
+				0605CF7421833F1C00B36C36 /* DocumentInfoCollectionCell.m */,
+				0605CF7521833F1C00B36C36 /* DocumentInfoCollectionCell.xib */,
+				0678630D2189D85C006C7BDF /* DocumentInfoNames.h */,
+				0678630E2189D85C006C7BDF /* DocumentInfoNames.m */,
+				0678630F2189D85C006C7BDF /* DocumentInfoNames.xib */,
+				067863122189DE59006C7BDF /* DocumentNamesCell.h */,
+				067863132189DE59006C7BDF /* DocumentNamesCell.m */,
+				067863142189DE59006C7BDF /* DocumentNamesCell.xib */,
+			);
+			name = "Document Info";
+			sourceTree = "<group>";
+		};
+		C39915461D3614C0003BEF29 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				C3F2A2AE1D34F3B700BFA456 /* CoreGraphics.framework */,
+				C3F2A2AC1D34F3A900BFA456 /* Foundation.framework */,
+				C3F2A2AA1D34F37D00BFA456 /* QuartzCore.framework */,
+				C3F2A2A81D34F37000BFA456 /* UIKit.framework */,
+			);
+			name = Framework;
+			path = emSigner;
+			sourceTree = "<group>";
+		};
+		C3A12D211D93F53F0077BF5D /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				D20AB3F61DB3FE73009B925D /* HoursConstants.h */,
+				D20AB3F71DB3FE73009B925D /* WebserviceManager.h */,
+				D20AB3F81DB3FE73009B925D /* WebserviceManager.m */,
+				D20AB3F91DB3FE73009B925D /* Connection.h */,
+				D20AB3FA1DB3FE73009B925D /* Connection.m */,
+				D20AB3FB1DB3FE73009B925D /* ConnectionDelegate.h */,
+				C3F742F81E1F5ABE009D1DF1 /* SingletonAPI.h */,
+				C3F742F91E1F5ABE009D1DF1 /* SingletonAPI.m */,
+			);
+			name = WebService;
+			sourceTree = "<group>";
+		};
+		C3F119E91D3F3E6900434FC9 /* Pending */ = {
+			isa = PBXGroup;
+			children = (
+				C3FABDEF1E37354800EAF5D7 /* MySignatures Pending */,
+				C3FABDEE1E37351B00EAF5D7 /* Waiting For Others */,
+			);
+			name = Pending;
+			sourceTree = "<group>";
+		};
+		C3F119EA1D3F3E8800434FC9 /* Drafts */ = {
+			isa = PBXGroup;
+			children = (
+				C3F6DCB51D38F0CE00223CA9 /* CoSignPendingVC.h */,
+				C3F6DCB61D38F0CE00223CA9 /* CoSignPendingVC.m */,
+				C3F6DCB71D38F0CE00223CA9 /* CoSignPendingVC.xib */,
+				C30FB16C1E14DDA400FE087E /* DraftInactiveVC.h */,
+				C30FB16D1E14DDA400FE087E /* DraftInactiveVC.m */,
+				C30FB16E1E14DDA400FE087E /* DraftInactiveVC.xib */,
+				C34009891DE0552D007008AE /* NotStartedTableViewCell.h */,
+				C340098A1DE0552D007008AE /* NotStartedTableViewCell.m */,
+				C340098B1DE0552D007008AE /* NotStartedTableViewCell.xib */,
+			);
+			name = Drafts;
+			sourceTree = "<group>";
+		};
+		C3F2A2651D34F0EE00BFA456 = {
+			isa = PBXGroup;
+			children = (
+				C3F2A2701D34F0EE00BFA456 /* emSigner */,
+				C3F2A28A1D34F0EE00BFA456 /* emSignerTests */,
+				C39915461D3614C0003BEF29 /* Framework */,
+				C3F2A2951D34F0EE00BFA456 /* emSignerUITests */,
+				0627B6AE239E113200F1AA4E /* emSignerDocumentSignIntent */,
+				0627B6BA239E113300F1AA4E /* emSignerDocumentSignIntentUI */,
+				C3F2A26F1D34F0EE00BFA456 /* Products */,
+				F23B7DEB00D6A39570DAEE19 /* Pods */,
+				45EBD4A046468555F4410DBD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C3F2A26F1D34F0EE00BFA456 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3F2A26E1D34F0EE00BFA456 /* emSigner.app */,
+				C3F2A2871D34F0EE00BFA456 /* emSignerTests.xctest */,
+				C3F2A2921D34F0EE00BFA456 /* emSignerUITests.xctest */,
+				0627B6AD239E113200F1AA4E /* emSignerDocumentSignIntent.appex */,
+				0627B6B7239E113300F1AA4E /* emSignerDocumentSignIntentUI.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3F2A2701D34F0EE00BFA456 /* emSigner */ = {
+			isa = PBXGroup;
+			children = (
+				06D3B71524728C3E001BC378 /* CustomHeader */,
+				06D64D5224696BF000A28387 /* IRLDocumentForWorkflows */,
+				06821D5123EBED1400A40B68 /* CustomAnimation */,
+				069D3DF623D5726600932607 /* SiriForSigning */,
+				06D97D132313ABBE00CC682A /* PageViewController */,
+				06058C2C2303E4BC00ACFC7B /* Comments */,
+				06A7B9F622A9242400BFDF0C /* office365 */,
+				06CB9FE222E5C01F0091AA46 /* SubclassAnnotationsPdf */,
+				06710B8422CDFCC4005BD9EA /* WorkFlow */,
+				062C60BB221425D600FDAD7B /* MPGTextField */,
+				06871452220C390700B61578 /* PlaceHolder */,
+				06BBF70C22019B8100172797 /* VCFloatingActionButton */,
+				0647627A2170AD44008E03E9 /* ImageFileCrop.h */,
+				0647627B2170AD44008E03E9 /* ImageFileCrop.m */,
+				06E29AF62354327E00AE0282 /* GoogleService-Info.plist */,
+				064762762170AD31008E03E9 /* FXBlurView */,
+				06593B7221268FAF00B07C0D /* emsigner-with-ico2.png */,
+				0616026F2109CB9D00FFCF11 /* All Documents */,
+				C3F69A381EEA7BAB0081B586 /* emSigner.entitlements */,
+				C3F2A2741D34F0EE00BFA456 /* AppDelegate.h */,
+				C3F2A2751D34F0EE00BFA456 /* AppDelegate.m */,
+				C3FABDFA1E373D6800EAF5D7 /* Login */,
+				C3F2A27A1D34F0EE00BFA456 /* Main.storyboard */,
+				C368B10B1EF6CA9A00F0458F /* emSigner Mobile App Description (2).pdf */,
+				C3F57FB01F14D18C006C51FE /* eSign */,
+				C3F57FAF1F14D16D006C51FE /* GetOTP */,
+				C3F72C2B1ED4026500B8BF2E /* FeedBack */,
+				C306C9BE1EC96DA30086B2AD /* Rate Us */,
+				C3FAB75B1E823A8C00238BC7 /* Pdf Listview */,
+				D271FFA21E2B595F00CB2E80 /* LMNavigationController.h */,
+				D271FFA31E2B595F00CB2E80 /* LMNavigationController.m */,
+				C30360ED1E2C981F00578EDF /* LMMenuCell.h */,
+				C30360EE1E2C981F00578EDF /* LMMenuCell.m */,
+				C309AFB81E5472F100B7ACFA /* Change Password */,
+				C397ECCE1E3B635C00844B53 /* Document Info */,
+				C3A12D211D93F53F0077BF5D /* WebService */,
+				C3FBB0BB1EF7971700348996 /* About Us */,
+				D2D054671D3BA209007EAE97 /* Side Menu */,
+				C312E89B1E646D19009DC7A2 /* Forgot Password */,
+				C312E89A1E6427E6009DC7A2 /* Recall */,
+				06E1CFBA211882B4007B93C2 /* Signatories Page */,
+				C312E8991E63F9A7009DC7A2 /* Decline */,
+				C3FBB0BC1EF7973E00348996 /* PopOver Multiple Document */,
+				C3F5B2FF1E5C018E007861EE /* Share */,
+				C3F6DCC91D38FAAC00223CA9 /* Status */,
+				C3FEE8D31E2893D100509D99 /* MBProgressbar */,
+				C33C34321E27B9610000ABC0 /* Float Buttton */,
+				C34009841DE04D18007008AE /* Rate Us */,
+				C34009851DE04D5D007008AE /* DropDown View */,
+				C3009DD61D641C01006DB84E /* Document Log */,
+				C3F3474C1D51F58B0012B70D /* My Profile */,
+				C31160581E5AFF8200E93385 /* Textview Placeholder */,
+				C3F6DCAF1D38E69100223CA9 /* DashBoard */,
+				C3F2A27D1D34F0EE00BFA456 /* Assets.xcassets */,
+				C3F2A27F1D34F0EE00BFA456 /* LaunchScreen.storyboard */,
+				C3F2A2821D34F0EE00BFA456 /* Info.plist */,
+				C3F2A2711D34F0EE00BFA456 /* Supporting Files */,
+				06732E512150F26F007BEC69 /* ForgotPasswordUpdated.h */,
+				06732E522150F26F007BEC69 /* ForgotPasswordUpdated.m */,
+				0611D85621D5F63000C01C9C /* DateCategory */,
+				06F6057621DF790B00FAABC0 /* LoadingCell */,
+				069B93E122130A7B00B05771 /* DelegateDocument.h */,
+				069B93E222130A7B00B05771 /* DelegateDocument.m */,
+				069B93E322130A7B00B05771 /* DelegateDocument.xib */,
+				06B803B22223E5F600942F1A /* ParallelSigning.h */,
+				06B803B32223E5F600942F1A /* ParallelSigning.m */,
+				06B803B42223E5F600942F1A /* ParallelSigning.xib */,
+			);
+			path = emSigner;
+			sourceTree = "<group>";
+		};
+		C3F2A2711D34F0EE00BFA456 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3F2A2721D34F0EE00BFA456 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C3F2A28A1D34F0EE00BFA456 /* emSignerTests */ = {
+			isa = PBXGroup;
+			children = (
+				C3F2A28B1D34F0EE00BFA456 /* emSignerTests.m */,
+				C3F2A28D1D34F0EE00BFA456 /* Info.plist */,
+			);
+			path = emSignerTests;
+			sourceTree = "<group>";
+		};
+		C3F2A2951D34F0EE00BFA456 /* emSignerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C3F2A2961D34F0EE00BFA456 /* emSignerUITests.m */,
+				C3F2A2981D34F0EE00BFA456 /* Info.plist */,
+			);
+			path = emSignerUITests;
+			sourceTree = "<group>";
+		};
+		C3F3474C1D51F58B0012B70D /* My Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C30873671D477B11000A51B6 /* MyProfileVC.h */,
+				C30873681D477B11000A51B6 /* MyProfileVC.m */,
+			);
+			name = "My Profile";
+			sourceTree = "<group>";
+		};
+		C3F50ADF1E08076200EFA46D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22951A0FAC18BF7220B15267 /* Pods */,
+				06D7A1282237916F002F96F4 /* PDFKit.framework */,
+				067C6D5C219EC4B300880C41 /* CoreData.framework */,
+				06C217A021133EAB002EAAE2 /* LocalAuthentication.framework */,
+				064222D7210D8A910028CB5B /* MessageUI.framework */,
+				064222D5210D8A890028CB5B /* Messages.framework */,
+				C34925F91F174DDE009C114F /* WebKit.framework */,
+				C309AFB61E545B5600B7ACFA /* QuickLook.framework */,
+				C3F50AE21E08077900EFA46D /* OpenAL.framework */,
+				C3F50AE31E08077900EFA46D /* OpenGLES.framework */,
+				C3F50AE01E08076200EFA46D /* GLKit.framework */,
+				AB738E16E178809D48BE188F /* Pods_emSigner.framework */,
+				660D4534BCC142B598BD2D31 /* Pods_emSignerTests.framework */,
+				FF4386461A364855C80F3111 /* Pods_emSignerUITests.framework */,
+			);
+			name = Frameworks;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		C3F57FAF1F14D16D006C51FE /* GetOTP */ = {
+			isa = PBXGroup;
+			children = (
+				C3F5949C1DE42A9F00080735 /* GetOTPVC.h */,
+				C3F5949D1DE42A9F00080735 /* GetOTPVC.m */,
+			);
+			name = GetOTP;
+			sourceTree = "<group>";
+		};
+		C3F57FB01F14D18C006C51FE /* eSign */ = {
+			isa = PBXGroup;
+			children = (
+				C33C86DD1D48851900856B55 /* CustomSignVC.h */,
+				C33C86DE1D48851900856B55 /* CustomSignVC.m */,
+				06031EB122C379610005248A /* EsignWebView.h */,
+				06031EB222C379610005248A /* EsignWebView.m */,
+			);
+			name = eSign;
+			sourceTree = "<group>";
+		};
+		C3F5B2FF1E5C018E007861EE /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				C35A93E31DDF0A37001B8D2A /* ShareVC.h */,
+				C35A93E41DDF0A37001B8D2A /* ShareVC.m */,
+			);
+			name = Share;
+			sourceTree = "<group>";
+		};
+		C3F5FD9A1ED58A43004EC97E /* MultiplePdfviewer */ = {
+			isa = PBXGroup;
+			children = (
+				C3F5FD971ED58A36004EC97E /* MultiplePdfViewerVC.h */,
+				C3F5FD981ED58A36004EC97E /* MultiplePdfViewerVC.m */,
+				C3FA5BE11EE02774006373F0 /* MultiplePdfTableViewCell.h */,
+				C3FA5BE21EE02774006373F0 /* MultiplePdfTableViewCell.m */,
+				C3FA5BE31EE02774006373F0 /* MultiplePdfTableViewCell.xib */,
+				C309980E1F1BA67900058938 /* AttachedVC.h */,
+				C309980F1F1BA67A00058938 /* AttachedVC.m */,
+				C36207031F208E8C00FBAFBE /* AttachedViewVC.h */,
+				C36207041F208E8C00FBAFBE /* AttachedViewVC.m */,
+				C36207051F208E8C00FBAFBE /* AttachedViewVC.xib */,
+				C3092DAC1F0B5B4E000834C7 /* AttachedMultiplePdfTableViewCell.h */,
+				C3092DAD1F0B5B4E000834C7 /* AttachedMultiplePdfTableViewCell.m */,
+				C3092DAE1F0B5B4E000834C7 /* AttachedMultiplePdfTableViewCell.xib */,
+			);
+			name = MultiplePdfviewer;
+			sourceTree = "<group>";
+		};
+		C3F6DCAF1D38E69100223CA9 /* DashBoard */ = {
+			isa = PBXGroup;
+			children = (
+				D2D0546E1D3BAAAA007EAE97 /* Menu VC */,
+				C33EC9C11DF594000062BB8D /* Signature View */,
+				C3F7387E1E4D91C2000142EF /* Reachabilty */,
+				C3FEE8DA1E28DA6600509D99 /* DropDownView */,
+			);
+			name = DashBoard;
+			sourceTree = "<group>";
+		};
+		C3F6DCC91D38FAAC00223CA9 /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				C309AFB51E5415C000B7ACFA /* Docs Store */,
+				C3F119E91D3F3E6900434FC9 /* Pending */,
+				C3F119EA1D3F3E8800434FC9 /* Drafts */,
+				C339D5E01DDB0C1900C03171 /* Recalled */,
+				C339D5DF1DDB0C0A00C03171 /* Declined */,
+				C339D5DE1DDB0BDE00C03171 /* Completed */,
+			);
+			name = Status;
+			sourceTree = "<group>";
+		};
+		C3F72C2B1ED4026500B8BF2E /* FeedBack */ = {
+			isa = PBXGroup;
+			children = (
+				C3F72C281ED4025000B8BF2E /* FeedbackVC.h */,
+				C3F72C291ED4025000B8BF2E /* FeedbackVC.m */,
+			);
+			name = FeedBack;
+			sourceTree = "<group>";
+		};
+		C3F7387E1E4D91C2000142EF /* Reachabilty */ = {
+			isa = PBXGroup;
+			children = (
+				C3F7387F1E4D91E7000142EF /* Reachability.h */,
+				C3F738801E4D91E7000142EF /* Reachability.m */,
+			);
+			name = Reachabilty;
+			sourceTree = "<group>";
+		};
+		C3FA5BD91EDFF40F006373F0 /* MultiplePdf OPenInprogress */ = {
+			isa = PBXGroup;
+			children = (
+				C3FA5BDA1EDFF522006373F0 /* InprogressMultiplePdf.h */,
+				C3FA5BDB1EDFF522006373F0 /* InprogressMultiplePdf.m */,
+			);
+			name = "MultiplePdf OPenInprogress";
+			sourceTree = "<group>";
+		};
+		C3FA5BDD1EE01B08006373F0 /* Complete Multiple Document */ = {
+			isa = PBXGroup;
+			children = (
+				C3FA5BDE1EE01CB6006373F0 /* CompleteMultipleDocumentVC.h */,
+				C3FA5BDF1EE01CB6006373F0 /* CompleteMultipleDocumentVC.m */,
+			);
+			name = "Complete Multiple Document";
+			sourceTree = "<group>";
+		};
+		C3FAB75B1E823A8C00238BC7 /* Pdf Listview */ = {
+			isa = PBXGroup;
+			children = (
+				C3FBC9AD1E81665200D4F0A8 /* ListPdfViewer.h */,
+				C3FBC9AE1E81665200D4F0A8 /* ListPdfViewer.m */,
+				C3396CE11E8CD1B9000F638D /* PdfListTableViewCell.h */,
+				C3396CE21E8CD1B9000F638D /* PdfListTableViewCell.m */,
+				C3396CE31E8CD1B9000F638D /* PdfListTableViewCell.xib */,
+			);
+			name = "Pdf Listview";
+			sourceTree = "<group>";
+		};
+		C3FABDEE1E37351B00EAF5D7 /* Waiting For Others */ = {
+			isa = PBXGroup;
+			children = (
+				C35368E11DEFF8CD008B7029 /* PendingVC.h */,
+				C35368E21DEFF8CD008B7029 /* PendingVC.m */,
+				C35368E31DEFF8CD008B7029 /* PendingVC.xib */,
+				D2923F7E1DF44CF500795F8A /* CoSignPendingListVC.h */,
+				D2923F7F1DF44CF500795F8A /* CoSignPendingListVC.m */,
+				D2923F801DF44CF500795F8A /* CoSignPendingListVC.xib */,
+				C3FA5BD91EDFF40F006373F0 /* MultiplePdf OPenInprogress */,
+			);
+			name = "Waiting For Others";
+			sourceTree = "<group>";
+		};
+		C3FABDEF1E37354800EAF5D7 /* MySignatures Pending */ = {
+			isa = PBXGroup;
+			children = (
+				C3F6FBA21E26629600C7AF4A /* HomeNewDashBoardVC.h */,
+				C3F900D31E85353200A4C6CC /* HomeNewDashBoardVC.m */,
+				C34B43901DF1832D00295E72 /* PendingListVC.h */,
+				C34B43911DF1832D00295E72 /* PendingListVC.m */,
+				C34B43921DF1832D00295E72 /* PendingListVC.xib */,
+				06636035225CC0F500514E23 /* delegationFlow.h */,
+				06636036225CC0F500514E23 /* delegationFlow.m */,
+				0663603A225CC2E300514E23 /* delegationtableviewcell.h */,
+				0663603B225CC2E300514E23 /* delegationtableviewcell.m */,
+				0663603C225CC2E300514E23 /* delegationtableviewcell.xib */,
+				06636037225CC0F500514E23 /* delegationFlow.xib */,
+				C3F5FD9A1ED58A43004EC97E /* MultiplePdfviewer */,
+				C33EC9BC1DF592F00062BB8D /* CaptureSignatureView.h */,
+				C33EC9BD1DF592F00062BB8D /* CaptureSignatureView.m */,
+				C33EC9BE1DF592F00062BB8D /* CaptureSignatureView.xib */,
+				C35368D91DEFEDEA008B7029 /* PendingVCTableViewCell.h */,
+				C35368DA1DEFEDEA008B7029 /* PendingVCTableViewCell.m */,
+				C35368DB1DEFEDEA008B7029 /* PendingVCTableViewCell.xib */,
+			);
+			name = "MySignatures Pending";
+			sourceTree = "<group>";
+		};
+		C3FABDFA1E373D6800EAF5D7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C3F2A2771D34F0EE00BFA456 /* ViewController.h */,
+				C3F2A2781D34F0EE00BFA456 /* ViewController.m */,
+				06B207F123211D29004BDDF3 /* AccountViewController.h */,
+				06B207F223211D29004BDDF3 /* AccountViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		C3FBB0BB1EF7971700348996 /* About Us */ = {
+			isa = PBXGroup;
+			children = (
+				C3E8460D1D9CDDDA007B14D2 /* AboutUsVC.h */,
+				C3E8460E1D9CDDDA007B14D2 /* AboutUsVC.m */,
+			);
+			name = "About Us";
+			sourceTree = "<group>";
+		};
+		C3FBB0BC1EF7973E00348996 /* PopOver Multiple Document */ = {
+			isa = PBXGroup;
+			children = (
+				C3F0620D1D50A52A008F19B3 /* CustomPopOverVC.h */,
+				C3F0620E1D50A52A008F19B3 /* CustomPopOverVC.m */,
+			);
+			name = "PopOver Multiple Document";
+			sourceTree = "<group>";
+		};
+		C3FEE8D31E2893D100509D99 /* MBProgressbar */ = {
+			isa = PBXGroup;
+			children = (
+				C3AB662B1E324BC400C17560 /* NSObject+Activity.h */,
+				C3AB662C1E324BC400C17560 /* NSObject+Activity.m */,
+			);
+			name = MBProgressbar;
+			sourceTree = "<group>";
+		};
+		C3FEE8DA1E28DA6600509D99 /* DropDownView */ = {
+			isa = PBXGroup;
+			children = (
+				C3FEE8DB1E28DA8B00509D99 /* LMDropdownView.h */,
+				C3FEE8DC1E28DA8B00509D99 /* LMDropdownView.m */,
+				C3FEE8DE1E28DA9800509D99 /* UIImage+LMExtension.h */,
+				C3FEE8DF1E28DA9800509D99 /* UIImage+LMExtension.m */,
+			);
+			name = DropDownView;
+			sourceTree = "<group>";
+		};
+		D2D054671D3BA209007EAE97 /* Side Menu */ = {
+			isa = PBXGroup;
+			children = (
+				D2D054681D3BA22F007EAE97 /* BaseViewController.h */,
+				D2D054691D3BA22F007EAE97 /* BaseViewController.m */,
+				D2D0546A1D3BA22F007EAE97 /* LeftMenuViewController.h */,
+				D2D0546B1D3BA22F007EAE97 /* LeftMenuViewController.m */,
+			);
+			name = "Side Menu";
+			sourceTree = "<group>";
+		};
+		D2D0546E1D3BAAAA007EAE97 /* Menu VC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Menu VC";
+			sourceTree = "<group>";
+		};
+		F23B7DEB00D6A39570DAEE19 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C83D57293883C675A6B0DBC2 /* Pods-emSigner.debug.xcconfig */,
+				4CA2E2F4817F93CBA9D00964 /* Pods-emSigner.release.xcconfig */,
+				5AB900A9750FC7F0B4A07606 /* Pods-emSignerTests.debug.xcconfig */,
+				BC59D068C768919C22C99D41 /* Pods-emSignerTests.release.xcconfig */,
+				4E99C20830A818664DB5B9F3 /* Pods-emSignerUITests.debug.xcconfig */,
+				DDC1EED8F3ACAF3489A5A7B5 /* Pods-emSignerUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0627B6AC239E113200F1AA4E /* emSignerDocumentSignIntent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0627B6CE239E113300F1AA4E /* Build configuration list for PBXNativeTarget "emSignerDocumentSignIntent" */;
+			buildPhases = (
+				0627B6A9239E113200F1AA4E /* Sources */,
+				0627B6AA239E113200F1AA4E /* Frameworks */,
+				0627B6AB239E113200F1AA4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = emSignerDocumentSignIntent;
+			productName = emSignerDocumentSignIntent;
+			productReference = 0627B6AD239E113200F1AA4E /* emSignerDocumentSignIntent.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		0627B6B6239E113300F1AA4E /* emSignerDocumentSignIntentUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0627B6CD239E113300F1AA4E /* Build configuration list for PBXNativeTarget "emSignerDocumentSignIntentUI" */;
+			buildPhases = (
+				0627B6B3239E113300F1AA4E /* Sources */,
+				0627B6B4239E113300F1AA4E /* Frameworks */,
+				0627B6B5239E113300F1AA4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = emSignerDocumentSignIntentUI;
+			productName = emSignerDocumentSignIntentUI;
+			productReference = 0627B6B7239E113300F1AA4E /* emSignerDocumentSignIntentUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		C3F2A26D1D34F0EE00BFA456 /* emSigner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3F2A29B1D34F0EE00BFA456 /* Build configuration list for PBXNativeTarget "emSigner" */;
+			buildPhases = (
+				ED7CE5C37D99278358B76FC7 /* [CP] Check Pods Manifest.lock */,
+				C3F2A26A1D34F0EE00BFA456 /* Sources */,
+				C3F2A26B1D34F0EE00BFA456 /* Frameworks */,
+				C3F2A26C1D34F0EE00BFA456 /* Resources */,
+				0627B6C8239E113300F1AA4E /* Embed App Extensions */,
+				C87B38E6E057ED1D14D5677F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0627B6C3239E113300F1AA4E /* PBXTargetDependency */,
+				0627B6C6239E113300F1AA4E /* PBXTargetDependency */,
+			);
+			name = emSigner;
+			productName = emSigner;
+			productReference = C3F2A26E1D34F0EE00BFA456 /* emSigner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C3F2A2861D34F0EE00BFA456 /* emSignerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3F2A29E1D34F0EE00BFA456 /* Build configuration list for PBXNativeTarget "emSignerTests" */;
+			buildPhases = (
+				1E7D443338DB5C1E7063EF06 /* [CP] Check Pods Manifest.lock */,
+				C3F2A2831D34F0EE00BFA456 /* Sources */,
+				C3F2A2841D34F0EE00BFA456 /* Frameworks */,
+				C3F2A2851D34F0EE00BFA456 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3F2A2891D34F0EE00BFA456 /* PBXTargetDependency */,
+			);
+			name = emSignerTests;
+			productName = emSignerTests;
+			productReference = C3F2A2871D34F0EE00BFA456 /* emSignerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C3F2A2911D34F0EE00BFA456 /* emSignerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3F2A2A11D34F0EE00BFA456 /* Build configuration list for PBXNativeTarget "emSignerUITests" */;
+			buildPhases = (
+				A0577993C5E5750C02DF6029 /* [CP] Check Pods Manifest.lock */,
+				C3F2A28E1D34F0EE00BFA456 /* Sources */,
+				C3F2A28F1D34F0EE00BFA456 /* Frameworks */,
+				C3F2A2901D34F0EE00BFA456 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3F2A2941D34F0EE00BFA456 /* PBXTargetDependency */,
+			);
+			name = emSignerUITests;
+			productName = emSignerUITests;
+			productReference = C3F2A2921D34F0EE00BFA456 /* emSignerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C3F2A2661D34F0EE00BFA456 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Emudhra;
+				TargetAttributes = {
+					0627B6AC239E113200F1AA4E = {
+						CreatedOnToolsVersion = 11.2.1;
+						DevelopmentTeam = 7Q5CZS8HV4;
+						ProvisioningStyle = Automatic;
+					};
+					0627B6B6239E113300F1AA4E = {
+						CreatedOnToolsVersion = 11.2.1;
+						DevelopmentTeam = 7Q5CZS8HV4;
+						ProvisioningStyle = Automatic;
+					};
+					C3F2A26D1D34F0EE00BFA456 = {
+						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					C3F2A2861D34F0EE00BFA456 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = C3F2A26D1D34F0EE00BFA456;
+					};
+					C3F2A2911D34F0EE00BFA456 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = C3F2A26D1D34F0EE00BFA456;
+					};
+				};
+			};
+			buildConfigurationList = C3F2A2691D34F0EE00BFA456 /* Build configuration list for PBXProject "emSigner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = C3F2A2651D34F0EE00BFA456;
+			productRefGroup = C3F2A26F1D34F0EE00BFA456 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3F2A26D1D34F0EE00BFA456 /* emSigner */,
+				C3F2A2861D34F0EE00BFA456 /* emSignerTests */,
+				C3F2A2911D34F0EE00BFA456 /* emSignerUITests */,
+				0627B6AC239E113200F1AA4E /* emSignerDocumentSignIntent */,
+				0627B6B6239E113300F1AA4E /* emSignerDocumentSignIntentUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0627B6AB239E113200F1AA4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0627B6B5239E113300F1AA4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0627B6C0239E113300F1AA4E /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3F2A26C1D34F0EE00BFA456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06636039225CC0F500514E23 /* delegationFlow.xib in Resources */,
+				C35368DD1DEFEDEA008B7029 /* PendingVCTableViewCell.xib in Resources */,
+				C30FB1701E14DDA500FE087E /* DraftInactiveVC.xib in Resources */,
+				06211E6221395F8F00412D1B /* SubClassView.xib in Resources */,
+				C3F6EA691E4C54DF00E64BB1 /* DocsStoreNextVC.xib in Resources */,
+				0670EE0F24740F0000791A15 /* UploadHeader.xib in Resources */,
+				0663603E225CC2E300514E23 /* delegationtableviewcell.xib in Resources */,
+				06B803B62223E5F600942F1A /* ParallelSigning.xib in Resources */,
+				06108779240633E8006DC56E /* FlexiformsPage.xib in Resources */,
+				067863112189D85C006C7BDF /* DocumentInfoNames.xib in Resources */,
+				06710C1022CDFD63005BD9EA /* ShowEditImagesFromImageList.xib in Resources */,
+				061754682473BF500025A62D /* SignatoriesListForFlexiforms.xib in Resources */,
+				06710C2322CDFD63005BD9EA /* SignersCellTableViewCell.xib in Resources */,
+				06710C1D22CDFD63005BD9EA /* ShowActivitiesCellTableViewCell.xib in Resources */,
+				069B93E522130A7B00B05771 /* DelegateDocument.xib in Resources */,
+				06DB56BF229D3B280086E159 /* DocinfoSignatoryCell.xib in Resources */,
+				06710C2522CDFD63005BD9EA /* SignerListCell.xib in Resources */,
+				C3396CE51E8CD1B9000F638D /* PdfListTableViewCell.xib in Resources */,
+				C35368E51DEFF8CD008B7029 /* PendingVC.xib in Resources */,
+				C36207071F208E8C00FBAFBE /* AttachedViewVC.xib in Resources */,
+				06D3B71B24728CFB001BC378 /* CustomHeader.xib in Resources */,
+				C3F2A2811D34F0EE00BFA456 /* LaunchScreen.storyboard in Resources */,
+				C3092DB01F0B5B4E000834C7 /* AttachedMultiplePdfTableViewCell.xib in Resources */,
+				C339D5FA1DDB248100C03171 /* RecallTableViewCell.xib in Resources */,
+				C3F6AE6A1E0A7AF800429CA8 /* CompletedNextVC.xib in Resources */,
+				06593B7321268FB000B07C0D /* emsigner-with-ico2.png in Resources */,
+				C3009DE01D641CF4006DB84E /* DocumentLogTableViewCell.xib in Resources */,
+				06710C1122CDFD63005BD9EA /* SignersCollectionCell.xib in Resources */,
+				06710C3022CDFD63005BD9EA /* ImagelistCell.xib in Resources */,
+				06E29AF72354327F00AE0282 /* GoogleService-Info.plist in Resources */,
+				C397ECD31E3B642800844B53 /* DocInfoTableViewCell.xib in Resources */,
+				C3009DE51D641D3A006DB84E /* CustomDocumentLogTableViewCell.xib in Resources */,
+				06710C2922CDFD63005BD9EA /* ShowPdfForImages.xib in Resources */,
+				C3F2A27E1D34F0EE00BFA456 /* Assets.xcassets in Resources */,
+				C3FABDF41E37361800EAF5D7 /* DeclineTableViewCell.xib in Resources */,
+				06710C1C22CDFD63005BD9EA /* MultipleImagesCell.xib in Resources */,
+				C339D5F51DDB23E400C03171 /* CompleteStatusVC.xib in Resources */,
+				06710C1722CDFD63005BD9EA /* DocsNameForHeader.xib in Resources */,
+				C33EC9C01DF592F00062BB8D /* CaptureSignatureView.xib in Resources */,
+				C397ECD81E3B644400844B53 /* DocAssignedTableViewCell.xib in Resources */,
+				C3FA5BE51EE02774006373F0 /* MultiplePdfTableViewCell.xib in Resources */,
+				C339C4061D9BCD470039DEAE /* iRate.bundle in Resources */,
+				C339D5E61DDB232600C03171 /* RecallStatusVC.xib in Resources */,
+				C34B43941DF1832D00295E72 /* PendingListVC.xib in Resources */,
+				C339D5EB1DDB238200C03171 /* DeclineStatusVC.xib in Resources */,
+				C3F2A27C1D34F0EE00BFA456 /* Main.storyboard in Resources */,
+				06710C2822CDFD63005BD9EA /* SignersInformation.xib in Resources */,
+				06710C1E22CDFD63005BD9EA /* DocsSize.xib in Resources */,
+				06BBF71322019B8100172797 /* floatTableViewCell.xib in Resources */,
+				067863162189DE59006C7BDF /* DocumentNamesCell.xib in Resources */,
+				06710C2422CDFD63005BD9EA /* RenameDocument.xib in Resources */,
+				D2923F821DF44CF500795F8A /* CoSignPendingListVC.xib in Resources */,
+				C3FABDF91E37366700EAF5D7 /* CompletedTableViewCell.xib in Resources */,
+				C368B10C1EF6CA9A00F0458F /* emSigner Mobile App Description (2).pdf in Resources */,
+				06710C2222CDFD63005BD9EA /* SignersDisplay.xib in Resources */,
+				C34A43D51E40718D00A38BB0 /* DeclineNextVC.xib in Resources */,
+				0605CF7721833F1C00B36C36 /* DocumentInfoCollectionCell.xib in Resources */,
+				06F6057421DF78F900FAABC0 /* LoadingCell.xib in Resources */,
+				06710C1622CDFD63005BD9EA /* workflow.xib in Resources */,
+				C3FF8B921E02C18100F82488 /* RecallDeclineVC.xib in Resources */,
+				06710C2D22CDFD63005BD9EA /* ShowActivities.xib in Resources */,
+				C340098D1DE0552D007008AE /* NotStartedTableViewCell.xib in Resources */,
+				C3F6DCB91D38F0CE00223CA9 /* CoSignPendingVC.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3F2A2851D34F0EE00BFA456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3F2A2901D34F0EE00BFA456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E7D443338DB5C1E7063EF06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-emSignerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0577993C5E5750C02DF6029 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-emSignerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C87B38E6E057ED1D14D5677F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-emSigner/Pods-emSigner-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/IRLDocumentScanner/IRLDocumentScanner.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MSAL/MSAL.framework",
+				"${BUILT_PRODUCTS_DIR}/MWPhotoBrowser/MWPhotoBrowser.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/TOCropViewController/TOCropViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DACircularProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IRLDocumentScanner.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MSAL.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MWPhotoBrowser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TOCropViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-emSigner/Pods-emSigner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED7CE5C37D99278358B76FC7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-emSigner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0627B6A9239E113200F1AA4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0627B6D0239E11A200F1AA4E /* DocumentSignIntents.intentdefinition in Sources */,
+				0627B6B1239E113200F1AA4E /* IntentHandler.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0627B6B3239E113300F1AA4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0627B6BD239E113300F1AA4E /* IntentViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3F2A26A1D34F0EE00BFA456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06BBF71222019B8100172797 /* floatTableViewCell.m in Sources */,
+				C34800261E30B7E200EE6D08 /* DocumentInfoVC.m in Sources */,
+				06031EB322C379610005248A /* EsignWebView.m in Sources */,
+				C33EC9BF1DF592F00062BB8D /* CaptureSignatureView.m in Sources */,
+				C30873691D477B11000A51B6 /* MyProfileVC.m in Sources */,
+				C3FF8B911E02C18100F82488 /* RecallDeclineVC.m in Sources */,
+				C339D5F41DDB23E400C03171 /* CompleteStatusVC.m in Sources */,
+				C3F2A2791D34F0EE00BFA456 /* ViewController.m in Sources */,
+				D2D0546C1D3BA22F007EAE97 /* BaseViewController.m in Sources */,
+				C3FA5BE01EE01CB6006373F0 /* CompleteMultipleDocumentVC.m in Sources */,
+				06710C1522CDFD63005BD9EA /* PreviewerController.m in Sources */,
+				0647627C2170AD44008E03E9 /* ImageFileCrop.m in Sources */,
+				0663603D225CC2E300514E23 /* delegationtableviewcell.m in Sources */,
+				C3FABDF81E37366700EAF5D7 /* CompletedTableViewCell.m in Sources */,
+				C30FB16F1E14DDA400FE087E /* DraftInactiveVC.m in Sources */,
+				06710C0F22CDFD63005BD9EA /* DocsNameForHeader.m in Sources */,
+				06710C2A22CDFD63005BD9EA /* workflow.m in Sources */,
+				06E1CFBE2118835D007B93C2 /* SignatoriesCell.m in Sources */,
+				C3AB662E1E324BC400C17560 /* NSObject+Activity.m in Sources */,
+				062C60BE221425D600FDAD7B /* MPGTextField.m in Sources */,
+				C3F6AE6D1E0A834400429CA8 /* CompletedNextVC.m in Sources */,
+				C3F2A2761D34F0EE00BFA456 /* AppDelegate.m in Sources */,
+				C3F6EA681E4C54DF00E64BB1 /* DocsStoreNextVC.m in Sources */,
+				06710C2622CDFD63005BD9EA /* SignersDisplay.m in Sources */,
+				C36207061F208E8C00FBAFBE /* AttachedViewVC.m in Sources */,
+				C3FA5BE41EE02774006373F0 /* MultiplePdfTableViewCell.m in Sources */,
+				C3A58D521D4F61D40080B011 /* DeclineVC.m in Sources */,
+				C3F5FD991ED58A36004EC97E /* MultiplePdfViewerVC.m in Sources */,
+				C311605B1E5B000300E93385 /* UITextView+Placeholder.m in Sources */,
+				C3F50ADD1E07ED2500EFA46D /* MPBDefaultStyleSignatureViewController.m in Sources */,
+				06710C1422CDFD63005BD9EA /* ImagelistCell.m in Sources */,
+				06821D5A23EBED1400A40B68 /* OverlayTransitioningDelegate.m in Sources */,
+				C3F742FA1E1F5ABE009D1DF1 /* SingletonAPI.m in Sources */,
+				06211E6321395F8F00412D1B /* SubClassView.m in Sources */,
+				C3E8460F1D9CDDDA007B14D2 /* AboutUsVC.m in Sources */,
+				C3F5949E1DE42A9F00080735 /* GetOTPVC.m in Sources */,
+				0611D85521D5F4AF00C01C9C /* NSString+DateAsAppleTime.m in Sources */,
+				06821D5923EBED1400A40B68 /* OverlayPresentationController.m in Sources */,
+				06D7A12C2237B3C1002F96F4 /* MyAnnotation.m in Sources */,
+				06710C1222CDFD63005BD9EA /* ShowActivities.m in Sources */,
+				C313681A1E547EF600252501 /* ChangePasswordVC.m in Sources */,
+				D2D0546D1D3BA22F007EAE97 /* LeftMenuViewController.m in Sources */,
+				06710C2722CDFD63005BD9EA /* DocsSize.m in Sources */,
+				C33C86DF1D48851900856B55 /* CustomSignVC.m in Sources */,
+				C301D09A1D6C49A50027B362 /* RecallVC.m in Sources */,
+				06B803B52223E5F600942F1A /* ParallelSigning.m in Sources */,
+				D2D054741D3BAB2B007EAE97 /* DocStoreVC.m in Sources */,
+				06DB56BE229D3B280086E159 /* DocinfoSignatoryCell.m in Sources */,
+				C33C343B1E27BDEC0000ABC0 /* RPFloatingPlaceholderTextField.m in Sources */,
+				06710C2022CDFD63005BD9EA /* ShowPdfForImages.m in Sources */,
+				0605CF7621833F1C00B36C36 /* DocumentInfoCollectionCell.m in Sources */,
+				C34B43931DF1832D00295E72 /* PendingListVC.m in Sources */,
+				D2923F811DF44CF500795F8A /* CoSignPendingListVC.m in Sources */,
+				06710C1922CDFD63005BD9EA /* ShowActivitiesCellTableViewCell.m in Sources */,
+				C339D5E51DDB232600C03171 /* RecallStatusVC.m in Sources */,
+				0637A0092407C96D0014E303 /* SignatoriesListForFlexiforms.m in Sources */,
+				C35368E41DEFF8CD008B7029 /* PendingVC.m in Sources */,
+				C33C343C1E27BDEC0000ABC0 /* RPFloatingPlaceholderTextView.m in Sources */,
+				06FFC55C2118778F0025CD11 /* SignatoriesPage.m in Sources */,
+				C3FEE8E01E28DA9800509D99 /* UIImage+LMExtension.m in Sources */,
+				C397ECD71E3B644400844B53 /* DocAssignedTableViewCell.m in Sources */,
+				C3F900D41E85353200A4C6CC /* HomeNewDashBoardVC.m in Sources */,
+				0611394F210B1FE5003BD191 /* DocsPage.m in Sources */,
+				06B207F323211D29004BDDF3 /* AccountViewController.m in Sources */,
+				06BBF71422019B8100172797 /* VCFloatingActionButton.m in Sources */,
+				0670EE0D24740E7900791A15 /* UploadHeader.m in Sources */,
+				06F6057321DF78F900FAABC0 /* LoadingCell.m in Sources */,
+				06D49B60231655A3001EC7B9 /* GHWalkThroughView.m in Sources */,
+				C397ECD21E3B642800844B53 /* DocInfoTableViewCell.m in Sources */,
+				C340098C1DE0552D007008AE /* NotStartedTableViewCell.m in Sources */,
+				C3009DE41D641D3A006DB84E /* CustomDocumentLogTableViewCell.m in Sources */,
+				06710C2B22CDFD63005BD9EA /* SignerListCell.m in Sources */,
+				069B93E422130A7B00B05771 /* DelegateDocument.m in Sources */,
+				D20AB3FC1DB3FE73009B925D /* WebserviceManager.m in Sources */,
+				C3F0620F1D50A52A008F19B3 /* CustomPopOverVC.m in Sources */,
+				D271FFA41E2B595F00CB2E80 /* LMNavigationController.m in Sources */,
+				C304C0A11F010138007800EF /* DocsStoreMultiplePdf.m in Sources */,
+				C3FA5BDC1EDFF522006373F0 /* InprogressMultiplePdf.m in Sources */,
+				069D3DF823D5729100932607 /* SigningSiri.swift in Sources */,
+				06636038225CC0F500514E23 /* delegationFlow.m in Sources */,
+				06710C2122CDFD63005BD9EA /* ShowEditImagesFromImageList.m in Sources */,
+				C3092DAF1F0B5B4E000834C7 /* AttachedMultiplePdfTableViewCell.m in Sources */,
+				C35368DC1DEFEDEA008B7029 /* PendingVCTableViewCell.m in Sources */,
+				C3009DDF1D641CF4006DB84E /* DocumentLogTableViewCell.m in Sources */,
+				06D49B61231655A3001EC7B9 /* GHWalkThroughPageCell.m in Sources */,
+				C34A43D41E40718D00A38BB0 /* DeclineNextVC.m in Sources */,
+				067863102189D85C006C7BDF /* DocumentInfoNames.m in Sources */,
+				C3F6DCB81D38F0CE00223CA9 /* CoSignPendingVC.m in Sources */,
+				06D64D5424696C2300A28387 /* WorkflowScannerController.swift in Sources */,
+				06710C1822CDFD63005BD9EA /* WorkflowTableViewController.m in Sources */,
+				06732E532150F26F007BEC69 /* ForgotPasswordUpdated.m in Sources */,
+				0613A5CF249A3418000FE35D /* BulkDocVC.m in Sources */,
+				D234389C1DA43042002FBD55 /* DropDownView.m in Sources */,
+				C3FBC9AF1E81665200D4F0A8 /* ListPdfViewer.m in Sources */,
+				D20AB3FD1DB3FE73009B925D /* Connection.m in Sources */,
+				C3F062121D50A8A3008F19B3 /* DocumentLogVC.m in Sources */,
+				06A7B9F922A9245100BFDF0C /* swiftController.swift in Sources */,
+				C35A93E51DDF0A37001B8D2A /* ShareVC.m in Sources */,
+				06871455220C391A00B61578 /* SPUserResizableView.m in Sources */,
+				06350D91232B65880004661E /* ReviewerController.m in Sources */,
+				06058C2F2303E4EE00ACFC7B /* CommentsController.m in Sources */,
+				C339C4071D9BCD470039DEAE /* iRate.m in Sources */,
+				C30360EF1E2C981F00578EDF /* LMMenuCell.m in Sources */,
+				C339D5F91DDB248100C03171 /* RecallTableViewCell.m in Sources */,
+				C30998101F1BA67A00058938 /* AttachedVC.m in Sources */,
+				06058C32230406BA00ACFC7B /* DropDownCell.m in Sources */,
+				06710C1A22CDFD63005BD9EA /* SignersInformation.m in Sources */,
+				C3F50ADE1E07ED2500EFA46D /* MPBSignatureViewControllerConfiguration.m in Sources */,
+				06108778240633E8006DC56E /* FlexiformsPage.m in Sources */,
+				C3396CE41E8CD1B9000F638D /* PdfListTableViewCell.m in Sources */,
+				06710C2F22CDFD63005BD9EA /* MultipleImagesCell.m in Sources */,
+				C3F50ADC1E07ED2500EFA46D /* MPBCustomStyleSignatureViewController.m in Sources */,
+				06821D5823EBED1400A40B68 /* ControllerAnimator.m in Sources */,
+				C339D5EA1DDB238200C03171 /* DeclineStatusVC.m in Sources */,
+				C3F72C2A1ED4025000B8BF2E /* FeedbackVC.m in Sources */,
+				06710C2C22CDFD63005BD9EA /* RenameDocument.m in Sources */,
+				C306C9BD1EC96D940086B2AD /* RateUsVC.m in Sources */,
+				064762792170AD32008E03E9 /* FXBlurView.m in Sources */,
+				06054B8B21414DD5006E749D /* SignatureImagesCell.m in Sources */,
+				C3F2A2731D34F0EE00BFA456 /* main.m in Sources */,
+				C3FEE8DD1E28DA8B00509D99 /* LMDropdownView.m in Sources */,
+				06D97D1B2313ADC200CC682A /* ImagesForPageViewController.m in Sources */,
+				06710C2E22CDFD63005BD9EA /* SignersCellTableViewCell.m in Sources */,
+				C3F738811E4D91E7000142EF /* Reachability.m in Sources */,
+				06113955210B2BD1003BD191 /* DocsCell.m in Sources */,
+				067863152189DE59006C7BDF /* DocumentNamesCell.m in Sources */,
+				C3F50AD41E07EC4A00EFA46D /* PPSSignatureView.m in Sources */,
+				06D3B71824728C92001BC378 /* CustomHeader.m in Sources */,
+				06710C1322CDFD63005BD9EA /* UploadDocuments.m in Sources */,
+				C3A12D201D93B8A50077BF5D /* ForgotPasswordVC.m in Sources */,
+				C3FABDF31E37361800EAF5D7 /* DeclineTableViewCell.m in Sources */,
+				06710C1B22CDFD63005BD9EA /* SignersCollectionCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3F2A2831D34F0EE00BFA456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3F2A28C1D34F0EE00BFA456 /* emSignerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3F2A28E1D34F0EE00BFA456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3F2A2971D34F0EE00BFA456 /* emSignerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0627B6C3239E113300F1AA4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0627B6B6239E113300F1AA4E /* emSignerDocumentSignIntentUI */;
+			targetProxy = 0627B6C2239E113300F1AA4E /* PBXContainerItemProxy */;
+		};
+		0627B6C6239E113300F1AA4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0627B6AC239E113200F1AA4E /* emSignerDocumentSignIntent */;
+			targetProxy = 0627B6C5239E113300F1AA4E /* PBXContainerItemProxy */;
+		};
+		C3F2A2891D34F0EE00BFA456 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3F2A26D1D34F0EE00BFA456 /* emSigner */;
+			targetProxy = C3F2A2881D34F0EE00BFA456 /* PBXContainerItemProxy */;
+		};
+		C3F2A2941D34F0EE00BFA456 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3F2A26D1D34F0EE00BFA456 /* emSigner */;
+			targetProxy = C3F2A2931D34F0EE00BFA456 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0627B6BE239E113300F1AA4E /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0627B6BF239E113300F1AA4E /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		C3F2A27A1D34F0EE00BFA456 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3F2A27B1D34F0EE00BFA456 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C3F2A27F1D34F0EE00BFA456 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3F2A2801D34F0EE00BFA456 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0627B6C9239E113300F1AA4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0.8;
+				DEVELOPMENT_TEAM = 7Q5CZS8HV4;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = emSignerDocumentSignIntent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.7.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emudhra.emSigner.emSignerDocumentSignIntent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0627B6CA239E113300F1AA4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0.8;
+				DEVELOPMENT_TEAM = 7Q5CZS8HV4;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = emSignerDocumentSignIntent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.7.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emudhra.emSigner.emSignerDocumentSignIntent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0627B6CB239E113300F1AA4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0.8;
+				DEVELOPMENT_TEAM = 7Q5CZS8HV4;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = emSignerDocumentSignIntentUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.7.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emudhra.emSigner.emSignerDocumentSignIntentUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0627B6CC239E113300F1AA4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0.8;
+				DEVELOPMENT_TEAM = 7Q5CZS8HV4;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = emSignerDocumentSignIntentUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.7.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emudhra.emSigner.emSignerDocumentSignIntentUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C3F2A2991D34F0EE00BFA456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C3F2A29A1D34F0EE00BFA456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C3F2A29C1D34F0EE00BFA456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C83D57293883C675A6B0DBC2 /* Pods-emSigner.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = emSigner/emSigner.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0.8;
+				DEAD_CODE_STRIPPING = NO;
+				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = 7Q5CZS8HV4;
+				ENABLE_BITCODE = NO;
+				GCC_NO_COMMON_BLOCKS = NO;
+				INFOPLIST_FILE = emSigner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = "$(inherited)  ";
+				PRODUCT_BUNDLE_IDENTIFIER = com.emudhra.emSigner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "emSigner/emSigner-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "$(inherited)/**";
+			};
+			name = Debug;
+		};
+		C3F2A29D1D34F0EE00BFA456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CA2E2F4817F93CBA9D00964 /* Pods-emSigner.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = emSigner/emSigner.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0.8;
+				DEAD_CODE_STRIPPING = NO;
+				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = 7Q5CZS8HV4;
+				ENABLE_BITCODE = NO;
+				GCC_NO_COMMON_BLOCKS = NO;
+				INFOPLIST_FILE = emSigner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = "$(inherited)  ";
+				PRODUCT_BUNDLE_IDENTIFIER = com.emudhra.emSigner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "emSigner/emSigner-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "$(inherited)/**";
+			};
+			name = Release;
+		};
+		C3F2A29F1D34F0EE00BFA456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AB900A9750FC7F0B4A07606 /* Pods-emSignerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = emSignerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nawin.emSignerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/emSigner.app/emSigner";
+			};
+			name = Debug;
+		};
+		C3F2A2A01D34F0EE00BFA456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC59D068C768919C22C99D41 /* Pods-emSignerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = emSignerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nawin.emSignerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/emSigner.app/emSigner";
+			};
+			name = Release;
+		};
+		C3F2A2A21D34F0EE00BFA456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E99C20830A818664DB5B9F3 /* Pods-emSignerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = emSignerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nawin.emSignerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = emSigner;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		C3F2A2A31D34F0EE00BFA456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDC1EED8F3ACAF3489A5A7B5 /* Pods-emSignerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = emSignerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nawin.emSignerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = emSigner;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0627B6CD239E113300F1AA4E /* Build configuration list for PBXNativeTarget "emSignerDocumentSignIntentUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0627B6CB239E113300F1AA4E /* Debug */,
+				0627B6CC239E113300F1AA4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0627B6CE239E113300F1AA4E /* Build configuration list for PBXNativeTarget "emSignerDocumentSignIntent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0627B6C9239E113300F1AA4E /* Debug */,
+				0627B6CA239E113300F1AA4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3F2A2691D34F0EE00BFA456 /* Build configuration list for PBXProject "emSigner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3F2A2991D34F0EE00BFA456 /* Debug */,
+				C3F2A29A1D34F0EE00BFA456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3F2A29B1D34F0EE00BFA456 /* Build configuration list for PBXNativeTarget "emSigner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3F2A29C1D34F0EE00BFA456 /* Debug */,
+				C3F2A29D1D34F0EE00BFA456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3F2A29E1D34F0EE00BFA456 /* Build configuration list for PBXNativeTarget "emSignerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3F2A29F1D34F0EE00BFA456 /* Debug */,
+				C3F2A2A01D34F0EE00BFA456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3F2A2A11D34F0EE00BFA456 /* Build configuration list for PBXNativeTarget "emSignerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3F2A2A21D34F0EE00BFA456 /* Debug */,
+				C3F2A2A31D34F0EE00BFA456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C3F2A2661D34F0EE00BFA456 /* Project object */;
+}

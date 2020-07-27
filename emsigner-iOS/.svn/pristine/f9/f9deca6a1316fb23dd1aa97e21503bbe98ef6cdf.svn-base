@@ -1,0 +1,727 @@
+//
+//  SignersInformation.m
+//  emSigner
+//
+//  Created by EMUDHRA on 29/10/18.
+//  Copyright © 2018 Emudhra. All rights reserved.
+//
+
+#import "SignersInformation.h"
+#import "SignersCellTableViewCell.h"
+#import "WebserviceManager.h"
+#import "DocumentInfoCollectionCell.h"
+#import "SignersCollectionCell.h"
+#import "MBProgressHUD.h"
+#import "NSObject+Activity.h"
+#import "SignersDisplay.h"
+#import "UploadDocuments.h"
+#import "MPBSignatureViewController.h"
+#import "ShowEditImagesFromImageList.h"
+
+@interface SignersInformation ()<uploadDocumentsDelegate,senddattaProtocol>
+{
+    NSString *appendcategory;
+    NSIndexPath *indexPather;
+    NSIndexPath *signindexPather;
+    BOOL signatoriesimg;
+    NSInteger DocumentID;
+    NSString * documentseries;
+    NSMutableArray * DocumentIDArray;
+   // NSMutableArray * finalarray;
+}
+
+@end
+
+@implementation SignersInformation
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+   _finalarray = [[NSMutableArray alloc]init];
+    DocumentIDArray = [[NSMutableArray alloc]init];
+    self.post =[[NSMutableArray alloc]init];
+    signatoriesimg = false;
+   // signatoriesimg = true;
+    _signersArray = [[NSMutableArray alloc]init];
+    self.signersInfoTable.delegate = self;
+    self.signersInfoTable.dataSource = self;
+    _getAllSigners = [[NSMutableArray alloc]init];
+    _subscriberidarray = [[NSMutableArray alloc]init];
+
+    [self.signersInfoTable registerNib:[UINib nibWithNibName:@"SignersCellTableViewCell" bundle:nil] forCellReuseIdentifier:@"SignersCellTableViewCell"];
+    
+    self.signersInfoTable.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+
+    [self getWorkFlow:self.categoryId];
+    // Do any additional setup after loading the view from its nib.
+    
+    //get month & year
+    
+//    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
+//    NSInteger month = [components month];
+//    NSInteger year = [components year]; //November
+//    NSDateFormatter *df = [[NSDateFormatter alloc] init] ;
+//    NSString *monthName = [[df monthSymbols] objectAtIndex:(month-1)];
+//    NSString *monthShortName=[monthName substringToIndex:3];
+    
+     appendcategory = [NSString stringWithFormat:@"%@",_categoryname];
+
+
+}
+-(void) viewWillAppear:(BOOL)animated
+{
+    if (_SelectedArray.count != 0) {
+        
+//        NSString *stringpp = [self saveData:_SelectedArray];
+//        NSArray *a1 = [self loadData:stringpp];
+        
+        NSLog(@"%@", self.imagesDictionary);
+
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(9.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            
+//            for (int i= 0; i<_signersArray.count; i++) {
+//              // NSString*config =  [_signersArray[i]valueForKey:@"ConfigId"];
+//
+//
+//            if ([[_signersArray[i]valueForKey:@"ConfigId"] isEqual: [[NSUserDefaults standardUserDefaults] valueForKey:@"ConfigId"]]) {
+//
+//                NSArray *dictKeys=[self.imagesDictionary allKeys];
+//
+////                for ( NSArray * arr   in self.imagesDictionary) {
+////                    [finalarray addObject:arr];
+////                     NSLog(@"%@",finalarray);
+////                }
+//                //[finalarray addObject:self.imagesDictionary];
+//                NSString *stringpp = [self saveData:self.imagesDictionary];
+//                NSArray *a1 = [self loadData:stringpp];
+//                NSLog(@"%@",a1);
+//
+//            }
+//            }
+            [self.finalarray replaceObjectAtIndex:indexPather.row withObject:self.imagesDictionary];//    self.imagesDictionary
+            
+            
+        });
+
+        
+            }
+}
+-(void) viewDidAppear:(BOOL)animated
+{
+    
+}
+-(NSString*)saveData :(id )dataArray
+{
+    NSFileManager *filemgr;
+    NSString *docsDir;
+    NSArray *dirPaths;
+    
+    filemgr = [NSFileManager defaultManager];
+    
+    // Get the documents directory
+    dirPaths = NSSearchPathForDirectoriesInDomains(
+                                                   NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    docsDir = [dirPaths objectAtIndex:0];
+    
+    // Build the path to the data file
+    NSString *dataFilePath = [[NSString alloc] initWithString: [docsDir
+                                                                stringByAppendingPathComponent: [NSString stringWithFormat:@"%@.archive",[[NSUserDefaults standardUserDefaults]valueForKey:@"ConfigId"]]]];
+    
+    [NSKeyedArchiver archiveRootObject:
+     dataArray toFile:dataFilePath];
+    return dataFilePath;
+}
+
+
+-(NSMutableArray *)loadData:(NSString*)pathForArray
+{
+    NSFileManager *filemgr;
+    NSString *docsDir;
+    NSArray *dirPaths;
+    
+    filemgr = [NSFileManager defaultManager];
+    
+    // Get the documents directory
+    dirPaths = NSSearchPathForDirectoriesInDomains(
+                                                   NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    docsDir = [dirPaths objectAtIndex:0];
+    
+    // Build the path to the data file
+    //NSString *dataFilePath = [[NSString alloc] initWithString: [docsDir
+                                                              //  stringByAppendingPathComponent: @"data.archive"]];
+    
+    // Check if the file already exists
+    if ([filemgr fileExistsAtPath: pathForArray])
+    {
+        NSMutableArray *dataArray;
+        
+        dataArray = [NSKeyedUnarchiver
+                     unarchiveObjectWithFile: pathForArray];
+        
+        return dataArray;
+    }
+    return NULL;
+}
+
+-(void)signatoryList
+{
+//    NSString *requestURL = [NSString stringWithFormat:@"https://sandboxapi.emsigner.com/api/GetAllSigners"];
+//
+//    [WebserviceManager sendSyncRequestWithURLGet:requestURL method:SAServiceReqestHTTPMethodGET body:requestURL completionBlock:^(BOOL status, id responseValue) {
+//        if(status)
+//        {
+//            dispatch_async(dispatch_get_main_queue(),
+//                           ^{
+//
+//
+//                               _getAllSigners = [responseValue valueForKey:@"Response"];
+//                               // [self.signersInfoTable reloadData];
+//
+//                           });
+//        }
+//        else{
+//
+//
+//            UIAlertController * alert = [UIAlertController
+//                                         alertControllerWithTitle:nil
+//                                         message:@"Your emsigner account is no longer active.Please login again"
+//                                         preferredStyle:UIAlertControllerStyleAlert];
+//
+//            //Add Buttons
+//
+//            UIAlertAction* yesButton = [UIAlertAction
+//                                        actionWithTitle:@"Ok"
+//                                        style:UIAlertActionStyleDefault
+//                                        handler:nil ];
+//
+//            [alert addAction:yesButton];
+//
+//            [self presentViewController:alert animated:YES completion:nil];
+//
+//            return;
+//        }
+//
+//
+//    }];
+//
+}
+-(void)getWorkFlow:(NSString*)categoryId
+{
+    [self startActivity:@"Refreshing..."];
+
+    NSString *requestURL = [NSString stringWithFormat:@"https://sandboxapi.emsigner.com/api/GetConfigDetails?categoryId=%@",categoryId];
+    
+    [WebserviceManager sendSyncRequestWithURLGet:requestURL method:SAServiceReqestHTTPMethodGET body:requestURL completionBlock:^(BOOL status, id responseValue) {
+        if(status)
+        {
+            dispatch_async(dispatch_get_main_queue(),
+                           ^{
+                             //  _finalarray = [[NSMutableArray alloc]init];
+                               _signersArray = [responseValue valueForKey:@"Response"];
+                            
+                               
+                               NSMutableDictionary *empty = [[NSMutableDictionary alloc]init];
+                               
+                               for (int i = 0; i<_signersArray.count; i++) {
+                                   [_finalarray addObject:empty];
+                                   [_post addObject:empty];
+//                                   for (int j = 0; j<[[_signersArray[i] valueForKey:@"NoofSignatories"]integerValue]; j++) {
+//
+//                                       [_subscriberidarray addObject:empty];
+//
+//                                   }
+                               }
+                             
+                               [self stopActivity];
+                               if ([[responseValue valueForKey:@"IsSuccess"]boolValue] == 1) {
+                                     [self.signersInfoTable reloadData];
+                               }
+                               else{
+                               [self.navigationController popViewControllerAnimated:true];
+                               }
+                           });
+        }
+        else{
+            
+            
+            UIAlertController * alert = [UIAlertController
+                                         alertControllerWithTitle:nil
+                                         message:@"Your emsigner account is no longer active.Please login again"
+                                         preferredStyle:UIAlertControllerStyleAlert];
+            
+            //Add Buttons
+            
+            UIAlertAction* yesButton = [UIAlertAction
+                                        actionWithTitle:@"Ok"
+                                        style:UIAlertActionStyleDefault
+                                        handler:nil ];
+            
+            [alert addAction:yesButton];
+            
+            [self presentViewController:alert animated:YES completion:nil];
+            
+            return;
+        }
+        
+        
+    }];
+    
+    
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _signersArray.count;
+    
+}
+
+// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
+// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+      SignersCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SignersCellTableViewCell" forIndexPath:indexPath];
+    
+    [cell.signerslbl sizeToFit];
+    cell.signerslbl.text = [[_signersArray objectAtIndex:indexPath.row]valueForKey:@"Documentname"];
+    [cell.SignerInfo addTarget:self action:@selector(SignerActionInfo:) forControlEvents:UIControlEventTouchUpInside];
+    if (signatoriesimg == false) {
+        cell.SignerInfo.hidden = true;
+        cell.uploaddocument.hidden = false;
+    }
+    else
+    {
+         cell.SignerInfo.hidden = false;
+        cell.uploaddocument.hidden = true;
+        
+    }
+     [cell.uploaddocument addTarget:self action:@selector(Uploaddocument:) forControlEvents:UIControlEventTouchUpInside];
+   // [cell.signersCollectionView registerNib:<#(nullable UINib *)#> forCellWithReuseIdentifier:<#(nonnull NSString *)#>]
+    
+    [cell.signersCollectionView  setDataSource:self];
+    [cell.signersCollectionView  setDelegate:self];
+    [cell.signersCollectionView  setBackgroundColor:[UIColor whiteColor]];
+    
+    [cell.signersCollectionView registerNib:[UINib nibWithNibName:@"SignersCollectionCell" bundle:nil] forCellWithReuseIdentifier:@"SignersCollectionCell"];
+
+    
+    [cell.signersCollectionView reloadData];
+    return cell;
+    
+}
+
+-(void)SignerActionInfo:(UIButton*)sender
+{
+    NSLog(@"SignerActionInfo");
+    CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.signersInfoTable];
+    NSIndexPath *indexPath = [self.signersInfoTable indexPathForRowAtPoint:buttonPosition];
+    SignersDisplay *objTrackOrderVC= [[SignersDisplay alloc] initWithNibName:@"SignersDisplay" bundle:nil];
+    objTrackOrderVC.signersCount = [[_signersArray[indexPath.row]valueForKey:@"NoofSignatories"]integerValue];
+    objTrackOrderVC.delegate = self;
+    objTrackOrderVC.CategoryId = _categoryId;
+    objTrackOrderVC.Documentname =  [_signersArray[indexPath.row]valueForKey:@"Documentname"];
+    objTrackOrderVC.CategoryName = _categoryname;
+    objTrackOrderVC.ConfigId = [[_signersArray objectAtIndex:indexPath.row]valueForKey:@"ConfigId"];
+   // objTrackOrderVC.DocumentID = *(&(DocumentID));
+    objTrackOrderVC.DocumentID =  [[DocumentIDArray objectAtIndex:indexPath.row]integerValue];
+   // [sendingvalues setObject:[NSNumber numberWithInteger:cid] forKey:@"CategoryId"];
+   // [sendingvalues setObject:_categoryname forKey:@"CategoryName"];
+   // [sendingvalues setObject:[[_signersArray objectAtIndex:rowToReload.row]valueForKey:@"Documentname"] forKey:@"DocumentName"];
+    //[sendingvalues setObject:_subscriberidarray  forKey:@"Signatories"];
+   // [sendingvalues setObject:@"false" forKey:@"IsSign"];
+   // [sendingvalues setObject:[[_signersArray objectAtIndex:indexPather.row]valueForKey:@"ConfigId"] forKey:@"ConfigId"];
+  //  [sendingvalues setValue:[NSNumber numberWithInteger:DocumentID] forKey:@"DocumentId"];
+ 
+    [[NSUserDefaults standardUserDefaults] setInteger:indexPath.row forKey:@"indexvalue"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
+    UINavigationController *objNavigationController = [[UINavigationController alloc]initWithRootViewController:objTrackOrderVC];
+    [self presentViewController:objNavigationController animated:true completion:nil];
+    // [self.navigationController pushViewController:objNavigationController animated:YES];
+
+
+    
+}
+-(void)Uploaddocument:(UIButton*)sender
+{
+    _sendarray = [[NSMutableArray alloc]initWithArray:_signersArray];
+    NSLog(@"Uploaddocument");
+    
+    
+    CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.signersInfoTable];
+    indexPather = [self.signersInfoTable indexPathForRowAtPoint:buttonPosition];
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setInteger:[[[_signersArray objectAtIndex:indexPather.row]valueForKey:@"ConfigId"]integerValue] forKey:@"ConfigId"];
+    
+    
+    UIStoryboard *newStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UploadDocuments *objTrackOrderVC= [newStoryBoard instantiateViewControllerWithIdentifier:@"UploadDocuments"];
+    objTrackOrderVC.sendarray= _sendarray;
+    objTrackOrderVC.documentName= [_sendarray[indexPather.row]valueForKey:@"Documentname"];
+    objTrackOrderVC.categoryname = _categoryname;
+    objTrackOrderVC.delegate = self;
+    
+    UINavigationController *objNavigationController = [[UINavigationController alloc]initWithRootViewController:objTrackOrderVC];
+    [self presentViewController:objNavigationController animated:true completion:nil];
+    
+  //  [self.navigationController pushViewController:objNavigationController animated:YES];
+    
+}
+-(void)sendDataTosigners:(NSMutableArray *)d :(NSMutableDictionary *)subscriberdict
+{
+    NSLog(@"%@%@",d,subscriberdict);
+    _getAllSigners = [d mutableCopy];
+
+    
+        NSInteger  indexCount = [[[NSUserDefaults standardUserDefaults]valueForKey:@"indexvalue"]integerValue];
+        NSIndexPath* rowToReload = [NSIndexPath indexPathForRow:indexCount inSection:0];
+    
+
+    [_post replaceObjectAtIndex:rowToReload.row withObject:subscriberdict];
+    
+        [self.signersInfoTable beginUpdates];
+        [self.signersInfoTable reloadRowsAtIndexPaths:[NSArray arrayWithObjects:rowToReload, nil] withRowAnimation:UITableViewRowAnimationNone];
+        [self.signersInfoTable endUpdates];
+
+}
+
+
+- (void)sendData:(NSMutableDictionary *)senddict
+{
+    [self dismissViewControllerAnimated:true completion:^{
+        NSLog(@"%@",senddict);
+
+                [self.finalarray replaceObjectAtIndex:indexPather.row withObject:senddict];//    self.imagesDictionary
+
+    }];
+//    [self.finalarray replaceObjectAtIndex:indexPather.row withObject:senddict];
+//    [self.navigationController popViewControllerAnimated:true];
+    
+    
+    
+
+    
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100;
+}
+#pragma mark - collectionView datasources
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+  return  _getAllSigners.count;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath;{
+   
+    CGSize defaultSize = CGSizeMake(120, 40);
+    
+    
+    return defaultSize;
+}
+//-(void)sendDataToA:(NSMutableArray *)array :(NSMutableArray*)signatoryidarray
+//{
+//    // data will come here inside of ViewControllerA
+//    _getAllSigners = [array mutableCopy];
+//    _subscriberidarray = [signatoryidarray mutableCopy];
+//
+//    //[_pickImagesandDate addObject:array];
+//    NSInteger  indexCount = [[[NSUserDefaults standardUserDefaults]valueForKey:@"indexvalue"]integerValue];
+//    NSIndexPath* rowToReload = [NSIndexPath indexPathForRow:indexCount inSection:0];
+//
+//    [self.signersInfoTable beginUpdates];
+//    [self.signersInfoTable reloadRowsAtIndexPaths:[NSArray arrayWithObjects:rowToReload, nil] withRowAnimation:UITableViewRowAnimationNone];
+//    [self.signersInfoTable endUpdates];
+//    // [self.listTable reloadData];
+//}
+
+
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
+{
+     SignersCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SignersCollectionCell" forIndexPath:indexPath];
+    cell.signersLbl.text= [_getAllSigners objectAtIndex:indexPath.item];
+    return cell;
+}
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+- (IBAction)uploadSignatories:(id)sender {
+    
+    [self callinitWorkFlowApi:_post];
+}
+
+
+-(void)callinitWorkFlowApi:(NSMutableArray*)post
+{
+
+    [self startActivity:@"Logging"];
+    [WebserviceManager sendSyncRequestWithURLDocument:@"https://sandboxapi.emsigner.com/api/InitiateWorkflow" method:SAServiceReqestHTTPMethodPOST body:post completionBlock:^(BOOL status, id responseValue){
+        
+        if (status) {
+            int   issucess = [[responseValue valueForKey:@"IsSuccess"]intValue];
+            
+            if (issucess != 0) {
+                
+                NSNumber * isSuccessNumber = (NSNumber *)[responseValue valueForKey:@"IsSuccess"];
+                if([isSuccessNumber boolValue] == YES)
+                {
+                    dispatch_async(dispatch_get_main_queue(),
+                                   ^{
+                                       UIAlertController * alert = [UIAlertController
+                                                                    alertControllerWithTitle:@""
+                                                                    message:[[responseValue valueForKey:@"Messages"]objectAtIndex:0]
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+                                       
+                                       //Add Buttons
+                                       
+                                       UIAlertAction* yesButton = [UIAlertAction
+                                                                   actionWithTitle:@"OK"
+                                                                   style:UIAlertActionStyleDefault
+                                                                   handler:^(UIAlertAction * action) {
+                                                                       //Handle your yes please button action here
+                                                                       [self.navigationController popToRootViewControllerAnimated:true]
+                                                                       ;
+                                                                   }];
+                                       
+                                       //Add your buttons to alert controller
+                                       
+                                       [alert addAction:yesButton];
+                                       [self presentViewController:alert animated:YES completion:nil];
+                                       [self stopActivity];
+                                   });
+                    
+                }
+                else
+                {
+                    dispatch_async(dispatch_get_main_queue(),
+                                   ^{
+                                       UIAlertController * alert = [UIAlertController
+                                                                    alertControllerWithTitle:@""
+                                                                    message:@"Something went wrong"
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+                                       
+                                       //Add Buttons
+                                       
+                                       UIAlertAction* yesButton = [UIAlertAction
+                                                                   actionWithTitle:@"OK"
+                                                                   style:UIAlertActionStyleDefault
+                                                                   handler:^(UIAlertAction * action) {
+                                                                       //Handle your yes please button action here
+                                                                       
+                                                                   }];
+                                       
+                                       //Add your buttons to alert controller
+                                       
+                                       [alert addAction:yesButton];
+                                       [self presentViewController:alert animated:YES completion:nil];
+                                       [self stopActivity];
+                                   });
+                    
+                }
+            }
+            else
+            {
+                dispatch_async(dispatch_get_main_queue(),
+                               ^{
+                                   UIAlertController * alert = [UIAlertController
+                                                                alertControllerWithTitle:@""
+                                                                message:@"Operation Failed"
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+                                   
+                                   //Add Buttons
+                                   
+                                   UIAlertAction* yesButton = [UIAlertAction
+                                                               actionWithTitle:@"OK"
+                                                               style:UIAlertActionStyleDefault
+                                                               handler:^(UIAlertAction * action) {
+                                                                   //Handle your yes please button action here
+                                                                   
+                                                               }];
+                                   
+                                   //Add your buttons to alert controller
+                                   
+                                   [alert addAction:yesButton];
+                                   
+                                   [self presentViewController:alert animated:YES completion:nil];
+                                   
+                                   [self stopActivity];
+                               });
+                
+            }
+            
+        }
+        else{
+            [self stopActivity];
+        }
+    }];
+    
+    
+}
+
+
+
+- (IBAction)sendDocuments:(id)sender {
+    NSUserDefaults *savePathForPdf = [NSUserDefaults standardUserDefaults];
+    NSString *getPathForPdf = [savePathForPdf valueForKey:@"savedPathForPdf"];
+    DocumentIDArray = [NSMutableArray new];
+    NSData *convertToByrtes = [NSData dataWithContentsOfFile:getPathForPdf];
+    NSString *base64image = [convertToByrtes base64EncodedStringWithOptions:0];
+    
+    //https://sandboxapi.emsigner.com/api/Documentupload
+    NSString *documentName = [[_signersArray objectAtIndex:indexPather.row]valueForKey:@"Documentname"];
+    //    NSString *post = [NSString stringWithFormat:@"CategoryID=%@&DocumentNumber=%@&Base64FileData=%@&DocumentName=%@&OptionalParam1=%@",_categoryId,appendcategory,base64image,documentName,@"",nil];
+    NSMutableDictionary* sendingvalues = [[NSMutableDictionary alloc]init];
+    NSInteger categoryid = _categoryId.integerValue;
+    //[sendingvalues setObject:categoryid forKey:@"CategoryID"];
+    [sendingvalues setValue:[NSNumber numberWithLong:categoryid] forKey:@"CategoryID"];
+    [sendingvalues setObject:appendcategory forKey:@"DocumentNumber"];
+    [sendingvalues setObject:base64image forKey:@"Base64FileData"];
+    [sendingvalues setObject:documentName forKey:@"DocumentName"];
+   [sendingvalues setObject:@" " forKey:@"OptionalParam1"];
+    NSMutableArray * post =[[NSMutableArray alloc]init];
+    [post addObject:sendingvalues];
+
+    NSError *error = nil;
+ 
+        //NSMutableArray * arr = [NSMutableArray arrayWithObject:_finalarray];
+    [self uploadApi:_finalarray];
+    
+
+}
+
+- (void)showModal:(UIModalPresentationStyle) style style:(MPBCustomStyleSignatureViewController*) controller
+{
+    
+    NSInteger cid = [_categoryId integerValue];
+    
+    NSMutableDictionary* sendingvalues = [[NSMutableDictionary alloc]init];
+    [sendingvalues setObject:[NSNumber numberWithInteger:cid] forKey:@"CategoryId"];
+    [sendingvalues setObject:_categoryname forKey:@"CategoryName"];
+    [sendingvalues setObject:[[_signersArray objectAtIndex:0]valueForKey:@"Documentname"] forKey:@"DocumentName"];
+    [sendingvalues setObject:_subscriberidarray  forKey:@"Signatories"];
+    [sendingvalues setObject:@"true" forKey:@"IsSign"];
+    [sendingvalues setObject:[[_signersArray objectAtIndex:indexPather.row]valueForKey:@"ConfigId"] forKey:@"ConfigId"];
+    [sendingvalues setValue:[NSNumber numberWithInteger:DocumentID] forKey:@"DocumentId"];
+    NSMutableArray * post =[[NSMutableArray alloc]init];
+    [post addObject:sendingvalues];
+    
+    MPBCustomStyleSignatureViewController* signatureViewController = [controller initWithConfiguration:[MPBSignatureViewControllerConfiguration configurationWithFormattedAmount:@""]];
+    signatureViewController.modalPresentationStyle = style;
+    signatureViewController.strExcutedFrom=@"Waiting for Others";
+    
+    signatureViewController.gotParametersForInitiateWorkFlow = post;
+    
+    
+    signatureViewController.preferredContentSize = CGSizeMake(800, 500);
+    signatureViewController.configuration.scheme = MPBSignatureViewControllerConfigurationSchemeAmex;
+   // signatureViewController.signatureWorkFlowID = _workFlowID;
+    signatureViewController.continueBlock = ^(UIImage *signature) {
+        //[self showImage: signature];
+    };
+    signatureViewController.cancelBlock = ^ {
+        
+    };
+    [self presentViewController:signatureViewController animated:YES completion:nil];
+    
+}
+
+-(void) uploadApi:(NSMutableArray *)post
+
+{
+    [self startActivity:@"Logging"];
+    http://10.80.102.44:7001/
+    https://sandboxapi.emsigner.com/api/
+    [WebserviceManager sendSyncRequestWithURLDocument:@"https://sandboxapi.emsigner.com/api/Documentupload" method:SAServiceReqestHTTPMethodPOST body:post completionBlock:^(BOOL status, id responseValue){
+        if (status) {
+            int issucess = [[responseValue valueForKey:@"IsSuccess"]intValue];
+            
+            if (issucess != 0) {
+                NSNumber * isSuccessNumber = (NSNumber *)[responseValue valueForKey:@"IsSuccess"];
+                if([isSuccessNumber boolValue] == YES)
+                {
+                    NSArray* responseArray = [responseValue valueForKey:@"Response"];
+                    for(int i = 0; i < responseArray.count; i++)
+                    {
+                        [DocumentIDArray addObject: [[[responseValue valueForKey:@"Response"]objectAtIndex:i]valueForKey:@"DocumentID"]];
+                    }
+                  
+                    [self stopActivity];
+                    
+                }
+                
+                dispatch_async(dispatch_get_main_queue(),
+                               ^{
+                                   UIAlertController * alert = [UIAlertController
+                                                                alertControllerWithTitle:@""
+                                                                message:[[responseValue valueForKey:@"Messages"] objectAtIndex:0]
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+                                   
+                                   //Add Buttons
+                                   
+                                   UIAlertAction* yesButton = [UIAlertAction
+                                                               actionWithTitle:@"OK"
+                                                               style:UIAlertActionStyleDefault
+                                                               handler:^(UIAlertAction * action) {
+                                                                   //Handle your yes please button action here
+                                                                   
+                                                               }];
+                                   
+                                   //Add your buttons to alert controller
+                                   signatoriesimg = true;
+                                   [alert addAction:yesButton];
+                                   
+                                   [self presentViewController:alert animated:YES completion:nil];
+                                   [self.signersInfoTable reloadData];
+                                   [self stopActivity];
+                               });
+                
+            }
+            else
+            {
+                dispatch_async(dispatch_get_main_queue(),
+                               ^{
+                                   UIAlertController * alert = [UIAlertController
+                                                                alertControllerWithTitle:@""
+                                                                message:@"Request Failed please Try agian"
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+                                   
+                                   //Add Buttons
+                                   
+                                   UIAlertAction* yesButton = [UIAlertAction
+                                                               actionWithTitle:@"OK"
+                                                               style:UIAlertActionStyleDefault
+                                                               handler:^(UIAlertAction * action) {
+                                                                   //Handle your yes please button action here
+                                                                   
+                                                               }];
+                                   
+                                   //Add your buttons to alert controller
+                                   
+                                   [alert addAction:yesButton];
+                                   
+                                   [self presentViewController:alert animated:YES completion:nil];
+                                   
+                                   [self stopActivity];
+                               });
+                
+            }
+            
+        }
+        else
+        {
+            [self stopActivity];
+        }
+    }];
+    
+    
+    
+}
+@end
