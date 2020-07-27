@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -18,6 +18,7 @@
 				9CE9590B07A15049DFC81A1C4F346139 /* PBXTargetDependency */,
 			);
 			name = Firebase;
+			productName = Firebase;
 		};
 		318D4B503C47BE8ED8E91C572D903937 /* FirebaseCoreDiagnosticsInterop */ = {
 			isa = PBXAggregateTarget;
@@ -27,6 +28,7 @@
 			dependencies = (
 			);
 			name = FirebaseCoreDiagnosticsInterop;
+			productName = FirebaseCoreDiagnosticsInterop;
 		};
 		9065CC5E0DF8E06B140486867E0332D7 /* FirebaseAnalytics */ = {
 			isa = PBXAggregateTarget;
@@ -41,6 +43,7 @@
 				F5C30D4C09BB5B3F200A15DF2706679C /* PBXTargetDependency */,
 			);
 			name = FirebaseAnalytics;
+			productName = FirebaseAnalytics;
 		};
 		AE3829FFCE73BC1E7A52AAE7603E5C50 /* GoogleAppMeasurement */ = {
 			isa = PBXAggregateTarget;
@@ -52,6 +55,7 @@
 				BC645D35ADEA325A62F04072CE002E23 /* PBXTargetDependency */,
 			);
 			name = GoogleAppMeasurement;
+			productName = GoogleAppMeasurement;
 		};
 		DB6383C0CABFADF2AFF73FEA4B805935 /* FirebaseAnalyticsInterop */ = {
 			isa = PBXAggregateTarget;
@@ -61,6 +65,7 @@
 			dependencies = (
 			);
 			name = FirebaseAnalyticsInterop;
+			productName = FirebaseAnalyticsInterop;
 		};
 /* End PBXAggregateTarget section */
 
@@ -1895,7 +1900,7 @@
 		017D0AD5FE43A7DFF9C5E91897153C23 /* MSIDHttpRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDHttpRequest.h; path = MSAL/IdentityCore/IdentityCore/src/network/MSIDHttpRequest.h; sourceTree = "<group>"; };
 		017DA9C8B62B95A7065C2D8DB53F1B55 /* GoogleDataTransportCCTSupport.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GoogleDataTransportCCTSupport.modulemap; sourceTree = "<group>"; };
 		01A6BC4119AA6869978F9168EFE0C43E /* FIRInstallations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallations.h; path = FirebaseInstallations/Source/Library/Public/FIRInstallations.h; sourceTree = "<group>"; };
-		01B80CD0ADC198E32CB6E478717BE106 /* Pods_emSignerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_emSignerTests.framework; path = "Pods-emSignerTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01B80CD0ADC198E32CB6E478717BE106 /* Pods_emSignerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_emSignerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BBA6CDD489F2A4DBC617C9527691E4 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
 		01BC793B842D89C510D7E4A254D776A7 /* FIRMessagingConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRMessagingConnection.h; path = Firebase/Messaging/FIRMessagingConnection.h; sourceTree = "<group>"; };
 		022982BFAA3FCC911C8BD04B85EF3C60 /* MSALPublicClientApplicationConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSALPublicClientApplicationConfig.m; path = MSAL/src/configuration/MSALPublicClientApplicationConfig.m; sourceTree = "<group>"; };
@@ -1903,7 +1908,7 @@
 		02C029FEB66F3C6D53035A8D05DD14C6 /* GDTCORUploadCoordinator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDTCORUploadCoordinator.m; path = GoogleDataTransport/GDTCORLibrary/GDTCORUploadCoordinator.m; sourceTree = "<group>"; };
 		02DE570812CCF537275426883457EC45 /* FirebaseInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FirebaseInstanceID.h; path = Firebase/InstanceID/Public/FirebaseInstanceID.h; sourceTree = "<group>"; };
 		0327EDC30EB4C7716EFB8AB240BCDBFF /* GPBCodedInputStream_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBCodedInputStream_PackagePrivate.h; path = objectivec/GPBCodedInputStream_PackagePrivate.h; sourceTree = "<group>"; };
-		032D1A81516AB51EAA15ED5C2C24390F /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = "Objective-C/TOCropViewController/Resources/en.lproj"; sourceTree = "<group>"; };
+		032D1A81516AB51EAA15ED5C2C24390F /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = "Objective-C/TOCropViewController/Resources/en.lproj"; sourceTree = "<group>"; };
 		034F1DDA8A067FFA85412119FE073895 /* MSIDInteractiveTokenRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDInteractiveTokenRequest.h; path = MSAL/IdentityCore/IdentityCore/src/requests/MSIDInteractiveTokenRequest.h; sourceTree = "<group>"; };
 		0366A0774B0C13F0910FB59403332ACC /* MSIDLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDLogger.m; path = MSAL/IdentityCore/IdentityCore/src/logger/MSIDLogger.m; sourceTree = "<group>"; };
 		03BEACEA678FBFD3B22346E6A5FA9942 /* MSALTokenParameters.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSALTokenParameters.m; path = MSAL/src/MSALTokenParameters.m; sourceTree = "<group>"; };
@@ -1949,7 +1954,7 @@
 		0C0A51BDE69B2C73725F98B61E48B94F /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderOperation.h; path = SDWebImage/SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
 		0C4754C7F5C86F5BDE67C56FE5A1CBA8 /* IQTitleBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQTitleBarButtonItem.h; path = IQKeyboardManager/IQToolbar/IQTitleBarButtonItem.h; sourceTree = "<group>"; };
 		0CB4B0C58706E44B2FABE27C410AEB32 /* IQUIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUIView+IQKeyboardToolbar.m"; path = "IQKeyboardManager/IQToolbar/IQUIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
-		0CC8D6DD56FCC155058F290630105BB6 /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = Base.lproj; path = "Objective-C/TOCropViewController/Resources/Base.lproj"; sourceTree = "<group>"; };
+		0CC8D6DD56FCC155058F290630105BB6 /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = Base.lproj; path = "Objective-C/TOCropViewController/Resources/Base.lproj"; sourceTree = "<group>"; };
 		0CCC81011AB7BCE0BFF3FB3223C1B39C /* Api.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Api.pbobjc.m; path = objectivec/google/protobuf/Api.pbobjc.m; sourceTree = "<group>"; };
 		0CEABD0ECD2636D39C0C1E2713D596EE /* MSIDCertAuthHandler+iOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MSIDCertAuthHandler+iOS.h"; path = "MSAL/IdentityCore/IdentityCore/src/webview/embeddedWebview/challangeHandlers/ios/MSIDCertAuthHandler+iOS.h"; sourceTree = "<group>"; };
 		0D037254B2188D50DC360D33BBA844C9 /* GPBRuntimeTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBRuntimeTypes.h; path = objectivec/GPBRuntimeTypes.h; sourceTree = "<group>"; };
@@ -2009,7 +2014,7 @@
 		15795B61A43666CA5A2BBBAA9795AD51 /* pb_common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_common.h; sourceTree = "<group>"; };
 		15B931763F0E0828B3A185C4CAC3FA03 /* FIRInstallationsIIDStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsIIDStore.h; path = FirebaseInstallations/Source/Library/IIDMigration/FIRInstallationsIIDStore.h; sourceTree = "<group>"; };
 		15E4B3B5A50ED1449EF7F5DB532408F6 /* MSIDInteractiveRequestParameters.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDInteractiveRequestParameters.m; path = MSAL/IdentityCore/IdentityCore/src/parameters/MSIDInteractiveRequestParameters.m; sourceTree = "<group>"; };
-		15F6021F833A68430B15C652DFCB3028 /* da-DK.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "da-DK.lproj"; path = "Objective-C/TOCropViewController/Resources/da-DK.lproj"; sourceTree = "<group>"; };
+		15F6021F833A68430B15C652DFCB3028 /* da-DK.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "da-DK.lproj"; path = "Objective-C/TOCropViewController/Resources/da-DK.lproj"; sourceTree = "<group>"; };
 		164589359A1ADEE32693E7586B04F0C2 /* FIRComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRComponent.h; path = FirebaseCore/Sources/Private/FIRComponent.h; sourceTree = "<group>"; };
 		16459F2968BAE09511F1E57276736B58 /* MSIDAADRequestConfigurator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDAADRequestConfigurator.m; path = MSAL/IdentityCore/IdentityCore/src/network/request_configurator/MSIDAADRequestConfigurator.m; sourceTree = "<group>"; };
 		16B60C49433B50BDA5549C8BF0616C8B /* MSIDCredentialCacheItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDCredentialCacheItem.h; path = MSAL/IdentityCore/IdentityCore/src/cache/token/MSIDCredentialCacheItem.h; sourceTree = "<group>"; };
@@ -2063,7 +2068,7 @@
 		20D914BF48E0C10F96A5756E08D245DE /* MSIDHttpRequestTelemetry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDHttpRequestTelemetry.m; path = MSAL/IdentityCore/IdentityCore/src/network/request_telemetry/MSIDHttpRequestTelemetry.m; sourceTree = "<group>"; };
 		2106849B095579AF49688AC90D25C0EF /* MSIDAccountMetadataCacheKey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDAccountMetadataCacheKey.h; path = MSAL/IdentityCore/IdentityCore/src/cache/metadata/accountMetadata/MSIDAccountMetadataCacheKey.h; sourceTree = "<group>"; };
 		212F0EE00B5E762D864B6439983CE9AB /* MSAL-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MSAL-umbrella.h"; sourceTree = "<group>"; };
-		2143E485C14C7134B9D974B4E51A19D6 /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pl.lproj; path = "Objective-C/TOCropViewController/Resources/pl.lproj"; sourceTree = "<group>"; };
+		2143E485C14C7134B9D974B4E51A19D6 /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = pl.lproj; path = "Objective-C/TOCropViewController/Resources/pl.lproj"; sourceTree = "<group>"; };
 		21C96A810C40B67263A66573C65436F0 /* FIRApp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRApp.m; path = FirebaseCore/Sources/FIRApp.m; sourceTree = "<group>"; };
 		21D390225764D8939848D01A7A869FC7 /* MSIDAADV2BrokerResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDAADV2BrokerResponse.m; path = MSAL/IdentityCore/IdentityCore/src/oauth2/aad_v2/MSIDAADV2BrokerResponse.m; sourceTree = "<group>"; };
 		21F4DD33581EF43AE38A5C45A448E6AF /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
@@ -2089,14 +2094,14 @@
 		24E61B532342C42C58AF6199FACD5CDA /* MSIDAppMetadataCacheItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDAppMetadataCacheItem.m; path = MSAL/IdentityCore/IdentityCore/src/cache/token/MSIDAppMetadataCacheItem.m; sourceTree = "<group>"; };
 		24F8096830AC8761AA83EDF7115FFCCE /* MSIDAADAuthority.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDAADAuthority.h; path = MSAL/IdentityCore/IdentityCore/src/validation/MSIDAADAuthority.h; sourceTree = "<group>"; };
 		255053B84D75DDFAE4D777CACD65106A /* UIButton+Extensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+Extensions.h"; path = "Source/Private/UIButton+Extensions.h"; sourceTree = "<group>"; };
-		25511A6935217235A87556C10113AF30 /* Pods_emSignerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_emSignerUITests.framework; path = "Pods-emSignerUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25511A6935217235A87556C10113AF30 /* Pods_emSignerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_emSignerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		256B780347D7EBAF77E59DCE44AEEFF1 /* UIApplication+MSIDExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+MSIDExtensions.m"; path = "MSAL/IdentityCore/IdentityCore/src/util/ios/UIApplication+MSIDExtensions.m"; sourceTree = "<group>"; };
 		256CDBA1AC47F5C4797810F397335058 /* IRLCameraMedia.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = IRLCameraMedia.xcassets; sourceTree = "<group>"; };
 		257120932B232BC7C593CBDE7002A16E /* MSIDPRTCacheItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDPRTCacheItem.h; path = MSAL/IdentityCore/IdentityCore/src/cache/token/MSIDPRTCacheItem.h; sourceTree = "<group>"; };
 		25A1BEB199527721F327BF6CED7F0FA1 /* FIRInstanceIDCheckinStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDCheckinStore.m; path = Firebase/InstanceID/FIRInstanceIDCheckinStore.m; sourceTree = "<group>"; };
 		25F86D913FDD50F041B667E2A909DCA4 /* PlayButtonOverlayLarge@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "PlayButtonOverlayLarge@3x.png"; path = "Pod/Assets/PlayButtonOverlayLarge@3x.png"; sourceTree = "<group>"; };
 		26235215022105AA458CF58561F8A065 /* FIRErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRErrors.h; path = FirebaseCore/Sources/Private/FIRErrors.h; sourceTree = "<group>"; };
-		2641CA963F7159F2A5D4A54CC3B6210F /* id.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = id.lproj; path = "Objective-C/TOCropViewController/Resources/id.lproj"; sourceTree = "<group>"; };
+		2641CA963F7159F2A5D4A54CC3B6210F /* id.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = id.lproj; path = "Objective-C/TOCropViewController/Resources/id.lproj"; sourceTree = "<group>"; };
 		26642DF77CB21FA5E28C8EEB8605FA2D /* MSIDOpenIdConfigurationInfoRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDOpenIdConfigurationInfoRequest.h; path = MSAL/IdentityCore/IdentityCore/src/network/request/MSIDOpenIdConfigurationInfoRequest.h; sourceTree = "<group>"; };
 		2678DF4C294A721BBCF35E9FE35FC3A1 /* FIRInstanceIDKeychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDKeychain.m; path = Firebase/InstanceID/FIRInstanceIDKeychain.m; sourceTree = "<group>"; };
 		2699C5D9FCD4B85264E5E2E4A1422ED8 /* GDTCORStorage_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORStorage_Private.h; path = GoogleDataTransport/GDTCORLibrary/Private/GDTCORStorage_Private.h; sourceTree = "<group>"; };
@@ -2122,7 +2127,7 @@
 		29BD5644EC2CB676FDCF641428A2D351 /* Pods-emSignerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-emSignerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2A0BF3E1C93779C731E1AC2D1BDBB973 /* MSALIndividualClaimRequestAdditionalInfo+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MSALIndividualClaimRequestAdditionalInfo+Internal.h"; path = "MSAL/src/MSALIndividualClaimRequestAdditionalInfo+Internal.h"; sourceTree = "<group>"; };
 		2A1FFF7C38F0EA18D7DA0E8F779F3CC1 /* MSIDTokenRequestProviding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDTokenRequestProviding.h; path = MSAL/IdentityCore/IdentityCore/src/requests/sdk/MSIDTokenRequestProviding.h; sourceTree = "<group>"; };
-		2A470DA77755E724474748789E45FF1F /* MSAL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MSAL.framework; path = MSAL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A470DA77755E724474748789E45FF1F /* MSAL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MSAL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A5C7775AA5FDE8AAC529046173EB53A /* MSIDCacheItemSerializing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDCacheItemSerializing.h; path = MSAL/IdentityCore/IdentityCore/src/cache/serializers/MSIDCacheItemSerializing.h; sourceTree = "<group>"; };
 		2A73BB019196E1977B9A80CC574A8302 /* MSIDAdfsAuthorityResolver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDAdfsAuthorityResolver.m; path = MSAL/IdentityCore/IdentityCore/src/validation/MSIDAdfsAuthorityResolver.m; sourceTree = "<group>"; };
 		2A7974A3DBBB9B757944189A1318F134 /* MSIDMetadataCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDMetadataCache.h; path = MSAL/IdentityCore/IdentityCore/src/cache/metadata/MSIDMetadataCache.h; sourceTree = "<group>"; };
@@ -2152,7 +2157,7 @@
 		2DA12D32151419AD58C5738AC13C70B0 /* MSIDDefaultErrorConverter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDDefaultErrorConverter.m; path = MSAL/IdentityCore/IdentityCore/src/MSIDDefaultErrorConverter.m; sourceTree = "<group>"; };
 		2DA66ABC3726D889969D349E3C4F3348 /* MSIDDefaultTokenRequestProvider+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MSIDDefaultTokenRequestProvider+Internal.h"; path = "MSAL/IdentityCore/IdentityCore/src/requests/sdk/msal/MSIDDefaultTokenRequestProvider+Internal.h"; sourceTree = "<group>"; };
 		2DE43280D95AC0BECFBC36DA3C28CB34 /* NSURL+MSIDExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURL+MSIDExtensions.m"; path = "MSAL/IdentityCore/IdentityCore/src/util/NSURL+MSIDExtensions.m"; sourceTree = "<group>"; };
-		2DE4958A77365F87B8F97EE84E0B07C9 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SDWebImage.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DE4958A77365F87B8F97EE84E0B07C9 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DF2F8627A22F14EE9F6012BEDCF9719 /* MSALB2CAuthority.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSALB2CAuthority.m; path = MSAL/src/instance/MSALB2CAuthority.m; sourceTree = "<group>"; };
 		2E315A536BD23F628FFD53501FFF975A /* MSIDGetV1IdTokenHttpEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDGetV1IdTokenHttpEvent.h; path = MSAL/IdentityCore/IdentityCore/src/telemetry/MSIDGetV1IdTokenHttpEvent.h; sourceTree = "<group>"; };
 		2E3A8918C5E6106E8DEAB6710170C94D /* FIRVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRVersion.h; path = FirebaseCore/Sources/FIRVersion.h; sourceTree = "<group>"; };
@@ -2170,7 +2175,7 @@
 		3096CCC64C113224F04838703DB845DD /* MSIDAuthority.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDAuthority.h; path = MSAL/IdentityCore/IdentityCore/src/validation/MSIDAuthority.h; sourceTree = "<group>"; };
 		30B5F459E24DC45D53F3D4F54302260A /* MSIDBrokerResponseHandler+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MSIDBrokerResponseHandler+Internal.h"; path = "MSAL/IdentityCore/IdentityCore/src/requests/sdk/MSIDBrokerResponseHandler+Internal.h"; sourceTree = "<group>"; };
 		317FFD8C2D5F98960872FD8DEE008A8B /* UIButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+WebCache.h"; path = "SDWebImage/UIButton+WebCache.h"; sourceTree = "<group>"; };
-		321732071C528C0DD7561F0AC8082E6E /* TOCropViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TOCropViewController.framework; path = TOCropViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		321732071C528C0DD7561F0AC8082E6E /* TOCropViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TOCropViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		321C640344DE2ABE81F5B67B1FE42350 /* MWPhotoBrowserPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MWPhotoBrowserPrivate.h; path = Pod/Classes/MWPhotoBrowserPrivate.h; sourceTree = "<group>"; };
 		321D4BDD30271E38AC59C7EF718EEEBB /* MSIDTokenRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDTokenRequest.m; path = MSAL/IdentityCore/IdentityCore/src/network/request/MSIDTokenRequest.m; sourceTree = "<group>"; };
 		323194A307E4354CBE3B948C82C897D9 /* MSALADFSAuthority.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSALADFSAuthority.m; path = MSAL/src/instance/MSALADFSAuthority.m; sourceTree = "<group>"; };
@@ -2198,7 +2203,7 @@
 		36554E8B05AF2DF3E7F00294C21ED0D9 /* MSIDLegacyTokenCacheAccessor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDLegacyTokenCacheAccessor.m; path = MSAL/IdentityCore/IdentityCore/src/cache/accessor/MSIDLegacyTokenCacheAccessor.m; sourceTree = "<group>"; };
 		365FF981557989B5C9EDD776E8D50C8B /* FirebaseMessaging-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FirebaseMessaging-umbrella.h"; sourceTree = "<group>"; };
 		367396E6718B84B4236B59DD204E61C8 /* FIRMessagingPubSubRegistrar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRMessagingPubSubRegistrar.h; path = Firebase/Messaging/FIRMessagingPubSubRegistrar.h; sourceTree = "<group>"; };
-		36CEE4332DD784891493B56BFB61E8AC /* firebasecore.nanopb.c */ = {isa = PBXFileReference; includeInIndex = 1; name = firebasecore.nanopb.c; path = Firebase/CoreDiagnostics/FIRCDLibrary/Protogen/nanopb/firebasecore.nanopb.c; sourceTree = "<group>"; };
+		36CEE4332DD784891493B56BFB61E8AC /* firebasecore.nanopb.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = firebasecore.nanopb.c; path = Firebase/CoreDiagnostics/FIRCDLibrary/Protogen/nanopb/firebasecore.nanopb.c; sourceTree = "<group>"; };
 		36DADC125635307ECE8CDC0BF668175D /* FIRInstallationsAuthTokenResultInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsAuthTokenResultInternal.h; path = FirebaseInstallations/Source/Library/FIRInstallationsAuthTokenResultInternal.h; sourceTree = "<group>"; };
 		36DFB816814613F0E83AF4FFA464DBF7 /* FIRInstallationsStoredAuthToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsStoredAuthToken.h; path = FirebaseInstallations/Source/Library/InstallationsStore/FIRInstallationsStoredAuthToken.h; sourceTree = "<group>"; };
 		3703C4D933E3F0CCE1B1EB944179960D /* MSIDAuthenticationSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDAuthenticationSession.h; path = MSAL/IdentityCore/IdentityCore/src/webview/systemWebview/ios/MSIDAuthenticationSession.h; sourceTree = "<group>"; };
@@ -2226,10 +2231,10 @@
 		3BA8687E4BFDF8F8FDDA09CA89A99C27 /* FIRBundleUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRBundleUtil.h; path = FirebaseCore/Sources/FIRBundleUtil.h; sourceTree = "<group>"; };
 		3BB90F3F990841B5D8D83929C0A352EE /* MSALExternalAccountProviding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSALExternalAccountProviding.h; path = MSAL/src/public/configuration/publicClientApplication/cache/MSALExternalAccountProviding.h; sourceTree = "<group>"; };
 		3C0C3A042688DA2E2CDD3258CDFDBA62 /* UIBarButtonItemArrowRight@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "UIBarButtonItemArrowRight@3x.png"; path = "Pod/Assets/UIBarButtonItemArrowRight@3x.png"; sourceTree = "<group>"; };
-		3C40AA5BD69A315E028901CE433BDFD2 /* fa.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fa.lproj; path = "Objective-C/TOCropViewController/Resources/fa.lproj"; sourceTree = "<group>"; };
+		3C40AA5BD69A315E028901CE433BDFD2 /* fa.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = fa.lproj; path = "Objective-C/TOCropViewController/Resources/fa.lproj"; sourceTree = "<group>"; };
 		3C96674A77023C5F328A8215DA4F261D /* SDWebImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageManager.m; path = SDWebImage/SDWebImageManager.m; sourceTree = "<group>"; };
 		3CB1553E26BDF011B670B61239B89D25 /* FIRInstanceIDTokenOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDTokenOperation.m; path = Firebase/InstanceID/FIRInstanceIDTokenOperation.m; sourceTree = "<group>"; };
-		3CBFBE0CD1F9318C320C9462F0255EAF /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = "Objective-C/TOCropViewController/Resources/it.lproj"; sourceTree = "<group>"; };
+		3CBFBE0CD1F9318C320C9462F0255EAF /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = it.lproj; path = "Objective-C/TOCropViewController/Resources/it.lproj"; sourceTree = "<group>"; };
 		3CCBA1ED75E0647BD4AEE41FD903350F /* MSIDBasicContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDBasicContext.m; path = MSAL/IdentityCore/IdentityCore/src/MSIDBasicContext.m; sourceTree = "<group>"; };
 		3DAA1C1D3DBE3C16905D0C66E687A7C0 /* Pods-emSigner-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-emSigner-Info.plist"; sourceTree = "<group>"; };
 		3DC03CE72DB5392DB7E36DFE2287C435 /* MSIDAppMetadataCacheItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDAppMetadataCacheItem.h; path = MSAL/IdentityCore/IdentityCore/src/cache/token/MSIDAppMetadataCacheItem.h; sourceTree = "<group>"; };
@@ -2248,7 +2253,7 @@
 		3F341415818EFC274902756734460D7F /* MSALOauth2Provider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSALOauth2Provider.h; path = MSAL/src/instance/oauth2/MSALOauth2Provider.h; sourceTree = "<group>"; };
 		3F64174B9D70047F0D9FF88F293998C4 /* MSALPublicClientStatusNotifications.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSALPublicClientStatusNotifications.m; path = MSAL/src/MSALPublicClientStatusNotifications.m; sourceTree = "<group>"; };
 		3FB80A8D2BAF707A6C9F5F5343B4BC66 /* GULNetworkLoggerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkLoggerProtocol.h; path = GoogleUtilities/Network/Private/GULNetworkLoggerProtocol.h; sourceTree = "<group>"; };
-		3FD0137B144E473E2B5F1CCCB95B85AE /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = tr.lproj; path = "Objective-C/TOCropViewController/Resources/tr.lproj"; sourceTree = "<group>"; };
+		3FD0137B144E473E2B5F1CCCB95B85AE /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = tr.lproj; path = "Objective-C/TOCropViewController/Resources/tr.lproj"; sourceTree = "<group>"; };
 		3FD3BB534110DEE3345C50946CF49ACC /* MSIDAccountCacheItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDAccountCacheItem.m; path = MSAL/IdentityCore/IdentityCore/src/cache/token/MSIDAccountCacheItem.m; sourceTree = "<group>"; };
 		4001FDA4B5AE495515A00FCB038CBD40 /* MSALAccount+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MSALAccount+Internal.h"; path = "MSAL/src/MSALAccount+Internal.h"; sourceTree = "<group>"; };
 		4008E1C9CB71BBCA5F87B672ADAD075A /* MSIDTelemetryEventInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDTelemetryEventInterface.h; path = MSAL/IdentityCore/IdentityCore/src/telemetry/MSIDTelemetryEventInterface.h; sourceTree = "<group>"; };
@@ -2260,7 +2265,7 @@
 		40FBF8BB0B642EDF1894B08D7BE557E3 /* MSIDBrokerInteractiveController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDBrokerInteractiveController.m; path = MSAL/IdentityCore/IdentityCore/src/controllers/ios/MSIDBrokerInteractiveController.m; sourceTree = "<group>"; };
 		410216598B8A486B1841FD15B57F10B7 /* MSIDTokenResponseValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDTokenResponseValidator.m; path = MSAL/IdentityCore/IdentityCore/src/requests/sdk/MSIDTokenResponseValidator.m; sourceTree = "<group>"; };
 		4162756765D46BDC8E48C3C671851F4A /* MSIDADFSAuthority.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDADFSAuthority.h; path = MSAL/IdentityCore/IdentityCore/src/validation/MSIDADFSAuthority.h; sourceTree = "<group>"; };
-		418DC6C72694FC9C979FCE790FFA10CB /* ro.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ro.lproj; path = "Objective-C/TOCropViewController/Resources/ro.lproj"; sourceTree = "<group>"; };
+		418DC6C72694FC9C979FCE790FFA10CB /* ro.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ro.lproj; path = "Objective-C/TOCropViewController/Resources/ro.lproj"; sourceTree = "<group>"; };
 		41C879B31B3F46BE354232DB831F4A32 /* MSIDWebviewSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDWebviewSession.h; path = MSAL/IdentityCore/IdentityCore/src/webview/MSIDWebviewSession.h; sourceTree = "<group>"; };
 		41D1FCEAFDAA89CEB9BF96D471E511D8 /* MSIDMainThreadUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDMainThreadUtil.m; path = MSAL/IdentityCore/IdentityCore/src/webview/MSIDMainThreadUtil.m; sourceTree = "<group>"; };
 		41D4C77489BEC3A9AB790EF1EA694C67 /* PromisesObjC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PromisesObjC.modulemap; sourceTree = "<group>"; };
@@ -2274,7 +2279,7 @@
 		434E401F044CD4F3FF825D6ADAB6BB31 /* MSIDKeychainTokenCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDKeychainTokenCache.m; path = MSAL/IdentityCore/IdentityCore/src/cache/MSIDKeychainTokenCache.m; sourceTree = "<group>"; };
 		4350FC9DE35D92E9B551481B520B46C9 /* MSIDJsonSerializer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDJsonSerializer.m; path = MSAL/IdentityCore/IdentityCore/src/MSIDJsonSerializer.m; sourceTree = "<group>"; };
 		435B03098420E629CE6863D998C91AB1 /* MSIDLegacyRefreshToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDLegacyRefreshToken.h; path = MSAL/IdentityCore/IdentityCore/src/oauth2/token/MSIDLegacyRefreshToken.h; sourceTree = "<group>"; };
-		436039F8F4EACFA9B47A79AD11FDCD23 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fr.lproj; path = "Objective-C/TOCropViewController/Resources/fr.lproj"; sourceTree = "<group>"; };
+		436039F8F4EACFA9B47A79AD11FDCD23 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = fr.lproj; path = "Objective-C/TOCropViewController/Resources/fr.lproj"; sourceTree = "<group>"; };
 		441E5C320995CE4E0C500B02CC60E24E /* FIRInstanceID+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FIRInstanceID+Private.h"; path = "Firebase/InstanceID/Private/FIRInstanceID+Private.h"; sourceTree = "<group>"; };
 		441E9A75FCED816369E871FB7B6650DE /* MSIDCertAuthHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDCertAuthHandler.h; path = MSAL/IdentityCore/IdentityCore/src/webview/embeddedWebview/challangeHandlers/MSIDCertAuthHandler.h; sourceTree = "<group>"; };
 		444109D98C763B60ECDCE3CFC28E7CA1 /* MSIDDeviceId.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDDeviceId.m; path = MSAL/IdentityCore/IdentityCore/src/MSIDDeviceId.m; sourceTree = "<group>"; };
@@ -2302,7 +2307,7 @@
 		48B42CB0EA0B9B5BE02DEA5E4712BCC0 /* Pods-emSignerUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-emSignerUITests-dummy.m"; sourceTree = "<group>"; };
 		48F99A3E1E3CA4D486F0FFCEA33B2E7F /* MWPhotoBrowser-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MWPhotoBrowser-Info.plist"; sourceTree = "<group>"; };
 		4944478104EC23711776EDF0B2162C68 /* MSIDUrlRequestSerializer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDUrlRequestSerializer.h; path = MSAL/IdentityCore/IdentityCore/src/network/request_serializer/MSIDUrlRequestSerializer.h; sourceTree = "<group>"; };
-		4969EC8638D1C5E2F74773710BC0F903 /* FirebaseInstallations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FirebaseInstallations.framework; path = FirebaseInstallations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4969EC8638D1C5E2F74773710BC0F903 /* FirebaseInstallations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseInstallations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4981886AE897C6E8199EF33DFC49E1F6 /* FIRInstanceIDTokenManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDTokenManager.h; path = Firebase/InstanceID/FIRInstanceIDTokenManager.h; sourceTree = "<group>"; };
 		49B3D2231EE6F62586834402A48FEBBD /* MSIDDRSType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDDRSType.h; path = MSAL/IdentityCore/IdentityCore/src/MSIDDRSType.h; sourceTree = "<group>"; };
 		49B97081EBE5E8E490D776627A39160C /* UIImage+GIF.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GIF.m"; path = "SDWebImage/UIImage+GIF.m"; sourceTree = "<group>"; };
@@ -2364,7 +2369,7 @@
 		54BFBF6CD68A05F9F35FCD412217B9A7 /* MSIDAccessToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDAccessToken.h; path = MSAL/IdentityCore/IdentityCore/src/oauth2/token/MSIDAccessToken.h; sourceTree = "<group>"; };
 		54CB725AC678D1A3016F19366FBDDFF6 /* MSIDDefaultCredentialCacheQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDDefaultCredentialCacheQuery.h; path = MSAL/IdentityCore/IdentityCore/src/cache/key/MSIDDefaultCredentialCacheQuery.h; sourceTree = "<group>"; };
 		54FAADD46F5B93C17F501BC2CFAB7FA6 /* MSALTelemetryEventsObservingProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSALTelemetryEventsObservingProxy.h; path = MSAL/src/telemetry/MSALTelemetryEventsObservingProxy.h; sourceTree = "<group>"; };
-		550CEEB133CEB709631993342E95828C /* ar.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ar.lproj; path = "Objective-C/TOCropViewController/Resources/ar.lproj"; sourceTree = "<group>"; };
+		550CEEB133CEB709631993342E95828C /* ar.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ar.lproj; path = "Objective-C/TOCropViewController/Resources/ar.lproj"; sourceTree = "<group>"; };
 		5523555E3CCCB0260065928E2F08881E /* FIRSecureStorage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRSecureStorage.m; path = FirebaseInstallations/Source/Library/SecureStorage/FIRSecureStorage.m; sourceTree = "<group>"; };
 		5526838A4175DF155729643E57D4F76F /* FIRInstallationsIIDStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstallationsIIDStore.m; path = FirebaseInstallations/Source/Library/IIDMigration/FIRInstallationsIIDStore.m; sourceTree = "<group>"; };
 		55445646A501B9F54C6ADFE9909DB363 /* MSIDWebAADAuthResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDWebAADAuthResponse.h; path = MSAL/IdentityCore/IdentityCore/src/webview/response/MSIDWebAADAuthResponse.h; sourceTree = "<group>"; };
@@ -2376,7 +2381,7 @@
 		56735D4603972E406D50524FE6622998 /* MSIDIntuneUserDefaultsCacheDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDIntuneUserDefaultsCacheDataSource.m; path = MSAL/IdentityCore/IdentityCore/src/intune/data_source/MSIDIntuneUserDefaultsCacheDataSource.m; sourceTree = "<group>"; };
 		569C159665BDBA1A8BEB93794995A620 /* GDTCORReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORReachability.h; path = GoogleDataTransport/GDTCORLibrary/Private/GDTCORReachability.h; sourceTree = "<group>"; };
 		56A3BF06E137A1A5F9EA12C00FFAF9FD /* GPBDictionary_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBDictionary_PackagePrivate.h; path = objectivec/GPBDictionary_PackagePrivate.h; sourceTree = "<group>"; };
-		56A51301B33C2BDE4E21A4EC15923C56 /* fi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fi.lproj; path = "Objective-C/TOCropViewController/Resources/fi.lproj"; sourceTree = "<group>"; };
+		56A51301B33C2BDE4E21A4EC15923C56 /* fi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = fi.lproj; path = "Objective-C/TOCropViewController/Resources/fi.lproj"; sourceTree = "<group>"; };
 		56AE593FF56F9F0D025F07BEBF1EE845 /* GDTCORTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDTCORTransformer.m; path = GoogleDataTransport/GDTCORLibrary/GDTCORTransformer.m; sourceTree = "<group>"; };
 		56BC73B74F68D6D7303C5AF6864ED46D /* MSALIndividualClaimRequest+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MSALIndividualClaimRequest+Internal.h"; path = "MSAL/src/MSALIndividualClaimRequest+Internal.h"; sourceTree = "<group>"; };
 		56D916ADD2F2D87553E5788B256734B2 /* MSIDTokenFilteringHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDTokenFilteringHelper.m; path = MSAL/IdentityCore/IdentityCore/src/cache/accessor/MSIDTokenFilteringHelper.m; sourceTree = "<group>"; };
@@ -2443,11 +2448,11 @@
 		607340279CF5A268260A551FE8BB224C /* DACircularProgress-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DACircularProgress-umbrella.h"; sourceTree = "<group>"; };
 		6087A7F7D8334792D44A238FD5A57342 /* SDWebImageCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCompat.h; path = SDWebImage/SDWebImageCompat.h; sourceTree = "<group>"; };
 		6145ABC1CF997BEC8A7990EE146DE428 /* GDTCOREvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCOREvent.h; path = GoogleDataTransport/GDTCORLibrary/Public/GDTCOREvent.h; sourceTree = "<group>"; };
-		619E7C0E981A19685E1BA3B15213027E /* FBLPromises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBLPromises.framework; path = PromisesObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		619E7C0E981A19685E1BA3B15213027E /* FBLPromises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61A71B312813B680260943F1C3232ABF /* FIRInstanceIDCombinedHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDCombinedHandler.h; path = Firebase/InstanceID/FIRInstanceIDCombinedHandler.h; sourceTree = "<group>"; };
 		622BD49A6003F40BAA2FB2C300D78288 /* MWPhotoBrowser-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MWPhotoBrowser-umbrella.h"; sourceTree = "<group>"; };
 		62CFC42626A45AC609E535D2BF328772 /* MSIDAADV1WebviewFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDAADV1WebviewFactory.h; path = MSAL/IdentityCore/IdentityCore/src/oauth2/aad_v1/MSIDAADV1WebviewFactory.h; sourceTree = "<group>"; };
-		62E9A21DB31082C5F751548808547706 /* MWPhotoBrowser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MWPhotoBrowser.framework; path = MWPhotoBrowser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62E9A21DB31082C5F751548808547706 /* MWPhotoBrowser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MWPhotoBrowser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		632AAA0300E94EC516FBC9B840855511 /* FIRCoreDiagnosticsData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRCoreDiagnosticsData.h; path = Interop/CoreDiagnostics/Public/FIRCoreDiagnosticsData.h; sourceTree = "<group>"; };
 		633AB767032656750F8F576338C6EEA6 /* MSIDClaimsRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDClaimsRequest.m; path = MSAL/IdentityCore/IdentityCore/src/claims/MSIDClaimsRequest.m; sourceTree = "<group>"; };
 		633EC6C61713C443E8E19BF3732EB585 /* FIRInstallationsHTTPError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsHTTPError.h; path = FirebaseInstallations/Source/Library/Errors/FIRInstallationsHTTPError.h; sourceTree = "<group>"; };
@@ -2481,14 +2486,14 @@
 		67418B03B7A4AC5273E616F088586E02 /* MSIDAdfsAuthorityResolver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDAdfsAuthorityResolver.h; path = MSAL/IdentityCore/IdentityCore/src/validation/MSIDAdfsAuthorityResolver.h; sourceTree = "<group>"; };
 		679C3EB1010F7688EC8F5E9836FE3F71 /* FIRInstanceIDLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDLogger.m; path = Firebase/InstanceID/FIRInstanceIDLogger.m; sourceTree = "<group>"; };
 		67BBBA9D232A336641268D899118FE2E /* IRLCameraView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IRLCameraView.m; path = Source/Private/IRLCameraView.m; sourceTree = "<group>"; };
-		68054CDE0C26DEE3403ED86457FFEC6C /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_common.c; sourceTree = "<group>"; };
+		68054CDE0C26DEE3403ED86457FFEC6C /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = pb_common.c; sourceTree = "<group>"; };
 		6871853ABF6221648BA2CE7B4C1F974C /* FIRComponentContainer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRComponentContainer.m; path = FirebaseCore/Sources/FIRComponentContainer.m; sourceTree = "<group>"; };
 		6981E6E71AC2FCEE7ECD948628D13F63 /* MSIDError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDError.m; path = MSAL/IdentityCore/IdentityCore/src/MSIDError.m; sourceTree = "<group>"; };
 		69FACDC92FC6220A6C7718A2C929F97E /* MSIDBackgroundTaskManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDBackgroundTaskManager.h; path = MSAL/IdentityCore/IdentityCore/src/webview/background/ios/MSIDBackgroundTaskManager.h; sourceTree = "<group>"; };
 		6A0AD21A19D6BA58D040917341002B5F /* MSIDErrorConverting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDErrorConverting.h; path = MSAL/IdentityCore/IdentityCore/src/MSIDErrorConverting.h; sourceTree = "<group>"; };
 		6A47FE8728AA2CC97D5001DECA1977D0 /* PromisesObjC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromisesObjC-umbrella.h"; sourceTree = "<group>"; };
 		6AB2133945C9B6F4268EE58F99142C8D /* MSIDMaskedUsernameLogParameter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDMaskedUsernameLogParameter.m; path = MSAL/IdentityCore/IdentityCore/src/logger/MSIDMaskedUsernameLogParameter.m; sourceTree = "<group>"; };
-		6AD3336633EE9BB99DE69E485F60465E /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FirebaseCoreDiagnostics.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AD3336633EE9BB99DE69E485F60465E /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseCoreDiagnostics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD529D2E627320C04284460F617E34E /* TOCropViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TOCropViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1C6EC669C85F8C0EFE87F7303B9F38 /* MSIDAppExtensionUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDAppExtensionUtil.h; path = MSAL/IdentityCore/IdentityCore/src/util/ios/MSIDAppExtensionUtil.h; sourceTree = "<group>"; };
 		6B6A13EE1C1DDA2E14AB82B4EAD7083E /* MSIDAccessToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDAccessToken.m; path = MSAL/IdentityCore/IdentityCore/src/oauth2/token/MSIDAccessToken.m; sourceTree = "<group>"; };
@@ -2537,7 +2542,7 @@
 		7147FF2B4B97D3F591D0BC08569E804F /* MSALGlobalConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSALGlobalConfig.m; path = MSAL/src/configuration/MSALGlobalConfig.m; sourceTree = "<group>"; };
 		71AB5760F8B64E5D043046FA4952EE50 /* NSMutableDictionary+MSIDExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+MSIDExtensions.m"; path = "MSAL/IdentityCore/IdentityCore/src/util/NSMutableDictionary+MSIDExtensions.m"; sourceTree = "<group>"; };
 		725A84302303135378A436ED9536D0ED /* UIBarButtonItemArrowRight@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "UIBarButtonItemArrowRight@2x.png"; path = "Pod/Assets/UIBarButtonItemArrowRight@2x.png"; sourceTree = "<group>"; };
-		7261A8B68739AFE37103C016290C7550 /* IQKeyboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IQKeyboardManager.framework; path = IQKeyboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7261A8B68739AFE37103C016290C7550 /* IQKeyboardManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IQKeyboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72E392407D2EDBC4FB71B1B556BBFDA4 /* IQKeyboardReturnKeyHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQKeyboardReturnKeyHandler.m; path = IQKeyboardManager/IQKeyboardReturnKeyHandler.m; sourceTree = "<group>"; };
 		7344CA53A18C3EF5CE6CE67299692390 /* GoogleUtilities-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleUtilities-umbrella.h"; sourceTree = "<group>"; };
 		7375E1E96718CD3111A6D1B779477829 /* MSIDAuthorizationCodeGrantRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDAuthorizationCodeGrantRequest.h; path = MSAL/IdentityCore/IdentityCore/src/network/request/MSIDAuthorizationCodeGrantRequest.h; sourceTree = "<group>"; };
@@ -2617,7 +2622,7 @@
 		80B45FD2057E36B6ABE27C75A049C644 /* MSIDAADV2Oauth2FactoryForV1Request.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDAADV2Oauth2FactoryForV1Request.m; path = MSAL/IdentityCore/IdentityCore/src/oauth2/aad_v2/MSIDAADV2Oauth2FactoryForV1Request.m; sourceTree = "<group>"; };
 		80E83B139FD7992BA4F32CAEE6FC3B3E /* MSALResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSALResult.m; path = MSAL/src/MSALResult.m; sourceTree = "<group>"; };
 		80F6E6B848595AE338C1095EACB681D5 /* NSDate+MSIDExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+MSIDExtensions.h"; path = "MSAL/IdentityCore/IdentityCore/src/util/NSDate+MSIDExtensions.h"; sourceTree = "<group>"; };
-		817C7E2FC63B66D42FEC05C9C5E70BD8 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = "Objective-C/TOCropViewController/Resources/ja.lproj"; sourceTree = "<group>"; };
+		817C7E2FC63B66D42FEC05C9C5E70BD8 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ja.lproj; path = "Objective-C/TOCropViewController/Resources/ja.lproj"; sourceTree = "<group>"; };
 		819F2149CACA786685944A5EB126158F /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
 		8203ECA9D0218D774EA62DCFF9B07A6B /* FIRMessagingSecureSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRMessagingSecureSocket.h; path = Firebase/Messaging/FIRMessagingSecureSocket.h; sourceTree = "<group>"; };
 		8267E55A300ABF4D727C8152DCAE6DFD /* MSIDResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDResponseSerialization.h; path = MSAL/IdentityCore/IdentityCore/src/network/response_serializer/MSIDResponseSerialization.h; sourceTree = "<group>"; };
@@ -2632,7 +2637,7 @@
 		83E2FC371E2338B14728436B4D2FBA7F /* MSALAccountsProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSALAccountsProvider.h; path = MSAL/src/instance/MSALAccountsProvider.h; sourceTree = "<group>"; };
 		83EA8EA2A9229ADED6DE6A02CD7B2E1A /* FIRInstallationsStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsStore.h; path = FirebaseInstallations/Source/Library/InstallationsStore/FIRInstallationsStore.h; sourceTree = "<group>"; };
 		841A8D313C477227D45AEB465E7E79A0 /* FIRInstanceIDCheckinPreferences.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDCheckinPreferences.m; path = Firebase/InstanceID/FIRInstanceIDCheckinPreferences.m; sourceTree = "<group>"; };
-		846ACE1E51B7544B39E2931F6E98D58B /* vi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = vi.lproj; path = "Objective-C/TOCropViewController/Resources/vi.lproj"; sourceTree = "<group>"; };
+		846ACE1E51B7544B39E2931F6E98D58B /* vi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = vi.lproj; path = "Objective-C/TOCropViewController/Resources/vi.lproj"; sourceTree = "<group>"; };
 		847999C590F278325920EB92612F3230 /* MSIDRequestControllerFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDRequestControllerFactory.m; path = MSAL/IdentityCore/IdentityCore/src/controllers/MSIDRequestControllerFactory.m; sourceTree = "<group>"; };
 		84B067925B44AD4DDB277AB994A314C9 /* MSIDAADV2IdTokenClaims.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDAADV2IdTokenClaims.m; path = MSAL/IdentityCore/IdentityCore/src/oauth2/aad_v2/MSIDAADV2IdTokenClaims.m; sourceTree = "<group>"; };
 		84D6FC9177E4DCE989A0F64701204968 /* MSALPublicClientApplicationConfig+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MSALPublicClientApplicationConfig+Internal.h"; path = "MSAL/src/configuration/MSALPublicClientApplicationConfig+Internal.h"; sourceTree = "<group>"; };
@@ -2650,7 +2655,7 @@
 		86F6E3E8C330694B43B921F255021EA4 /* Duration.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Duration.pbobjc.h; path = objectivec/google/protobuf/Duration.pbobjc.h; sourceTree = "<group>"; };
 		86FF62EF638D025EAC4A580BFA88AA9C /* FirebaseMessaging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FirebaseMessaging.h; path = Firebase/Messaging/Public/FirebaseMessaging.h; sourceTree = "<group>"; };
 		87012B990DFAA0F6881EDB32A5E12442 /* GDTCCTNanopbHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCCTNanopbHelpers.h; path = GoogleDataTransportCCTSupport/GDTCCTLibrary/Private/GDTCCTNanopbHelpers.h; sourceTree = "<group>"; };
-		87120160E27F1CF40260FFE6CFD9CA76 /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nl.lproj; path = "Objective-C/TOCropViewController/Resources/nl.lproj"; sourceTree = "<group>"; };
+		87120160E27F1CF40260FFE6CFD9CA76 /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = nl.lproj; path = "Objective-C/TOCropViewController/Resources/nl.lproj"; sourceTree = "<group>"; };
 		87495F98D7AA4C15854A8592EE8473F0 /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderOperation.m; path = SDWebImage/SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
 		876846542AAA639F20926FEEAFBC3C92 /* MSIDLegacySilentTokenRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDLegacySilentTokenRequest.h; path = MSAL/IdentityCore/IdentityCore/src/requests/sdk/adal/MSIDLegacySilentTokenRequest.h; sourceTree = "<group>"; };
 		879884AD474ED1252CB7FD4A68D07D80 /* MSIDAADV2Oauth2Factory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDAADV2Oauth2Factory.h; path = MSAL/IdentityCore/IdentityCore/src/oauth2/aad_v2/MSIDAADV2Oauth2Factory.h; sourceTree = "<group>"; };
@@ -2660,7 +2665,7 @@
 		8844F33BE4666578DC8772103A04584E /* pb_encode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_encode.h; sourceTree = "<group>"; };
 		887A2C43DBDD2963ED309D631278B2B7 /* FIRCoreDiagnosticsInterop.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRCoreDiagnosticsInterop.h; path = Interop/CoreDiagnostics/Public/FIRCoreDiagnosticsInterop.h; sourceTree = "<group>"; };
 		88B9E06CF68AE0A40C73F403516D9469 /* MSIDIdTokenClaims.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDIdTokenClaims.m; path = MSAL/IdentityCore/IdentityCore/src/oauth2/MSIDIdTokenClaims.m; sourceTree = "<group>"; };
-		88E2CEEB327C3E31D39E2380CE494D81 /* GoogleDataTransportCCTSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleDataTransportCCTSupport.framework; path = GoogleDataTransportCCTSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88E2CEEB327C3E31D39E2380CE494D81 /* GoogleDataTransportCCTSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleDataTransportCCTSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88ECA0FA8E88BCCE61AB7071EBC8C7C0 /* NSKeyedArchiver+MSIDExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSKeyedArchiver+MSIDExtensions.h"; path = "MSAL/IdentityCore/IdentityCore/src/util/NSKeyedArchiver+MSIDExtensions.h"; sourceTree = "<group>"; };
 		896852A0F9ACBD2889645014058CE261 /* MSALIndividualClaimRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSALIndividualClaimRequest.h; path = MSAL/src/public/MSALIndividualClaimRequest.h; sourceTree = "<group>"; };
 		89AA9039C1F7C2BB2AA0896805936263 /* MSIDAADAuthorityMetadataResponseSerializer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDAADAuthorityMetadataResponseSerializer.m; path = MSAL/IdentityCore/IdentityCore/src/network/request/MSIDAADAuthorityMetadataResponseSerializer.m; sourceTree = "<group>"; };
@@ -2690,7 +2695,7 @@
 		8EC31E2DCC889D04A56686C350D96602 /* MSIDAccountType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDAccountType.m; path = MSAL/IdentityCore/IdentityCore/src/oauth2/account/MSIDAccountType.m; sourceTree = "<group>"; };
 		8F07C45E69FC00473D8880BD17053B3D /* GDTCORUploadPackage_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORUploadPackage_Private.h; path = GoogleDataTransport/GDTCORLibrary/Private/GDTCORUploadPackage_Private.h; sourceTree = "<group>"; };
 		8F97AF993D5C0F8AAD3F98D2B389FCE7 /* GDTCOREvent_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCOREvent_Private.h; path = GoogleDataTransport/GDTCORLibrary/Private/GDTCOREvent_Private.h; sourceTree = "<group>"; };
-		8FC736F27A2037DE96435EC461BAF30B /* fa-IR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "fa-IR.lproj"; path = "Objective-C/TOCropViewController/Resources/fa-IR.lproj"; sourceTree = "<group>"; };
+		8FC736F27A2037DE96435EC461BAF30B /* fa-IR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "fa-IR.lproj"; path = "Objective-C/TOCropViewController/Resources/fa-IR.lproj"; sourceTree = "<group>"; };
 		907E4B10EE893ABA6A426453A5E626C6 /* GDTCORUploadCoordinator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORUploadCoordinator.h; path = GoogleDataTransport/GDTCORLibrary/Private/GDTCORUploadCoordinator.h; sourceTree = "<group>"; };
 		908BAC108806B0E7EA96B7671DEB7289 /* NSError+FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+FIRInstanceID.h"; path = "Firebase/InstanceID/NSError+FIRInstanceID.h"; sourceTree = "<group>"; };
 		90CD4DB38B927D54887ACF89925D2B4A /* MSIDRequestControlling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDRequestControlling.h; path = MSAL/IdentityCore/IdentityCore/src/controllers/MSIDRequestControlling.h; sourceTree = "<group>"; };
@@ -2699,7 +2704,7 @@
 		914F5EDA052A4349AE7E60C6B165A612 /* TOCropOverlayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropOverlayView.h; path = "Objective-C/TOCropViewController/Views/TOCropOverlayView.h"; sourceTree = "<group>"; };
 		91F896EA193C06B6E60C62FCE84139E4 /* SDWebImage-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SDWebImage-Info.plist"; sourceTree = "<group>"; };
 		921FC3E51DD228BF0040CDBDE6697EB5 /* GPBCodedOutputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBCodedOutputStream.m; path = objectivec/GPBCodedOutputStream.m; sourceTree = "<group>"; };
-		924CEA9ED997254F3B2E7AF3DE75D543 /* GoogleDataTransport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleDataTransport.framework; path = GoogleDataTransport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		924CEA9ED997254F3B2E7AF3DE75D543 /* GoogleDataTransport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleDataTransport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		927E1EB90D18563D648CB07A2232B8F8 /* cct.nanopb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cct.nanopb.h; path = GoogleDataTransportCCTSupport/GDTCCTLibrary/Protogen/nanopb/cct.nanopb.h; sourceTree = "<group>"; };
 		92B6BB00767A454ED53668F0C9E22469 /* MSIDRefreshTokenGrantRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDRefreshTokenGrantRequest.m; path = MSAL/IdentityCore/IdentityCore/src/network/request/MSIDRefreshTokenGrantRequest.m; sourceTree = "<group>"; };
 		92BAC225DCB1F47B375D998FE70E8C1C /* MSIDAADRefreshTokenGrantRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDAADRefreshTokenGrantRequest.h; path = MSAL/IdentityCore/IdentityCore/src/network/request/MSIDAADRefreshTokenGrantRequest.h; sourceTree = "<group>"; };
@@ -2719,7 +2724,7 @@
 		95B7B337F34A18D06927EA4DECF74435 /* FIROptionsInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIROptionsInternal.h; path = FirebaseCore/Sources/Private/FIROptionsInternal.h; sourceTree = "<group>"; };
 		95C9C2E314D548F81B0041080A439B8F /* UIImage+GIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GIF.h"; path = "SDWebImage/UIImage+GIF.h"; sourceTree = "<group>"; };
 		95F7B549289A94BBBD9E9133DD853020 /* GDTCORTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORTransformer.h; path = GoogleDataTransport/GDTCORLibrary/Private/GDTCORTransformer.h; sourceTree = "<group>"; };
-		95FB9684607CEF7038C47A7D8BCA6F15 /* IRLDocumentScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IRLDocumentScanner.framework; path = IRLDocumentScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95FB9684607CEF7038C47A7D8BCA6F15 /* IRLDocumentScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IRLDocumentScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9612780C7296D96598763BFB3BFBFF50 /* MSIDAuthority+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MSIDAuthority+Internal.h"; path = "MSAL/IdentityCore/IdentityCore/src/validation/MSIDAuthority+Internal.h"; sourceTree = "<group>"; };
 		96180EE605207D7505C6634E320D90B3 /* MSIDDefaultBrokerTokenRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDDefaultBrokerTokenRequest.m; path = MSAL/IdentityCore/IdentityCore/src/requests/sdk/msal/MSIDDefaultBrokerTokenRequest.m; sourceTree = "<group>"; };
 		9629B9FD195018EA6D8BDBF131FAB054 /* MSIDTelemetryPiiOiiRules.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDTelemetryPiiOiiRules.h; path = MSAL/IdentityCore/IdentityCore/src/telemetry/MSIDTelemetryPiiOiiRules.h; sourceTree = "<group>"; };
@@ -2768,17 +2773,17 @@
 		9D55CA170F7A34B4EC821E8692AFA191 /* IQKeyboardManagerConstantsInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQKeyboardManagerConstantsInternal.h; path = IQKeyboardManager/Constants/IQKeyboardManagerConstantsInternal.h; sourceTree = "<group>"; };
 		9D6722FE1EDFC81449BAFCF67C03A863 /* GULUserDefaults.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULUserDefaults.h; path = GoogleUtilities/UserDefaults/Private/GULUserDefaults.h; sourceTree = "<group>"; };
 		9D7297FFC1D2B3E26D35C5CD12806A5C /* MSIDWebviewSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDWebviewSession.m; path = MSAL/IdentityCore/IdentityCore/src/webview/MSIDWebviewSession.m; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D95FEDF2345B0ED41BD4E548791B118 /* FBLPromise+Wrap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Wrap.h"; path = "Sources/FBLPromises/include/FBLPromise+Wrap.h"; sourceTree = "<group>"; };
 		9DAA2677D45E6B746F1386C2079C72F7 /* MSIDAADV2WebviewFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDAADV2WebviewFactory.m; path = MSAL/IdentityCore/IdentityCore/src/oauth2/aad_v2/MSIDAADV2WebviewFactory.m; sourceTree = "<group>"; };
 		9DD39126FCAA641C3AF0188ED03CF12C /* Wrappers.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Wrappers.pbobjc.m; path = objectivec/google/protobuf/Wrappers.pbobjc.m; sourceTree = "<group>"; };
 		9E2CF8FBB4A2D7F32BB0CFDDE98B36A3 /* FIRApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRApp.h; path = FirebaseCore/Sources/Public/FIRApp.h; sourceTree = "<group>"; };
-		9E2FAB15336EF525AB9CDA4011502A52 /* cct.nanopb.c */ = {isa = PBXFileReference; includeInIndex = 1; name = cct.nanopb.c; path = GoogleDataTransportCCTSupport/GDTCCTLibrary/Protogen/nanopb/cct.nanopb.c; sourceTree = "<group>"; };
+		9E2FAB15336EF525AB9CDA4011502A52 /* cct.nanopb.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = cct.nanopb.c; path = GoogleDataTransportCCTSupport/GDTCCTLibrary/Protogen/nanopb/cct.nanopb.c; sourceTree = "<group>"; };
 		9E4EB588F5D201AE9ECB6FA2BDA11C99 /* MSIDKeychainUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDKeychainUtil.m; path = MSAL/IdentityCore/IdentityCore/src/util/ios/MSIDKeychainUtil.m; sourceTree = "<group>"; };
 		9E606BE755D533A37A11E9E41BA1963E /* SDWebImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageManager.h; path = SDWebImage/SDWebImageManager.h; sourceTree = "<group>"; };
 		9E6269D3279D9C981708AF099FB3BA5E /* FIRInstallationsVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsVersion.h; path = FirebaseInstallations/Source/Library/Public/FIRInstallationsVersion.h; sourceTree = "<group>"; };
 		9ED8059E91B9C25DE524C3E0E9C04837 /* MSIDDefaultAccountCacheKey.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDDefaultAccountCacheKey.m; path = MSAL/IdentityCore/IdentityCore/src/cache/key/MSIDDefaultAccountCacheKey.m; sourceTree = "<group>"; };
-		9F1897AC0412CBDD2D79CAFDCACE138B /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hant.lproj"; path = "Objective-C/TOCropViewController/Resources/zh-Hant.lproj"; sourceTree = "<group>"; };
+		9F1897AC0412CBDD2D79CAFDCACE138B /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "zh-Hant.lproj"; path = "Objective-C/TOCropViewController/Resources/zh-Hant.lproj"; sourceTree = "<group>"; };
 		9F1B975112A0055A16D3047A319CECF9 /* MSIDAADOauth2Factory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDAADOauth2Factory.h; path = MSAL/IdentityCore/IdentityCore/src/oauth2/aad_base/MSIDAADOauth2Factory.h; sourceTree = "<group>"; };
 		9F74000959630A1636732A25041093BE /* GULReachabilityChecker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULReachabilityChecker.m; path = GoogleUtilities/Reachability/GULReachabilityChecker.m; sourceTree = "<group>"; };
 		9F9F9435049D1CD89624AA742F3CEFD3 /* FIRInstallationsHTTPError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstallationsHTTPError.m; path = FirebaseInstallations/Source/Library/Errors/FIRInstallationsHTTPError.m; sourceTree = "<group>"; };
@@ -2829,7 +2834,7 @@
 		A8C7D32FD0684D8CA6C8ACC9085DD692 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
 		A8D4F0F53149E6EEC484E302BE4B63C8 /* MSIDCredentialCacheItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDCredentialCacheItem.m; path = MSAL/IdentityCore/IdentityCore/src/cache/token/MSIDCredentialCacheItem.m; sourceTree = "<group>"; };
 		A90D289643F921C13C223F54508399A6 /* TOCropViewControllerTransitioning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropViewControllerTransitioning.m; path = "Objective-C/TOCropViewController/Models/TOCropViewControllerTransitioning.m"; sourceTree = "<group>"; };
-		A91E8558AB37E884167ADF741362711F /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pt.lproj; path = "Objective-C/TOCropViewController/Resources/pt.lproj"; sourceTree = "<group>"; };
+		A91E8558AB37E884167ADF741362711F /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = pt.lproj; path = "Objective-C/TOCropViewController/Resources/pt.lproj"; sourceTree = "<group>"; };
 		A93263915C74EF9F3F110BB3B2CB2343 /* MSIDJsonSerializing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDJsonSerializing.h; path = MSAL/IdentityCore/IdentityCore/src/MSIDJsonSerializing.h; sourceTree = "<group>"; };
 		A939404CE0885E72C9019F15773E3F41 /* GPBUnknownField_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBUnknownField_PackagePrivate.h; path = objectivec/GPBUnknownField_PackagePrivate.h; sourceTree = "<group>"; };
 		A9437CAA69283D77191911ED4BCBC67E /* IdentityCore_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IdentityCore_Internal.h; path = MSAL/IdentityCore/IdentityCore/src/IdentityCore_Internal.h; sourceTree = "<group>"; };
@@ -2842,12 +2847,12 @@
 		AAB5498BDB9D44C4BD1704A47664291B /* Pods-emSignerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-emSignerTests.release.xcconfig"; sourceTree = "<group>"; };
 		AB112D4D790DC534C3F90D8336BEA751 /* MSIDLegacyTokenResponseValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDLegacyTokenResponseValidator.h; path = MSAL/IdentityCore/IdentityCore/src/requests/sdk/adal/MSIDLegacyTokenResponseValidator.h; sourceTree = "<group>"; };
 		AB61DCB41B85137CDEDD208A8ED2458A /* FIRMessagingDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRMessagingDefines.h; path = Firebase/Messaging/FIRMessagingDefines.h; sourceTree = "<group>"; };
-		AB75D344012EBF35AAE4663945DBCEB4 /* Pods_emSigner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_emSigner.framework; path = "Pods-emSigner.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB75D344012EBF35AAE4663945DBCEB4 /* Pods_emSigner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_emSigner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8AA27EA9CA3F92877944DF6B6A3EB1 /* MSALOauth2Provider+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MSALOauth2Provider+Internal.h"; path = "MSAL/src/instance/oauth2/MSALOauth2Provider+Internal.h"; sourceTree = "<group>"; };
 		ABA91559CF4C19C7B888E22E509F6308 /* DACircularProgress.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DACircularProgress.modulemap; sourceTree = "<group>"; };
 		ABE06A4A06D0A84F50FEC32477CFF38B /* MSIDIdToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDIdToken.h; path = MSAL/IdentityCore/IdentityCore/src/oauth2/token/MSIDIdToken.h; sourceTree = "<group>"; };
 		AC29651F7181E54BDB354F7BFD62490C /* MSIDAccountIdentifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDAccountIdentifier.h; path = MSAL/IdentityCore/IdentityCore/src/oauth2/account/MSIDAccountIdentifier.h; sourceTree = "<group>"; };
-		AC2F2BB1C4CFE3B4092EDBACF7F4F191 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "Objective-C/TOCropViewController/Resources/zh-Hans.lproj"; sourceTree = "<group>"; };
+		AC2F2BB1C4CFE3B4092EDBACF7F4F191 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "zh-Hans.lproj"; path = "Objective-C/TOCropViewController/Resources/zh-Hans.lproj"; sourceTree = "<group>"; };
 		AC710A06C9FD1BAC6006FAE971C38CBE /* GULNetworkURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULNetworkURLSession.m; path = GoogleUtilities/Network/GULNetworkURLSession.m; sourceTree = "<group>"; };
 		AC7B905EAF8490F2ABE0142E81832A3A /* MSIDVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDVersion.h; path = MSAL/IdentityCore/IdentityCore/src/MSIDVersion.h; sourceTree = "<group>"; };
 		AC80F866264816147CB9DC188518A5FF /* MSALRedirectUriVerifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSALRedirectUriVerifier.m; path = MSAL/src/util/ios/MSALRedirectUriVerifier.m; sourceTree = "<group>"; };
@@ -2883,11 +2888,11 @@
 		B1F9D5B5DF9A24E64A1EA4EEEB61DD68 /* Pods-emSignerTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-emSignerTests-Info.plist"; sourceTree = "<group>"; };
 		B203B5A608839D11BDF5A365897F37B5 /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+HighlightedWebCache.m"; path = "SDWebImage/UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
 		B20FE59E956E4AC5B3296B66AA2DFFD1 /* FBLPromise+Reduce.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Reduce.m"; path = "Sources/FBLPromises/FBLPromise+Reduce.m"; sourceTree = "<group>"; };
-		B25A8D6B92A81FED298B38B5EFD12C42 /* DACircularProgress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DACircularProgress.framework; path = DACircularProgress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B25A8D6B92A81FED298B38B5EFD12C42 /* DACircularProgress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DACircularProgress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B25C6AC1C75BA1A6B41C8197F195725C /* FIRInstanceIDAPNSInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDAPNSInfo.m; path = Firebase/InstanceID/FIRInstanceIDAPNSInfo.m; sourceTree = "<group>"; };
 		B25F652F1755897A811BAB7895C48277 /* MSIDDefaultTokenRequestProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDDefaultTokenRequestProvider.h; path = MSAL/IdentityCore/IdentityCore/src/requests/sdk/msal/MSIDDefaultTokenRequestProvider.h; sourceTree = "<group>"; };
 		B279A5DB230EFC26010283FD51A584CC /* MWTapDetectingImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MWTapDetectingImageView.h; path = Pod/Classes/MWTapDetectingImageView.h; sourceTree = "<group>"; };
-		B2B51FFB95B0180631E52466BE574C52 /* hu.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = hu.lproj; path = "Objective-C/TOCropViewController/Resources/hu.lproj"; sourceTree = "<group>"; };
+		B2B51FFB95B0180631E52466BE574C52 /* hu.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = hu.lproj; path = "Objective-C/TOCropViewController/Resources/hu.lproj"; sourceTree = "<group>"; };
 		B2F3557D0CE11CC5896EECE5A541B457 /* MSIDAADV2TokenResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDAADV2TokenResponse.m; path = MSAL/IdentityCore/IdentityCore/src/oauth2/aad_v2/MSIDAADV2TokenResponse.m; sourceTree = "<group>"; };
 		B3202B0D15FD75B482B9D41208DB7B00 /* NSDictionary+FIRMessaging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+FIRMessaging.m"; path = "Firebase/Messaging/NSDictionary+FIRMessaging.m"; sourceTree = "<group>"; };
 		B36D2786DA2F82D8DB2647ABF5805B92 /* FIRInstallationsStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstallationsStore.m; path = FirebaseInstallations/Source/Library/InstallationsStore/FIRInstallationsStore.m; sourceTree = "<group>"; };
@@ -2919,7 +2924,7 @@
 		B8C6F16E217339F254359C30185A61D0 /* MSALPublicClientApplicationConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSALPublicClientApplicationConfig.h; path = MSAL/src/public/configuration/MSALPublicClientApplicationConfig.h; sourceTree = "<group>"; };
 		B8CF974224A217F05D2A5F6079178A65 /* MSALExtraQueryParameters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSALExtraQueryParameters.h; path = MSAL/src/configuration/MSALExtraQueryParameters.h; sourceTree = "<group>"; };
 		B9193F30ABA839F07C52BFD85565E53E /* IQUITextFieldView+Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUITextFieldView+Additions.m"; path = "IQKeyboardManager/Categories/IQUITextFieldView+Additions.m"; sourceTree = "<group>"; };
-		B97B9420D3756FC2775143CF5D3CACD4 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = nanopb.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B97B9420D3756FC2775143CF5D3CACD4 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA2FD829E9671C3F5B7AB558B30256EB /* MSIDAadAuthorityResolver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDAadAuthorityResolver.m; path = MSAL/IdentityCore/IdentityCore/src/validation/MSIDAadAuthorityResolver.m; sourceTree = "<group>"; };
 		BA4C809077CCCD435946C0F24BB50493 /* GoogleDataTransport-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleDataTransport-umbrella.h"; sourceTree = "<group>"; };
 		BAB22D30D0103A1D04C1883415B30DB9 /* FIRAppAssociationRegistration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAppAssociationRegistration.h; path = FirebaseCore/Sources/Private/FIRAppAssociationRegistration.h; sourceTree = "<group>"; };
@@ -2936,7 +2941,7 @@
 		BE328F571238039F4F798A27828C586B /* MSIDDefaultTokenRequestProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDDefaultTokenRequestProvider.m; path = MSAL/IdentityCore/IdentityCore/src/requests/sdk/msal/MSIDDefaultTokenRequestProvider.m; sourceTree = "<group>"; };
 		BEBBDBBC02AC8413F631E3C34AAE1471 /* FIRLoggerLevel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRLoggerLevel.h; path = FirebaseCore/Sources/Public/FIRLoggerLevel.h; sourceTree = "<group>"; };
 		BEC0754702A81FC2E1DD3F30A0AB1713 /* FIRInstanceIDTokenOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDTokenOperation.h; path = Firebase/InstanceID/FIRInstanceIDTokenOperation.h; sourceTree = "<group>"; };
-		BEDCD0728057FB737835D73F324828FE /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_decode.c; sourceTree = "<group>"; };
+		BEDCD0728057FB737835D73F324828FE /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = pb_decode.c; sourceTree = "<group>"; };
 		BEE71E7F68F746EAEC7BCC1276CB5850 /* FIRInstanceID.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceID.m; path = Firebase/InstanceID/FIRInstanceID.m; sourceTree = "<group>"; };
 		BF33C492023AAB2027B8EC675FA35764 /* GULNetwork.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULNetwork.m; path = GoogleUtilities/Network/GULNetwork.m; sourceTree = "<group>"; };
 		BF3808C2A8DAF05FAB2FB6626A181B68 /* NSDictionary+FIRMessaging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+FIRMessaging.h"; path = "Firebase/Messaging/NSDictionary+FIRMessaging.h"; sourceTree = "<group>"; };
@@ -2948,7 +2953,7 @@
 		BFAA8B7D2B5D902F01D67591BC8FDC17 /* GULAppEnvironmentUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULAppEnvironmentUtil.h; path = GoogleUtilities/Environment/third_party/GULAppEnvironmentUtil.h; sourceTree = "<group>"; };
 		C0B3CA755827AD47B3DF67EBC33B69B4 /* TOCropViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TOCropViewController-dummy.m"; sourceTree = "<group>"; };
 		C0F9798B50A1B60FCC6F71FDC4A59EEB /* PlayButtonOverlayLargeTap@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "PlayButtonOverlayLargeTap@3x.png"; path = "Pod/Assets/PlayButtonOverlayLargeTap@3x.png"; sourceTree = "<group>"; };
-		C11DC5CE54B256516E6534397E9B97F2 /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ko.lproj; path = "Objective-C/TOCropViewController/Resources/ko.lproj"; sourceTree = "<group>"; };
+		C11DC5CE54B256516E6534397E9B97F2 /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ko.lproj; path = "Objective-C/TOCropViewController/Resources/ko.lproj"; sourceTree = "<group>"; };
 		C14B5BE609C28A83FC9C4FD5019880CC /* Pods-emSigner-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-emSigner-acknowledgements.plist"; sourceTree = "<group>"; };
 		C14DB6C7C10AD70BE74BA61D87E3B30C /* MSIDDefaultCredentialCacheKey.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDDefaultCredentialCacheKey.m; path = MSAL/IdentityCore/IdentityCore/src/cache/key/MSIDDefaultCredentialCacheKey.m; sourceTree = "<group>"; };
 		C18A59DC5134A1EF70509B3A45A38428 /* MSALHTTPConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSALHTTPConfig.h; path = MSAL/src/public/configuration/global/MSALHTTPConfig.h; sourceTree = "<group>"; };
@@ -2976,7 +2981,7 @@
 		C51DA3CBAA8083DDE37CF7A19FA09A60 /* MSALOauth2Authority.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSALOauth2Authority.m; path = MSAL/src/instance/MSALOauth2Authority.m; sourceTree = "<group>"; };
 		C51E54236CE2E5F35474FA86E6DB9BD5 /* FIRMessagingPendingTopicsList.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRMessagingPendingTopicsList.m; path = Firebase/Messaging/FIRMessagingPendingTopicsList.m; sourceTree = "<group>"; };
 		C5C6C1457A8C2F15111C2E800680953D /* Pods-emSigner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-emSigner-umbrella.h"; sourceTree = "<group>"; };
-		C5DD41452D1FFBF7F4FCD2FF7139FC97 /* pb_encode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_encode.c; sourceTree = "<group>"; };
+		C5DD41452D1FFBF7F4FCD2FF7139FC97 /* pb_encode.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = pb_encode.c; sourceTree = "<group>"; };
 		C5E642911AE16E59F268DBF430449DB9 /* MSIDOAuth2Constants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDOAuth2Constants.h; path = MSAL/IdentityCore/IdentityCore/src/MSIDOAuth2Constants.h; sourceTree = "<group>"; };
 		C62B637867F2C23036912B7A7132174C /* Empty.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Empty.pbobjc.m; path = objectivec/google/protobuf/Empty.pbobjc.m; sourceTree = "<group>"; };
 		C64B3F2CD40FE3E88E6F97F95C27A365 /* GDTCORClock.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDTCORClock.m; path = GoogleDataTransport/GDTCORLibrary/GDTCORClock.m; sourceTree = "<group>"; };
@@ -2989,7 +2994,7 @@
 		C74A2BD983778092FC4D238F61814D85 /* MSALWebviewParameters.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSALWebviewParameters.m; path = MSAL/src/configuration/MSALWebviewParameters.m; sourceTree = "<group>"; };
 		C7695DBC5F497E81C877F9EBA7B64CF5 /* TOCropViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TOCropViewController-umbrella.h"; sourceTree = "<group>"; };
 		C7770D1D7D588AE73E8AAF8A1D4998E0 /* MSALAccount+MultiTenantAccount.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MSALAccount+MultiTenantAccount.h"; path = "MSAL/src/public/MSALAccount+MultiTenantAccount.h"; sourceTree = "<group>"; };
-		C81E9F0743ABDEBF7163B1B4C7292695 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ru.lproj; path = "Objective-C/TOCropViewController/Resources/ru.lproj"; sourceTree = "<group>"; };
+		C81E9F0743ABDEBF7163B1B4C7292695 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ru.lproj; path = "Objective-C/TOCropViewController/Resources/ru.lproj"; sourceTree = "<group>"; };
 		C880BFBABDC8ED5FEBF6E4ED4C489AD6 /* FIRInstanceIDVersionUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDVersionUtilities.m; path = Firebase/InstanceID/FIRInstanceIDVersionUtilities.m; sourceTree = "<group>"; };
 		C8BBB454CCE0D7FF746E184496886701 /* MSIDPKeyAuthHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDPKeyAuthHandler.h; path = MSAL/IdentityCore/IdentityCore/src/webview/embeddedWebview/challangeHandlers/MSIDPKeyAuthHandler.h; sourceTree = "<group>"; };
 		C8C58276EB35D43D2A9C282B5B6A5891 /* FIRInstallationsErrorUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsErrorUtil.h; path = FirebaseInstallations/Source/Library/Errors/FIRInstallationsErrorUtil.h; sourceTree = "<group>"; };
@@ -3025,13 +3030,13 @@
 		D039190174BF94F56A41524C816E1219 /* UIBarButtonItemArrowLeft.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = UIBarButtonItemArrowLeft.png; path = Pod/Assets/UIBarButtonItemArrowLeft.png; sourceTree = "<group>"; };
 		D047FEFBA12560641C4BC6B00D3C16B4 /* GDTCORPlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORPlatform.h; path = GoogleDataTransport/GDTCORLibrary/Public/GDTCORPlatform.h; sourceTree = "<group>"; };
 		D0E7E28D1EB8FCB721898EDDE491E367 /* SDWebImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloader.m; path = SDWebImage/SDWebImageDownloader.m; sourceTree = "<group>"; };
-		D0F6283211F92348455B4DB0FA657BCA /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBProgressHUD.framework; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0F6283211F92348455B4DB0FA657BCA /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D100A0C7DCCAC5AD27B500C13968E3AF /* GPBMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBMessage.h; path = objectivec/GPBMessage.h; sourceTree = "<group>"; };
 		D15B5123D2588A5ED8CEA0918C1DB353 /* MSIDDefaultBrokerResponseHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDDefaultBrokerResponseHandler.m; path = MSAL/IdentityCore/IdentityCore/src/requests/sdk/msal/MSIDDefaultBrokerResponseHandler.m; sourceTree = "<group>"; };
 		D1779B2D5EF8B2AB5DFAC85086E2C6C0 /* MSALTenantProfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSALTenantProfile.h; path = MSAL/src/public/MSALTenantProfile.h; sourceTree = "<group>"; };
 		D29A26CEDF318E8DE9C53993CD11075D /* MSIDLegacyBrokerTokenRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDLegacyBrokerTokenRequest.m; path = MSAL/IdentityCore/IdentityCore/src/requests/sdk/adal/MSIDLegacyBrokerTokenRequest.m; sourceTree = "<group>"; };
 		D2AD7590D75900F7D3EC4FC2428D82C1 /* SDWebImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDWebImage.xcconfig; sourceTree = "<group>"; };
-		D2E3520A578529AEAE5B700EC20FE9A9 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FirebaseCore.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2E3520A578529AEAE5B700EC20FE9A9 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30985E8AE7BE3771AC820B856B2B06A /* MSALCacheConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSALCacheConfig.h; path = MSAL/src/public/configuration/publicClientApplication/cache/MSALCacheConfig.h; sourceTree = "<group>"; };
 		D35098EF35987AD7583A82E9E25FB0F4 /* FIRInstanceIDStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDStore.m; path = Firebase/InstanceID/FIRInstanceIDStore.m; sourceTree = "<group>"; };
 		D3D9E06F5179DD90552BFADA3ECCD839 /* MSALHTTPConfig+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MSALHTTPConfig+Internal.h"; path = "MSAL/src/configuration/MSALHTTPConfig+Internal.h"; sourceTree = "<group>"; };
@@ -3039,12 +3044,12 @@
 		D43185FBDA0836F99C496F7C0C6EB4D5 /* MSIDAadAuthorityCacheRecord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDAadAuthorityCacheRecord.h; path = MSAL/IdentityCore/IdentityCore/src/validation/MSIDAadAuthorityCacheRecord.h; sourceTree = "<group>"; };
 		D44C1A45FC2AA8E5AE965DA33BCD6CB6 /* MSIDIntuneUserDefaultsCacheDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDIntuneUserDefaultsCacheDataSource.h; path = MSAL/IdentityCore/IdentityCore/src/intune/data_source/MSIDIntuneUserDefaultsCacheDataSource.h; sourceTree = "<group>"; };
 		D44F06715CFC44B7B56EB0B4F5895E01 /* GPBDescriptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBDescriptor.h; path = objectivec/GPBDescriptor.h; sourceTree = "<group>"; };
-		D4636AB4127BF5763E8CE5598DCD9268 /* FirebaseMessaging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FirebaseMessaging.framework; path = FirebaseMessaging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4636AB4127BF5763E8CE5598DCD9268 /* FirebaseMessaging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseMessaging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46DB3386DCF1D05EEDB85FB07D0E3C3 /* MSIDAADV1IdTokenClaims.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDAADV1IdTokenClaims.h; path = MSAL/IdentityCore/IdentityCore/src/oauth2/aad_v1/MSIDAADV1IdTokenClaims.h; sourceTree = "<group>"; };
 		D49347D2B72FA1A03BF2489E15411ED6 /* MSALPublicClientApplication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSALPublicClientApplication.h; path = MSAL/src/public/MSALPublicClientApplication.h; sourceTree = "<group>"; };
 		D497FC4E11B9211A9CAAA84B3E944343 /* FirebaseMessaging.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FirebaseMessaging.modulemap; sourceTree = "<group>"; };
 		D4F3047BEEFF208F708E11650EBF61F9 /* MSIDAADRequestConfigurator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDAADRequestConfigurator.h; path = MSAL/IdentityCore/IdentityCore/src/network/request_configurator/MSIDAADRequestConfigurator.h; sourceTree = "<group>"; };
-		D50785E97871E2ACD4B488BA2EA15A83 /* protobuf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = protobuf.framework; path = Protobuf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D50785E97871E2ACD4B488BA2EA15A83 /* protobuf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = protobuf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D50B8D16487D64FDDAFFEB726515E106 /* FIRAppInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAppInternal.h; path = FirebaseCore/Sources/Private/FIRAppInternal.h; sourceTree = "<group>"; };
 		D50EAE3A9790D926E8EAA40EA79FE080 /* FirebaseMessaging-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FirebaseMessaging-Info.plist"; sourceTree = "<group>"; };
 		D521590C8C8DDC515508E6A3B1D82EF1 /* MSIDAADV1AuthorizationCodeRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDAADV1AuthorizationCodeRequest.m; path = MSAL/IdentityCore/IdentityCore/src/network/request/MSIDAADV1AuthorizationCodeRequest.m; sourceTree = "<group>"; };
@@ -3076,7 +3081,7 @@
 		D9793D13C02264E04976F54BBFFDFC19 /* MSIDOAuth2EmbeddedWebviewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDOAuth2EmbeddedWebviewController.m; path = MSAL/IdentityCore/IdentityCore/src/webview/embeddedWebview/MSIDOAuth2EmbeddedWebviewController.m; sourceTree = "<group>"; };
 		D9B2D23D5D96BD469E4322FC5186A5CA /* MWPhoto.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MWPhoto.m; path = Pod/Classes/MWPhoto.m; sourceTree = "<group>"; };
 		D9BC6EE311BDFBF22693F71D2D8403F9 /* MSIDB2COauth2Factory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDB2COauth2Factory.m; path = MSAL/IdentityCore/IdentityCore/src/oauth2/b2c/MSIDB2COauth2Factory.m; sourceTree = "<group>"; };
-		DA0458BBB76D7B4345B58FAB0602AD01 /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleUtilities.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA0458BBB76D7B4345B58FAB0602AD01 /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA20D73812E7F67730BC7F0DFCA56383 /* MSIDOpenIdConfigurationInfoRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDOpenIdConfigurationInfoRequest.m; path = MSAL/IdentityCore/IdentityCore/src/network/request/MSIDOpenIdConfigurationInfoRequest.m; sourceTree = "<group>"; };
 		DA27EAF7CF4977CCF3D353106B8ED9AB /* GULSwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULSwizzler.m; path = GoogleUtilities/MethodSwizzler/GULSwizzler.m; sourceTree = "<group>"; };
 		DA6D19125C10A6ED7C9B6845119E9145 /* ResourceBundle-MWPhotoBrowser-MWPhotoBrowser-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-MWPhotoBrowser-MWPhotoBrowser-Info.plist"; sourceTree = "<group>"; };
@@ -3133,7 +3138,7 @@
 		E328B7C9C5BD054DE82C98CBB3D5A382 /* FIRInstallationsAPIService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsAPIService.h; path = FirebaseInstallations/Source/Library/InstallationsAPI/FIRInstallationsAPIService.h; sourceTree = "<group>"; };
 		E34775A41BE4376B21047B6B0C1450F9 /* IQUITextFieldView+Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQUITextFieldView+Additions.h"; path = "IQKeyboardManager/Categories/IQUITextFieldView+Additions.h"; sourceTree = "<group>"; };
 		E35EC2D3BF7D8D5C4638EEE772CAC619 /* MSALLegacySharedAccountsProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSALLegacySharedAccountsProvider.h; path = MSAL/src/public/ios/cache/MSALLegacySharedAccountsProvider.h; sourceTree = "<group>"; };
-		E36835E63C9BBA59061115B22CEF41E0 /* TOCropViewControllerBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TOCropViewControllerBundle.bundle; path = "TOCropViewController-TOCropViewControllerBundle.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E36835E63C9BBA59061115B22CEF41E0 /* TOCropViewControllerBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TOCropViewControllerBundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A625308D3ADA7A3E97770854027836 /* TOCropViewConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropViewConstants.h; path = "Objective-C/TOCropViewController/Constants/TOCropViewConstants.h"; sourceTree = "<group>"; };
 		E3AB365E525A9994152F045D328C8646 /* FIRHeartbeatInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRHeartbeatInfo.h; path = FirebaseCore/Sources/Private/FIRHeartbeatInfo.h; sourceTree = "<group>"; };
 		E3D0075D614BC921D0FA9C9943C3257B /* FIRMessagingClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRMessagingClient.h; path = Firebase/Messaging/FIRMessagingClient.h; sourceTree = "<group>"; };
@@ -3169,7 +3174,7 @@
 		EA8A0B7DDF7C1BA5DA7E4704B996E16D /* MSIDWebviewInteracting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDWebviewInteracting.h; path = MSAL/IdentityCore/IdentityCore/src/webview/MSIDWebviewInteracting.h; sourceTree = "<group>"; };
 		EABCFB2D897126641223E4AC5756AFF6 /* IQPreviousNextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQPreviousNextView.m; path = IQKeyboardManager/IQToolbar/IQPreviousNextView.m; sourceTree = "<group>"; };
 		EAC762BC9289956B20A7BB777E9B2DBB /* FIRDependency.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRDependency.m; path = FirebaseCore/Sources/FIRDependency.m; sourceTree = "<group>"; };
-		EB469C7FA298514367348B279306B07F /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FirebaseInstanceID.framework; path = FirebaseInstanceID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB469C7FA298514367348B279306B07F /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseInstanceID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB64BE1BDA5120551E569DA2C55B1192 /* IQNSArray+Sort.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQNSArray+Sort.h"; path = "IQKeyboardManager/Categories/IQNSArray+Sort.h"; sourceTree = "<group>"; };
 		EB6523ED80E909339FC26E820684B1EA /* SDWebImageOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageOperation.h; path = SDWebImage/SDWebImageOperation.h; sourceTree = "<group>"; };
 		EBA7EA2FBEAEE3EDFBA70EDF6E6B1B0D /* GPBMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBMessage.m; path = objectivec/GPBMessage.m; sourceTree = "<group>"; };
@@ -3182,7 +3187,7 @@
 		EC73038C80496239B438CAFB0CFF5155 /* Pods-emSignerUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-emSignerUITests-umbrella.h"; sourceTree = "<group>"; };
 		EC820378F3EE85588C9D5FDE7B1A3A73 /* IRLDocumentScanner.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IRLDocumentScanner.xcconfig; sourceTree = "<group>"; };
 		EC87EE96188A0244CFADAF749758C1F6 /* MSIDVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDVersion.m; path = MSAL/src/MSIDVersion.m; sourceTree = "<group>"; };
-		ECCF8CFDCCAB0D116AA68E45F15656F2 /* pt-BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-BR.lproj"; path = "Objective-C/TOCropViewController/Resources/pt-BR.lproj"; sourceTree = "<group>"; };
+		ECCF8CFDCCAB0D116AA68E45F15656F2 /* pt-BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "pt-BR.lproj"; path = "Objective-C/TOCropViewController/Resources/pt-BR.lproj"; sourceTree = "<group>"; };
 		ED253DC4213D442002F27717E55B6DF9 /* MSIDAADAuthorityMetadataResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDAADAuthorityMetadataResponse.h; path = MSAL/IdentityCore/IdentityCore/src/network/request/MSIDAADAuthorityMetadataResponse.h; sourceTree = "<group>"; };
 		ED3547DF2277E6D057305FDE7AAE6973 /* FIRInstallationsStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsStatus.h; path = FirebaseInstallations/Source/Library/InstallationsIDController/FIRInstallationsStatus.h; sourceTree = "<group>"; };
 		ED58D6E5A612A47FA85B1C20569CEDD3 /* FIRInstanceIDCombinedHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDCombinedHandler.m; path = Firebase/InstanceID/FIRInstanceIDCombinedHandler.m; sourceTree = "<group>"; };
@@ -3194,10 +3199,10 @@
 		EDCE2C8ABA615F7F294EF9742DDF9EC0 /* MSIDBrokerTokenRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDBrokerTokenRequest.h; path = MSAL/IdentityCore/IdentityCore/src/requests/MSIDBrokerTokenRequest.h; sourceTree = "<group>"; };
 		EDCEA65835474E1F8F3247D543E914D5 /* MSIDAadAuthorityCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDAadAuthorityCache.h; path = MSAL/IdentityCore/IdentityCore/src/validation/MSIDAadAuthorityCache.h; sourceTree = "<group>"; };
 		EDE9048FA982AF7CEA3C86623EA07011 /* FIRMessagingExtensionHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRMessagingExtensionHelper.h; path = Firebase/Messaging/Public/FIRMessagingExtensionHelper.h; sourceTree = "<group>"; };
-		EDECEC02908BAED529B475A0E6D97807 /* ms.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ms.lproj; path = "Objective-C/TOCropViewController/Resources/ms.lproj"; sourceTree = "<group>"; };
+		EDECEC02908BAED529B475A0E6D97807 /* ms.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ms.lproj; path = "Objective-C/TOCropViewController/Resources/ms.lproj"; sourceTree = "<group>"; };
 		EE04BDB6C410BF8E9BCA7D220ED455A8 /* FIRConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRConfiguration.h; path = FirebaseCore/Sources/Public/FIRConfiguration.h; sourceTree = "<group>"; };
 		EE4E6A5340189C6DE385F81487F49FE1 /* MSIDIntuneApplicationStateManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDIntuneApplicationStateManager.m; path = MSAL/IdentityCore/IdentityCore/src/intune/MSIDIntuneApplicationStateManager.m; sourceTree = "<group>"; };
-		EEA1D8E61283E8DC8D0594B68BBBEAC7 /* MWPhotoBrowser.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MWPhotoBrowser.bundle; path = "MWPhotoBrowser-MWPhotoBrowser.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEA1D8E61283E8DC8D0594B68BBBEAC7 /* MWPhotoBrowser.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MWPhotoBrowser.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF2115331DD87839D61A713B3E8AEEDF /* MWPhotoBrowser.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MWPhotoBrowser.xcconfig; sourceTree = "<group>"; };
 		EF3E99A6975A15AD7F79B8AA29440E61 /* GDTCCTNanopbHelpers.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDTCCTNanopbHelpers.m; path = GoogleDataTransportCCTSupport/GDTCCTLibrary/GDTCCTNanopbHelpers.m; sourceTree = "<group>"; };
 		EF4C81E4862385686BAD21D403645634 /* MSIDMaskedLogParameter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDMaskedLogParameter.m; path = MSAL/IdentityCore/IdentityCore/src/logger/MSIDMaskedLogParameter.m; sourceTree = "<group>"; };
@@ -3219,7 +3224,7 @@
 		F22A4CF214DF2790BF89297F1B1FA584 /* GPBProtocolBuffers_RuntimeSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBProtocolBuffers_RuntimeSupport.h; path = objectivec/GPBProtocolBuffers_RuntimeSupport.h; sourceTree = "<group>"; };
 		F22D05A2971F674540F3C364A98E7278 /* FIRMessagingPubSub.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRMessagingPubSub.m; path = Firebase/Messaging/FIRMessagingPubSub.m; sourceTree = "<group>"; };
 		F247E7440C686DEB823FBD1FE7C74277 /* MSIDB2CAuthority.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDB2CAuthority.m; path = MSAL/IdentityCore/IdentityCore/src/validation/MSIDB2CAuthority.m; sourceTree = "<group>"; };
-		F2506928F278C3ED97F17E0BC4052376 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = "Objective-C/TOCropViewController/Resources/de.lproj"; sourceTree = "<group>"; };
+		F2506928F278C3ED97F17E0BC4052376 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = de.lproj; path = "Objective-C/TOCropViewController/Resources/de.lproj"; sourceTree = "<group>"; };
 		F2AEF67E7AA0E60E920423BD4576D3B4 /* FIRInstallationsLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstallationsLogger.h; path = FirebaseInstallations/Source/Library/FIRInstallationsLogger.h; sourceTree = "<group>"; };
 		F2CC4C9801DB672EB995657F64491202 /* Pods-emSignerUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-emSignerUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F2FFCE4774589CD3760FF73082E0B035 /* MSIDAADAuthorizationCodeRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDAADAuthorizationCodeRequest.m; path = MSAL/IdentityCore/IdentityCore/src/network/request/MSIDAADAuthorizationCodeRequest.m; sourceTree = "<group>"; };
@@ -3253,7 +3258,7 @@
 		F8DD7CEE70C8FB90AC57C0ACABA14D20 /* MSIDCacheKey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSIDCacheKey.h; path = MSAL/IdentityCore/IdentityCore/src/cache/key/MSIDCacheKey.h; sourceTree = "<group>"; };
 		F8F9477F176CDA353B538469F4A407F4 /* DACircularProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DACircularProgressView.h; path = DACircularProgress/DACircularProgressView.h; sourceTree = "<group>"; };
 		F90D908050FF66475B836D449413C728 /* MSIDDRSDiscoveryResponseSerializer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSIDDRSDiscoveryResponseSerializer.m; path = MSAL/IdentityCore/IdentityCore/src/network/request/MSIDDRSDiscoveryResponseSerializer.m; sourceTree = "<group>"; };
-		F92C378444882AA0FAC009F4FF5B2F4B /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = "Objective-C/TOCropViewController/Resources/es.lproj"; sourceTree = "<group>"; };
+		F92C378444882AA0FAC009F4FF5B2F4B /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = es.lproj; path = "Objective-C/TOCropViewController/Resources/es.lproj"; sourceTree = "<group>"; };
 		F939A69C1DE252EA9303DF20EF22B53E /* MSALPromptType_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSALPromptType_Internal.h; path = MSAL/src/MSALPromptType_Internal.h; sourceTree = "<group>"; };
 		F96612EEA01E17B75275E8C5508EAAEA /* IQKeyboardReturnKeyHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQKeyboardReturnKeyHandler.h; path = IQKeyboardManager/IQKeyboardReturnKeyHandler.h; sourceTree = "<group>"; };
 		F975548B4AFA5F789AD764D94EAD4261 /* MSALB2CAuthority.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSALB2CAuthority.h; path = MSAL/src/public/MSALB2CAuthority.h; sourceTree = "<group>"; };
@@ -3542,7 +3547,6 @@
 				4ABD0A21A5B59DCB1228FD27A1080146 /* CoreOnly */,
 				8540D382A647A1DC72F66CFD5BF0E386 /* Support Files */,
 			);
-			name = Firebase;
 			path = Firebase;
 			sourceTree = "<group>";
 		};
@@ -3560,7 +3564,6 @@
 				EFC74DB7427C8126ADFDD749F6EC94C9 /* encode */,
 				1795215386B7410C4E15F51514109DFE /* Support Files */,
 			);
-			name = nanopb;
 			path = nanopb;
 			sourceTree = "<group>";
 		};
@@ -4318,7 +4321,6 @@
 				1C5F0872965DECB8DF753559181C03FB /* NSError+FIRMessaging.m */,
 				646779740CAF35C4408251F90A4F7DC0 /* Support Files */,
 			);
-			name = FirebaseMessaging;
 			path = FirebaseMessaging;
 			sourceTree = "<group>";
 		};
@@ -4364,7 +4366,6 @@
 				8E043B5424B8664FD01B924D98B5403D /* Resources */,
 				76D751CA1FD39D47D4CCEFFAF465E821 /* Support Files */,
 			);
-			name = TOCropViewController;
 			path = TOCropViewController;
 			sourceTree = "<group>";
 		};
@@ -4395,7 +4396,6 @@
 				C1E8596240BD87DB7107054A8406FDD5 /* Resources */,
 				D985737F636DA6CB2CCBC17DFDE7E837 /* Support Files */,
 			);
-			name = MWPhotoBrowser;
 			path = MWPhotoBrowser;
 			sourceTree = "<group>";
 		};
@@ -4405,7 +4405,6 @@
 				C42DC137314B555644B027B6CD3B86EE /* Core */,
 				CD0634C2D6D57CD6F88E265E6BB274BC /* Support Files */,
 			);
-			name = SDWebImage;
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
@@ -4416,7 +4415,6 @@
 				5099D2DE7EF51DE7001C52CE646F094B /* MBProgressHUD.m */,
 				C4FA1FB4D04A383BC83DD801AB326CCF /* Support Files */,
 			);
-			name = MBProgressHUD;
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -4429,7 +4427,6 @@
 				33CF5608AE58076B66BCC28A8A60DC0E /* DALabeledCircularProgressView.m */,
 				07417261B0F025E252573D979D74FA03 /* Support Files */,
 			);
-			name = DACircularProgress;
 			path = DACircularProgress;
 			sourceTree = "<group>";
 		};
@@ -4485,7 +4482,6 @@
 				9ACCA031C00746BF020B748EC8CA341A /* Frameworks */,
 				4CAD38DBFF11B917DFF98BE2C3266E67 /* Support Files */,
 			);
-			name = FirebaseAnalytics;
 			path = FirebaseAnalytics;
 			sourceTree = "<group>";
 		};
@@ -4567,7 +4563,6 @@
 				9DD39126FCAA641C3AF0188ED03CF12C /* Wrappers.pbobjc.m */,
 				EE229F305D1A65A81422B38C75BF2B88 /* Support Files */,
 			);
-			name = Protobuf;
 			path = Protobuf;
 			sourceTree = "<group>";
 		};
@@ -4624,7 +4619,6 @@
 				6F3AF5117E1B475CD849E758DB90B0B0 /* FBLPromises.h */,
 				561473E03C4BB6016D3BA8E2BF36BEA5 /* Support Files */,
 			);
-			name = PromisesObjC;
 			path = PromisesObjC;
 			sourceTree = "<group>";
 		};
@@ -4656,7 +4650,6 @@
 				8088DBE913667D589EDABB85137C0822 /* Frameworks */,
 				13F0F6C7B873DA2337F92326A333F297 /* Support Files */,
 			);
-			name = GoogleAppMeasurement;
 			path = GoogleAppMeasurement;
 			sourceTree = "<group>";
 		};
@@ -4710,7 +4703,6 @@
 				CCCF1C58D24830E907765C2747253733 /* Support Files */,
 				A0BB4A2D465928E81F7AB14A17B077BD /* UserDefaults */,
 			);
-			name = GoogleUtilities;
 			path = GoogleUtilities;
 			sourceTree = "<group>";
 		};
@@ -4735,7 +4727,6 @@
 				5646D18D3856D6CD303F60394A42E014 /* firebasecore.nanopb.h */,
 				FDB7AB4DC57560219613C80FBF01D4C6 /* Support Files */,
 			);
-			name = FirebaseCoreDiagnostics;
 			path = FirebaseCoreDiagnostics;
 			sourceTree = "<group>";
 		};
@@ -4748,7 +4739,6 @@
 				546BE3A379FD79101AD9A7F822C3967E /* FIRInteropParameterNames.h */,
 				847F4E85FE0028A6795B98A6A243DB49 /* Support Files */,
 			);
-			name = FirebaseAnalyticsInterop;
 			path = FirebaseAnalyticsInterop;
 			sourceTree = "<group>";
 		};
@@ -4858,7 +4848,6 @@
 				A9AA6B2041EF7DC2267A905FD3ADB4F0 /* IQUIViewController+Additions.m */,
 				7CB439821E4E52780F825A3523185C74 /* Support Files */,
 			);
-			name = IQKeyboardManager;
 			path = IQKeyboardManager;
 			sourceTree = "<group>";
 		};
@@ -4973,7 +4962,6 @@
 				A00B9362F7F6C5B738A3FDBDB951286E /* NSError+FIRInstanceID.m */,
 				6DADA49D52ED98FDF3F7A983684FF68D /* Support Files */,
 			);
-			name = FirebaseInstanceID;
 			path = FirebaseInstanceID;
 			sourceTree = "<group>";
 		};
@@ -5004,7 +4992,6 @@
 				945E3E879C2770E746442C3696E5196E /* GDTCCTUploader.m */,
 				FD60715496340028C2F40F2C6B84DC27 /* Support Files */,
 			);
-			name = GoogleDataTransportCCTSupport;
 			path = GoogleDataTransportCCTSupport;
 			sourceTree = "<group>";
 		};
@@ -5024,7 +5011,6 @@
 				887A2C43DBDD2963ED309D631278B2B7 /* FIRCoreDiagnosticsInterop.h */,
 				77A6F8D2138CF78C4C01D3F6E53C382B /* Support Files */,
 			);
-			name = FirebaseCoreDiagnosticsInterop;
 			path = FirebaseCoreDiagnosticsInterop;
 			sourceTree = "<group>";
 		};
@@ -5073,7 +5059,6 @@
 				5523555E3CCCB0260065928E2F08881E /* FIRSecureStorage.m */,
 				1CE07E20AFF34A5EF25FC0B91EC36050 /* Support Files */,
 			);
-			name = FirebaseInstallations;
 			path = FirebaseInstallations;
 			sourceTree = "<group>";
 		};
@@ -5191,7 +5176,6 @@
 				2196259A79CA82FE9A7DC07D8326BAEF /* app-lib */,
 				5FEE50650B3438189A12AC33963F1AEA /* Support Files */,
 			);
-			name = MSAL;
 			path = MSAL;
 			sourceTree = "<group>";
 		};
@@ -5385,7 +5369,6 @@
 				359FF7BFC8401304A79F8082794D726B /* GoogleDataTransport.h */,
 				AAC9D4F0BC7DE3487B64F35AA12A3B6A /* Support Files */,
 			);
-			name = GoogleDataTransport;
 			path = GoogleDataTransport;
 			sourceTree = "<group>";
 		};
@@ -5463,7 +5446,6 @@
 				7743681753BA830DF4150A4DA8D54447 /* FIRVersion.m */,
 				FF1873CF15F870A7F072B0E7783E48BF /* Support Files */,
 			);
-			name = FirebaseCore;
 			path = FirebaseCore;
 			sourceTree = "<group>";
 		};
@@ -5489,7 +5471,6 @@
 				B898B4582FD84E21322B921BCDB85CB1 /* Default */,
 				DD108F99D368DAFA131DF9B733D3B15B /* Support Files */,
 			);
-			name = IRLDocumentScanner;
 			path = IRLDocumentScanner;
 			sourceTree = "<group>";
 		};
@@ -6894,14 +6875,15 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1120;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 442B98630965A296699C78072314D90C /* Products */;
@@ -8258,10 +8240,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -8284,11 +8263,7 @@
 				INFOPLIST_FILE = "Target Support Files/IRLDocumentScanner/IRLDocumentScanner-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/IRLDocumentScanner/IRLDocumentScanner.modulemap";
 				PRODUCT_MODULE_NAME = IRLDocumentScanner;
 				PRODUCT_NAME = IRLDocumentScanner;
@@ -8319,11 +8294,7 @@
 				INFOPLIST_FILE = "Target Support Files/FirebaseInstanceID/FirebaseInstanceID-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/FirebaseInstanceID/FirebaseInstanceID.modulemap";
 				PRODUCT_MODULE_NAME = FirebaseInstanceID;
@@ -8357,11 +8328,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-emSignerTests/Pods-emSignerTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-emSignerTests/Pods-emSignerTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -8396,11 +8363,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-emSignerTests/Pods-emSignerTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-emSignerTests/Pods-emSignerTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -8423,10 +8386,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -8449,11 +8409,7 @@
 				INFOPLIST_FILE = "Target Support Files/IQKeyboardManager/IQKeyboardManager-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/IQKeyboardManager/IQKeyboardManager.modulemap";
 				PRODUCT_MODULE_NAME = IQKeyboardManager;
 				PRODUCT_NAME = IQKeyboardManager;
@@ -8483,11 +8439,7 @@
 				INFOPLIST_FILE = "Target Support Files/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport.modulemap";
 				PRODUCT_MODULE_NAME = GoogleDataTransportCCTSupport;
@@ -8518,11 +8470,7 @@
 				INFOPLIST_FILE = "Target Support Files/GoogleDataTransport/GoogleDataTransport-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/GoogleDataTransport/GoogleDataTransport.modulemap";
 				PRODUCT_MODULE_NAME = GoogleDataTransport;
@@ -8554,11 +8502,7 @@
 				INFOPLIST_FILE = "Target Support Files/GoogleUtilities/GoogleUtilities-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GoogleUtilities/GoogleUtilities.modulemap";
 				PRODUCT_MODULE_NAME = GoogleUtilities;
 				PRODUCT_NAME = GoogleUtilities;
@@ -8577,6 +8521,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -8655,11 +8600,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-emSigner/Pods-emSigner-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-emSigner/Pods-emSigner.modulemap";
 				OTHER_LDFLAGS = "";
@@ -8708,11 +8649,7 @@
 				INFOPLIST_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
 				PRODUCT_MODULE_NAME = MBProgressHUD;
 				PRODUCT_NAME = MBProgressHUD;
@@ -8734,10 +8671,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -8751,10 +8685,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -8776,11 +8707,7 @@
 				INFOPLIST_FILE = "Target Support Files/FirebaseCore/FirebaseCore-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/FirebaseCore/FirebaseCore.modulemap";
 				PRODUCT_MODULE_NAME = FirebaseCore;
@@ -8813,11 +8740,7 @@
 				INFOPLIST_FILE = "Target Support Files/TOCropViewController/TOCropViewController-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/TOCropViewController/TOCropViewController.modulemap";
 				PRODUCT_MODULE_NAME = TOCropViewController;
 				PRODUCT_NAME = TOCropViewController;
@@ -8849,11 +8772,7 @@
 				INFOPLIST_FILE = "Target Support Files/SDWebImage/SDWebImage-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SDWebImage/SDWebImage.modulemap";
 				PRODUCT_MODULE_NAME = SDWebImage;
 				PRODUCT_NAME = SDWebImage;
@@ -8884,11 +8803,7 @@
 				INFOPLIST_FILE = "Target Support Files/MWPhotoBrowser/MWPhotoBrowser-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MWPhotoBrowser/MWPhotoBrowser.modulemap";
 				PRODUCT_MODULE_NAME = MWPhotoBrowser;
 				PRODUCT_NAME = MWPhotoBrowser;
@@ -8920,11 +8835,7 @@
 				INFOPLIST_FILE = "Target Support Files/IQKeyboardManager/IQKeyboardManager-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/IQKeyboardManager/IQKeyboardManager.modulemap";
 				PRODUCT_MODULE_NAME = IQKeyboardManager;
 				PRODUCT_NAME = IQKeyboardManager;
@@ -8946,10 +8857,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -8973,11 +8881,7 @@
 				INFOPLIST_FILE = "Target Support Files/MWPhotoBrowser/MWPhotoBrowser-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MWPhotoBrowser/MWPhotoBrowser.modulemap";
 				PRODUCT_MODULE_NAME = MWPhotoBrowser;
 				PRODUCT_NAME = MWPhotoBrowser;
@@ -9007,11 +8911,7 @@
 				INFOPLIST_FILE = "Target Support Files/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.modulemap";
 				PRODUCT_MODULE_NAME = FirebaseCoreDiagnostics;
@@ -9043,11 +8943,7 @@
 				INFOPLIST_FILE = "Target Support Files/FirebaseMessaging/FirebaseMessaging-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/FirebaseMessaging/FirebaseMessaging.modulemap";
 				PRODUCT_MODULE_NAME = FirebaseMessaging;
@@ -9080,11 +8976,7 @@
 				INFOPLIST_FILE = "Target Support Files/SDWebImage/SDWebImage-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SDWebImage/SDWebImage.modulemap";
 				PRODUCT_MODULE_NAME = SDWebImage;
 				PRODUCT_NAME = SDWebImage;
@@ -9106,10 +8998,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -9132,11 +9021,7 @@
 				INFOPLIST_FILE = "Target Support Files/IRLDocumentScanner/IRLDocumentScanner-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/IRLDocumentScanner/IRLDocumentScanner.modulemap";
 				PRODUCT_MODULE_NAME = IRLDocumentScanner;
 				PRODUCT_NAME = IRLDocumentScanner;
@@ -9168,11 +9053,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-emSignerUITests/Pods-emSignerUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-emSignerUITests/Pods-emSignerUITests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -9205,11 +9086,7 @@
 				INFOPLIST_FILE = "Target Support Files/PromisesObjC/PromisesObjC-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/PromisesObjC/PromisesObjC.modulemap";
 				PRODUCT_MODULE_NAME = FBLPromises;
 				PRODUCT_NAME = FBLPromises;
@@ -9242,11 +9119,7 @@
 				INFOPLIST_FILE = "Target Support Files/MSAL/MSAL-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MSAL/MSAL.modulemap";
 				PRODUCT_MODULE_NAME = MSAL;
 				PRODUCT_NAME = MSAL;
@@ -9277,11 +9150,7 @@
 				INFOPLIST_FILE = "Target Support Files/Protobuf/Protobuf-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Protobuf/Protobuf.modulemap";
 				PRODUCT_MODULE_NAME = protobuf;
 				PRODUCT_NAME = protobuf;
@@ -9312,11 +9181,7 @@
 				INFOPLIST_FILE = "Target Support Files/FirebaseMessaging/FirebaseMessaging-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/FirebaseMessaging/FirebaseMessaging.modulemap";
 				PRODUCT_MODULE_NAME = FirebaseMessaging;
@@ -9335,6 +9200,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -9384,8 +9250,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -9407,11 +9272,7 @@
 				INFOPLIST_FILE = "Target Support Files/PromisesObjC/PromisesObjC-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/PromisesObjC/PromisesObjC.modulemap";
 				PRODUCT_MODULE_NAME = FBLPromises;
 				PRODUCT_NAME = FBLPromises;
@@ -9441,11 +9302,7 @@
 				INFOPLIST_FILE = "Target Support Files/FirebaseInstanceID/FirebaseInstanceID-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/FirebaseInstanceID/FirebaseInstanceID.modulemap";
 				PRODUCT_MODULE_NAME = FirebaseInstanceID;
@@ -9477,11 +9334,7 @@
 				INFOPLIST_FILE = "Target Support Files/TOCropViewController/TOCropViewController-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/TOCropViewController/TOCropViewController.modulemap";
 				PRODUCT_MODULE_NAME = TOCropViewController;
 				PRODUCT_NAME = TOCropViewController;
@@ -9502,10 +9355,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -9527,11 +9377,7 @@
 				INFOPLIST_FILE = "Target Support Files/FirebaseInstallations/FirebaseInstallations-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/FirebaseInstallations/FirebaseInstallations.modulemap";
 				PRODUCT_MODULE_NAME = FirebaseInstallations;
@@ -9564,11 +9410,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-emSigner/Pods-emSigner-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-emSigner/Pods-emSigner.modulemap";
 				OTHER_LDFLAGS = "";
@@ -9601,11 +9443,7 @@
 				INFOPLIST_FILE = "Target Support Files/GoogleDataTransport/GoogleDataTransport-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/GoogleDataTransport/GoogleDataTransport.modulemap";
 				PRODUCT_MODULE_NAME = GoogleDataTransport;
@@ -9628,10 +9466,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -9655,11 +9490,7 @@
 				INFOPLIST_FILE = "Target Support Files/GoogleUtilities/GoogleUtilities-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GoogleUtilities/GoogleUtilities.modulemap";
 				PRODUCT_MODULE_NAME = GoogleUtilities;
 				PRODUCT_NAME = GoogleUtilities;
@@ -9690,11 +9521,7 @@
 				INFOPLIST_FILE = "Target Support Files/Protobuf/Protobuf-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Protobuf/Protobuf.modulemap";
 				PRODUCT_MODULE_NAME = protobuf;
 				PRODUCT_NAME = protobuf;
@@ -9715,10 +9542,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -9742,11 +9566,7 @@
 				INFOPLIST_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
 				PRODUCT_MODULE_NAME = MBProgressHUD;
 				PRODUCT_NAME = MBProgressHUD;
@@ -9776,11 +9596,7 @@
 				INFOPLIST_FILE = "Target Support Files/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.modulemap";
 				PRODUCT_MODULE_NAME = FirebaseCoreDiagnostics;
@@ -9812,11 +9628,7 @@
 				INFOPLIST_FILE = "Target Support Files/DACircularProgress/DACircularProgress-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/DACircularProgress/DACircularProgress.modulemap";
 				PRODUCT_MODULE_NAME = DACircularProgress;
 				PRODUCT_NAME = DACircularProgress;
@@ -9848,11 +9660,7 @@
 				INFOPLIST_FILE = "Target Support Files/nanopb/nanopb-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/nanopb/nanopb.modulemap";
 				PRODUCT_MODULE_NAME = nanopb;
 				PRODUCT_NAME = nanopb;
@@ -9884,11 +9692,7 @@
 				INFOPLIST_FILE = "Target Support Files/DACircularProgress/DACircularProgress-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/DACircularProgress/DACircularProgress.modulemap";
 				PRODUCT_MODULE_NAME = DACircularProgress;
 				PRODUCT_NAME = DACircularProgress;
@@ -9920,11 +9724,7 @@
 				INFOPLIST_FILE = "Target Support Files/MSAL/MSAL-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MSAL/MSAL.modulemap";
 				PRODUCT_MODULE_NAME = MSAL;
 				PRODUCT_NAME = MSAL;
@@ -9971,11 +9771,7 @@
 				INFOPLIST_FILE = "Target Support Files/FirebaseCore/FirebaseCore-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/FirebaseCore/FirebaseCore.modulemap";
 				PRODUCT_MODULE_NAME = FirebaseCore;
@@ -10023,11 +9819,7 @@
 				INFOPLIST_FILE = "Target Support Files/nanopb/nanopb-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/nanopb/nanopb.modulemap";
 				PRODUCT_MODULE_NAME = nanopb;
 				PRODUCT_NAME = nanopb;
@@ -10057,11 +9849,7 @@
 				INFOPLIST_FILE = "Target Support Files/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport.modulemap";
 				PRODUCT_MODULE_NAME = GoogleDataTransportCCTSupport;
@@ -10111,11 +9899,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-emSignerUITests/Pods-emSignerUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-emSignerUITests/Pods-emSignerUITests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -10138,10 +9922,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -10164,11 +9945,7 @@
 				INFOPLIST_FILE = "Target Support Files/FirebaseInstallations/FirebaseInstallations-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/FirebaseInstallations/FirebaseInstallations.modulemap";
 				PRODUCT_MODULE_NAME = FirebaseInstallations;
