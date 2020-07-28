@@ -25,6 +25,7 @@
 
 @property (strong,nonatomic) NSMutableArray *listArray;
 @property (strong, nonatomic) NSString *workFlowId;
+@property (strong,nonatomic) NSString *workFlowType;
 @property (strong,nonatomic) NSString *document;
 @property (nonatomic, assign) NSInteger selectedRow;
 @property (nonatomic, assign) int currentSelectedRow;

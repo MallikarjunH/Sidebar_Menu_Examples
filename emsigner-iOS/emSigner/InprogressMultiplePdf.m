@@ -52,7 +52,7 @@
     [self startActivity:@"Refreshing"];
     
     //NSString *requestURL = [NSString stringWithFormat:@"%@GetDocumentidsByWorkflowid?WorkflowID=%@",kMultipleDoc,_workFlowId];
-    NSString *requestURL = [NSString stringWithFormat:@"%@DownloadWorkflowDocuments?WorkflowID=%@",kMultipleDoc,_workFlowId];
+    NSString *requestURL = [NSString stringWithFormat:@"%@DownloadWorkflowDocuments?WorkflowId=%@",kMultipleDoc,_workFlowId];
     
     [WebserviceManager sendSyncRequestWithURLGet:requestURL method:SAServiceReqestHTTPMethodGET body:requestURL completionBlock:^(BOOL status, id responseValue) {
         
@@ -112,8 +112,7 @@
         
     }
     
-    //    /*************************Web Service*******************************/
-    
+   /*
     [self startActivity:@"Loading.."];
     //    NSString *PendingWorkflowID = [[NSUserDefaults standardUserDefaults]
     //                                   valueForKey:@"PendingWorkflowID"];
@@ -277,7 +276,7 @@
         }
         
     }];
-    [self stopActivity];
+    [self stopActivity]; */
     return cell;
 }
 
@@ -293,7 +292,9 @@
     
     [self startActivity:@"Loading..."];
     
-    NSString *requestURL = [NSString stringWithFormat:@"%@DownloadDocumentById?documentId=%@",kOpenPDFImage,[[_listArray objectAtIndex:indexPath.row] valueForKey:@"DocumentID"]];
+   // NSString *requestURL = [NSString stringWithFormat:@"%@DownloadDocumentById?documentId=%@",kOpenPDFImage,[[_listArray objectAtIndex:indexPath.row] valueForKey:@"DocumentID"]];
+    NSString *requestURL = [NSString stringWithFormat:@"%@GetDocumentDetailsById?documentId=%@&workflowType=%@",kOpenPDFImage,[[_listArray objectAtIndex:indexPath.row] valueForKey:@"DocumentId"],_workFlowType];
+    
     [WebserviceManager sendSyncRequestWithURLGet:requestURL method:SAServiceReqestHTTPMethodGET body:requestURL completionBlock:^(BOOL status, id responseValue) {
         
      //   if(status)
@@ -374,7 +375,7 @@
                     
                     NSLog(@"%@",[[responseValue valueForKey:@"Response"] valueForKey:@"DocumentName"]);
                     
-                    descriptionStr=[[AppDelegate AppDelegateInstance] strCheckNull:[NSString stringWithFormat:@"%@",[[responseValue valueForKey:@"Response"] valueForKey:@"Filebyte"]]];
+                    descriptionStr=[[AppDelegate AppDelegateInstance] strCheckNull:[NSString stringWithFormat:@"%@",[[responseValue valueForKey:@"Response"] valueForKey:@"Document"]]];
                     
                     NSData *data = [[NSData alloc]initWithBase64EncodedString:descriptionStr options:0];
                     // from your converted Base64 string
@@ -404,7 +405,7 @@
                 
                 //Check Null String Address
                 
-                descriptionStr=[[AppDelegate AppDelegateInstance] strCheckNull:[NSString stringWithFormat:@"%@",[[responseValue valueForKey:@"Response"] valueForKey:@"Filebyte"]]];
+                descriptionStr=[[AppDelegate AppDelegateInstance] strCheckNull:[NSString stringWithFormat:@"%@",[[responseValue valueForKey:@"Response"] valueForKey:@"Document"]]];
               
                 NSData *data = [[NSData alloc]initWithBase64EncodedString:descriptionStr options:0];
                 // from your converted Base64 string

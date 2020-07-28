@@ -30,6 +30,7 @@
 @property (nonatomic, assign) int currentSelectedRow;
 @property (strong, nonatomic) NSString *strExcutedFrom;
 @property (strong, nonatomic) PDFDocument *pdfDocument;
+@property (strong,nonatomic) NSString *workFlowType;
 
 @property (nonatomic, strong) NSMutableDictionary *documentInfoArray;
 

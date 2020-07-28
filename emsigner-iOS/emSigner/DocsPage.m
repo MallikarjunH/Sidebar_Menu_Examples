@@ -27,7 +27,13 @@
 #import "DocStoreVC.h"
 #import "WorkflowTableViewController.h"
 #import "UploadDocuments.h"
+#import "GlobalVariables.h"
+
 @interface DocsPage ()
+{
+    UIRefreshControl * refreshControl;
+    GlobalVariables *globalVariables;
+}
 @property (weak, nonatomic) IBOutlet UITabBar *tabbar;
 @property (nonatomic) UIViewController *selectedController;
 
@@ -52,6 +58,20 @@
 
     //self.docsArray = [NSMutableArray arrayWithObjects:@"View Docstore",@"Workflows",@"Upload Documents", nil];
     
+    globalVariables=[GlobalVariables sharedInstance];
+      
+    
+    //Pull to refresh
+    refreshControl = [[UIRefreshControl alloc]init];
+    
+    [refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
+
+    if (@available(iOS 10.0, *)) {
+        self.docsTableView.refreshControl = refreshControl;
+    } else {
+        [self.docsTableView addSubview:refreshControl];
+    }
+    
     self.docsArray = [NSMutableArray arrayWithObjects:@"View Docstore",@"Workflows", nil];
 
     self.DocumentTypeImageview = @[@"pending-1x",@"ico-waiting-32",@"decline-1x",@"recalled-1x",@"completed-1x"];
@@ -60,15 +80,32 @@
     _docsTableView.dataSource =self;
     self.tabbar.delegate = self;
     
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
     [self startActivity:@"Loading"];
     [self dashBoardCount];
     [self profileDetails];
     [self.tabbar setSelectedItem:[self.tabbar.items objectAtIndex:0]];
+}
 
+-(void)viewWillAppear:(BOOL)animated
+{
+   /* if (![self connected]){
+        NSLog(@"Not Internet Conection");
+    }else{
+        NSLog(@" Internet Conection");
+    }*/
+    
+  /*  [self startActivity:@"Loading"];
+    [self dashBoardCount];
+    [self profileDetails];
+    [self.tabbar setSelectedItem:[self.tabbar.items objectAtIndex:0]]; */
+
+}
+
+- (void)refreshTable {
+    //TODO: refresh your data
+    [self dashBoardCount];
+    [self.docsTableView reloadData];
+    [refreshControl endRefreshing];
 }
 
 -(void)dashBoardCount
@@ -90,6 +127,12 @@
                                if (_responseArray != (id)[NSNull null])
                                {
                                    _searchResults = [[NSMutableArray alloc]initWithArray:(NSMutableArray*)_responseArray];
+                                   
+                                  /* for (int i=0; i<self->_searchResults.count; i++) {
+                                      
+                                       NSDictionary * dict = _searchResults[i];
+                                       //NSString *
+                                   } */
                                    
                                    [_docsTableView reloadData];
                                    
@@ -241,87 +284,91 @@
         static NSString *cellIdentifier = @"cell";
         DocsCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
         cell.docsLabel.text = (self.categoriesArray)[indexPath.row];
-
-        if (indexPath.row == 0) {
-            
-            NSArray* pending = [self filteredArray:@"Status" :@"Pending"];
-            NSArray* inprogress = [self filteredArray:@"Status" :@"CosignPending"];
-            long pendingNumber = 0;
-            long inprogressNumber = 0;
-            
-            if (pending.count !=0) {
-                
-                 pendingNumber = [[[pending objectAtIndex:0] valueForKey:@"Count"]integerValue];
-                if (inprogress.count == 0) {
-                    inprogressNumber = 0;
-                } else {
-                    inprogressNumber = [[[inprogress objectAtIndex:0] valueForKey:@"Count"]integerValue];
-                }
-                 
-                
-            }
-            else
-            {
-                
-            }
-            long subtract = pendingNumber - inprogressNumber;
-                if (pending.count == 0) {
-                [cell.docsCount setTitle:@"0" forState:UIControlStateNormal];
-            }
-            else
-            {
-                [cell.docsCount setTitle:[NSString stringWithFormat:@"%ld",subtract] forState:UIControlStateNormal];
-            }
-
-        }
-        else if (indexPath.row == 1)
-        {
-             NSArray* inprogress = [self filteredArray:@"Status" :@"CosignPending"];
-            if (inprogress.count == 0) {
-                [cell.docsCount setTitle:@"0" forState:UIControlStateNormal];
-            }
-            else
-            {
-                [cell.docsCount setTitle:[NSString stringWithFormat:@"%@", [[inprogress objectAtIndex:0] valueForKey:@"Count"]] forState:UIControlStateNormal];
-            }
-            
-        }
-
-        else if (indexPath.row == 2)
-        {
-            NSArray* declined = [self filteredArray:@"Status" :@"Declined"];
-            if (declined.count==0) {
-                [cell.docsCount setTitle:@"0" forState:UIControlStateNormal];
-            }
-            else
-            {
-                [cell.docsCount setTitle:[NSString stringWithFormat:@"%@", [[declined objectAtIndex:0] valueForKey:@"Count"]] forState:UIControlStateNormal];
-            }
-        }
-        else if (indexPath.row == 3)
-        {
-            NSArray* recalled = [self filteredArray:@"Status" :@"Recalled"];
-            if (recalled .count==0) {
-                [cell.docsCount setTitle:@"0" forState:UIControlStateNormal];
-            }
-            else
-            {
-                [cell.docsCount setTitle:[NSString stringWithFormat:@"%@", [[recalled objectAtIndex:0] valueForKey:@"Count"]] forState:UIControlStateNormal];
-            }
-        }
-        else if (indexPath.row == 4)
-        {
-            NSArray* completed = [self filteredArray:@"Status" :@"Completed"];
-            if (completed .count == 0) {
-                [cell.docsCount setTitle:@"0" forState:UIControlStateNormal];
-            }
-            else
-            {
-                [cell.docsCount setTitle:[NSString stringWithFormat:@"%@", [[completed objectAtIndex:0] valueForKey:@"Count"]] forState:UIControlStateNormal];
-            }
-        }
-        
         [cell.docsImageView setImage:[UIImage imageNamed:[_DocumentTypeImageview objectAtIndex:indexPath.row]]];
+  
+            if (indexPath.row == 0) {
+                
+                NSArray* pending = [self filteredArray:@"Status" :@"Pending"];
+                NSArray* inprogress = [self filteredArray:@"Status" :@"CosignPending"];
+                long pendingNumber = 0;
+                long inprogressNumber = 0;
+                
+                if (pending.count !=0) {
+                    
+                     pendingNumber = [[[pending objectAtIndex:0] valueForKey:@"Count"]integerValue];
+                    if (inprogress.count == 0) {
+                        inprogressNumber = 0;
+                    } else {
+                        inprogressNumber = [[[inprogress objectAtIndex:0] valueForKey:@"Count"]integerValue];
+                    }
+                     
+                    
+                }
+                else
+                {
+                    
+                }
+                long subtract = pendingNumber - inprogressNumber;
+                    if (pending.count == 0) {
+                    [cell.docsCount setTitle:@"0" forState:UIControlStateNormal];
+                }
+                else
+                {
+                    [cell.docsCount setTitle:[NSString stringWithFormat:@"%ld",subtract] forState:UIControlStateNormal];
+                    globalVariables.mySignatureCount = [NSString stringWithFormat:@"%ld",subtract];
+                }
+
+            }
+            else if (indexPath.row == 1)
+            {
+                 NSArray* inprogress = [self filteredArray:@"Status" :@"CosignPending"];
+                if (inprogress.count == 0) {
+                    [cell.docsCount setTitle:@"0" forState:UIControlStateNormal];
+                }
+                else
+                {
+                    [cell.docsCount setTitle:[NSString stringWithFormat:@"%@", [[inprogress objectAtIndex:0] valueForKey:@"Count"]] forState:UIControlStateNormal];
+                    globalVariables.waitingOthersCount = [NSString stringWithFormat:@"%@", [[inprogress objectAtIndex:0] valueForKey:@"Count"]];
+                }
+                
+            }
+
+            else if (indexPath.row == 2)
+            {
+                NSArray* declined = [self filteredArray:@"Status" :@"Declined"];
+                if (declined.count==0) {
+                    [cell.docsCount setTitle:@"0" forState:UIControlStateNormal];
+                }
+                else
+                {
+                    [cell.docsCount setTitle:[NSString stringWithFormat:@"%@", [[declined objectAtIndex:0] valueForKey:@"Count"]] forState:UIControlStateNormal];
+                    globalVariables.declinedCount = [NSString stringWithFormat:@"%@", [[declined objectAtIndex:0] valueForKey:@"Count"]];
+                }
+            }
+            else if (indexPath.row == 3)
+            {
+                NSArray* recalled = [self filteredArray:@"Status" :@"Recalled"];
+                if (recalled .count==0) {
+                    [cell.docsCount setTitle:@"0" forState:UIControlStateNormal];
+                }
+                else
+                {
+                    [cell.docsCount setTitle:[NSString stringWithFormat:@"%@", [[recalled objectAtIndex:0] valueForKey:@"Count"]] forState:UIControlStateNormal];
+                    globalVariables.recalledCount = [NSString stringWithFormat:@"%@", [[recalled objectAtIndex:0] valueForKey:@"Count"]];
+                }
+            }
+            else if (indexPath.row == 4)
+            {
+                NSArray* completed = [self filteredArray:@"Status" :@"Completed"];
+                if (completed .count == 0) {
+                    [cell.docsCount setTitle:@"0" forState:UIControlStateNormal];
+                }
+                else
+                {
+                    [cell.docsCount setTitle:[NSString stringWithFormat:@"%@", [[completed objectAtIndex:0] valueForKey:@"Count"]] forState:UIControlStateNormal];
+                    globalVariables.completedCount = [NSString stringWithFormat:@"%@", [[completed objectAtIndex:0] valueForKey:@"Count"]];
+                }
+            }
         return cell;
 
         }
@@ -546,5 +593,13 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+//Network Connection Checks
+- (BOOL)connected
+{
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [reachability currentReachabilityStatus];
+    return !(networkStatus == NotReachable);
+}
 
 @end

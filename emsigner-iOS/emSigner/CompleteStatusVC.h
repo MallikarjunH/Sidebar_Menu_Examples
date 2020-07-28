@@ -33,6 +33,8 @@
 @property (nonatomic,strong) NSMutableArray *docInfoArray;
 @property (strong, nonatomic) PDFDocument *pdfDocument;
 
+@property (strong,nonatomic) NSString *workFlowType;
+
 @property (strong,nonatomic) NSString *pdfName;
 @property (strong,nonatomic) NSString *filePath;
 @property (strong,nonatomic)   NSString *path ;

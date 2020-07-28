@@ -37,6 +37,7 @@
 		064762792170AD32008E03E9 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 064762782170AD31008E03E9 /* FXBlurView.m */; };
 		0647627C2170AD44008E03E9 /* ImageFileCrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 0647627B2170AD44008E03E9 /* ImageFileCrop.m */; };
 		06593B7321268FB000B07C0D /* emsigner-with-ico2.png in Resources */ = {isa = PBXBuildFile; fileRef = 06593B7221268FAF00B07C0D /* emsigner-with-ico2.png */; };
+		065FBF1A24CFCAD2007B6E76 /* GlobalVariables.m in Sources */ = {isa = PBXBuildFile; fileRef = 065FBF1924CFCAD2007B6E76 /* GlobalVariables.m */; };
 		06636038225CC0F500514E23 /* delegationFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 06636036225CC0F500514E23 /* delegationFlow.m */; };
 		06636039225CC0F500514E23 /* delegationFlow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06636037225CC0F500514E23 /* delegationFlow.xib */; };
 		0663603D225CC2E300514E23 /* delegationtableviewcell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0663603B225CC2E300514E23 /* delegationtableviewcell.m */; };
@@ -333,6 +334,8 @@
 		0647627A2170AD44008E03E9 /* ImageFileCrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageFileCrop.h; sourceTree = "<group>"; };
 		0647627B2170AD44008E03E9 /* ImageFileCrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageFileCrop.m; sourceTree = "<group>"; };
 		06593B7221268FAF00B07C0D /* emsigner-with-ico2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emsigner-with-ico2.png"; sourceTree = "<group>"; };
+		065FBF1824CFCAD2007B6E76 /* GlobalVariables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalVariables.h; sourceTree = "<group>"; };
+		065FBF1924CFCAD2007B6E76 /* GlobalVariables.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlobalVariables.m; sourceTree = "<group>"; };
 		06636035225CC0F500514E23 /* delegationFlow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = delegationFlow.h; sourceTree = "<group>"; };
 		06636036225CC0F500514E23 /* delegationFlow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = delegationFlow.m; sourceTree = "<group>"; };
 		06636037225CC0F500514E23 /* delegationFlow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = delegationFlow.xib; sourceTree = "<group>"; };
@@ -803,6 +806,85 @@
 			path = FXBlurView;
 			sourceTree = "<group>";
 		};
+		065FBF1124CFC8A5007B6E76 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				065FBF1824CFCAD2007B6E76 /* GlobalVariables.h */,
+				065FBF1924CFCAD2007B6E76 /* GlobalVariables.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		065FBF1224CFC8AD007B6E76 /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = VIews;
+			sourceTree = "<group>";
+		};
+		065FBF1324CFC8B8007B6E76 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C3FABDFA1E373D6800EAF5D7 /* Login */,
+				C3F57FAF1F14D16D006C51FE /* GetOTP */,
+				C3F57FB01F14D18C006C51FE /* eSign */,
+				C3F72C2B1ED4026500B8BF2E /* FeedBack */,
+				C309AFB81E5472F100B7ACFA /* Change Password */,
+				C3FBB0BB1EF7971700348996 /* About Us */,
+				C3F5B2FF1E5C018E007861EE /* Share */,
+				C3F3474C1D51F58B0012B70D /* My Profile */,
+				C306C9BE1EC96DA30086B2AD /* Rate Us */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		065FBF1424CFC8C7007B6E76 /* AppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				C3F2A2741D34F0EE00BFA456 /* AppDelegate.h */,
+				C3F2A2751D34F0EE00BFA456 /* AppDelegate.m */,
+			);
+			name = AppDelegates;
+			sourceTree = "<group>";
+		};
+		065FBF1524CFC8F0007B6E76 /* HelperClasses */ = {
+			isa = PBXGroup;
+			children = (
+				065FBF1724CFC9A1007B6E76 /* ImageCrop */,
+				069D3DF623D5726600932607 /* SiriForSigning */,
+				06871452220C390700B61578 /* PlaceHolder */,
+				064762762170AD31008E03E9 /* FXBlurView */,
+				06A7B9F622A9242400BFDF0C /* office365 */,
+				C34009841DE04D18007008AE /* Rate Us */,
+				062C60BB221425D600FDAD7B /* MPGTextField */,
+			);
+			name = HelperClasses;
+			sourceTree = "<group>";
+		};
+		065FBF1624CFC904007B6E76 /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				D20AB3F61DB3FE73009B925D /* HoursConstants.h */,
+				D20AB3F71DB3FE73009B925D /* WebserviceManager.h */,
+				D20AB3F81DB3FE73009B925D /* WebserviceManager.m */,
+				D20AB3F91DB3FE73009B925D /* Connection.h */,
+				D20AB3FA1DB3FE73009B925D /* Connection.m */,
+				D20AB3FB1DB3FE73009B925D /* ConnectionDelegate.h */,
+				C3F742F81E1F5ABE009D1DF1 /* SingletonAPI.h */,
+				C3F742F91E1F5ABE009D1DF1 /* SingletonAPI.m */,
+			);
+			name = WebServices;
+			sourceTree = "<group>";
+		};
+		065FBF1724CFC9A1007B6E76 /* ImageCrop */ = {
+			isa = PBXGroup;
+			children = (
+				0647627A2170AD44008E03E9 /* ImageFileCrop.h */,
+				0647627B2170AD44008E03E9 /* ImageFileCrop.m */,
+			);
+			name = ImageCrop;
+			sourceTree = "<group>";
+		};
 		06710B8422CDFCC4005BD9EA /* WorkFlow */ = {
 			isa = PBXGroup;
 			children = (
@@ -1254,21 +1336,6 @@
 			path = emSigner;
 			sourceTree = "<group>";
 		};
-		C3A12D211D93F53F0077BF5D /* WebService */ = {
-			isa = PBXGroup;
-			children = (
-				D20AB3F61DB3FE73009B925D /* HoursConstants.h */,
-				D20AB3F71DB3FE73009B925D /* WebserviceManager.h */,
-				D20AB3F81DB3FE73009B925D /* WebserviceManager.m */,
-				D20AB3F91DB3FE73009B925D /* Connection.h */,
-				D20AB3FA1DB3FE73009B925D /* Connection.m */,
-				D20AB3FB1DB3FE73009B925D /* ConnectionDelegate.h */,
-				C3F742F81E1F5ABE009D1DF1 /* SingletonAPI.h */,
-				C3F742F91E1F5ABE009D1DF1 /* SingletonAPI.m */,
-			);
-			name = WebService;
-			sourceTree = "<group>";
-		};
 		C3F119E91D3F3E6900434FC9 /* Pending */ = {
 			isa = PBXGroup;
 			children = (
@@ -1324,57 +1391,43 @@
 		C3F2A2701D34F0EE00BFA456 /* emSigner */ = {
 			isa = PBXGroup;
 			children = (
+				065FBF1424CFC8C7007B6E76 /* AppDelegates */,
+				065FBF1124CFC8A5007B6E76 /* Model */,
+				065FBF1224CFC8AD007B6E76 /* VIews */,
+				065FBF1324CFC8B8007B6E76 /* Controller */,
+				065FBF1624CFC904007B6E76 /* WebServices */,
+				065FBF1524CFC8F0007B6E76 /* HelperClasses */,
 				06D3B71524728C3E001BC378 /* CustomHeader */,
 				06D64D5224696BF000A28387 /* IRLDocumentForWorkflows */,
 				06821D5123EBED1400A40B68 /* CustomAnimation */,
-				069D3DF623D5726600932607 /* SiriForSigning */,
 				06D97D132313ABBE00CC682A /* PageViewController */,
 				06058C2C2303E4BC00ACFC7B /* Comments */,
-				06A7B9F622A9242400BFDF0C /* office365 */,
 				06CB9FE222E5C01F0091AA46 /* SubclassAnnotationsPdf */,
 				06710B8422CDFCC4005BD9EA /* WorkFlow */,
-				062C60BB221425D600FDAD7B /* MPGTextField */,
-				06871452220C390700B61578 /* PlaceHolder */,
 				06BBF70C22019B8100172797 /* VCFloatingActionButton */,
-				0647627A2170AD44008E03E9 /* ImageFileCrop.h */,
-				0647627B2170AD44008E03E9 /* ImageFileCrop.m */,
 				06E29AF62354327E00AE0282 /* GoogleService-Info.plist */,
-				064762762170AD31008E03E9 /* FXBlurView */,
 				06593B7221268FAF00B07C0D /* emsigner-with-ico2.png */,
 				0616026F2109CB9D00FFCF11 /* All Documents */,
 				C3F69A381EEA7BAB0081B586 /* emSigner.entitlements */,
-				C3F2A2741D34F0EE00BFA456 /* AppDelegate.h */,
-				C3F2A2751D34F0EE00BFA456 /* AppDelegate.m */,
-				C3FABDFA1E373D6800EAF5D7 /* Login */,
 				C3F2A27A1D34F0EE00BFA456 /* Main.storyboard */,
 				C368B10B1EF6CA9A00F0458F /* emSigner Mobile App Description (2).pdf */,
-				C3F57FB01F14D18C006C51FE /* eSign */,
-				C3F57FAF1F14D16D006C51FE /* GetOTP */,
-				C3F72C2B1ED4026500B8BF2E /* FeedBack */,
-				C306C9BE1EC96DA30086B2AD /* Rate Us */,
 				C3FAB75B1E823A8C00238BC7 /* Pdf Listview */,
 				D271FFA21E2B595F00CB2E80 /* LMNavigationController.h */,
 				D271FFA31E2B595F00CB2E80 /* LMNavigationController.m */,
 				C30360ED1E2C981F00578EDF /* LMMenuCell.h */,
 				C30360EE1E2C981F00578EDF /* LMMenuCell.m */,
-				C309AFB81E5472F100B7ACFA /* Change Password */,
 				C397ECCE1E3B635C00844B53 /* Document Info */,
-				C3A12D211D93F53F0077BF5D /* WebService */,
-				C3FBB0BB1EF7971700348996 /* About Us */,
 				D2D054671D3BA209007EAE97 /* Side Menu */,
 				C312E89B1E646D19009DC7A2 /* Forgot Password */,
 				C312E89A1E6427E6009DC7A2 /* Recall */,
 				06E1CFBA211882B4007B93C2 /* Signatories Page */,
 				C312E8991E63F9A7009DC7A2 /* Decline */,
 				C3FBB0BC1EF7973E00348996 /* PopOver Multiple Document */,
-				C3F5B2FF1E5C018E007861EE /* Share */,
 				C3F6DCC91D38FAAC00223CA9 /* Status */,
 				C3FEE8D31E2893D100509D99 /* MBProgressbar */,
 				C33C34321E27B9610000ABC0 /* Float Buttton */,
-				C34009841DE04D18007008AE /* Rate Us */,
 				C34009851DE04D5D007008AE /* DropDown View */,
 				C3009DD61D641C01006DB84E /* Document Log */,
-				C3F3474C1D51F58B0012B70D /* My Profile */,
 				C31160581E5AFF8200E93385 /* Textview Placeholder */,
 				C3F6DCAF1D38E69100223CA9 /* DashBoard */,
 				C3F2A27D1D34F0EE00BFA456 /* Assets.xcassets */,
@@ -2137,6 +2190,7 @@
 				C339D5E51DDB232600C03171 /* RecallStatusVC.m in Sources */,
 				0637A0092407C96D0014E303 /* SignatoriesListForFlexiforms.m in Sources */,
 				C35368E41DEFF8CD008B7029 /* PendingVC.m in Sources */,
+				065FBF1A24CFCAD2007B6E76 /* GlobalVariables.m in Sources */,
 				C33C343C1E27BDEC0000ABC0 /* RPFloatingPlaceholderTextView.m in Sources */,
 				06FFC55C2118778F0025CD11 /* SignatoriesPage.m in Sources */,
 				C3FEE8E01E28DA9800509D99 /* UIImage+LMExtension.m in Sources */,

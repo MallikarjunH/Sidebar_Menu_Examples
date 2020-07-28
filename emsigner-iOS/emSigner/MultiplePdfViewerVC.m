@@ -17,7 +17,7 @@
 #import "DocumentInfoVC.h"
 #import "CustomPopOverVC.h"
 #import "ParallelSigning.h"
-
+#import "GlobalVariables.h"
 
 @interface MultiplePdfViewerVC ()<CellPopUp>
 {
@@ -34,6 +34,7 @@
     NSString* path;
     NSArray *SignatoryArray;
     const char *password;
+    GlobalVariables * globalVariables;
 }
 
 @end
@@ -68,6 +69,8 @@ enum
     [self.tableView registerNib:[UINib nibWithNibName:@"MultiplePdfTableViewCell" bundle:nil] forCellReuseIdentifier:@"MultiplePdfTableViewCell"];
     
     _listArray = [[NSMutableArray alloc]init];
+    globalVariables = [[GlobalVariables alloc] init];
+    
     //    /*************************Web Service*******************************/
     
     [self startActivity:@"Refreshing"];
@@ -82,13 +85,13 @@ enum
             if(status && ![[responseValue valueForKey:@"Response"] isKindOfClass:[NSNull class]])
 
         {
-            _listArray = [responseValue valueForKey:@"Response"];
+            self->_listArray = [responseValue valueForKey:@"Response"];
             dispatch_async(dispatch_get_main_queue(),
                            ^{
                               // _listArray=[responseValue valueForKey:@"Response"];
                                if (_listArray != (id)[NSNull null])
                                {
-                                   [_tableView reloadData];
+                                   [self->_tableView reloadData];
                                    [self stopActivity];
                                }
                                else{
@@ -144,9 +147,9 @@ enum
     cell.docInfoBtn.tag = indexPath.row;
     [cell.docInfoBtn addTarget:self action:@selector(docInfoBtnClicked1:) forControlEvents:UIControlEventTouchUpInside];
     
-    /*
+
     
-    [self startActivity:@"Loading.."];
+ /*   [self startActivity:@"Loading.."];
    // NSString *requestURL = [NSString stringWithFormat:@"%@GetSignerDetails?DocumentId=%@",kMultipleSignatory,[[_listArray objectAtIndex:indexPath.row] valueForKey:@"DocumentID"]];
     NSString *requestURL = [NSString stringWithFormat:@"%@GetSignerDetails?DocumentId=%@",kMultipleSignatory,[[_listArray objectAtIndex:indexPath.row] valueForKey:@"DocumentId"]];
     
@@ -318,6 +321,13 @@ enum
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    NSString *documentId = globalVariables.documentId;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+    NSString *loggedInUserEmail = [defaults stringForKey:@"Email"];
+    
+    
     self.selectedRow = indexPath.row;
     /*************************Web Service*******************************/
         
@@ -334,40 +344,40 @@ enum
             {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     
-                    coordinatesArray = [[NSMutableArray alloc]init];
+                    self->coordinatesArray = [[NSMutableArray alloc]init];
 
-                    _checkNullArray = [responseValue valueForKey:@"Response"];
+                    self->_checkNullArray = [responseValue valueForKey:@"Response"];
 
                     //Check Null String Address
-                    lstOriginatory = [[NSMutableArray alloc]init];
-                    lstSignatory = [[NSMutableArray alloc]init];
+                    self->lstOriginatory = [[NSMutableArray alloc]init];
+                    self->lstSignatory = [[NSMutableArray alloc]init];
                     
-                    lstOriginatory = [[responseValue valueForKey:@"Response"] valueForKey:@"lstOriginatory"];
-                    lstSignatory = [[responseValue valueForKey:@"Response"] valueForKey:@"lstSignatory"];
+                    self->lstOriginatory = [[responseValue valueForKey:@"Response"] valueForKey:@"lstOriginatory"];
+                    self->lstSignatory = [[responseValue valueForKey:@"Response"] valueForKey:@"lstSignatory"];
                     
-                    descriptionStr=[[AppDelegate AppDelegateInstance] strCheckNull:[NSString stringWithFormat:@"%@",[[responseValue valueForKey:@"Response"] valueForKey:@"Document"]]];
+                    self->descriptionStr=[[AppDelegate AppDelegateInstance] strCheckNull:[NSString stringWithFormat:@"%@",[[responseValue valueForKey:@"Response"] valueForKey:@"Document"]]];
                   
                    // descriptionStr=[[AppDelegate AppDelegateInstance] strCheckNull:[NSString stringWithFormat:@"%@",[[responseValue valueForKey:@"Response"] valueForKey:@"Description"]]];
                     
-                  //  NSUserDefaults * prefs = [NSUserDefaults standardUserDefaults];
+                   // NSUserDefaults * prefs = [NSUserDefaults standardUserDefaults];
                    // NSData *tempData = [[NSUserDefaults standardUserDefaults] valueForKey:@"Signatory"];
-                   // NSDictionary *myDicProfile = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSDictionary class]
-                                                                  //  fromData:tempData error:nil];
-                    //SignatoryArray = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSArray class] fromData:tempData error:nil];
+                    //NSDictionary *myDicProfile = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSDictionary class] fromData:tempData error:nil];
+                    
+                   // SignatoryArray = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSArray class] fromData:tempData error:nil];
 
-                   // SignatoryArray =  [prefs objectForKey:@"Signatory"];
+                                               //   self->SignatoryArray =  [prefs objectForKey:@"Signatory"];
                                     
                     //Checking for signatorys and multiple PDF
-                    for (int i = 0; i<_signatoryHolderArray.count; i++) {
+                    for (int i = 0; i<self->_signatoryHolderArray.count; i++) {
                        
-                        NSString * lowercaseEmail = [[_signatoryHolderArray [i]valueForKey:@"EmailID"]lowercaseString];
+                        NSString * lowercaseEmail = [[self->_signatoryHolderArray [i]valueForKey:@"EmailID"]lowercaseString];
                         NSString * loginMail = [[[NSUserDefaults standardUserDefaults]valueForKey:@"Email"]lowercaseString];
                         
-                        if (([lowercaseEmail isEqualToString:loginMail] &&[[_signatoryHolderArray[i]valueForKey:@"DocumentId"]integerValue] == [[[_listArray objectAtIndex:indexPath.row] valueForKey:@"DocumentID"]integerValue]))
+                        if (([lowercaseEmail isEqualToString:loginMail] &&[[self->_signatoryHolderArray[i]valueForKey:@"DocumentId"]integerValue] == ([[[_listArray objectAtIndex:indexPath.row] valueForKey:@"DocumentID"]integerValue] || [[[_listArray objectAtIndex:indexPath.row] valueForKey:@"DocumentId"]integerValue])))
                         {
-                            if (([[_signatoryHolderArray[i]valueForKey:@"StatusID"]intValue] == 7) || ([[_signatoryHolderArray[i]valueForKey:@"StatusID"]integerValue] == 53)|| ([[_signatoryHolderArray[i]valueForKey:@"StatusID"]integerValue] == 8)) {
+                            if (([[self->_signatoryHolderArray[i]valueForKey:@"StatusID"]intValue] == 7) || ([[self->_signatoryHolderArray[i]valueForKey:@"StatusID"]integerValue] == 53)|| ([[_signatoryHolderArray[i]valueForKey:@"StatusID"]integerValue] == 8)) {
                                 
-                                   [coordinatesArray addObject:_signatoryHolderArray[i]];
+                                [self->coordinatesArray addObject:self->_signatoryHolderArray[i]];
                             }
                         }
                     }
@@ -378,7 +388,7 @@ enum
                     
                     if (arr.count > 0) {
                         NSString * ischeck = @"ischeck";
-                        [_mstrXMLString appendString:@"Signed By:"];
+                        [self->_mstrXMLString appendString:@"Signed By:"];
                         
                         for (int i = 0; arr.count>i; i++) {
                             NSDictionary * dict = arr[i];
@@ -387,17 +397,17 @@ enum
                                 NSString* name = dict[@"Name"];
                                 NSString * totalstring = [NSString stringWithFormat:@"%@[%@]",name,emailid];
                                 
-                                if ([_mstrXMLString containsString:[NSString stringWithFormat:@"%@",totalstring]]) {
+                                if ([self->_mstrXMLString containsString:[NSString stringWithFormat:@"%@",totalstring]]) {
                                     
                                 }
                                 else
                                 {
-                                    [_mstrXMLString appendString:[NSString stringWithFormat:@" %@",totalstring]];
+                                    [self->_mstrXMLString appendString:[NSString stringWithFormat:@" %@",totalstring]];
                                 }
                                 
                                 //[mstrXMLString appendString:[NSString stringWithFormat:@"Signed By: %@",totalstring]];
                                 ischeck = @"Signatory";
-                                NSLog(@"%@",_mstrXMLString);
+                                NSLog(@"%@",self->_mstrXMLString);
                             }
                         }
                         if ([ischeck  isEqual: @"ischeck"])

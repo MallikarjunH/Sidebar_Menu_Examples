@@ -48,7 +48,8 @@
     //    /*************************Web Service*******************************/
     
     [self startActivity:@"Refreshing"];
-    NSString *requestURL = [NSString stringWithFormat:@"%@GetDocumentidsByWorkflowid?WorkflowID=%@",kMultipleDoc,_workFlowId];
+   // NSString *requestURL = [NSString stringWithFormat:@"%@GetDocumentidsByWorkflowid?WorkflowID=%@",kMultipleDoc,_workFlowId];
+    NSString *requestURL = [NSString stringWithFormat:@"%@DownloadWorkflowDocuments?WorkflowId=%@",kMultipleDoc,_workFlowId];
     
     [WebserviceManager sendSyncRequestWithURLGet:requestURL method:SAServiceReqestHTTPMethodGET body:requestURL completionBlock:^(BOOL status, id responseValue) {
         
@@ -69,16 +70,17 @@
                                     return ;
                                 }
                              
+                                  [self stopActivity];
                                });
             
         }
         else{
             
-            
+            [self stopActivity];
         }
         
     }];
-    [self stopActivity];
+   // [self stopActivity];
     /*******************************************************************************/
     
 }
@@ -126,10 +128,8 @@
          ];
     }
     
-    //    /*************************Web Service*******************************/
     
-    
-    [self startActivity:@"Loading.."];
+ /*   [self startActivity:@"Loading.."];
     //    NSString *PendingWorkflowID = [[NSUserDefaults standardUserDefaults]
     //                                   valueForKey:@"PendingWorkflowID"];
     NSString *requestURL = [NSString stringWithFormat:@"%@GetSignerDetails?DocumentId=%@",kMultipleSignatory,[[_listArray objectAtIndex:indexPath.row] valueForKey:@"DocumentID"]];
@@ -295,12 +295,11 @@
         }
         else{
             
-            
+            [self stopActivity];
         }
         
     }];
-    /****************************************************************/
-    
+    [self stopActivity]; */
     return cell;
 }
 
@@ -316,7 +315,9 @@
     
     [self startActivity:@"Loading..."];
     
-    NSString *requestURL = [NSString stringWithFormat:@"%@DownloadDocumentById?documentId=%@",kOpenPDFImage,[[_listArray objectAtIndex:indexPath.row] valueForKey:@"DocumentID"]];
+   // NSString *requestURL = [NSString stringWithFormat:@"%@DownloadDocumentById?documentId=%@",kOpenPDFImage,[[_listArray objectAtIndex:indexPath.row] valueForKey:@"DocumentID"]];
+    NSString *requestURL = [NSString stringWithFormat:@"%@GetDocumentDetailsById?DocumentId=%@&workflowType=%@",kOpenPDFImage,[[_listArray objectAtIndex:indexPath.row] valueForKey:@"DocumentId"],_workFlowType];
+    
     [WebserviceManager sendSyncRequestWithURLGet:requestURL method:SAServiceReqestHTTPMethodGET body:requestURL completionBlock:^(BOOL status, id responseValue) {
         
         if(status && ![[responseValue valueForKey:@"Response"] isKindOfClass:[NSNull class]])
@@ -325,7 +326,7 @@
                 
                 //Check Null String Address
                 NSString *descriptionStr;
-                descriptionStr=[[AppDelegate AppDelegateInstance] strCheckNull:[NSString stringWithFormat:@"%@",[[responseValue valueForKey:@"Response"] valueForKey:@"Filebyte"]]];
+                descriptionStr=[[AppDelegate AppDelegateInstance] strCheckNull:[NSString stringWithFormat:@"%@",[[responseValue valueForKey:@"Response"] valueForKey:@"Document"]]];
                 
                 mstrXMLString = [[NSMutableString alloc]init];
                 NSArray *arr =  [[responseValue valueForKey:@"Response"] valueForKey:@"lstSignatory"];

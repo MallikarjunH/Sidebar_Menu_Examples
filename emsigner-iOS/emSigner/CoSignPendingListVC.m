@@ -301,6 +301,7 @@ BOOL _isRotating;
             InprogressMultiplePdf *objTrackOrderVC= [newStoryBoard instantiateViewControllerWithIdentifier:@"InprogressMultiplePdf"];
             objTrackOrderVC.delegate = self;
             objTrackOrderVC.workFlowId = _workflowID;
+            objTrackOrderVC.workFlowType = _workFlowType;
             objTrackOrderVC.currentSelectedRow = _selectedIndex;
             objTrackOrderVC.strExcutedFrom = _strExcutedFrom;
             objTrackOrderVC.document = @"Documents";

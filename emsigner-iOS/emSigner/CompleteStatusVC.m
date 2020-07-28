@@ -574,6 +574,7 @@
         [self alertForCollaborative];
         return;
     }
+    _workFlowType = [[_filterArray objectAtIndex:indexPath.row] valueForKey:@"WorkflowType"];
     
     NSString *requestURL = [NSString stringWithFormat:@"%@GetDocumentDetailsById?workFlowId=%@&workflowType=%@",kOpenPDFImage,[[_filterArray objectAtIndex:indexPath.row] valueForKey:@"WorkFlowId"],[[_filterArray objectAtIndex:indexPath.row] valueForKey:@"WorkflowType"]];
     [WebserviceManager sendSyncRequestWithURLGet:requestURL method:SAServiceReqestHTTPMethodGET body:requestURL completionBlock:^(BOOL status, id responseValue) {
@@ -717,7 +718,7 @@
                        temp.documentID = [[[responseValue valueForKey:@"Response"] valueForKey:@"DocumentId"]objectAtIndex:0];
                         temp.documentCount = [[[responseValue valueForKey:@"Response"] valueForKey:@"NoOfAttachments"] stringValue];
                         temp.signatoryString = mstrXMLString;
-
+                        temp.workFlowType = _workFlowType;
                         temp.attachmentCount = [[[responseValue valueForKey:@"Response"] valueForKey:@"NoOfAttachments"] stringValue];
                         [self.navigationController pushViewController:temp animated:YES];
                         [self stopActivity];

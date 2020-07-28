@@ -305,6 +305,7 @@ BOOL _isRotating;
             objTrackOrderVC.strExcutedFrom = _strExcutedFrom;
             //objTrackOrderVC.strExcutedFrom = @"DocsStore";
             objTrackOrderVC.document = @"Documents";
+            objTrackOrderVC.workFlowType = _workFlowType;
             //            self.definesPresentationContext = YES;
             //            //self is presenting view controller
             //            objTrackOrderVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;

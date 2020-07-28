@@ -1013,6 +1013,7 @@
         return;
     }
     
+    _workFlowType = [[_searchResults objectAtIndex:indexPath.row] valueForKey:@"WorkflowType"];
     
     NSString *requestURL = [NSString stringWithFormat:@"%@GetDocumentDetailsById?workFlowId=%@&workflowType=%@",kOpenPDFImage,[[_searchResults objectAtIndex:indexPath.row] valueForKey:@"WorkFlowId"],[[_searchResults objectAtIndex:indexPath.row] valueForKey:@"WorkflowType"]];
     [WebserviceManager sendSyncRequestWithURLGet:requestURL method:SAServiceReqestHTTPMethodGET body:requestURL completionBlock:^(BOOL status, id responseValue) {
@@ -1187,7 +1188,7 @@
                         
                         temp.workflowID = [[_searchResults objectAtIndex:indexPath.row] valueForKey:@"WorkFlowId"];
                         temp.documentID = [[[responseValue valueForKey:@"Response"] valueForKey:@"DocumentId"]objectAtIndex:0];
-                        
+                        temp.workFlowType = _workFlowType;
                         [self.navigationController pushViewController:temp animated:YES];
                         [self stopActivity];
                         

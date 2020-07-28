@@ -45,6 +45,8 @@
 @property (strong,nonatomic) NSMutableArray *arrayMail;
 @property (nonatomic,strong) NSMutableArray *docInfoArray;
 
+@property (strong,nonatomic) NSString *workFlowType;
+
 - (void)viewWillAppear:(BOOL)animated;
 - (void)makeServieCallWithPageNumaber:(NSUInteger)pageNumber;
 

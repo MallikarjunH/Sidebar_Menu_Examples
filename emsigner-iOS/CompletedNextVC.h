@@ -47,6 +47,9 @@
 @property(nonatomic,strong) NSString *_pathForDoc;
 @property (strong, nonatomic) PDFDocument *pdfDocument;
 @property (nonatomic, assign) const char *passwordForPDF;
+
+@property (strong,nonatomic) NSString *workFlowType;
+
 @property (weak, nonatomic) IBOutlet UITabBar *completedTabbar;
 @property(assign)BOOL isDocStore;
 - (IBAction)downloadBtn:(id)sender;

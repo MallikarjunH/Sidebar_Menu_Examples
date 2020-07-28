@@ -28,6 +28,7 @@
 #import "HomeNewDashBoardVC.h"
 //#import <NotificationBannerSwift/NotificationBannerSwift-Swift.h>
 //#import <NotificationBannerSwift-Swift.h>
+#import "GlobalVariables.h"
 
 #import "emSigner-Swift.h"
 //#import "emSigner-Bridging-Header.h"
@@ -41,6 +42,7 @@
     UIImage *imageForPlaceholders;
     BOOL statusCheck;
     
+    GlobalVariables *globalVariables;
     UIImage*img;
     CGRect   annotationBounds;
     
@@ -106,6 +108,7 @@ BOOL _isRotating;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     _addFile = [[NSMutableArray alloc] init];
+    globalVariables = [[GlobalVariables alloc] init];
     
     setEnableMoveRestriction = NO;
     NSLog(@"%s",_passwordForPDF);
@@ -692,6 +695,9 @@ BOOL _isRotating;
 
 
 -(void)dissmissCellPopup:(NSInteger)row{
+    
+    globalVariables.documentId = _documentID;
+    
     switch (row) {
         case 0:
         {

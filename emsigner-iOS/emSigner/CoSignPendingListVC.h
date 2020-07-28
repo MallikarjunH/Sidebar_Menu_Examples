@@ -44,6 +44,7 @@
 @property(nonatomic,strong) NSString *pathForDoc;
 
 @property (strong, nonatomic) PDFDocument *pdfDocument;
+@property (strong,nonatomic) NSString *workFlowType;
 
 @property (nonatomic, assign) const char *passwordForPDF;
 @property (weak, nonatomic) IBOutlet UITabBar *waitingForOthersTabBar;
