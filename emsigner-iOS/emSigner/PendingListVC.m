@@ -921,8 +921,19 @@ BOOL _isRotating;
     NSString *base64image=[pp base64EncodedStringWithOptions:0];
     
     NSString *checkPassword  = [[NSUserDefaults standardUserDefaults] valueForKey:@"Password"];
+    NSString * workFlowType = self.workFlowType;
     
-    NSString *post = [NSString stringWithFormat:@"WorkflowId=%@&SignatureImage=%@&Password=%@&workflowType=%@&ReviewerComment=%@",_workFlowID,base64image,checkPassword,self.workFlowType,reviewerComments];
+    workFlowType = [[AppDelegate AppDelegateInstance] strCheckNull:[NSString stringWithFormat:@"%@",self.workFlowType]];
+    if ([workFlowType isEqualToString:@"0"] || [workFlowType isEqualToString:@""]) {
+        workFlowType = @"1";
+    }else{
+        workFlowType = self.workFlowType;
+    }
+    
+    checkPassword = [[AppDelegate AppDelegateInstance] strCheckNull:[NSString stringWithFormat:@"%@",checkPassword]];
+    reviewerComments = [[AppDelegate AppDelegateInstance] strCheckNull:[NSString stringWithFormat:@"%@",reviewerComments]];
+    
+    NSString *post = [NSString stringWithFormat:@"WorkflowId=%@&SignatureImage=%@&Password=%@&workflowType=%@&ReviewerComment=%@",_workFlowID,base64image,checkPassword,workFlowType,reviewerComments];
     post = [[post stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
             stringByReplacingOccurrencesOfString:@"+" withString:@"%2B"];
     [WebserviceManager sendSyncRequestWithURL:kSignatureImage method:SAServiceReqestHTTPMethodPOST body:post completionBlock:^(BOOL status, id responseValue){

@@ -322,7 +322,8 @@ enum
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    NSString *documentId = globalVariables.documentId;
+    NSString *documentId1 = globalVariables.documentId;
+    NSInteger documentId = [documentId1 integerValue];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
     NSString *loggedInUserEmail = [defaults stringForKey:@"Email"];
@@ -352,8 +353,11 @@ enum
                     self->lstOriginatory = [[NSMutableArray alloc]init];
                     self->lstSignatory = [[NSMutableArray alloc]init];
                     
-                    self->lstOriginatory = [[responseValue valueForKey:@"Response"] valueForKey:@"lstOriginatory"];
-                    self->lstSignatory = [[responseValue valueForKey:@"Response"] valueForKey:@"lstSignatory"];
+                   // self->lstOriginatory = [[responseValue valueForKey:@"Response"] valueForKey:@"lstOriginatory"];
+                    self->lstOriginatory = [[responseValue valueForKey:@"Response"] valueForKey:@"Originatory"];
+                   // self->lstSignatory = [[responseValue valueForKey:@"Response"] valueForKey:@"lstSignatory"];
+                    self->lstSignatory = [[responseValue valueForKey:@"Response"] valueForKey:@"Signatory"];
+                    
                     
                     self->descriptionStr=[[AppDelegate AppDelegateInstance] strCheckNull:[NSString stringWithFormat:@"%@",[[responseValue valueForKey:@"Response"] valueForKey:@"Document"]]];
                   
@@ -373,26 +377,35 @@ enum
                         NSString * lowercaseEmail = [[self->_signatoryHolderArray [i]valueForKey:@"EmailID"]lowercaseString];
                         NSString * loginMail = [[[NSUserDefaults standardUserDefaults]valueForKey:@"Email"]lowercaseString];
                         
-                        if (([lowercaseEmail isEqualToString:loginMail] &&[[self->_signatoryHolderArray[i]valueForKey:@"DocumentId"]integerValue] == ([[[_listArray objectAtIndex:indexPath.row] valueForKey:@"DocumentID"]integerValue] || [[[_listArray objectAtIndex:indexPath.row] valueForKey:@"DocumentId"]integerValue])))
+                        if([lowercaseEmail isEqualToString:loginMail] && (documentId == [[[self->_listArray objectAtIndex:indexPath.row] valueForKey:@"DocumentId"]integerValue])) {
+                            
+                            if (([[self->_signatoryHolderArray[i]valueForKey:@"StatusID"]intValue] == 7) || ([[self->_signatoryHolderArray[i]valueForKey:@"StatusID"]integerValue] == 53)|| ([[self->_signatoryHolderArray[i]valueForKey:@"StatusID"]integerValue] == 8)) {
+                                
+                                [self->coordinatesArray addObject:self->_signatoryHolderArray[i]];
+                            }
+                        }
+                        
+                       /* if (([lowercaseEmail isEqualToString:loginMail] && [[self->_signatoryHolderArray[i]valueForKey:@"DocumentId"]integerValue] == [[[self->_listArray objectAtIndex:indexPath.row] valueForKey:@"DocumentId"]integerValue]))
                         {
                             if (([[self->_signatoryHolderArray[i]valueForKey:@"StatusID"]intValue] == 7) || ([[self->_signatoryHolderArray[i]valueForKey:@"StatusID"]integerValue] == 53)|| ([[_signatoryHolderArray[i]valueForKey:@"StatusID"]integerValue] == 8)) {
                                 
                                 [self->coordinatesArray addObject:self->_signatoryHolderArray[i]];
                             }
-                        }
+                        } */
                     }
                     
                     self.mstrXMLString = [[NSMutableString alloc]init];
-                    NSArray *arr =  [[responseValue valueForKey:@"Response"]valueForKey:@"lstSignatory"];
-                    
+                    //NSArray *arr =  [[responseValue valueForKey:@"Response"]valueForKey:@"lstSignatory"];
+                    NSArray *arr =  [[responseValue valueForKey:@"Response"]valueForKey:@"Signatory"];
                     
                     if (arr.count > 0) {
                         NSString * ischeck = @"ischeck";
                         [self->_mstrXMLString appendString:@"Signed By:"];
                         
-                        for (int i = 0; arr.count>i; i++) {
+                        for (int i = 0; i < arr.count; i++) {
                             NSDictionary * dict = arr[i];
-                            if ([dict[@"StatusID"]intValue] == 13) {
+                           // if ([dict[@"StatusID"]intValue] == 13) {
+                            if ([dict[@"StatusID"]intValue] == 7) {
                                 NSString* emailid = dict[@"EmailID"];
                                 NSString* name = dict[@"Name"];
                                 NSString * totalstring = [NSString stringWithFormat:@"%@[%@]",name,emailid];
@@ -412,18 +425,30 @@ enum
                         }
                         if ([ischeck  isEqual: @"ischeck"])
                         {
-                            NSArray *arr1 =  [[responseValue valueForKey:@"Response"] valueForKey:@"lstOriginatory"];
-                            _mstrXMLString = [NSMutableString string];
+                           // NSArray *arr1 =  [[responseValue valueForKey:@"Response"] valueForKey:@"lstOriginatory"];
+                            NSArray *arr1 =  [[responseValue valueForKey:@"Response"] valueForKey:@"Originatory"];
+        
                             
-                            [_mstrXMLString appendString:@"Originated By:"];
-                            for (int i = 0; arr1.count > i; i++) {
-                                NSDictionary * dict = arr1[i];
-                                
-                                NSString* emailid = dict[@"EmailID"];
-                                NSString* name = dict[@"Name"];
-                                NSString * totalstring = [NSString stringWithFormat:@"%@[%@]",name,emailid];
-                                [_mstrXMLString appendString:[NSString stringWithFormat:@" %@",totalstring]];
-                                NSLog(@"%@",_mstrXMLString);
+                            if (arr1 != (id)[NSNull null] && arr1 != nil && [arr1 count] != 0 ){
+                              // NSLog(@"Array is: %@", arr1);
+                               NSLog(@"Array Count is: %lu", (unsigned long)arr1.count);
+                                if(arr1.count > 0){
+                                    self->_mstrXMLString = [NSMutableString string];
+                                    
+                                    [self->_mstrXMLString appendString:@"Originated By:"];
+                                    for (int i = 0; i< arr1.count; i++) {
+                                        NSDictionary * dict = arr1[i];
+                                        
+                                        NSString* emailid = dict[@"EmailID"];
+                                        NSString* name = dict[@"Name"];
+                                        NSString * totalstring = [NSString stringWithFormat:@"%@[%@]",name,emailid];
+                                        [self->_mstrXMLString appendString:[NSString stringWithFormat:@" %@",totalstring]];
+                                        NSLog(@"%@",self->_mstrXMLString);
+                                    }
+                                }
+                            }
+                            else{
+                                NSLog(@"Array is Null");
                             }
                         }
                         //}
@@ -431,20 +456,20 @@ enum
                     
                     else
                     {
-                        NSArray *arr1 =  [[responseValue valueForKey:@"Response"] valueForKey:@"lstOriginatory"];
-                        
-                        [_mstrXMLString appendString:@"Originated By:"];
-                        
-                        for (int i = 0; arr1.count > i; i++) {
-                            NSDictionary * dict = arr1[i];
+                        NSArray *arr1 =  [[responseValue valueForKey:@"Response"] valueForKey:@"Originatory"];
+                        if(arr1.count > 0){
+                            [self->_mstrXMLString appendString:@"Originated By:"];
                             
-                            NSString* emailid = dict[@"EmailID"];
-                            NSString* name = dict[@"Name"];
-                            NSString * totalstring = [NSString stringWithFormat:@"%@[%@]",name,emailid];
-                            [_mstrXMLString appendString:[NSString stringWithFormat:@"%@",totalstring]];
-                            NSLog(@"%@",_mstrXMLString);
+                            for (int i = 0; i< arr1.count; i++) {
+                                NSDictionary * dict = arr1[i];
+                                
+                                NSString* emailid = dict[@"EmailID"];
+                                NSString* name = dict[@"Name"];
+                                NSString * totalstring = [NSString stringWithFormat:@"%@[%@]",name,emailid];
+                                [self->_mstrXMLString appendString:[NSString stringWithFormat:@"%@",totalstring]];
+                                NSLog(@"%@",self->_mstrXMLString);
+                            }
                         }
-                        
                     }
                     
                     if ([[[responseValue valueForKey:@"Response"] valueForKey:@"IsPasswordProtected"] boolValue]==YES) {
@@ -452,19 +477,19 @@ enum
                         NSLog(@"%@",[[responseValue valueForKey:@"Response"] valueForKey:@"DocumentName"]);
                         
                        // descriptionStr=[[AppDelegate AppDelegateInstance] strCheckNull:[NSString stringWithFormat:@"%@",[[responseValue valueForKey:@"Response"] valueForKey:@"Filebyte"]]];
-                        descriptionStr=[[AppDelegate AppDelegateInstance] strCheckNull:[NSString stringWithFormat:@"%@",[[responseValue valueForKey:@"Response"] valueForKey:@"Document"]]];
+                        self->descriptionStr=[[AppDelegate AppDelegateInstance] strCheckNull:[NSString stringWithFormat:@"%@",[[responseValue valueForKey:@"Response"] valueForKey:@"Document"]]];
                         
-                        data = [[NSData alloc]initWithBase64EncodedString:descriptionStr options:0];
+                        self->data = [[NSData alloc]initWithBase64EncodedString:self->descriptionStr options:0];
                         // from your converted Base64 string
                         NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
-                        NSString *path = [documentsDirectory stringByAppendingPathComponent:[[_listArray objectAtIndex:indexPath.row] objectForKey:@"DocumentName"]];
-                        [data writeToFile:path atomically:YES];
+                        NSString *path = [documentsDirectory stringByAppendingPathComponent:[[self->_listArray objectAtIndex:indexPath.row] objectForKey:@"DocumentName"]];
+                        [self->data writeToFile:path atomically:YES];
                         
-                        NSString *displayName = [[_listArray objectAtIndex:indexPath.row] objectForKey:@"DocumentName"];
+                        NSString *displayName = [[self->_listArray objectAtIndex:indexPath.row] objectForKey:@"DocumentName"];
                         [[NSUserDefaults standardUserDefaults] setObject:displayName forKey:@"displayName"];
                         [[NSUserDefaults standardUserDefaults] synchronize];
                         
-                        self.pdfDocument = [[PDFDocument alloc] initWithData:data];
+                        self.pdfDocument = [[PDFDocument alloc] initWithData:self->data];
 
                         
                         if ([self.pdfDocument isLocked]) {
@@ -481,15 +506,15 @@ enum
                        
                     }
                     
-                    data = [[NSData alloc]initWithBase64EncodedString:descriptionStr options:0];
+                    self->data = [[NSData alloc]initWithBase64EncodedString:self->descriptionStr options:0];
                     // from your converted Base64 string
                     NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
-                    NSString *path = [documentsDirectory stringByAppendingPathComponent:[[_listArray objectAtIndex:indexPath.row] objectForKey:@"DocumentName"]];
-                    [data writeToFile:path atomically:YES];
+                    NSString *path = [documentsDirectory stringByAppendingPathComponent:[[self->_listArray objectAtIndex:indexPath.row] objectForKey:@"DocumentName"]];
+                    [self->data writeToFile:path atomically:YES];
                     
                     NSString*  SubscriberId = [[NSUserDefaults standardUserDefaults]valueForKey:@"signOrReviewerText"];
 
-                    BOOL  isSignatory,isReviewer;
+                    BOOL  isSignatory = false,isReviewer = false;
                     if ([SubscriberId isEqualToString:@"Sign & Review"]) {
                         isSignatory = true;
                         isReviewer = true;
@@ -519,19 +544,19 @@ enum
 //                        self.signlabel.text = @"Reviewer";
 //                    }
                     
-                    if (![_parallel isEqualToString:@"1"]) {
+                    if (![self->_parallel isEqualToString:@"1"]) {
                     PendingListVC *temp = [[PendingListVC alloc] init];//WithFilename:path path:path document: doc];
 
-                    temp.pdfImagedetail = descriptionStr;
-                    temp.strExcutedFrom = _strExcutedFrom;
-                    temp.myTitle = [[_listArray objectAtIndex:indexPath.row] objectForKey:@"DocumentName"];
-                    temp.workFlowID = _workFlowId;
-                    temp.workFlowType = _workFlowType;
+                    temp.pdfImagedetail = self->descriptionStr;
+                    temp.strExcutedFrom = self->_strExcutedFrom;
+                    temp.myTitle = [[self->_listArray objectAtIndex:indexPath.row] objectForKey:@"DocumentName"];
+                    temp.workFlowID = self->_workFlowId;
+                    temp.workFlowType = self->_workFlowType;
                     temp.signatoryString = self.mstrXMLString;
-                    temp.signatoryHolderArray =    _signatoryHolderArray;
+                    temp.signatoryHolderArray =  self->_signatoryHolderArray;
                     temp.isSignatory = isSignatory;
                     temp.isReviewer = isReviewer;
-                    temp.placeholderArray = coordinatesArray;
+                    temp.placeholderArray = self->coordinatesArray;
                     temp.signatureImage = self.signatureImage;
                     [self.navigationController pushViewController:temp animated:YES];
                     [self stopActivity];
@@ -541,15 +566,15 @@ enum
                         ParallelSigning *temp = [[ParallelSigning alloc] init];//WithFilename:path path:path document: doc];
                         
                         temp._pathForDoc = path;
-                        temp.pdfImagedetail = descriptionStr;
-                        temp.myTitle = [[_listArray objectAtIndex:indexPath.row] objectForKey:@"DocumentName"];
+                        temp.pdfImagedetail = self->descriptionStr;
+                        temp.myTitle = [[self->_listArray objectAtIndex:indexPath.row] objectForKey:@"DocumentName"];
                         temp.strExcutedFrom=@"Completed";
-                        temp.workflowID = _workFlowId;
-                        temp.documentCount = [[_checkNullArray valueForKey:@"NoOfDocuments"] stringValue];
-                        temp.signatoryString = _mstrXMLString;
+                        temp.workflowID = self->_workFlowId;
+                        temp.documentCount = [[self->_checkNullArray valueForKey:@"NoOfDocuments"] stringValue];
+                        temp.signatoryString = self->_mstrXMLString;
                         // temp.matchSignersList = arr;
-                        temp.placeholderArray = coordinatesArray;
-                        temp.matchSignersList =    _signatoryHolderArray;
+                        temp.placeholderArray = self->coordinatesArray;
+                        temp.matchSignersList =    self->_signatoryHolderArray;
 
                         // temp.attachmentCount = [[_checkNullArray valueForKey:@"NoOfAttachments"] stringValue];
                         [self.navigationController pushViewController:temp animated:YES];
