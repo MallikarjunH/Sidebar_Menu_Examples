@@ -34,7 +34,7 @@
     NSString* path;
     NSArray *SignatoryArray;
     const char *password;
-    GlobalVariables * globalVariables;
+   // GlobalVariables * globalVariables;
 }
 
 @end
@@ -69,7 +69,7 @@ enum
     [self.tableView registerNib:[UINib nibWithNibName:@"MultiplePdfTableViewCell" bundle:nil] forCellReuseIdentifier:@"MultiplePdfTableViewCell"];
     
     _listArray = [[NSMutableArray alloc]init];
-    globalVariables = [[GlobalVariables alloc] init];
+   // globalVariables = [[GlobalVariables alloc] init];
     
     //    /*************************Web Service*******************************/
     
@@ -322,10 +322,9 @@ enum
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    NSString *documentId1 = globalVariables.documentId;
-    NSInteger documentId = [documentId1 integerValue];
+    NSString *documentId = GlobalVariables.sharedInstance.documentId;
+   // NSInteger documentId = [documentId1 integerValue];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
     NSString *loggedInUserEmail = [defaults stringForKey:@"Email"];
     
     
@@ -370,29 +369,58 @@ enum
                    // SignatoryArray = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSArray class] fromData:tempData error:nil];
 
                                                //   self->SignatoryArray =  [prefs objectForKey:@"Signatory"];
-                                    
-                    //Checking for signatorys and multiple PDF
+                            
+                     
+                    if (self->lstSignatory.count > 0){
+                        
+                        
+                        for (int i = 0; i <self->lstSignatory.count; i++) {
+                            
+                           NSDictionary * dict = self->lstSignatory[i];
+                           NSString *email = [dict valueForKey:@"EmailID"];
+                           NSString *documentID = [NSString stringWithFormat:@"%@",[dict valueForKey:@"DocumentId"]];
+                           NSString *statusId = [NSString stringWithFormat:@"%@",[dict valueForKey:@"StatusID"]];
+                            
+                            NSLog(@"Email id: %@",email);
+                            NSLog(@"Document id: %@",documentID);
+                            NSLog(@"Status id: %@",statusId);
+                            
+                            NSLog(@"Origional Email: %@",loggedInUserEmail);
+                            NSLog(@"Original Document ID: %@",documentId);
+                            
+                           //if (email == loggedInUserEmail && documentID == documentId) {
+                            if([email isEqualToString:loggedInUserEmail] && [documentID isEqualToString:documentId]) {
+                               
+                               NSLog(@"Both Email and DOcument id are same");
+                               
+                               if([statusId isEqualToString:@"7"]) {
+                                   
+                                   [self->coordinatesArray addObject:dict];
+                                   NSLog(@"Object Added");
+                               }else{
+                                   NSLog(@"Object Not Added - Status Id is not same");
+                               }
+                           }
+                
+                        } //Loop end
+                    }
+                   
+                   /* //Checking for signatorys and multiple PDF
+                    //for (int i = 0; i<self->_signatoryHolderArray.count; i++) {
                     for (int i = 0; i<self->_signatoryHolderArray.count; i++) {
                        
                         NSString * lowercaseEmail = [[self->_signatoryHolderArray [i]valueForKey:@"EmailID"]lowercaseString];
-                        NSString * loginMail = [[[NSUserDefaults standardUserDefaults]valueForKey:@"Email"]lowercaseString];
+                       // NSString * loginMail = [[[NSUserDefaults standardUserDefaults]valueForKey:@"Email"]lowercaseString];
                         
-                        if([lowercaseEmail isEqualToString:loginMail] && (documentId == [[[self->_listArray objectAtIndex:indexPath.row] valueForKey:@"DocumentId"]integerValue])) {
+                        if([lowercaseEmail isEqualToString:loggedInUserEmail] && (documentId == [[[self->_listArray objectAtIndex:indexPath.row] valueForKey:@"DocumentId"]integerValue])) {
                             
                             if (([[self->_signatoryHolderArray[i]valueForKey:@"StatusID"]intValue] == 7) || ([[self->_signatoryHolderArray[i]valueForKey:@"StatusID"]integerValue] == 53)|| ([[self->_signatoryHolderArray[i]valueForKey:@"StatusID"]integerValue] == 8)) {
                                 
                                 [self->coordinatesArray addObject:self->_signatoryHolderArray[i]];
                             }
                         }
-                        
-                       /* if (([lowercaseEmail isEqualToString:loginMail] && [[self->_signatoryHolderArray[i]valueForKey:@"DocumentId"]integerValue] == [[[self->_listArray objectAtIndex:indexPath.row] valueForKey:@"DocumentId"]integerValue]))
-                        {
-                            if (([[self->_signatoryHolderArray[i]valueForKey:@"StatusID"]intValue] == 7) || ([[self->_signatoryHolderArray[i]valueForKey:@"StatusID"]integerValue] == 53)|| ([[_signatoryHolderArray[i]valueForKey:@"StatusID"]integerValue] == 8)) {
-                                
-                                [self->coordinatesArray addObject:self->_signatoryHolderArray[i]];
-                            }
-                        } */
-                    }
+                    
+                    } */
                     
                     self.mstrXMLString = [[NSMutableString alloc]init];
                     //NSArray *arr =  [[responseValue valueForKey:@"Response"]valueForKey:@"lstSignatory"];

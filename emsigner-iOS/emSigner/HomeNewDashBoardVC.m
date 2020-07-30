@@ -695,18 +695,18 @@ enum
                             return;
                         }
                         
-                        arr =  [_checkNullArray valueForKey:@"Signatory"];
+                        self->arr =  [_checkNullArray valueForKey:@"Signatory"];
                         
                         NSUserDefaults * prefs = [NSUserDefaults standardUserDefaults];
-                        NSData * data = [NSKeyedArchiver archivedDataWithRootObject:arr requiringSecureCoding:NO error:nil];
+                        NSData * data = [NSKeyedArchiver archivedDataWithRootObject:self->arr requiringSecureCoding:NO error:nil];
                         [prefs setObject:data forKey:@"Signatory"];
                         
-                        if (arr.count > 0) {
+                        if (self->arr.count > 0) {
                             NSString * ischeck = @"ischeck";
-                            [mstrXMLString appendString:@"Signed By:"];
+                            [self->mstrXMLString appendString:@"Signed By:"];
                             
-                            for (int i = 0; arr.count>i; i++) {
-                                NSDictionary * dict = arr[i];
+                            for (int i = 0; i < self->arr.count; i++) {
+                                NSDictionary * dict = self->arr[i];
                                 
                                 //status id for parallel signing
                                 if ([dict[@"StatusID"]intValue] == 7) {
@@ -719,33 +719,34 @@ enum
                                     NSString* name = dict[@"Name"];
                                     NSString * totalstring = [NSString stringWithFormat:@"%@[%@]",name,emailid];
                                     
-                                    if ([mstrXMLString containsString:[NSString stringWithFormat:@"%@",totalstring]]) {
+                                    if ([self->mstrXMLString containsString:[NSString stringWithFormat:@"%@",totalstring]]) {
                                         
                                     }
                                     else
                                     {
-                                        [mstrXMLString appendString:[NSString stringWithFormat:@" %@",totalstring]];
+                                        [self->mstrXMLString appendString:[NSString stringWithFormat:@" %@",totalstring]];
                                     }
                                     
                                     //[mstrXMLString appendString:[NSString stringWithFormat:@"Signed By: %@",totalstring]];
                                     ischeck = @"Signatory";
-                                    NSLog(@"%@",mstrXMLString);
+                                    NSLog(@"%@",self->mstrXMLString);
                                 }
                             }
+                            
                             if ([ischeck  isEqual: @"ischeck"])
                             {
                                 NSArray *arr1 =  [[responseValue valueForKey:@"Response"] valueForKey:@"Originatory"];
-                                mstrXMLString = [NSMutableString string];
+                                self->mstrXMLString = [NSMutableString string];
                                 
-                                [mstrXMLString appendString:@"Originated By:"];
+                                [self->mstrXMLString appendString:@"Originated By:"];
                                 for (int i = 0; arr1.count > i; i++) {
                                     NSDictionary * dict = arr1[i];
                                     
                                     NSString* emailid = dict[@"EmailID"];
                                     NSString* name = dict[@"Name"];
                                     NSString * totalstring = [NSString stringWithFormat:@"%@[%@]",name,emailid];
-                                    [mstrXMLString appendString:[NSString stringWithFormat:@" %@",totalstring]];
-                                    NSLog(@"%@",mstrXMLString);
+                                    [self->mstrXMLString appendString:[NSString stringWithFormat:@" %@",totalstring]];
+                                    NSLog(@"%@",self->mstrXMLString);
                                 }
                             }
                             //}
@@ -754,7 +755,7 @@ enum
                         else
                         {
                             NSArray *arr1 =  [[responseValue valueForKey:@"Response"] valueForKey:@"Originatory"];
-                            [mstrXMLString appendString:@"Originated By:"];
+                            [self->mstrXMLString appendString:@"Originated By:"];
                             
                             for (int i = 0; arr1.count > i; i++) {
                                 NSDictionary * dict = arr1[i];
@@ -762,44 +763,45 @@ enum
                                 NSString* emailid = dict[@"EmailID"];
                                 NSString* name = dict[@"Name"];
                                 NSString * totalstring = [NSString stringWithFormat:@"%@[%@]",name,emailid];
-                                [mstrXMLString appendString:[NSString stringWithFormat:@"%@",totalstring]];
-                                NSLog(@"%@",mstrXMLString);
+                                [self->mstrXMLString appendString:[NSString stringWithFormat:@"%@",totalstring]];
+                                NSLog(@"%@",self->mstrXMLString);
                             }
                         }
                         
-                        coordinatesArray = [[NSMutableArray alloc]init];
+                        self->coordinatesArray = [[NSMutableArray alloc]init];
                         //Checking for signatorys and multiple PDF
-                        for (int i = 0; i<arr.count; i++) {
+                        for (int i = 0; i <self->arr.count; i++) {
                             
-                            if ([[arr[i]valueForKey:@"EmailID"] caseInsensitiveCompare:[[NSUserDefaults standardUserDefaults]valueForKey:@"Email"]] == NSOrderedSame)
+                            if ([[self->arr[i]valueForKey:@"EmailID"] caseInsensitiveCompare:[[NSUserDefaults standardUserDefaults]valueForKey:@"Email"]] == NSOrderedSame)
                             {
                                 // ([[[_checkNullArray valueForKey:@"CurrentStatus"]valueForKey:@"IsOpened"]intValue]== 1)
-                                if (([[arr[i]valueForKey:@"StatusID"]integerValue] == 53)) {
-                                    isdelegate = false;
-                                    statusId = 0;
+                                if (([[self->arr[i]valueForKey:@"StatusID"]integerValue] == 53)) {
+                                    self->isdelegate = false;
+                                    self->statusId = 0;
                                 }
-                                else if ([[arr[i]valueForKey:@"StatusID"]integerValue] == 7){
-                                    isdelegate = true;
-                                    statusId = 1;
+                                else if ([[self->arr[i]valueForKey:@"StatusID"]integerValue] == 7){
+                                    self->isdelegate = true;
+                                    self->statusId = 1;
                                 }
-                                if ((([[arr[i]valueForKey:@"StatusID"]integerValue] == 7)|| ([[arr[i]valueForKey:@"StatusID"]integerValue] == 53)|| ([[arr[i]valueForKey:@"StatusID"]integerValue] == 8))) {
+                                
+                                if ((([[self->arr[i]valueForKey:@"StatusID"]integerValue] == 7)|| ([[self->arr[i]valueForKey:@"StatusID"]integerValue] == 53)|| ([[self->arr[i]valueForKey:@"StatusID"]integerValue] == 8))) {
                                     
                                     if ([[arr[i]valueForKey:@"DocumentId"]integerValue]== [[[_checkNullArray valueForKey:@"DocumentId"]objectAtIndex:0]integerValue]) {
-                                        [coordinatesArray addObject:arr[i]];
+                                        [self->coordinatesArray addObject:self->arr[i]];
                                     }
                                 }
                             }
                         }
                         
-                        statusForPlaceholders = [coordinatesArray valueForKey:@"StatusID"];
+                        self->statusForPlaceholders = [self->coordinatesArray valueForKey:@"StatusID"];
                         
                         //FileDataBytes
-                        _pdfImageArray=[[responseValue valueForKey:@"Response"] valueForKey:@"Document"];
+                        self->_pdfImageArray=[[responseValue valueForKey:@"Response"] valueForKey:@"Document"];
                         
-                        if (_pdfImageArray != (id)[NSNull null])
+                        if (self->_pdfImageArray != (id)[NSNull null])
                         {
                             NSUserDefaults *statusIdForMultiplePdf = [NSUserDefaults standardUserDefaults];
-                            [statusIdForMultiplePdf setInteger:(long)statusId forKey:@"statusIdForMultiplePdf"];
+                            [statusIdForMultiplePdf setInteger:(long)self->statusId forKey:@"statusIdForMultiplePdf"];
                             [statusIdForMultiplePdf synchronize];
                             
                             if ([[[responseValue valueForKey:@"Response"] valueForKey:@"IsPasswordProtected"] boolValue]==YES) {
@@ -811,7 +813,7 @@ enum
                                 
                                 //workflow type  == 3
                                 
-                                if ([[[_searchResults objectAtIndex:indexPath.row] valueForKey:@"WorkflowType"]integerValue] == 3)
+                                if ([[[self->_searchResults objectAtIndex:indexPath.row] valueForKey:@"WorkflowType"]integerValue] == 3)
                                 {
                                     [self parallelSigning:indexPath.row];
                                     
@@ -823,7 +825,7 @@ enum
                                 
                                 data = [[NSData alloc]initWithBase64EncodedString:_pdfImageArray options:0];
                                 NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
-                                NSString *path = [documentsDirectory stringByAppendingPathComponent:[[_searchResults objectAtIndex:indexPath.row] objectForKey:@"DisplayName"]];
+                                NSString *path = [documentsDirectory stringByAppendingPathComponent:[[self->_searchResults objectAtIndex:indexPath.row] objectForKey:@"DisplayName"]];
                                 [data writeToFile:path atomically:YES];
                                 
                                 
@@ -842,7 +844,7 @@ enum
                                 [[NSUserDefaults standardUserDefaults] setObject:attachmentCount forKey:@"attachmentCount"];
                                 [[NSUserDefaults standardUserDefaults] synchronize];
                                 
-                                NSString *workflowId = [[_searchResults objectAtIndex:indexPath.row] valueForKey:@"WorkFlowId"];
+                                NSString *workflowId = [[self->_searchResults objectAtIndex:indexPath.row] valueForKey:@"WorkFlowId"];
                                 [[NSUserDefaults standardUserDefaults] setObject:workflowId forKey:@"workflowId"];
                                 [[NSUserDefaults standardUserDefaults] synchronize];
                                 
